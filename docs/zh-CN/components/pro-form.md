@@ -44,7 +44,7 @@ data.email // string
 data.time // string[]
 ```
 
-`defineForm` 的字段通过使用 field 函数进行复用，前往[表单字段（Fields）](/zh-CN/components/pro-field)了解更多字段用法。
+`defineForm` 的字段通过使用 field 函数进行复用，前往[表单字段（Fields）](/zh-CN/components/pro-form-field)了解更多字段用法。
 
 ## Data
 
