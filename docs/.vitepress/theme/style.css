@@ -34,6 +34,18 @@
 }
 
 /**
+ * Component: Global
+ * -------------------------------------------------------------------------- */
+
+:root {
+  /* --vp-layout-max-width */
+}
+
+.VPDoc.has-aside .content-container {
+    max-width: 1000px !important;
+}
+
+/**
  * Component: Home
  * -------------------------------------------------------------------------- */
 
@@ -103,7 +115,7 @@
   margin-left: 100px;
 }
 .VPNavBar.has-sidebar .VPNavBarMenu.menu {
-  margin-left: 92px;
+  margin-left: 50px;
 }
 .VPNavBarMenu.menu {
   flex: 1;
@@ -121,4 +133,34 @@
 }
 .VPSidebarItem.level-0 > .item .text {
   font-size: 1rem;
+}
+
+.demo-card .demo-card__view:not(:first-child) {
+  margin-top: 16px;
+}
+
+.demo-card .demo-card__view pre {
+  font-family: v-mono, monospace;
+}
+
+.demo-card .demo-card__view code {
+  font-family: v-mono, monospace;
+}
+
+.demo-card code.n-text {
+  white-space: nowrap;
+}
+@media (min-width: 640px) {
+  .vp-doc div[class*='language-'] {
+    border-radius: 8px;
+    margin: 0;
+    border-radius:0 0 4px 4px;
+  }
+}
+.vp-doc div[class*='language-'] {
+  background-color: var(--n-color, var(--vp-code-block-bg));
+  transition: color .3s var(--n-bezier), background-color .3s var(--n-bezier), box-shadow .3s var(--n-bezier), border-color .3s var(--n-bezier);
+}
+.vp-doc [class*='language-'] code {
+  font-size: 14px;
 }

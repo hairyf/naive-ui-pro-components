@@ -52,7 +52,6 @@ const form = defineForm({
   })
     .preventAutofill(),
 })
-
 </script>
 
 <template>

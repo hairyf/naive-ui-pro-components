@@ -4,6 +4,7 @@
 
 ```ts
 import { defineForm, field } from 'naive-ui-pro-components'
+
 // fields.ts
 export const emailField = field({
   type: 'input',
@@ -28,7 +29,7 @@ export const emailField = field({
 
 // xxx.vue setup
 const { dataTrans } = defineForm({
-    email: emailField,
+  email: emailField,
 })
 ```
 
@@ -42,9 +43,9 @@ export const emailField = field({
 })
 
 const { dataTrans } = defineForm({
-    email: emailField.withConfig({
-        // ...
-    }),
+  email: emailField.withConfig({
+    // ...
+  }),
 })
 ```
 
@@ -53,24 +54,24 @@ const { dataTrans } = defineForm({
 `field`、`withConfig` 传入函数可接收当前使用的 form 上下文。
 
 ```ts
-export const emailField = field((context) =>{
-    // 和其他参数组合 rules 等...
-    context.data
-    // 验证其他参数...
-    context.validate(['password'])
-    return {
-      // ...
-    }
+export const emailField = field((context) => {
+  // 和其他参数组合 rules 等...
+  context.data
+  // 验证其他参数...
+  context.validate(['password'])
+  return {
+    // ...
+  }
 })
 
-const myEmail = emailField.withConfig(context => {
-    return {
-      // 使用 withConfig 再次组合
-    }
+const myEmail = emailField.withConfig((context) => {
+  return {
+    // 使用 withConfig 再次组合
+  }
 })
 
 const { dataTrans } = defineForm({
-    email: myEmail,
+  email: myEmail,
 })
 ```
 
@@ -83,27 +84,27 @@ const form = defineForm({
   number: numberField,
   email: emailField.withConfig({
     renderItem(model, config) {
-        // config: {label, key, type, props}
-        return (
+      // config: {label, key, type, props}
+      return (
             <NInput
-             placeholder={config.placeholder} 
-             v-model={[model.value, 'value']} 
+             placeholder={config.placeholder}
+             v-model={[model.value, 'value']}
             />
-        )
+      )
     },
   }),
 })
 ```
 
-其中第三个参数是 `defaultRender` 默认渲染函数，可以通过 `defaultRender` 渲染默认的表单项。
+其中第三个参数是默认渲染函数，可以通过该函数渲染默认的表单项。
 
 ```tsx
 const form = defineForm({
   number: numberField,
   email: emailField.withConfig({
     renderItem(model, config, defaultRender) {
-        // config: {label, key, type, props}
-        return <div>
+      // config: {label, key, type, props}
+      return <div>
           {/* your content... */}
           {defaultRender(model, config)}
         </div>

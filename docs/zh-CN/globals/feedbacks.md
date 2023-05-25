@@ -14,7 +14,6 @@
 另外，我们对 `$message`、`$dialog` 的返回结果进行了优化，现在你可以直接使用 `await` 来获取用户的选择结果：
 
 ```ts
-
 const ins = $dialog.warning({
   content: glbI18n.t('merchant.store.deleteText'),
   // 如果用户点击了确认，则会执行 postApiStoreDelete 方法，此时 button 处于 loading 状态

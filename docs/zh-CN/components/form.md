@@ -44,7 +44,7 @@ data.email // string
 data.time // string[]
 ```
 
-`defineForm` 的字段通过使用 field 函数进行复用，前往[表单字段（Fields）](/zh-CN/components/pro-form-field)了解更多字段用法。
+`defineForm` 的字段通过使用 field 函数进行复用，前往[表单字段（Fields）](/zh-CN/components/form-field)了解更多字段用法。
 
 ## Data
 
@@ -92,7 +92,7 @@ form 会保存实例初始值，通过 resetFields 将表单的字段重置为�
 
 ```ts
 const form = defineForm({
- // ...
+  // ...
 })
 
 form.resetFields() // 重置所有
@@ -109,7 +109,7 @@ resetValidate 与 resetFields 相似，但它只会重置表单的校验状态�
 
 ```ts
 const { resetFields } = defineForm({
- // ...
+  // ...
 })
 
 // 重置所有校验
@@ -117,3 +117,4 @@ resetValidate()
 // 重置 code 字段校验
 resetValidate(['code'])
 ```
+

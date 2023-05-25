@@ -1,5 +1,8 @@
-import { DefaultTheme, defineConfig } from 'vitepress'
+import type { DefaultTheme } from 'vitepress'
+import { defineConfig } from 'vitepress'
+import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin'
 
+// 组件绝对路径
 function defineThemeConfig(lang = 'en-US') {
   const themeConfig: DefaultTheme.Config = {
     // https://vitepress.dev/reference/default-theme-config
@@ -9,35 +12,56 @@ function defineThemeConfig(lang = 'en-US') {
       { text: 'Components', link: `/${lang}/components` },
     ],
     search: {
-      provider: 'local'
+      provider: 'local',
     },
     sidebar: [
       {
         text: 'Docs',
         items: [
           { text: 'Introduction', link: `/${lang}/docs/intro` },
-          { text: 'Quick Start', link: `/${lang}/docs/` }
-        ]
+          { text: 'Quick Start', link: `/${lang}/docs/` },
+        ],
       },
       {
         text: 'Components',
         items: [
-          { text: 'Global Feedbacks', link: `/${lang}/components/global-feedbacks` },
-          { text: 'Pro Form', link: `/${lang}/components/pro-form` },
-          { text: 'Pro Form Field', link: `/${lang}/components/pro-form-field` },
-          { text: 'Pro Form Toolbars', link: `/${lang}/components/pro-form-toolbars` },
-          { text: 'Pro Table', link: `/${lang}/components/pro-table` },
-          { text: 'Pro Table Controls', link: `/${lang}/components/pro-table-controls` },
-        ]
-      }
+          {
+            text: 'Form',
+            link: `/${lang}/components/form`,
+            collapsed: true,
+            items: [
+              { text: 'Field', link: `/${lang}/components/form-field` },
+              { text: 'Toolbars', link: `/${lang}/components/form-toolbars` },
+            ],
+          },
+          {
+            text: 'Table',
+            link: `/${lang}/components/table`,
+            collapsed: true,
+            items: [
+              { text: 'Columns', link: `/${lang}/components/table-columns` },
+            ],
+          },
+          {
+            text: 'Controls',
+            link: `/${lang}/components/controls`,
+          },
+        ],
+      },
+      {
+        text: 'Globals',
+        items: [
+          { text: 'Feedbacks', link: `/${lang}/globals/feedbacks` },
+        ],
+      },
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
     ],
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2022-PRESENT Hairyf contributors',
-    }
+    },
   }
 
   return themeConfig
@@ -45,22 +69,32 @@ function defineThemeConfig(lang = 'en-US') {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Naive UI Pro Components",
-  description: "Make backend development easier",
+  title: 'Naive UI Pro Components',
+  description: 'Make backend development easier',
   head: [
     ['link', { rel: 'icon', href: '/logo.svg' }],
     ['meta', { name: 'author', content: 'Hairyf' }],
   ],
+  markdown: {
+    config(md) {
+      md.use(containerPreview)
+      md.use(componentPreview)
+    },
+    theme: {
+      dark: 'vitesse-dark',
+      light: 'vitesse-light',
+    },
+  },
   locales: {
-    root: {
+    'root': {
       label: 'English',
       lang: 'en-US',
-      themeConfig: defineThemeConfig('en-US')
+      themeConfig: defineThemeConfig('en-US'),
     },
     'zh-CN': {
       label: '简体中文',
       lang: 'zh-CN',
-      themeConfig: defineThemeConfig('zh-CN')
-    }
+      themeConfig: defineThemeConfig('zh-CN'),
+    },
   },
 })
