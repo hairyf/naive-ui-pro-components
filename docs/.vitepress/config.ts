@@ -26,25 +26,22 @@ function defineThemeConfig(lang = 'en-US') {
         text: 'Components',
         items: [
           {
-            text: 'Form',
+            text: 'Form Pro',
             link: `/${lang}/components/form`,
-            collapsed: true,
-            items: [
-              { text: 'Field', link: `/${lang}/components/form-field` },
-              { text: 'Toolbars', link: `/${lang}/components/form-toolbars` },
-            ],
+
           },
-          {
-            text: 'Table',
-            link: `/${lang}/components/table`,
-            collapsed: true,
-            items: [
-              { text: 'Columns', link: `/${lang}/components/table-columns` },
-            ],
-          },
+          { text: 'Form Field', link: `/${lang}/components/form-field` },
+          { text: 'Form Toolbars', link: `/${lang}/components/form-toolbars` },
+          { text: 'Table Pro', link: `/${lang}/components/table` },
+          { text: 'Table Columns', link: `/${lang}/components/table-columns` },
+
           {
             text: 'Controls',
             link: `/${lang}/components/controls`,
+          },
+          {
+            text: 'Modal',
+            link: `/${lang}/components/modal`,
           },
         ],
       },

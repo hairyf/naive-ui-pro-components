@@ -4,11 +4,10 @@ Pro Components 是基于 Naive UI 开发的一套高级组件超集。它提供�
 
 ## Features
 
-- [pro-feedbacks](/)
 - [pro-form](/)
-- [pro-toolbars](/)
 - [pro-table](/)
 - [pro-controls](/)
+- [pro-feedbacks](/)
 - 开发中...
 
 ## Installation
