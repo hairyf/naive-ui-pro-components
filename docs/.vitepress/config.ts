@@ -1,8 +1,45 @@
 import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
 import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin'
+import VueJsx from 'unplugin-vue-jsx/vite'
 
-// 组件绝对路径
+// https://vitepress.dev/reference/site-config
+export default defineConfig({
+  title: 'Naive UI Pro Components',
+  description: 'Make backend development easier',
+  head: [
+    ['link', { rel: 'icon', href: '/logo.svg' }],
+    ['meta', { name: 'author', content: 'Hairyf' }],
+  ],
+  markdown: {
+    config(md) {
+      md.use(containerPreview)
+      md.use(componentPreview)
+    },
+    theme: {
+      dark: 'vitesse-dark',
+      light: 'vitesse-light',
+    },
+  },
+  vite: {
+    plugins: [
+      VueJsx({}),
+    ],
+  },
+  locales: {
+    'root': {
+      label: 'English',
+      lang: 'en-US',
+      themeConfig: defineThemeConfig('en-US'),
+    },
+    'zh-CN': {
+      label: '简体中文',
+      lang: 'zh-CN',
+      themeConfig: defineThemeConfig('zh-CN'),
+    },
+  },
+})
+
 function defineThemeConfig(lang = 'en-US') {
   const themeConfig: DefaultTheme.Config = {
     // https://vitepress.dev/reference/default-theme-config
@@ -37,7 +74,7 @@ function defineThemeConfig(lang = 'en-US') {
 
           {
             text: 'Controls',
-            link: `/${lang}/components/controls`,
+            link: `/${lang}/components/controls/`,
           },
           {
             text: 'Modal',
@@ -63,35 +100,3 @@ function defineThemeConfig(lang = 'en-US') {
 
   return themeConfig
 }
-
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
-  title: 'Naive UI Pro Components',
-  description: 'Make backend development easier',
-  head: [
-    ['link', { rel: 'icon', href: '/logo.svg' }],
-    ['meta', { name: 'author', content: 'Hairyf' }],
-  ],
-  markdown: {
-    config(md) {
-      md.use(containerPreview)
-      md.use(componentPreview)
-    },
-    theme: {
-      dark: 'vitesse-dark',
-      light: 'vitesse-light',
-    },
-  },
-  locales: {
-    'root': {
-      label: 'English',
-      lang: 'en-US',
-      themeConfig: defineThemeConfig('en-US'),
-    },
-    'zh-CN': {
-      label: '简体中文',
-      lang: 'zh-CN',
-      themeConfig: defineThemeConfig('zh-CN'),
-    },
-  },
-})

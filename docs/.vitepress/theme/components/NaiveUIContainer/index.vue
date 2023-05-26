@@ -96,7 +96,7 @@ onMounted(() => visible.value = false)
             {{ !visible ? t('show') : t('hide') }}
           </NTooltip>
         </template>
-        <NP v-if="description">
+        <NP v-if="description && description !== '默认描述'">
           {{ description }}
         </NP>
         <div class="demo-content">
@@ -111,6 +111,9 @@ onMounted(() => visible.value = false)
 </template>
 
 <style>
+  .demo-card {
+    margin: 28px 0;
+  }
   .demo-content p {
     margin: 0;
   }

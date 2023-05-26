@@ -13,7 +13,7 @@ export default {
     })
   },
   enhanceApp({ app }) {
-    app.component('DemoPreview', NaiveUIContainer)
     app.use(naive)
+    app.component('DemoPreview', NaiveUIContainer)
   },
 }
