@@ -1,7 +1,7 @@
 {
-  "name": "@naive-ui/pro-controls",
+  "name": "@naive-ui/utils",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "./src/index.ts",
   "publishConfig": {
     "main": "./dist/index.cjs.js",
@@ -23,7 +23,6 @@
     "build": "tsup"
   },
   "dependencies": {
-    "@naive-ui/utils": "workspace:^",
     "vue-demi": "^0.14.5"
   },
   "devDependencies": {

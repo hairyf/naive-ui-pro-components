@@ -1,4 +1,2 @@
-export function log(...args: any[]) {
-  console.log(...args)
-}
-export * from './aaa'
+export * from './define'
+export * from './types'
