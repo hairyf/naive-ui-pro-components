@@ -10,7 +10,7 @@ Pro Controls 通常用于在 Table Columns 与 Form Toolbars 中，它也可以�
 
 <preview path="./demo/basic.vue" title="基础" description=""></preview>
 
-<preview path="./demo/basic.vue" title="表单工具栏" description=""></preview>
+<preview path="./demo/form.vue" title="表单工具栏" description=""></preview>
 
 ```html
 <script lang="ts" setup>
