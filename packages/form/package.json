@@ -1,7 +1,7 @@
 {
-  "name": "@naive-ui/utils",
+  "name": "@naive-ui/pro-form",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "./src/index.ts",
   "publishConfig": {
     "main": "./dist/index.cjs.js",
@@ -23,9 +23,8 @@
     "build": "tsup"
   },
   "dependencies": {
-    "defu": "^6.1.2",
+    "@naive-ui/utils": "workspace:^",
+    "@vueuse/core": "^10.1.2",
     "vue-demi": "^0.14.5"
-  },
-  "devDependencies": {
   }
 }

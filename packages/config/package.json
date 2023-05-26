@@ -4,6 +4,6 @@
   "private": true,
   "main": "index.js",
   "devDependencies": {
-    "esbuild-plugin-vue-jsx": "^0.1.0"
+    "esbuild-plugin-globals": "^0.2.0"
   }
 }
