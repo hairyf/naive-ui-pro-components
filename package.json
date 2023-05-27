@@ -20,9 +20,9 @@
     "@naive-ui/config": "workspace:*",
     "@types/node": "^20.2.3",
     "@vicons/fluent": "^0.12.0",
-    "@vitepress-demo-preview/plugin": "^1.1.9",
     "codesandbox": "^2.2.3",
     "eslint": "^8.41.0",
+    "markdown-it-vitepress-demo": "^0.1.1",
     "tsup": "^6.7.0",
     "vitepress": "1.0.0-beta.1"
   }

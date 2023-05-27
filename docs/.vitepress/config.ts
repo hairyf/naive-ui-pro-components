@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
-import { componentPreview, containerPreview } from '@vitepress-demo-preview/plugin'
+import mitVitepressDemo from 'markdown-it-vitepress-demo'
 import VueJsx from 'unplugin-vue-jsx/vite'
 
 // https://vitepress.dev/reference/site-config
@@ -13,8 +13,7 @@ export default defineConfig({
   ],
   markdown: {
     config(md) {
-      md.use(containerPreview)
-      md.use(componentPreview)
+      md.use(mitVitepressDemo)
     },
     theme: {
       dark: 'vitesse-dark',

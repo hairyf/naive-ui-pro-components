@@ -8,9 +8,9 @@ Pro Controls 通常用于在 Table Columns 与 Form Toolbars 中，它也可以�
 
 - [按钮 Button - Naive UI](https://www.naiveui.com/zh-CN/light/components/button)
 
-<preview path="./demo/basic.vue" title="基础" description=""></preview>
+<demo src="./demo/basic.vue" title="基础" />
 
-<preview path="./demo/form.vue" title="表单工具栏" description=""></preview>
+<demo src="./demo/form.vue" title="表单工具栏" />
 
 ```html
 <script lang="ts" setup>

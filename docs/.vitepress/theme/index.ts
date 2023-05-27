@@ -14,6 +14,6 @@ export default {
   },
   enhanceApp({ app }) {
     app.use(naive)
-    app.component('DemoPreview', NaiveUIContainer)
+    app.component('DemoContainer', NaiveUIContainer)
   },
 }
