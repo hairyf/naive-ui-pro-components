@@ -11,7 +11,8 @@ const props = defineProps<{
   sfcTsCode: string
   // if using ts, sfcJsCode will transform the to js
   sfcJsCode: string
-  highlightedHtml: string
+  sfcTsHtml: string
+  sfcJsHtml: string
   // descriptionHtml is generally not used since the slot with name="desc" will handle everything
   descriptionHtml?: string
   title: string
@@ -40,14 +41,22 @@ const { t } = i18n({
 })
 
 const sfcTsCode = computed(() => decodeURIComponent(props.sfcTsCode))
-const highlightedHtml = computed(() => decodeURIComponent(props.highlightedHtml))
+const sfcJsCode = computed(() => decodeURIComponent(props.sfcJsCode))
+
+const isUsingTs = computed(() => !!props.sfcTsCode)
+
+const sfcCode = computed(() => isUsingTs.value ? sfcTsCode.value : sfcJsCode.value)
+
+const showTs = ref(isUsingTs.value)
+
+const highlightedHtml = computed(() => decodeURIComponent(showTs.value ? props.sfcTsHtml : props.sfcJsHtml))
 </script>
 
 <template>
   <NaiveContainer :title="title">
     <template #header-extra>
       <EditOnSandboxButton
-        :code="sfcTsCode"
+        :code="sfcCode"
         :tooltip="t('editInCodeSandbox')"
       />
       <EditOnGithubButton
@@ -55,7 +64,7 @@ const highlightedHtml = computed(() => decodeURIComponent(props.highlightedHtml)
         :tooltip="t('editOnGithub')"
       />
       <CopyCodeButton
-        :code="sfcTsCode"
+        :code="sfcCode"
         :success-text="t('copySuccess')"
         :tooltip="t('copyCode')"
       />
@@ -69,6 +78,20 @@ const highlightedHtml = computed(() => decodeURIComponent(props.highlightedHtml)
     </n-p>
     <slot />
     <template v-if="visible" #footer>
+      <n-tabs
+        v-if="isUsingTs"
+        size="small"
+        type="segment"
+        style="padding: 12px 24px 0 24px"
+        @update:value="($e) => (showTs = $e === 'ts')"
+      >
+        <n-tab name="ts">
+          TypeScript
+        </n-tab>
+        <n-tab name="js">
+          JavaScript
+        </n-tab>
+      </n-tabs>
       <div class="language-vue" v-html="highlightedHtml" />
     </template>
   </NaiveContainer>

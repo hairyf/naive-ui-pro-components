@@ -35,9 +35,6 @@ importers:
       '@vicons/fluent':
         specifier: ^0.12.0
         version: 0.12.0
-      '@vitepress-demo-preview/plugin':
-        specifier: ^1.1.9
-        version: 1.1.9(markdown-it-container@3.0.0)(vitepress@1.0.0-beta.1)(vue@3.3.4)
       codesandbox:
         specifier: ^2.2.3
         version: 2.2.3
@@ -45,8 +42,8 @@ importers:
         specifier: ^8.41.0
         version: 8.41.0
       markdown-it-vitepress-demo:
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       tsup:
         specifier: ^6.7.0
         version: 6.7.0(typescript@5.0.4)
@@ -799,10 +796,6 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@flypeng/tool@5.3.1:
-    resolution: {integrity: sha512-z/AxDBdZezktnTizVkGQ/Ve6w7GHnYEKtw3mZDGfjpKRBAImOuHMWdajbdmQXpqzMJbnPThZlL36d/6RNpKh1w==}
-    dev: true
-
   /@hairy/vue-components@0.1.1(vue@3.3.4):
     resolution: {integrity: sha512-NcLXENY1LmYEI+8B5N2ImisyBP66h5drXRcwigBtGuKjAXdacjO/D7oE2BBcFtzZqk51T5n9iXTbsPxU/2WKOA==}
     dependencies:
@@ -1221,20 +1214,6 @@ packages:
       vue: ^3.2.25
     dependencies:
       vite: 4.3.8(@types/node@20.2.3)
-      vue: 3.3.4
-    dev: true
-
-  /@vitepress-demo-preview/plugin@1.1.9(markdown-it-container@3.0.0)(vitepress@1.0.0-beta.1)(vue@3.3.4):
-    resolution: {integrity: sha512-fsShFK9C0sNhXyxDWDpolxq9B9coUnN/7U03C0c3m0FD/+rKrRSyW7+RwtEqWVMVjiIPUMgPoF8XlQaw1tODZQ==}
-    peerDependencies:
-      markdown-it-container: ^3.0.0
-      vitepress: '*'
-      vue: ^3.2.0
-    dependencies:
-      '@flypeng/tool': 5.3.1
-      markdown-it: 13.0.1
-      markdown-it-container: 3.0.0
-      vitepress: 1.0.0-beta.1(@algolia/client-search@4.17.1)(@types/node@20.2.3)
       vue: 3.3.4
     dev: true
 
@@ -2305,11 +2284,6 @@ packages:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
     dependencies:
       once: 1.4.0
-    dev: true
-
-  /entities@3.0.1:
-    resolution: {integrity: sha512-WiyBqoomrwMdFG1e0kqvASYfnlb0lp8M5o5Fw2OFq1hNZxxcNk8Ik0Xm7LxzBhuidnZB/UtBqVCgUz3kBOP51Q==}
-    engines: {node: '>=0.12'}
     dev: true
 
   /entities@4.5.0:
@@ -3861,12 +3835,6 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /linkify-it@4.0.1:
-    resolution: {integrity: sha512-C7bfi1UZmoj8+PQx22XyeXCuBlokoyWQL5pWSP+EI6nzRylyThouddufc2c1NDIcP9k5agmN9fLpA7VNJfIiqw==}
-    dependencies:
-      uc.micro: 1.0.6
-    dev: true
-
   /load-tsconfig@0.2.5:
     resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -3985,8 +3953,8 @@ packages:
     resolution: {integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==}
     dev: true
 
-  /markdown-it-vitepress-demo@0.1.1:
-    resolution: {integrity: sha512-uaqR9urWd8Q54urD44jhtkGZubZJj7H6y78fGrRZylV0bQQB4geGvuow6BhKXZsFO8NS/U4Hc145lJe2rG+Bfg==}
+  /markdown-it-vitepress-demo@0.1.2:
+    resolution: {integrity: sha512-fxWz8+qPdAWurX3Oz3CsqfSL/xXOX3Aex1ya7F+op+vfkzcSuHpFlZchCcyCGKACZJhghwj8rOxBQhzT3pazPg==}
     dependencies:
       '@swc/core': 1.3.60
       '@vue/compiler-core': 3.3.4
@@ -3995,17 +3963,6 @@ packages:
       markdown-it-container: 3.0.0
     transitivePeerDependencies:
       - '@swc/helpers'
-    dev: true
-
-  /markdown-it@13.0.1:
-    resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
-    hasBin: true
-    dependencies:
-      argparse: 2.0.1
-      entities: 3.0.1
-      linkify-it: 4.0.1
-      mdurl: 1.0.1
-      uc.micro: 1.0.6
     dev: true
 
   /mdast-util-from-markdown@0.8.5:
@@ -4022,10 +3979,6 @@ packages:
 
   /mdast-util-to-string@2.0.0:
     resolution: {integrity: sha512-AW4DRS3QbBayY/jJmD8437V1Gombjf8RSOUCMFBuo5iHi58AGEgVCKQ+ezHkZZDpAQS75hcBMpLqjpJTjtUL7w==}
-    dev: true
-
-  /mdurl@1.0.1:
-    resolution: {integrity: sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==}
     dev: true
 
   /merge-stream@2.0.0:
@@ -5380,10 +5333,6 @@ packages:
     resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}
     engines: {node: '>=12.20'}
     hasBin: true
-    dev: true
-
-  /uc.micro@1.0.6:
-    resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
     dev: true
 
   /unbox-primitive@1.0.2:
