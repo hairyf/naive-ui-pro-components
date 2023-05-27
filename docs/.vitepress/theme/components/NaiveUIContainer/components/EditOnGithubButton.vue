@@ -1,7 +1,5 @@
 <script lang="ts">
-import type { PropType } from 'vue'
 import { defineComponent } from 'vue'
-import type { ButtonProps } from 'naive-ui'
 import EditIcon from '@vicons/fluent/Compose16Regular.js'
 import { githubBlobURL } from '../utils'
 
@@ -11,47 +9,41 @@ export default defineComponent({
     EditIcon,
   },
   props: {
-    relativeUrl: {
+    relativePath: {
       type: String,
       required: true,
     },
     text: Boolean,
     quaternary: Boolean,
-    size: {
-      type: String as PropType<ButtonProps['size']>,
-      default: 'tiny',
-    },
+    tooltip: String,
   },
   setup(props) {
-    return {
-      url: githubBlobURL + props.relativeUrl,
+    function open() {
+      window.open(githubBlobURL + props.relativePath, '__blank')
     }
+    return { open }
   },
 })
 </script>
 
 <template>
-  <n-button
-    class="edit-button"
-    :theme-overrides="
-      quaternary
-        ? {
-          paddingTiny: '4px',
-          heightTiny: '14px',
-        }
-        : undefined
-    "
-    :quaternary="quaternary"
-    :text="!quaternary"
-    :size="size"
-    tag="a"
-    :href="url"
-    target="_blank"
-  >
-    <template #icon>
-      <n-icon>
-        <EditIcon />
-      </n-icon>
+  <n-tooltip>
+    <template #trigger>
+      <n-button
+        class="edit-button"
+        size="tiny"
+        text
+        target="_blank"
+        :style="{ padding: 0 }"
+        @click="open"
+      >
+        <template #icon>
+          <n-icon>
+            <EditIcon />
+          </n-icon>
+        </template>
+      </n-button>
     </template>
-  </n-button>
+    {{ tooltip }}
+  </n-tooltip>
 </template>
