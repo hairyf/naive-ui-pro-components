@@ -2,9 +2,7 @@
 import { defineControls } from '@naive-ui/pro-controls'
 
 function delay(time: number) {
-  return new Promise<void>((resolve) => {
-    setTimeout(() => resolve(), time)
-  })
+  return new Promise<void>(resolve => setTimeout(() => resolve(), time))
 }
 
 const controls = defineControls([

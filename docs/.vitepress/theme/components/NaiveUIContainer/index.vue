@@ -73,7 +73,7 @@ const highlightedHtml = computed(() => decodeURIComponent(showTs.value ? props.s
         @click="visible = !visible"
       />
     </template>
-    <n-p v-if="$slots.desc">
+    <n-p v-if="$slots.desc" class="desc">
       <slot name="desc" />
     </n-p>
     <slot />
@@ -97,3 +97,15 @@ const highlightedHtml = computed(() => decodeURIComponent(showTs.value ? props.s
     </template>
   </NaiveContainer>
 </template>
+
+<style>
+  .desc:not(:empty) {
+    margin-bottom: 24px;
+  }
+  .demo-card .demo-card__view:not(:first-child) {
+    margin-top: 16px;
+  }
+  .demo-card code.n-text {
+    white-space: nowrap;
+  }
+</style>

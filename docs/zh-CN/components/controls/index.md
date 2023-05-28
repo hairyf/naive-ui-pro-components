@@ -10,84 +10,8 @@ Pro Controls 通常用于在 Table Columns 与 Form Toolbars 中，它也可以�
 
 <demo src="./demo/basic.vue" title="基础" />
 
-<demo src="./demo/form.vue" title="表单工具栏" />
+::: demo src="./demo/form.vue" title="表单工具栏"
 
-```html
-<script lang="ts" setup>
-import { defineForm, defineControls } from 'naive-ui-pro-components'
-const form = defineForm({
-  storeNum: {
-    type: 'input',
-    placeholder: () => glbI18n.t('placeholders.storeNum'),
-  },
-  storeName: storeNameField.preventDefault(),
-  phoneNumber: phoneNumberField.preventDefault(),
-})
+与 [form-toolbars](/zh-CN/components/form-toolbars) 配合使用，可以快速生成表单工具栏。
 
-const toolbars = defineControls([
-  {
-    render: () => 'Reset',
-    // 组件会处理 promise 并添加 loading 状态
-    helper: async () => {
-      form.resetFields()
-      await table.search()
-    },
-  },
-  {
-    props: { type: 'primary' },
-    render: () => 'Search',
-    helper: async () => {
-      await table.search()
-    },
-    slots: {
-      // 可以使用 slots 重写按钮插槽，例如用于添加图标
-    }
-  },
-])
-</script>
-
-<template>
-  <n-card>
-    <pro-form :toolbars="toolbars" :instance="form" />
-  </n-card>
-</template>
-```
-
-## 与 Table Columns 配合使用
-
-```ts
-import { defineColumns, defineControls } from 'naive-ui-pro-components'
-
-const controls = defineControls<[{ id: number }, number]>([
-  {
-    text: true,
-    render: () => 'Edit',
-    // params: rowData, index
-    helper: ({ id }) => editStoreModal({ id }),
-  },
-  {
-    text: true,
-    render: () => 'Delete',
-    helper: (rowData, index) => {
-      $dialog.warning({
-        content: glbI18n.t('merchant.store.deleteText'),
-        onPositiveClick: () => postApiStoreDelete({ id: rowData.id }),
-      })
-    },
-  },
-])
-
-// 传递给 columns
-const columns = defineColumns<{ id: number }>([
-  {
-    key: 'storeNum',
-    title: () => glbI18n.t('labels.storeNumber'),
-  },
-  // ...
-  {
-    key: '__action__',
-    title: () => glbI18n.t('words.actions'),
-    render: controls,
-  },
-])
-```
+:::

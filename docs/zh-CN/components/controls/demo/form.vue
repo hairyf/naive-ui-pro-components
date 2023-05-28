@@ -1,13 +1,23 @@
 <script lang="ts" setup>
 import { defineControls } from '@naive-ui/pro-controls'
+import ProForm, { defineForm } from '@naive-ui/pro-form'
 
 function delay(time: number) {
-  return new Promise<void>((resolve) => {
-    setTimeout(() => resolve(), time)
-  })
+  return new Promise<void>(resolve => setTimeout(() => resolve(), time))
 }
 
-const controls = defineControls([
+const form = defineForm({
+  store: {
+    type: 'input',
+    placeholder: 'store id',
+  },
+  name: {
+    type: 'input',
+    placeholder: 'name',
+  },
+})
+
+const toolbars = defineControls([
   {
     render: () => 'Search',
     helper: () => {
@@ -25,5 +35,5 @@ const controls = defineControls([
 </script>
 
 <template>
-  <component :is="controls" />
+  <pro-form :instance="form" :toolbars="toolbars" />
 </template>
