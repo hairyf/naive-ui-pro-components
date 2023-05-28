@@ -15,15 +15,28 @@ export const proFormProps = {
     type: Object as PropType<ProFormInstance>,
     required: true as const,
   },
-  cols: Number,
-  xGap: Number,
-  yGap: Number,
-  grid: Number,
+  cols: {
+    type: Number,
+    default: 24,
+  },
+  xGap: {
+    type: Number,
+    default: 12,
+  },
+  yGap: {
+    type: Number,
+    default: 0,
+  },
+  grid: {
+    type: Boolean,
+    default: true,
+  },
   toolbars: [
     String,
     Number,
     Object,
     Boolean,
+    Function,
   ] as PropType<
     | Component
     | FunctionalComponent
@@ -34,7 +47,7 @@ export const proFormProps = {
   >,
 }
 
-const ProForm = defineComponent({
+export const NProForm = defineComponent({
   name: 'ProForm',
   props: proFormProps,
   slots: {} as SlotsType<{
@@ -108,8 +121,10 @@ const ProForm = defineComponent({
         return null
 
       // TODO: https://github.com/tusen-ai/naive-ui/issues/4635
-      return <FormItem suffix span="0:24 742:6 1394:4">
+      return <FormItem suffix span={6} showLabel={false}>
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'right' }}>
         {content}
+        </div>
       </FormItem>
     }
 
@@ -124,15 +139,13 @@ const ProForm = defineComponent({
 })
 
 function spawnSpan(config: FormItemConfig, toolbars = false) {
-  if (toolbars || !config.props?.type)
+  if (!toolbars)
     return config.span || 24
 
-  if (config.props.type === 'datetimerange')
+  if (config.props?.type === 'datetimerange')
     return '0:24 742:12 1394:8'
-  if (config.props.type === 'daterange')
+  if (config.props?.type === 'daterange')
     return '0:24 742:12 1394:4'
 
   return '0:24 742:6 1394:4'
 }
-
-export default ProForm

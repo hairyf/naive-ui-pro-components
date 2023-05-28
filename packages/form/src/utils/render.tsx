@@ -20,7 +20,7 @@ export function renderDefField(model: Ref<any>, config: FormItemConfig, _key?: s
   return <Component
     placeholder={placeholder}
     {...reactive(config.props || {})}
-    v-model={[model, 'value']}
+    v-model={[model.value, 'value']}
     >
       {{ ...config.slots }}
     </Component>
