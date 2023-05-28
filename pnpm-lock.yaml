@@ -10,6 +10,9 @@ importers:
       '@naive-ui/pro-controls':
         specifier: workspace:^
         version: link:packages/controls
+      '@naive-ui/pro-form':
+        specifier: workspace:^
+        version: link:packages/form
       '@vicons/ionicons5':
         specifier: ^0.12.0
         version: 0.12.0

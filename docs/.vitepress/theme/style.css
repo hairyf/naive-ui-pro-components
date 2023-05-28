@@ -38,7 +38,7 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  /* --vp-layout-max-width */
+  --vp-layout-max-width: 1600px;
 }
 
 .VPDoc.has-aside .content-container {
@@ -110,7 +110,6 @@
   font-size: 1.03rem;
 }
 
-
 .VPNavBarMenu.menu  {
   margin-left: 100px;
 }
@@ -124,6 +123,10 @@
 .VPNavBarSearch.search {
   flex-grow: 0;
 }
+.VPNavBarTranslations.VPFlyout.translations::before {
+  display: none;
+}
+
 
 .VPLink.link.VPNavBarMenuLink {
   font-size: 0.9rem
@@ -135,26 +138,16 @@
   font-size: 1rem;
 }
 
-.demo-card .demo-card__view:not(:first-child) {
-  margin-top: 16px;
-}
-
-.demo-card .demo-card__view pre {
-  font-family: v-mono, monospace;
-}
-
-.demo-card .demo-card__view code {
-  font-family: v-mono, monospace;
-}
-
-.demo-card code.n-text {
-  white-space: nowrap;
-}
 @media (min-width: 640px) {
   .vp-doc div[class*='language-'] {
     border-radius: 8px;
     margin: 0;
     border-radius:0 0 4px 4px;
+  }
+}
+@media (min-width: 1280px) {
+  .content {
+    min-width: 945px !important;
   }
 }
 .vp-doc div[class*='language-'] {
