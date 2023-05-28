@@ -24,6 +24,10 @@ export default defineConfig({
     plugins: [
       VueJsx({}),
     ],
+    // fix: https://github.com/vuejs/vitepress/issues/1905
+    ssr: {
+      noExternal: ['naive-ui'],
+    },
   },
   locales: {
     'root': {

@@ -5,7 +5,13 @@ import './style.css'
 import naive from 'naive-ui'
 import NaiveUIContainer from './components/NaiveUIContainer/index.vue'
 
-NaiveUIContainer.adasdasdasdas = '123n12uio3n12uio3n12io3n'
+// fix: document is not defined
+if (!global.document) {
+  global.document = {
+    querySelector: () => ({}),
+    createElement: () => ({}),
+  } as any
+}
 export default {
   ...Theme,
   Layout: () => {
