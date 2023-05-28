@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { CodeOutline } from '@vicons/ionicons5'
+import CodeOutline from '@vicons/ionicons5/CodeOutline.js'
 
 defineProps<{
   tooltip?: string

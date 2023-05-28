@@ -5,8 +5,9 @@ import './style.css'
 import naive from 'naive-ui'
 import NaiveUIContainer from './components/NaiveUIContainer/index.vue'
 
+// fix: global is not defined
 // fix: document is not defined
-if (!global.document) {
+if (typeof global !== 'undefined' && !global.document) {
   global.document = {
     querySelector: () => ({}),
     createElement: () => ({}),
