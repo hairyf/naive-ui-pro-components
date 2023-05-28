@@ -83,6 +83,7 @@ const highlightedHtml = computed(() => decodeURIComponent(showTs.value ? props.s
         size="small"
         type="segment"
         style="padding: 12px 24px 0 24px"
+        animated
         @update:value="($e) => (showTs = $e === 'ts')"
       >
         <n-tab name="ts">

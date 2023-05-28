@@ -2,6 +2,22 @@ import { clone as _clone, cloneDeep as _cloneDeep, defu, final, isFunction, toAr
 import { unref } from 'vue-demi'
 import type { FormItemFieldConfig, WithConfig, WithFieldConfig, WithFieldConfigExtends } from '../types'
 
+export function field<T extends WithFieldConfigExtends>(config: WithFieldConfig<T>) {
+  const target = encase(config)
+
+  function withConfig(config: WithFieldConfig<T>) {
+    if (isFunction(config))
+      return field((c: any) => defu((config as any)(c), { ...final(config, c) }))
+    if (isFunction(config))
+      return field((c: any) => defu(config, { ...final(config, c) }))
+    return field(defu(config, { ...config }))
+  }
+
+  target.withConfig = withConfig as unknown as WithConfig<T>
+
+  return target
+}
+
 function encase<T extends WithFieldConfigExtends>(config: WithFieldConfig<T>) {
   const target = config as FormItemFieldConfig<T>
 
@@ -42,21 +58,5 @@ function encase<T extends WithFieldConfigExtends>(config: WithFieldConfig<T>) {
   target.preventDefault = preventDefault
   target.preventRequired = preventRequired
   target.preventAutofill = preventAutofill
-  return target
-}
-
-export function field<T extends WithFieldConfigExtends>(config: WithFieldConfig<T>) {
-  const target = encase(config)
-
-  function withConfig(config: WithFieldConfig<T>) {
-    if (isFunction(config))
-      return field((c: any) => defu((config as any)(c), { ...final(config, c) }))
-    if (isFunction(config))
-      return field((c: any) => defu(config, { ...final(config, c) }))
-    return field(defu(config, { ...config }))
-  }
-
-  target.withConfig = withConfig as unknown as WithConfig<T>
-
   return target
 }

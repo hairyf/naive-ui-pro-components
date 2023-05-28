@@ -1,7 +1,7 @@
 import type { NestedRefs } from '@naive-ui/utils'
 import type * as NaiveUI from 'naive-ui'
 import type { MaybeRef, Ref, VNodeChild } from 'vue-demi'
-import type { ProFormInst } from './instance'
+import type { ProFormInstance } from './instance'
 
 export interface FormItemDate {
   type?: 'date-picker'
@@ -140,8 +140,12 @@ export type FormItemFieldConfig<T extends WithFieldConfigExtends> = T & {
 
 export type WithFieldConfigExtends = FormItemConfig | (() => FormItemConfig)
 
-export type WithFieldConfig<T> = T | ((inst: ProFormInst) => T)
-export type FormItemConfigExport<V = any, K = string> = FormItemConfig<V, K> | ((inst: ProFormInst) => FormItemConfig<V, K>)
+export type WithFieldConfig<T> = T | ((inst: ProFormInstance) => T)
+export type FormItemConfigExport<V = any, K = string> = FormItemConfig<V, K> | ((inst: ProFormInstance) => FormItemConfig<V, K>)
 export type RecordFormItemConfigExport = Record<string, FormItemConfigExport>
 
 export type WithConfig<T extends WithFieldConfigExtends> = (config: WithFieldConfig<FormItemConfig>) => FormItemFieldConfig<T>
+
+export type DecodeValues<T extends RecordFormItemConfigExport> = {
+  [key in keyof T]: T[key] extends WithFieldConfig<infer V> ? V : never
+}

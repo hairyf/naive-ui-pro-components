@@ -1,9 +1,10 @@
 import type { FormInst, FormItemInst, FormRules } from 'naive-ui'
 import type { ShouldRuleBeApplied } from 'naive-ui/es/form/src/interface'
 import type { Data, TransformData } from './data'
+import type { DecodeValues, RecordFormItemConfigExport } from './config'
 
-export interface ProFormInst<T = any> {
-  values: T
+export interface ProFormInstance<T extends RecordFormItemConfigExport = RecordFormItemConfigExport> {
+  values: DecodeValues<T>
   data: Data<T>
   dataTrans: TransformData<T>
   validate: (filters?: string[] | ShouldRuleBeApplied) => Promise<void>

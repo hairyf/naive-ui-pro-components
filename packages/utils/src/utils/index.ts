@@ -1,4 +1,6 @@
 import { createDefu } from 'defu'
+import type { Component, FunctionalComponent, VNode } from 'vue-demi'
+import { h } from 'vue-demi'
 
 export function noop() { }
 
@@ -53,4 +55,12 @@ export function cloneDeep<T>(value: T): T {
   const keys = Object.entries(value)
   const entries = keys.map(([key, value]) => [key, cloneDeep(value)])
   return Object.fromEntries(entries)
+}
+
+export function render(is?: Component | FunctionalComponent | string | number | boolean | VNode | null) {
+  if (typeof is === 'boolean')
+    return null
+  if (typeof is === 'string' || typeof is === 'number')
+    return is
+  return is ? h(is) : null
 }
