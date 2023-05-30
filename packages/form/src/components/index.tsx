@@ -56,18 +56,12 @@ export const NProForm = defineComponent({
   setup(_props, { slots }) {
     const customs = ['grid', 'xGap', 'yGap', 'cols', 'instance', 'toolbars'] as const
     const props = reactivePick(_props, ...customs)
-    const _formProps = reactiveOmit(_props, ...customs)
+    const formProps = reactiveOmit(_props, ...customs)
 
     const {
       _formInstRef, _formItemInstRefs,
       _rules, data, values,
     } = toRefs(props.instance)
-
-    const formProps = computed(() => ({
-      rules: _rules.value,
-      model: data.value,
-      ..._formProps,
-    }))
 
     const gridProps = computed(() => ({
       cols: props.cols,
@@ -89,7 +83,7 @@ export const NProForm = defineComponent({
     }
 
     function renderForm(content: VNode | VNode[]) {
-      return <NForm ref={_formInstRef} {...formProps}>
+      return <NForm ref={_formInstRef} model={data.value} rules={_rules.value} {...formProps} >
         {props.grid
           ? <NGrid {...gridProps.value}>{content}</NGrid>
           : content}

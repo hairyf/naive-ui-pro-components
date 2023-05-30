@@ -42,9 +42,12 @@
 
 :::
 
+::: demo src="./demo/field.vue" title="表单字段"
 
+`field` 是一个描述对象，他可以是普通的对象，field 可以与 form 分离，并且通过 `field` 函数创建具有额外的能力。
 
-`defineForm` 的字段通过使用 field 函数进行复用，前往[表单字段（Fields）](/zh-CN/components/form-field)了解更多字段用法。
+:::
+
 
 ## Data
 

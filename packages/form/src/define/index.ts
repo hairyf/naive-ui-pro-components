@@ -1,5 +1,6 @@
 import type { MaybeRef } from 'vue-demi'
 import { reactive } from 'vue-demi'
+
 import { useData, useMetadata, useRules, useValues } from '../composables'
 import type { ProFormInstance, RecordFormItemConfigExport } from '../types'
 
@@ -23,7 +24,3 @@ export function defineForm<T extends RecordFormItemConfigExport>(initialValues: 
 
   return instance as any
 }
-
-const props = defineForm({
-  a: () => ({ type: 'input' }),
-})
