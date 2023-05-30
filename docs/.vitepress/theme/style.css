@@ -157,3 +157,8 @@
 .vp-doc [class*='language-'] code {
   font-size: 14px;
 }
+
+.vp-doc table {
+  display: table;
+  margin: 0;
+}
