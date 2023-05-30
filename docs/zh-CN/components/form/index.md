@@ -49,7 +49,13 @@
 :::
 
 
-::: demo src="./demo/field-render.vue" title="字段上下文"
+::: demo src="./demo/field-context.vue" title="字段上下文"
+
+`field|withConfig` 传入函数可接收当前使用的 form 实例，用于组合校验。
+
+:::
+
+::: demo src="./demo/field-render.vue" title="字段渲染"
 
 通过 `renderItem` 字段可以自定义渲染表单项，如果内容比较复杂，我们建议使用 tsx 编写。
 
