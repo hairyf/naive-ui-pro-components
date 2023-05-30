@@ -3,6 +3,7 @@
   "rules": {
     "@typescript-eslint/no-use-before-define": "off",
     "vue/component-name-in-template-casing": "off",
-    "no-alert": "off"
+    "no-alert": "off",
+    "vue/one-component-per-file": "off"
   }
 }

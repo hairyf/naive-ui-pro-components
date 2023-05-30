@@ -74,21 +74,9 @@ function defineThemeConfig(lang = 'en-US') {
           { text: 'Form Toolbars', link: `/${lang}/components/form-toolbars` },
           { text: 'Table Pro', link: `/${lang}/components/table` },
           { text: 'Table Columns', link: `/${lang}/components/table-columns` },
-
-          {
-            text: 'Controls',
-            link: `/${lang}/components/controls/`,
-          },
-          {
-            text: 'Modal',
-            link: `/${lang}/components/modal`,
-          },
-        ],
-      },
-      {
-        text: 'Globals',
-        items: [
-          { text: 'Feedbacks', link: `/${lang}/globals/feedbacks` },
+          { text: 'Controls', link: `/${lang}/components/controls/` },
+          // { text: 'Modal', link: `/${lang}/components/modal` },
+          { text: 'Globals', link: `/${lang}/components/globals` },
         ],
       },
     ],
@@ -100,6 +88,5 @@ function defineThemeConfig(lang = 'en-US') {
       copyright: 'Copyright © 2022-PRESENT Hairyf contributors',
     },
   }
-
   return themeConfig
 }
