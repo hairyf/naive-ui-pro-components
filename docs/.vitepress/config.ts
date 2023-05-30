@@ -65,13 +65,10 @@ function defineThemeConfig(lang = 'en-US') {
       {
         text: 'Components',
         items: [
-          { text: 'Form Pro', link: `/${lang}/components/form/` },
-          { text: 'Form Field', link: `/${lang}/components/form/field` },
-          { text: 'Form Toolbars', link: `/${lang}/components/form/toolbars` },
-          { text: 'Table Pro', link: `/${lang}/components/table/` },
-          { text: 'Table Columns', link: `/${lang}/components/table/columns` },
-          { text: 'Controls', link: `/${lang}/components/controls/` },
+          { text: 'Form', link: `/${lang}/components/form/` },
+          { text: 'Table', link: `/${lang}/components/table/` },
           { text: 'Globals', link: `/${lang}/components/globals/` },
+          { text: 'Controls', link: `/${lang}/components/controls/` },
         ],
       },
     ],
