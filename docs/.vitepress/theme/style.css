@@ -110,24 +110,6 @@
   font-size: 1.03rem;
 }
 
-.VPNavBarMenu.menu  {
-  margin-left: 100px;
-}
-.VPNavBar.has-sidebar .VPNavBarMenu.menu {
-  margin-left: 50px;
-}
-.VPNavBarMenu.menu {
-  flex: 1;
-  order: -1;
-}
-.VPNavBarSearch.search {
-  flex-grow: 0;
-}
-.VPNavBarTranslations.VPFlyout.translations::before {
-  display: none;
-}
-
-
 .VPLink.link.VPNavBarMenuLink {
   font-size: 0.9rem
 }
