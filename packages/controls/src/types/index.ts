@@ -5,7 +5,7 @@ import type { VNodeChild } from 'vue-demi'
 export interface ControlProps<T extends any[]> extends NestedRefs<Omit<ButtonProps, 'onClick' | 'loading' | 'disabled'>> {
   helper?: (...args: T) => Promise<void> | void
   render?: string | ((...args: T) => string)
-  disabled?: boolean | ((...args: T) => boolean)
+  enable?: boolean | ((...args: T) => boolean)
   slots?: Record<string, (...args: T) => VNodeChild>
 }
 

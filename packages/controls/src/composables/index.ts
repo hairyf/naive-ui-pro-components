@@ -6,10 +6,10 @@ export function useControlButtons<T extends any[]>(args: T, controls: ControlPro
   const buttons = computed(() => {
     return controls
       .filter((control) => {
-        const disabled = typeof control.disabled === 'function'
-          ? control.disabled(...args)
-          : control.disabled
-        return !disabled
+        const enable = typeof control.enable === 'function'
+          ? control.enable(...args)
+          : (control.enable || true)
+        return enable
       })
       .map((control) => {
         const { disabled: _, helper, render, ...props } = control

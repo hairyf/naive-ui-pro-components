@@ -65,7 +65,8 @@ function defineThemeConfig(lang = 'en-US') {
       {
         text: 'Components',
         items: [
-          { text: 'Form', link: `/${lang}/components/form/` },
+          { text: 'ProForm', link: `/${lang}/components/form/` },
+          { text: 'ProFormField', link: `/${lang}/components/form/field` },
           { text: 'Table', link: `/${lang}/components/table/` },
           { text: 'Globals', link: `/${lang}/components/globals/` },
           { text: 'Controls', link: `/${lang}/components/controls/` },

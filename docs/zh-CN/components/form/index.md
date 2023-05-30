@@ -40,27 +40,6 @@
 
 字段的 `formItemProps` 可以对表单项进行设置，它会继承 [n-form-item](https://www.naiveui.com/zh-CN/os-theme/components/form#FormItem-Props) 和 [n-grid-item](https://www.naiveui.com/zh-CN/os-theme/components/grid#GridItem-Props) 的所有属性。
 
-:::
-
-::: demo src="./demo/field.vue" title="表单字段"
-
-`field` 是一个描述对象，他可以是普通的对象，field 可以与 form 分离，并且通过 `field` 函数创建具有额外的能力。
-
-:::
-
-
-::: demo src="./demo/field-context.vue" title="字段上下文"
-
-`field|withConfig` 传入函数可接收当前使用的 form 实例，用于组合校验。
-
-:::
-
-::: demo src="./demo/field-render.vue" title="字段渲染"
-
-通过 `renderItem` 字段可以自定义渲染表单项，如果内容比较复杂，我们建议使用 tsx 编写。
-
-:::
-
 ::: demo src="./demo/data-transform.vue" title="数据转换"
 
 字段的其中 `transform` 属性可以对某个字段属性进行转换，并绑定在 `form.dataTrans` 属性上，这在提交表单的时候非常实用：
