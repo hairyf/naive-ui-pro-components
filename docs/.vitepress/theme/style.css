@@ -161,4 +161,5 @@
 .vp-doc table {
   display: table;
   margin: 0;
+  width: 100%;
 }

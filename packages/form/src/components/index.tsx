@@ -70,7 +70,7 @@ export const NProForm = defineComponent({
       itemResponsive: true,
     }))
 
-    const toolbars = computed(() => !!(props.toolbars || slots.toolbars))
+    const toolbars = computed(() => props.toolbars === '' || !!(props.toolbars || slots.toolbars))
 
     function spawnItemProps(path: string, config: FormItemConfig) {
       return {

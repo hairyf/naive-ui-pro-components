@@ -49,75 +49,52 @@
 :::
 
 
-## Data
+::: demo src="./demo/field-render.vue" title="字段上下文"
 
-defineForm 返回特殊的 data、dataTrans 对象，用于处理表单数据。
+通过 `renderItem` 字段可以自定义渲染表单项，如果内容比较复杂，我们建议使用 tsx 编写。
 
-### Data Object
+:::
 
-Data 对象是对传入的字段映射相应的 value，可以对某些字段单独处理，data 只允许修改内部值，不能直接替换 data。
+::: demo src="./demo/data-transform.vue" title="数据转换"
 
-```ts
-// 不要对 data 进行结构和重新赋值
-form.data.email = '' // √
-form.data = { email: '' } // x
-```
+字段的其中 `transform` 属性可以对某个字段属性进行转换，并绑定在 `form.dataTrans` 属性上，这在提交表单的时候非常实用：
 
-### Data Transform
+:::
 
-每个字段中存在 rules、value（default value）、type 等属性，其中 transform 可以对某个字段属性进行转换，这在提交表单的时候非常实用：
+::: demo src="./demo/toolbars.vue" title="表单工具栏"
 
-```ts
-const { dataTrans } = defineForm({
-  time: {
-    type: 'input',
-    value: [],
-    transform(value: string[]) {
-      return {
-        start: value[0],
-        end: value[1],
-      }
-    },
-  },
-})
-dataTrans.start // string
-dataTrans.end // string
-dataTrans.time // undefined
-```
+通过设置 `toolbars` 属性开启工具栏模式，所有属性栅格将固定在 `0:12 742:8 1394:6`。
 
-## Methods
+你还可以通过 `toolbars slots` 在编写右侧工具栏的内容。
 
-defineForm 中的所有返回的方法。
+:::
 
-### Data Reset
 
-form 会保存实例初始值，通过 resetFields 将表单的字段重置为初始值。
+## Props
 
-```ts
-const form = defineForm({
-  // ...
-})
+| 名称 | 类型 | 默认值 | 说明 |
+| --- | --- | --- | --- |
+| instance | `ProFormInstance` | `-` | 组件的实例 |
+| grid | `boolean` | `true` | 是否开启栅格布局 |
+| cols | `number \| ResponsiveDescription` | `24` | 显示的栅格数量 |
+| x-gap | `number \| ResponsiveDescription` | `0` | 横向间隔槽 |
+| y-gap | `number \| ResponsiveDescription` | `0` | 纵向间隔槽 |
 
-form.resetFields() // 重置所有
-form.resetFields(['code']) // 重置某些字段
+> 更多参数请参考 [n-form](https://www.naiveui.com/zh-CN/os-theme/components/form) 和 [n-grid](https://www.naiveui.com/zh-CN/os-theme/components/grid) 的属性。
 
-// resetFields 默认会对重置的字段重置校验
-// 如果不需要，在第二个参数中传入 validate: false
-form.resetFields(['code'], { validate: false })
-```
+## Methods（defineForm）
 
-### Form Reset
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| validate | `(paths?: string[]) => Promise<void>` | 验证表项，传递 `paths` 过滤需要验证的参数 |
+| resetValidate | `(paths?: string[]) => void` | 重置校验，传递 `paths` 过滤需要重置的参数 |
+| resetFields | `(paths?: string[]) => void` | 重置表单数据为初始值，传递 `paths` 过滤需要重置的参数 |
 
-resetValidate 与 resetFields 相似，但它只会重置表单的校验状态。
 
-```ts
-const { resetFields } = defineForm({
-  // ...
-})
+## Slots
 
-// 重置所有校验
-resetValidate()
-// 重置 code 字段校验
-resetValidate(['code'])
-```
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| toolbars | `()` | 工具栏内容，使用该插槽默认开启工具栏模式 |
+
 

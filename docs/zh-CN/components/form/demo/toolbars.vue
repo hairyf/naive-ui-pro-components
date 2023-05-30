@@ -20,6 +20,12 @@ const form = defineForm({
 </script>
 
 <template>
-  <n-pro-form :instance="form" />
-  <pre>{{ JSON.stringify(form.dataTrans, null, 2) }}</pre>
+  <n-pro-form :instance="form">
+    <template #toolbars>
+      <n-button type="primary">
+        Search
+      </n-button>
+    </template>
+  </n-pro-form>
+  <n-pro-form :instance="form" toolbars />
 </template>
