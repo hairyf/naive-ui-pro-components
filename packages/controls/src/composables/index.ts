@@ -13,9 +13,7 @@ export function useControlButtons<T extends any[]>(args: T, controls: ControlPro
       })
       .map((control) => {
         const { disabled: _, helper, render, ...props } = control
-        const [onClick, loading] = useAsyncCallback(() => {
-          return helper?.(...args)
-        })
+        const [onClick, loading] = useAsyncCallback(() => helper?.(...args))
         const defaultRender = () => typeof render === 'function'
           ? render
           : () => render
@@ -24,8 +22,8 @@ export function useControlButtons<T extends any[]>(args: T, controls: ControlPro
           slots[key] = slots[key]?.(...args)
         return reactive({
           ...props,
+          loading: props.text ? false : loading.value,
           slots,
-          loading,
           onClick,
         })
       })
