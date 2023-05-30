@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { NCard, NConfigProvider, NMessageProvider, darkTheme, lightTheme } from 'naive-ui'
+import { NCard, NConfigProvider, darkTheme, lightTheme } from 'naive-ui'
+import NGlobalProvider from '@naive-ui-pro/globals'
 import { useData } from 'vitepress'
 
 const props = defineProps<{
@@ -16,7 +17,7 @@ function handleTitleClick() {
 
 <template>
   <NConfigProvider :theme="isDark ? darkTheme : lightTheme">
-    <NMessageProvider>
+    <NGlobalProvider>
       <NCard
         :id="id"
         class="demo-card"
@@ -42,7 +43,7 @@ function handleTitleClick() {
           <slot name="footer" />
         </template>
       </NCard>
-    </NMessageProvider>
+    </NGlobalProvider>
   </NConfigProvider>
 </template>
 

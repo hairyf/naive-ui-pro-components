@@ -13,6 +13,9 @@ importers:
       '@naive-ui-pro/form':
         specifier: workspace:^
         version: link:packages/form
+      '@naive-ui-pro/globals':
+        specifier: workspace:^
+        version: link:packages/globals
       '@naive-ui-pro/table':
         specifier: workspace:^
         version: link:packages/table

@@ -1,4 +1,4 @@
-import { NLoadingBarProvider, useNotification } from 'naive-ui'
+import { NNotificationProvider, useNotification } from 'naive-ui'
 import { defineComponent } from 'vue'
 
 export const NGlobalNotification = defineComponent({
@@ -8,9 +8,9 @@ export const NGlobalNotification = defineComponent({
       window.$notification = useNotification()
       return () => null
     })
-    return () => <NLoadingBarProvider>
+    return () => <NNotificationProvider>
       <Install />
       {slots.default?.()}
-    </NLoadingBarProvider>
+    </NNotificationProvider>
   },
 })

@@ -22,7 +22,7 @@ export function useControlButtons<T extends any[]>(args: T, controls: ControlPro
           slots[key] = slots[key]?.(...args)
         return reactive({
           ...props,
-          loading: props.text ? false : loading.value,
+          loading,
           slots,
           onClick,
         })

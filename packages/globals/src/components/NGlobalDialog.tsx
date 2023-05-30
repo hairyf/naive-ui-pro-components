@@ -1,5 +1,5 @@
 import type { XDialogProviderInst } from 'naive-ui'
-import { NLoadingBarProvider, useDialog } from 'naive-ui'
+import { NDialogProvider, useDialog } from 'naive-ui'
 import { defineComponent } from 'vue'
 import { createDeferred, packer } from '../utils'
 
@@ -16,6 +16,14 @@ export const NGlobalDialog = defineComponent({
             const inst = source({
               ...options,
               onPositiveClick,
+              onClose() {
+                deferred.reject()
+                options.onClose?.()
+              },
+              onNegativeClick(e) {
+                deferred.reject()
+                options.onNegativeClick?.(e)
+              },
             })
             async function onPositiveClick(e: any) {
               inst.loading = true
@@ -34,9 +42,9 @@ export const NGlobalDialog = defineComponent({
       )
       return () => null
     })
-    return () => <NLoadingBarProvider>
+    return () => <NDialogProvider>
       <Install />
       {slots.default?.()}
-    </NLoadingBarProvider>
+    </NDialogProvider>
   },
 })

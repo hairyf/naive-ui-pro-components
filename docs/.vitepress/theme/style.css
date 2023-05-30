@@ -163,3 +163,6 @@
   margin: 0;
   width: 100%;
 }
+.vp-doc th, .vp-doc td {
+  border: none
+}

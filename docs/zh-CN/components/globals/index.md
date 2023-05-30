@@ -11,6 +11,14 @@
 
 现在你可以在全局中通过使用 `$message`、`$dialog`、`$loadingBar`、`$notification` 来使用这些方法。
 
+<demo title="Basic" src="./demo/basic.vue" />
+
+```ts
+function onClick() {
+  $message.info('人生处处是美梦')
+}
+```
+
 另外，我们对 `$message`、`$dialog` 的返回结果进行了优化，现在你可以直接使用 `await` 来获取用户的选择结果：
 
 ```ts

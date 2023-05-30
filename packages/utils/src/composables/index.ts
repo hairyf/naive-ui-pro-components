@@ -3,17 +3,13 @@ import { ref } from 'vue-demi'
 export function useAsyncCallback<T extends (...args: any[]) => any>(fun: T) {
   const error = ref()
   const loading = ref(false)
-  async function execute(...args: any[]) {
-    try {
+  function execute(...args: any[]) {
+    const result = fun(...args)
+    if (result instanceof Promise) {
       loading.value = true
-      const result = await fun(...args)
-      loading.value = false
-      return result
+      result.finally(() => loading.value = false).catch()
     }
-    catch (error) {
-      loading.value = false
-      throw error
-    }
+    return result
   }
 
   return [execute as unknown as T, loading, error] as const

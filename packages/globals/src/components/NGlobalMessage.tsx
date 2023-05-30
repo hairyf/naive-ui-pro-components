@@ -1,5 +1,5 @@
 import type { XMessageApiInjection } from 'naive-ui'
-import { NLoadingBarProvider, useMessage } from 'naive-ui'
+import { NMessageProvider, useMessage } from 'naive-ui'
 
 import { defineComponent } from 'vue'
 import { createDeferred, packer } from '../utils'
@@ -27,9 +27,9 @@ export const NGlobalMessage = defineComponent({
       )
       return () => null
     })
-    return () => <NLoadingBarProvider>
+    return () => <NMessageProvider>
       <Install />
       {slots.default?.()}
-    </NLoadingBarProvider>
+    </NMessageProvider>
   },
 })
