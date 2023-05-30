@@ -12,7 +12,7 @@ Pro Controls 通常用于在 Table Columns 与 Form Toolbars 中，它也可以�
 
 ::: demo src="./demo/form.vue" title="表单工具栏"
 
-与 [form-toolbars](/zh-CN/components/form-toolbars) 配合使用，可以快速制作表单工具栏。
+与 Form Toolbars 配合使用，可以快速制作表单工具栏。
 
 :::
 
