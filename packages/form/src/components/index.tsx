@@ -12,7 +12,7 @@ const { rules: _r, model: _m, ...extendsProps } = formProps
 export const proFormProps = {
   ...extendsProps,
   instance: {
-    type: Object as PropType<ProFormInstance>,
+    type: Object as PropType<ProFormInstance<any>>,
     required: true as const,
   },
   cols: {

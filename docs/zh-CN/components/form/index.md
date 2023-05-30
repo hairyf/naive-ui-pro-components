@@ -16,33 +16,33 @@
 - [按钮 Button - Naive UI](https://www.naiveui.com/zh-CN/os-theme/components/button)
 - [开关 Switch - Naive UI](https://www.naiveui.com/zh-CN/light/components/switch)
 
-## defineForm
+::: demo src="./demo/basic.vue" title="基础"
 
-`defineForm` 是一个高阶函数，返回一个表单对象的实例，将表单数据进行重组，具有良好的 Typescript 支持。
+高级表单使用 `defineForm` 定义，返回一个表单对象的实例，它会将表单数据进行重组，它具有良好的 Typescript 支持。
 
-```ts
-import { defineForm } from 'naive-ui-pro-components'
+:::
 
-const email = ref('')
 
-const { data, resetFields } = defineForm({
-  brandNum: {
-    type: 'input',
-    value: '',
-  },
-  email: {
-    type: 'input',
-    value: email,
-  },
-  time: {
-    type: 'date-picker',
-    value: [] as [string, string],
-  },
-})
-data.brandNum // string
-data.email // string
-data.time // string[]
-```
+::: demo src="./demo/grid.vue" title="栅格"
+
+对不同的字段的 `span` 进行设置，可以实现不同栅格布局。
+
+:::
+
+::: demo src="./demo/props.vue" title="表单组件设置"
+
+字段中的 `props` 属性，可以对表单组件进行设置。
+
+:::
+
+
+::: demo src="./demo/formItemProps.vue" title="表单组件设置"
+
+字段的 `formItemProps` 可以对表单项进行设置，它会继承 [n-form-item](https://www.naiveui.com/zh-CN/os-theme/components/form#FormItem-Props) 和 [n-grid-item](https://www.naiveui.com/zh-CN/os-theme/components/grid#GridItem-Props) 的所有属性。
+
+:::
+
+
 
 `defineForm` 的字段通过使用 field 函数进行复用，前往[表单字段（Fields）](/zh-CN/components/form-field)了解更多字段用法。
 

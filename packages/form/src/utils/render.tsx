@@ -20,6 +20,7 @@ export function renderDefField(model: Ref<any>, config: FormItemConfig, _key?: s
   return <Component
     placeholder={placeholder}
     {...reactive(config.props || {})}
+    style="width: 100%"
     v-model={[model.value, 'value']}
     >
       {{ ...config.slots }}
