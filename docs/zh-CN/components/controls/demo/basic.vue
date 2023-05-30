@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineControls } from '@naive-ui/pro-controls'
+import { defineControls } from '@naive-ui-pro/controls'
 
 function delay(time: number) {
   return new Promise<void>(resolve => setTimeout(() => resolve(), time))

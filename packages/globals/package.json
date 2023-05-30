@@ -1,5 +1,5 @@
 {
-  "name": "@naive-ui/pro-globals",
+  "name": "@naive-ui-pro/globals",
   "type": "module",
   "version": "0.0.1",
   "main": "./src/index.ts",

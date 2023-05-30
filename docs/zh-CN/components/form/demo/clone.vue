@@ -1,30 +1,34 @@
-<script lang="ts" setup>
+<script setup>
 import NProForm, { defineForm, field } from '@naive-ui-pro/form'
 
 // fields.ts
 const emailField = field({
   type: 'input',
   value: '',
+  span: 12,
   rules: [
     {
       required: true,
       message: '请输入邮箱',
       trigger: 'blur',
     },
-    {
-      type: 'email',
-      message: '请输入正确的邮箱',
-    },
   ],
 })
-// xxx.vue setup
+
+// 拷贝字段，避免字段 value 引用相同
+const emailField2 = emailField.clone()
+// 深度克隆
+const emailField3 = emailField.cloneDeep()
+
+emailField3.rules.push({
+  type: 'email',
+  message: '请输入正确的邮箱',
+})
+
 const form = defineForm({
-  email: emailField
-    // 通过 withConfig 可以对 field 进行再次配置
-    .withConfig({
-      label: '邮箱',
-      placeholder: '请输入邮箱',
-    }),
+  email: emailField,
+  email2: emailField2,
+  email3: emailField3,
 })
 </script>
 

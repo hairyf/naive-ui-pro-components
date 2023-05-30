@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { defineControls } from '@naive-ui/pro-controls'
-import NProForm, { defineForm } from '@naive-ui/pro-form'
+import { defineControls } from '@naive-ui-pro/controls'
+import NProForm, { defineForm } from '@naive-ui-pro/form'
 
 function delay(time: number) {
   return new Promise<void>(resolve => setTimeout(() => resolve(), time))

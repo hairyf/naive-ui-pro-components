@@ -1,5 +1,5 @@
 {
-  "name": "@naive-ui/pro-table",
+  "name": "@naive-ui-pro/table",
   "type": "module",
   "version": "0.0.1",
   "main": "./src/index.ts",

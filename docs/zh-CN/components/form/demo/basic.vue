@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import NProForm, { defineForm } from '@naive-ui/pro-form'
+import NProForm, { defineForm } from '@naive-ui-pro/form'
 import { ref } from 'vue'
 
 const email = ref('')

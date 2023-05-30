@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { defineControls } from '@naive-ui/pro-controls'
-import ProTable, { defineTable, useColumns } from '@naive-ui/pro-table'
+import { defineControls } from '@naive-ui-pro/controls'
+import ProTable, { defineTable, useColumns } from '@naive-ui-pro/table'
 
 interface Row {
   id: number

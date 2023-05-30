@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import NProForm, { defineForm, field } from '@naive-ui/pro-form'
+import NProForm, { defineForm, field } from '@naive-ui-pro/form'
 
 // 创建 field 时访问 form 上下文
 function createConfirmEmail(key: string) {

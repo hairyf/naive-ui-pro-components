@@ -7,13 +7,13 @@ importers:
       '@hairy/vue-components':
         specifier: ^0.1.1
         version: 0.1.1(vue@3.3.4)
-      '@naive-ui/pro-controls':
+      '@naive-ui-pro/controls':
         specifier: workspace:^
         version: link:packages/controls
-      '@naive-ui/pro-form':
+      '@naive-ui-pro/form':
         specifier: workspace:^
         version: link:packages/form
-      '@naive-ui/pro-table':
+      '@naive-ui-pro/table':
         specifier: workspace:^
         version: link:packages/table
       '@vicons/ionicons5':

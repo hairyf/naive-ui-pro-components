@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import NProForm, { defineForm, field } from '@naive-ui/pro-form'
+import NProForm, { defineForm, field } from '@naive-ui-pro/form'
 import { NRadio, NRadioGroup, NSpace } from 'naive-ui'
 import { h } from 'vue'
 

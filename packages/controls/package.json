@@ -1,5 +1,5 @@
 {
-  "name": "@naive-ui/pro-controls",
+  "name": "@naive-ui-pro/controls",
   "type": "module",
   "version": "0.0.1",
   "main": "./src/index.ts",
