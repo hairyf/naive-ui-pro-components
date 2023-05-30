@@ -5,13 +5,7 @@ const form = defineForm({
   brandNum: {
     type: 'input',
     formItemProps: {
-      label: 'Brand Number',
-    },
-  },
-  email: {
-    type: 'input',
-    formItemProps: {
-      label: 'Email',
+      required: true,
     },
   },
 })
