@@ -2,24 +2,34 @@
 import { NCard, NConfigProvider, NMessageProvider, darkTheme, lightTheme } from 'naive-ui'
 import { useData } from 'vitepress'
 
-defineProps<{
+const props = defineProps<{
   title: string
+  id: string
 }>()
 
 const { isDark } = useData()
+
+function handleTitleClick() {
+  window.location.hash = `#${props.id}`
+}
 </script>
 
 <template>
   <NConfigProvider :theme="isDark ? darkTheme : lightTheme">
     <NMessageProvider>
       <NCard
+        :id="id"
         class="demo-card"
         :segmented="{
           footer: true,
         }"
         footer-style="padding: 0;"
-        :title="title"
       >
+        <template #header>
+          <span style="cursor: pointer" @click="handleTitleClick">
+            {{ title }}
+          </span>
+        </template>
         <template #header-extra>
           <div style="display: flex; gap: 6px">
             <slot name="header-extra" />

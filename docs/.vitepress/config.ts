@@ -79,6 +79,7 @@ function defineThemeConfig(lang = 'en-US') {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2022-PRESENT Hairyf contributors',
     },
+    outline: false,
   }
   return themeConfig
 }

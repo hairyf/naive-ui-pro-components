@@ -53,7 +53,7 @@ const highlightedHtml = computed(() => decodeURIComponent(showTs.value ? props.s
 </script>
 
 <template>
-  <NaiveContainer :title="title">
+  <NaiveContainer :id="metadata.fileName" :title="title">
     <template #header-extra>
       <EditOnSandboxButton
         :code="sfcCode"
