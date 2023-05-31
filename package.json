@@ -1,7 +1,7 @@
 {
   "name": "naive-ui-pro-components-monorepo",
   "version": "0.1.1",
-  "preview": true,
+  "private": true,
   "scripts": {
     "release": "bumpp -r & pnpm -r publish --no-git-checks --access public",
     "docs:dev": "vitepress dev docs",
