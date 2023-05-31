@@ -40,7 +40,6 @@ export default defineConfig({
         ],
       }),
     ],
-    // fix: https://github.com/vuejs/vitepress/issues/1905
     ssr: {
       noExternal: ['naive-ui', 'naive-ui-pro-components'],
     },
@@ -89,7 +88,7 @@ function defineThemeConfig(lang = 'en-US') {
       componentsNavOrSidebar,
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
+      { icon: 'github', link: 'https://github.com/hairyf/naive-ui-pro-components' },
     ],
     footer: {
       message: 'Released under the MIT License.',

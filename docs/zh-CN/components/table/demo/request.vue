@@ -1,4 +1,3 @@
-<!-- eslint-disable no-console -->
 <template>
   <component :is="controls" style="margin-bottom: 24px;" />
   <n-pro-table :instance="table" :columns="columns" />
@@ -50,6 +49,7 @@ const controls = defineControls([
     // 你可以利用 requestAll 方法获取所有数据来自定义导出表格数据的逻辑
     helper: async () => {
       const data = await table.requestAll()
+      // eslint-disable-next-line no-console
       console.log(data)
     },
   },

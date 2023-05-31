@@ -23,7 +23,7 @@ pnpm add @naive-ui-pro/table
 pnpm add naive-ui-pro-components
 ```
 
-## Full Import
+## Global Import
 
 ```ts
 import { createApp } from 'vue'
@@ -42,8 +42,6 @@ Install the `unplugin-vue-components` and `unplugin-auto-import` plugins, which 
 ```sh
 npm install -D unplugin-vue-components unplugin-auto-import
 ```
-
-### Vite
 
 ### Vite
 

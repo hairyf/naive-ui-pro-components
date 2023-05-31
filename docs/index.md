@@ -13,7 +13,7 @@ hero:
       link: /docs/intro
     - theme: alt
       text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      link: https://github.com/hairyf/naive-ui-pro-components
 
 features:
   - title: Easy to use
