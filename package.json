@@ -9,6 +9,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "lint": "eslint .",
+    "test": "vitest",
     "typecheck": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
