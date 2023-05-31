@@ -12,6 +12,7 @@ exports.defineBuildConfig = (options) => {
   options = {
     ...options,
     external: ['vue-demi', 'naive-ui', '@vueuse/core'],
+    esbuildPlugins: [require('unplugin-vue-jsx/esbuild')()],
     outExtension({ format }) {
       return { js: `.${format}.js` }
     },
