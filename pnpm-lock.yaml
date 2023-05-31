@@ -66,16 +66,16 @@ importers:
   packages/components:
     dependencies:
       '@naive-ui-pro/controls':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../controls
       '@naive-ui-pro/form':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../form
       '@naive-ui-pro/globals':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../globals
       '@naive-ui-pro/table':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../table
       vue-demi:
         specifier: ^0.14.5
