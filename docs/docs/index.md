@@ -4,10 +4,10 @@ Pro Components is a set of advanced components developed based on Naive UI. It p
 
 ## Features
 
-- [ProForm](/en-US/components/form/) - A form template component based on object-oriented functional programming, with preset common layouts and behaviors.
-- [ProTable](/en-US/components/table/) - Abstracts network requests and table formatting.
-- [ProControls](/en-US/components/controls/) - Form and table controls for multiple scenarios.
-- [ProGlobals](/en-US/components/globals/) - Mounting and optimization of global feedback components.
+- [ProForm](/components/form/) - A form template component based on object-oriented functional programming, with preset common layouts and behaviors.
+- [ProTable](/components/table/) - Abstracts network requests and table formatting.
+- [ProControls](/components/controls/) - Form and table controls for multiple scenarios.
+- [ProGlobals](/components/globals/) - Mounting and optimization of global feedback components.
 - In development...
 
 ## Installation
