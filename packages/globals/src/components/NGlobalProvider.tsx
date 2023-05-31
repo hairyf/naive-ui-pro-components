@@ -5,8 +5,8 @@ import { NGlobalDialog } from './NGlobalDialog'
 import { NGlobalNotification } from './NGlobalNotification'
 import { NGlobalMessage } from './NGlobalMessage'
 
-export const NGlobals = defineComponent({
-  name: 'NGlobals',
+export const NGlobalProvider = defineComponent({
+  name: 'NGlobalProvider',
   setup(_, { slots }) {
     return () =>
     <NInstallProvider

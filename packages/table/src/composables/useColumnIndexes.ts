@@ -7,7 +7,7 @@ export function useColumnIndexes(pagination: UnwrapNestedRefs<OffsetPagination>)
     key: nanoid(5),
     title: '#',
     render: (_: any, rowIndex: number) => {
-      return rowIndex + 1 + ((pagination.currentPage - 1) * pagination.currentPageSize)
+      return rowIndex + 1 + ((pagination.page - 1) * pagination.pageSize)
     },
     fixed: 'left' as const,
   }

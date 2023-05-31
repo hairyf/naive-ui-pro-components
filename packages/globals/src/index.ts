@@ -1,6 +1,6 @@
 /// <reference types="./global.window" />
 
-import { NGlobals } from './components'
+import { NGlobalProvider } from './components'
 
 /* eslint-disable import/export */
 export * from './global'
@@ -8,4 +8,4 @@ export * from './global.naive'
 
 export * from './components'
 
-export default NGlobals
+export default NGlobalProvider
