@@ -1,6 +1,6 @@
 # naive-ui-pro-components
 
-See our website [naive-ui-pro-components](/https://naiveui-pro-components.vercel.app/) for more information.
+See our website [naive-ui-pro-components](https://naiveui-pro-components.vercel.app/) for more information.
 
 ## Install
 
