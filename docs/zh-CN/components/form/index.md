@@ -18,7 +18,7 @@
 :::
 
 
-::: demo src="./demo/formItemProps.vue" title="表单组件设置"
+::: demo src="./demo/formItemProps.vue" title="表单项设置"
 字段的 `formItemProps` 可以对表单项进行设置，它会继承 [n-form-item](https://www.naiveui.com/zh-CN/os-theme/components/form#FormItem-Props) 和 [n-grid-item](https://www.naiveui.com/zh-CN/os-theme/components/grid#GridItem-Props) 的所有属性。
 :::
 
