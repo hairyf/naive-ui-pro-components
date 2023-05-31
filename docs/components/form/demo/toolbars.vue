@@ -10,6 +10,8 @@
 </template>
 
 <script lang="ts" setup>
+import { defineForm } from 'naive-ui-pro-components'
+
 import { ref } from 'vue'
 
 const email = ref('')

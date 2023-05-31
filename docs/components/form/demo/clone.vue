@@ -3,6 +3,8 @@
 </template>
 
 <script setup>
+import { defineForm, field } from 'naive-ui-pro-components'
+
 // fields.ts
 const emailField = field({
   type: 'input',

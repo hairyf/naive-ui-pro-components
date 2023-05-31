@@ -3,6 +3,8 @@
 </template>
 
 <script lang="ts" setup>
+import { defineForm, field } from 'naive-ui-pro-components'
+
 // Accessing the form context when creating a field
 function createConfirmEmail(key: string) {
   return field(({ data }) => {

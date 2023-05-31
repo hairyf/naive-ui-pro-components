@@ -3,6 +3,8 @@
 </template>
 
 <script lang="ts" setup>
+import { defineForm, field } from 'naive-ui-pro-components'
+
 // 创建 field 时访问 form 上下文
 function createConfirmEmail(key: string) {
   return field(({ data }) => {

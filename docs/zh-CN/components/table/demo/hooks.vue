@@ -3,6 +3,8 @@
 </template>
 
 <script lang="ts" setup>
+import { defineTable, useColumnIndexes, useColumnLink, useColumns } from 'naive-ui-pro-components'
+
 interface Row {
   name: string
   link: string

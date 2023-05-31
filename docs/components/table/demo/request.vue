@@ -4,6 +4,8 @@
 </template>
 
 <script lang="ts" setup>
+import { defineControls, defineTable, useColumns } from 'naive-ui-pro-components'
+
 interface Row {
   id: number
   name: string

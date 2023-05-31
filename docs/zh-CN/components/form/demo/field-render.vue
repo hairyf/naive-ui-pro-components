@@ -3,6 +3,8 @@
 </template>
 
 <script lang="ts" setup>
+import { defineForm, field } from 'naive-ui-pro-components'
+
 import { NRadio, NRadioGroup, NSpace } from 'naive-ui'
 import { h } from 'vue'
 
