@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /docs/intro
+      link: /docs/
     - theme: alt
       text: View on GitHub
       link: https://github.com/hairyf/naive-ui-pro-components
