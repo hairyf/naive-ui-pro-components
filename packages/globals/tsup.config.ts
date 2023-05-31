@@ -4,7 +4,7 @@ export default defineBuildConfig({
   format: ['cjs', 'esm', 'iife', 'iife-min'],
   entry: ['src/index.ts'],
   name: 'pro-globals',
-  globalName: 'proGlobals',
+  globalName: 'NaiveProGlobals',
   globals: {
     vue: 'Vue',
   },
