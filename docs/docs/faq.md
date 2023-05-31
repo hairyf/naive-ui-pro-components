@@ -1,11 +1,10 @@
-# 常见问题
+# Frequently Asked Questions
 
-## defineForm 传递对象而不是数组
+## Passing an Object Instead of an Array in defineForm
 
-你可以会感到疑惑，defineForm 通过对象的形式声明组件的顺序，而不是数组，在组件设计之初我们我们的确是使用数组的形式，但是在实际使用中，我们发现数组的形式会有一些问题，且经过我们长期的实践，我们认为采用对象是完全可行的。
+You may be puzzled by the use of objects instead of arrays in defineForm to declare the order of components. While we did initially use arrays in the design of the components, we found that arrays had some issues in practical use. Through our long-term practice, we believe that using objects is completely viable.
 
-
-**类型推断在数组上无法进行：**
+**Type inference doesn't work well with arrays:**
 
 ```ts
 const form = defineForm([
@@ -19,11 +18,11 @@ const form = defineForm([
   },
 ])
 
-// 无法正确推断出 form 的类型
+// Cannot correctly infer the type of form
 form.data // { name: string } | { age: string }
 ```
 
-而通过对象的形式却能轻松的推断出类型：
+On the other hand, using objects allows for easy type inference:
 
 ```ts
 const form = defineForm({
@@ -38,13 +37,13 @@ const form = defineForm({
 form.data // { name: string; age: string }
 ```
 
-**组合表单的复用形式不够灵活：**
+**Limited flexibility in reusing combined form fields:**
 
 ```ts
 const nameField = {
   type: 'input',
   key: 'name' as const,
-  // ...其他配置
+  // ...other configurations
 }
 
 const form = defineForm([
@@ -53,12 +52,12 @@ const form = defineForm([
 ])
 ```
 
-对象的复用形式：
+Using object reuse:
 
 ```ts
 const nameField = {
   type: 'input',
-  // ...其他配置
+  // ...other configurations
 }
 const form = defineForm({
   name: nameField,
@@ -66,7 +65,7 @@ const form = defineForm({
 })
 ```
 
-尽管通过数组可以很轻松的操作索引控制表单顺序和显示，然而现实情况是索引却并不直观，而对象也可以通过组合的方式实现动态的表单显示：
+While arrays make it easy to manipulate the order and display of form fields through indexing, the reality is that indexing is not always intuitive. Objects can also achieve dynamic form display through composition:
 
 ```ts
 const formFields = {/* ... */}
@@ -77,17 +76,16 @@ const form = defineForm(() => {
 })
 ```
 
-## defineTable 分页的配置与控制分离
+## Separation of Pagination Configuration and Control in defineTable
 
-在 `NProTable` 中，组件的 `pagination` 仅用于配置分页的显示参数，而 `page` 与 `pageSize` 由 `defineTable` 全程接管，你可以通过 `defineTable` 参数配置这两个参数的初始值。
+In `NProTable`, the `pagination` property of the component is only used to configure the display parameters of pagination, while `page` and `pageSize` are managed entirely by `defineTable`. You can configure the initial values of these two parameters through the arguments of `defineTable`.
 
 ```ts
 const table = defineTable({
-  // ...其他配置
+  // ...other configurations
   page: 2,
   pageSize: 15,
 })
 
-// 你可以通过 table.pagination.page、table.pagination.pageSize 获取当前页码和当前页大小
+// You can access the current page number and page size through table.pagination.page and table.pagination.pageSize
 ```
-

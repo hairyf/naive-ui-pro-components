@@ -4,9 +4,9 @@
 
 ```html
 <!-- App.vue -->
-<n-globals>
+<n-global-provider>
   <content />
-</n-globals>
+</n-global-provider>
 ```
 
 现在你可以在全局中通过使用 `$message`、`$dialog`、`$loadingBar`、`$notification` 来使用这些方法。
