@@ -12,12 +12,14 @@ import { ref } from 'vue'
 export interface OffsetPaginationOptions extends Omit<_OffsetPaginationOptions, 'onPageChange' | 'onPageSizeChange' | 'onPageCountChange'> {
 }
 
-export interface OffsetPagination extends _OffsetPagination {
+export interface OffsetPagination extends Omit<_OffsetPagination, 'currentPage' | 'currentPageSize'> {
+  page: Ref<number>
+  pageSize: Ref<number>
   total: Ref<number>
 }
 export interface ServerPaginationResolve extends Partial<UnwrapNestedRefs<OffsetPagination>> {
-  currentPageSize: number
-  currentPage: number
+  page: number
+  pageSize: number
 }
 
 export function useOffsetPagination(options: _OffsetPaginationOptions = {}): OffsetPagination {
@@ -36,8 +38,8 @@ export function useOffsetPagination(options: _OffsetPaginationOptions = {}): Off
   }) as _OffsetPagination
 
   const returnValue = {
-    currentPage,
-    currentPageSize,
+    page: currentPage,
+    pageSize: currentPageSize,
     pageCount,
     isFirstPage,
     isLastPage,

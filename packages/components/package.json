@@ -1,0 +1,33 @@
+{
+  "name": "@naive-ui/utils",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "./src/index.ts",
+  "publishConfig": {
+    "main": "./dist/index.cjs.js",
+    "types": "./dist/index.d.ts",
+    "module": "./dist/index.esm.js",
+    "unpkg": "./dist/index.iife.min.js",
+    "jsdelivr": "./dist/index.iife.min.js",
+    "exports": {
+      ".": {
+        "import": "./dist/index.esm.js",
+        "require": "./dist/index.cjs.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@naive-ui-pro/controls": "workspace:^",
+    "@naive-ui-pro/form": "workspace:^",
+    "@naive-ui-pro/globals": "workspace:^",
+    "@naive-ui-pro/table": "workspace:^"
+  },
+  "devDependencies": {
+  }
+}

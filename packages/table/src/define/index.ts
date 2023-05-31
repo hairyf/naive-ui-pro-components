@@ -20,8 +20,8 @@ export function defineTable<T extends any[]>(options: DefineTableOptions<T>): Pr
 
   const [request, loading] = useAsyncCallback(
     async (_pagination?: ServerPaginationResolve) => {
-      if (typeof _pagination?.currentPage === 'undefined')
-        pagination.currentPage.value = firstPage.value
+      if (typeof _pagination?.page === 'undefined')
+        pagination.page.value = firstPage.value
       const result = await options.request(reactive(pagination))
       pagination.total.value = result.total
       data.value = result.data
@@ -32,12 +32,12 @@ export function defineTable<T extends any[]>(options: DefineTableOptions<T>): Pr
   const reset = useDebounceFn(() => request(), 50)
   const requestAll = () => requestAllData(options.request)
 
-  watch(pagination.currentPage, (newValue, oldValue) => {
+  watch(pagination.page, (newValue, oldValue) => {
     if (newValue !== oldValue)
       search(reactive(pagination))
   })
 
-  watch(pagination.currentPageSize, () => {
+  watch(pagination.pageSize, () => {
     search(reactive(pagination))
   })
 
@@ -62,7 +62,7 @@ export function defineTable<T extends any[]>(options: DefineTableOptions<T>): Pr
 }
 
 async function requestAllData<T>(request: DefineTableOptions<T>['request']) {
-  const pagination = { currentPage: 1, currentPageSize: 1000 }
+  const pagination = { page: 1, pageSize: 1000 }
   let length = Infinity
   const data: any[] = []
   while (length > 1000) {
@@ -70,7 +70,7 @@ async function requestAllData<T>(request: DefineTableOptions<T>['request']) {
     const array = result.data as any[] || []
     data.push(...array)
     length = array.length
-    pagination.currentPage++
+    pagination.page++
   }
   return data as T
 }

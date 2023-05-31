@@ -60,6 +60,21 @@ importers:
         specifier: 1.0.0-beta.1
         version: 1.0.0-beta.1(@algolia/client-search@4.17.1)(@types/node@20.2.3)
 
+  packages/components:
+    dependencies:
+      '@naive-ui-pro/controls':
+        specifier: workspace:^
+        version: link:../controls
+      '@naive-ui-pro/form':
+        specifier: workspace:^
+        version: link:../form
+      '@naive-ui-pro/globals':
+        specifier: workspace:^
+        version: link:../globals
+      '@naive-ui-pro/table':
+        specifier: workspace:^
+        version: link:../table
+
   packages/config:
     devDependencies:
       esbuild-plugin-globals:

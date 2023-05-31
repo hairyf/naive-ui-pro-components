@@ -12,10 +12,10 @@ function delay(time: number) {
 
 const table = defineTable<Row[]>({
   pageSize: 5,
-  request: async (pagination) => {
+  request: async ({ pageSize }) => {
     await delay(500)
     return {
-      data: Array.from({ length: pagination.currentPageSize }).map((_) => {
+      data: Array.from({ length: pageSize }).map((_) => {
         return { name: 'Jim Green', link: 'https://www.naiveui.com/', linkName: 'NaiveUI' }
       }),
       total: 1000,

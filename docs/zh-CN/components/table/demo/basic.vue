@@ -12,18 +12,18 @@ const columns = useColumns<Row>([
 ])
 
 const table = defineTable<Row[]>({
-  request: () => {
+  request: ({ page, pageSize }) => {
     return {
-      data: [
-        { id: 1, name: 'John Brown' },
-        { id: 2, name: 'Jim Green' },
-        { id: 3, name: 'Joe Black' },
-      ],
-      total: 3,
+      data: Array.from({ length: pageSize }).map((_, i) => {
+        return { id: ((page - 1) * pageSize) + i, name: 'John Brown' }
+      }),
+      total: 1000,
     }
   },
   // 默认开始请求第一页
   immediate: true,
+  // 分页设置
+  pageSize: 5,
 })
 </script>
 

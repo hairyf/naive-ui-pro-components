@@ -18,7 +18,7 @@ export const proTableProps = {
     required: true as const,
   },
   pagination: {
-    type: [Boolean, Object] as PropType<boolean | PaginationProps>,
+    type: [Boolean, Object] as PropType<boolean | Omit<PaginationProps, 'page' | 'pageSize' | 'pageCount'>>,
     default: true as const,
   },
 }
@@ -46,14 +46,6 @@ export const NProTable = defineComponent({
         ...(isObject(props.pagination) ? props.pagination : {}),
       } as PaginationProps
     })
-    const page = computed({
-      get: () => instance.value.pagination.currentPage,
-      set: val => instance.value.pagination.currentPage = val,
-    })
-    const pageSize = computed({
-      get: () => instance.value.pagination.currentPageSize,
-      set: val => instance.value.pagination.currentPageSize = val,
-    })
 
     const minWidth = useTableMinWidth(columns)
 
@@ -70,8 +62,8 @@ export const NProTable = defineComponent({
       <Condition if={showPagination.value} class="n-pro-table__pagination" tag="div">
         <NPagination
           v-models={[
-            [page.value, 'page'],
-            [pageSize.value, 'pageSize'],
+            [instance.value.pagination.page, 'page'],
+            [instance.value.pagination.pageSize, 'pageSize'],
           ]}
           {...pagination.value}
         />
