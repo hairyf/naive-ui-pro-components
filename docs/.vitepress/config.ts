@@ -60,39 +60,33 @@ export default defineConfig({
 })
 
 function defineThemeConfig(lang = 'en-US') {
+  const prefix = lang = lang === 'en-US' ? '/' : `/${lang}/`
+  const componentsNavOrSidebar = {
+    text: 'Components',
+    items: [
+      { text: 'ProForm', link: `${prefix}components/form/` },
+      { text: 'ProTable', link: `${prefix}components/table/` },
+      { text: 'ProControls', link: `${prefix}components/controls/` },
+      { text: 'ProGlobals', link: `${prefix}components/globals/` },
+    ],
+  }
   const themeConfig: DefaultTheme.Config = {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: lang === 'en-US' ? '/' : `/${lang}/` },
-      { text: 'Docs', link: `/${lang}/docs/intro` },
-      {
-        text: 'Components',
-        items: [
-          { text: 'ProForm', link: `/${lang}/components/form/` },
-          { text: 'ProTable', link: `/${lang}/components/table/` },
-          { text: 'ProControls', link: `/${lang}/components/controls/` },
-          { text: 'Globals', link: `/${lang}/components/globals/` },
-        ],
-      },
+      { text: 'Home', link: prefix },
+      { text: 'Docs', link: `${prefix}docs/intro` },
+      componentsNavOrSidebar,
     ],
     sidebar: [
       {
         text: 'Docs',
         items: [
-          { text: 'Introduction', link: `/${lang}/docs/intro` },
-          { text: 'Quick Start', link: `/${lang}/docs/` },
-          { text: 'FAQ', link: `/${lang}/docs/faq` },
+          { text: 'Introduction', link: `${prefix}docs/intro` },
+          { text: 'Quick Start', link: `${prefix}docs/` },
+          { text: 'FAQ', link: `${prefix}docs/faq` },
         ],
       },
-      {
-        text: 'Components',
-        items: [
-          { text: 'ProForm', link: `/${lang}/components/form/` },
-          { text: 'ProTable', link: `/${lang}/components/table/` },
-          { text: 'ProControls', link: `/${lang}/components/controls/` },
-          { text: 'ProGlobals', link: `/${lang}/components/globals/` },
-        ],
-      },
+      componentsNavOrSidebar,
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
