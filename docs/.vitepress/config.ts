@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
-import mitVitepressDemo from 'markdown-it-vitepress-demo'
+import mitDemo from 'markdown-it-vitepress-demo'
 import VueJsx from 'unplugin-vue-jsx/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 
@@ -14,7 +14,7 @@ export default defineConfig({
   ],
   markdown: {
     config(md) {
-      md.use(mitVitepressDemo)
+      md.use(mitDemo)
     },
     theme: {
       dark: 'vitesse-dark',
@@ -41,7 +41,7 @@ export default defineConfig({
       }),
     ],
     ssr: {
-      noExternal: ['naive-ui', 'naive-ui-pro-components'],
+      noExternal: ['naive-ui'],
     },
   },
   locales: {
