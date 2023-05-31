@@ -79,9 +79,7 @@ The `field` method returns a field, and the `clone` method can be used to clone 
 
 | Name | Type | Description |
 | --- | --- | --- |
-| withConfig | `(config) => WithConfigField` | Carry and return
-
- a new configuration |
+| withConfig | `(config) => WithConfigField` | Carry and return a new configuration |
 | preventDefault | `() => WithConfigField` | Set label and rules to empty |
 | preventRequired | `() => WithConfigField` | Remove `required` from rules |
 | preventAutofill | `() => WithConfigField` | Prevent browser autofill |
