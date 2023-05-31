@@ -5,7 +5,7 @@ export default [
     format: ['cjs', 'esm', 'iife', 'iife-min'],
     entry: ['src/index.ts'],
     name: 'naive-ui-pro-components',
-    globalName: 'NaiveProComponents',
+    globalName: 'NaiveUIProComponents',
     globals: {
       'naive-ui': 'naive',
       'vue': 'Vue',
