@@ -24,13 +24,15 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "@naive-ui-pro/controls": "workspace:^",
     "@naive-ui-pro/form": "workspace:^",
     "@naive-ui-pro/globals": "workspace:^",
-    "@naive-ui-pro/table": "workspace:^"
+    "@naive-ui-pro/table": "workspace:^",
+    "vue-demi": "^0.14.5"
   },
   "devDependencies": {
     "unplugin-auto-import": "^0.16.4",

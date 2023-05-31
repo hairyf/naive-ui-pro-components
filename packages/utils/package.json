@@ -20,11 +20,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "defu": "^6.1.2",
     "vue-demi": "^0.14.5"
-  },
-  "devDependencies": {}
+  }
 }
