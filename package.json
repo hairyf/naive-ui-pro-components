@@ -1,6 +1,6 @@
 {
   "name": "naive-ui-pro-components-monorepo",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "preview": true,
   "scripts": {
     "release": "bumpp -r & pnpm -r publish --no-git-checks --access public",
