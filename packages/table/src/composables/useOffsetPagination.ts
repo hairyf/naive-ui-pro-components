@@ -16,6 +16,8 @@ export interface OffsetPagination extends _OffsetPagination {
   total: Ref<number>
 }
 export interface ServerPaginationResolve extends Partial<UnwrapNestedRefs<OffsetPagination>> {
+  currentPageSize: number
+  currentPage: number
 }
 
 export function useOffsetPagination(options: _OffsetPaginationOptions = {}): OffsetPagination {

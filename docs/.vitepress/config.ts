@@ -76,7 +76,7 @@ function defineThemeConfig(lang = 'en-US') {
           { text: 'ProForm', link: `/${lang}/components/form/` },
           { text: 'ProTable', link: `/${lang}/components/table/` },
           { text: 'ProControls', link: `/${lang}/components/controls/` },
-          { text: 'Globals', link: `/${lang}/components/globals/` },
+          { text: 'ProGlobals', link: `/${lang}/components/globals/` },
         ],
       },
     ],

@@ -6,10 +6,16 @@ interface Row {
   link: string
 }
 
+function delay(time: number) {
+  return new Promise<void>(resolve => setTimeout(() => resolve(), time))
+}
+
 const table = defineTable<Row[]>({
-  request: () => {
+  pageSize: 5,
+  request: async (pagination) => {
+    await delay(500)
     return {
-      data: Array.from({ length: 1000 }).map((_) => {
+      data: Array.from({ length: pagination.currentPageSize }).map((_) => {
         return { name: 'Jim Green', link: 'https://www.naiveui.com/', linkName: 'NaiveUI' }
       }),
       total: 1000,
