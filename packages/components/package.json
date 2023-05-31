@@ -27,10 +27,10 @@
     "build": "tsup"
   },
   "dependencies": {
-    "@naive-ui-pro/controls": "workspace:^",
-    "@naive-ui-pro/form": "workspace:^",
-    "@naive-ui-pro/globals": "workspace:^",
-    "@naive-ui-pro/table": "workspace:^",
+    "@naive-ui-pro/controls": "workspace:*",
+    "@naive-ui-pro/form": "workspace:*",
+    "@naive-ui-pro/globals": "workspace:*",
+    "@naive-ui-pro/table": "workspace:*",
     "vue-demi": "^0.14.5"
   },
   "devDependencies": {
