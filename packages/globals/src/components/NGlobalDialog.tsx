@@ -1,6 +1,6 @@
 import type { XDialogProviderInst } from 'naive-ui'
 import { NDialogProvider, useDialog } from 'naive-ui'
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue-demi'
 import { createDeferred, packer } from '../utils'
 
 export const NGlobalDialog = defineComponent({

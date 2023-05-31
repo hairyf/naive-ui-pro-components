@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { DataTableInst } from 'naive-ui'
-import { ref } from 'vue'
+import { ref } from 'vue-demi'
 import type { ColumnKey, FilterState } from 'naive-ui/es/data-table/src/interface'
 import type { OffsetPaginationOptions } from './useOffsetPagination'
 import { useOffsetPagination } from './useOffsetPagination'

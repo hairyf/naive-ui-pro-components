@@ -1,5 +1,5 @@
 import { NNotificationProvider, useNotification } from 'naive-ui'
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue-demi'
 
 export const NGlobalNotification = defineComponent({
   name: 'NGlobalNotification',

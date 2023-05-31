@@ -1,4 +1,4 @@
-import type { App } from 'vue'
+import type { App } from 'vue-demi'
 import { NProForm } from '@naive-ui-pro/form'
 import { NProTable } from '@naive-ui-pro/table'
 import { NGlobalDialog, NGlobalMessage, NGlobalNotification, NGlobalProvider, NInstallProvider } from '@naive-ui-pro/globals'

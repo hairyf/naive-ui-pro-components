@@ -1,5 +1,5 @@
-import type { Component, PropType, VNode } from 'vue'
-import { computed, defineComponent, h } from 'vue'
+import type { Component, PropType, VNode } from 'vue-demi'
+import { computed, defineComponent, h } from 'vue-demi'
 
 export const NInstallProvider = defineComponent({
   props: {

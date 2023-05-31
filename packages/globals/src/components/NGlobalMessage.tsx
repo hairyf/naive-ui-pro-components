@@ -1,7 +1,7 @@
 import type { XMessageApiInjection } from 'naive-ui'
 import { NMessageProvider, useMessage } from 'naive-ui'
 
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue-demi'
 import { createDeferred, packer } from '../utils'
 
 export const NGlobalMessage = defineComponent({

@@ -6,8 +6,8 @@ import {
   useOffsetPagination as _useOffsetPagination,
 } from '@vueuse/core'
 
-import type { Ref, UnwrapNestedRefs } from 'vue'
-import { ref } from 'vue'
+import type { Ref, UnwrapNestedRefs } from 'vue-demi'
+import { ref } from 'vue-demi'
 
 export interface OffsetPaginationOptions extends Omit<_OffsetPaginationOptions, 'onPageChange' | 'onPageSizeChange' | 'onPageCountChange'> {
 }

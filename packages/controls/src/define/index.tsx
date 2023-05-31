@@ -1,6 +1,6 @@
 import { NButton, c } from 'naive-ui'
-import type { PropType } from 'vue'
-import { defineComponent, h } from 'vue'
+import type { PropType } from 'vue-demi'
+import { defineComponent, h } from 'vue-demi'
 import type { ControlInstance, ControlProps } from '../types'
 import { useControlButtons } from '../composables'
 

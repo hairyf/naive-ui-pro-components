@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue-demi'
 import { NInstallProvider } from './NInstallProvider'
 import { NGlobalLoadingBar } from './NGlobalLoadingBar'
 import { NGlobalDialog } from './NGlobalDialog'
