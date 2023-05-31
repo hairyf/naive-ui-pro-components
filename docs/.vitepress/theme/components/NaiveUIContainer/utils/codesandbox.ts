@@ -17,15 +17,9 @@ const indexHtml = `<!DOCTYPE html>
 `
 
 const appVue = `<template>
-<n-loading-bar-provider>
-  <n-message-provider>
-    <n-notification-provider>
-      <n-dialog-provider>
-        <demo />
-      </n-dialog-provider>
-    </n-notification-provider>
-  </n-message-provider>
-</n-loading-bar-provider>
+  <n-global-provider>
+    <demo />
+  </n-global-provider>
 </template>
 
 <script>
@@ -71,6 +65,7 @@ export function getCodeSandboxParams(code: string) {
             'vue': 'next',
             'vue-router': 'next',
             'naive-ui': 'latest',
+            'naive-ui-pro-components': 'latest',
           },
           devDependencies: {
             '@vue/cli-plugin-babel': '~4.5.0',
