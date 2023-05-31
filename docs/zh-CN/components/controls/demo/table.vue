@@ -1,7 +1,8 @@
-<script lang="ts" setup>
-import { defineControls } from '@naive-ui-pro/controls'
-import ProTable, { defineTable, useColumns } from '@naive-ui-pro/table'
+<template>
+  <n-pro-table :instance="table" :columns="columns" />
+</template>
 
+<script lang="ts" setup>
 interface Row {
   id: number
   name: string
@@ -39,9 +40,3 @@ const table = defineTable<Row[]>({
   },
 })
 </script>
-
-<template>
-  <ProTable :instance="table" :columns="columns" />
-</template>
-
-<style lang="scss" scoped></style>

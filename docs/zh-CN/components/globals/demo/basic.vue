@@ -1,6 +1,8 @@
-<script lang="ts" setup>
-import { defineControls } from '@naive-ui-pro/controls'
+<template>
+  <component :is="controls" />
+</template>
 
+<script lang="ts" setup>
 function delay(time: number) {
   return new Promise<void>(resolve => setTimeout(() => resolve(), time))
 }
@@ -47,7 +49,3 @@ I cant get no, I cant get no`,
   },
 ])
 </script>
-
-<template>
-  <component :is="controls" />
-</template>

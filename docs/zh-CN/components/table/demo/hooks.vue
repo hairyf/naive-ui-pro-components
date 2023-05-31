@@ -1,6 +1,8 @@
-<script lang="ts" setup>
-import NProTable, { defineTable, useColumnIndexes, useColumnLink, useColumns } from '@naive-ui-pro/table'
+<template>
+  <n-pro-table :instance="table" :columns="columns" />
+</template>
 
+<script lang="ts" setup>
 interface Row {
   name: string
   link: string
@@ -33,7 +35,3 @@ const columns = useColumns<Row>([
   useColumnLink('link', { key: 'linkName' }),
 ])
 </script>
-
-<template>
-  <n-pro-table :instance="table" :columns="columns" />
-</template>

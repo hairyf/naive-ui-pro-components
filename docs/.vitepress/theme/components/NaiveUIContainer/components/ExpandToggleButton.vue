@@ -1,13 +1,3 @@
-<script lang="ts" setup>
-import CodeOutline from '@vicons/ionicons5/CodeOutline.js'
-
-defineProps<{
-  tooltip?: string
-}>()
-
-const emit = defineEmits(['click'])
-</script>
-
 <template>
   <NTooltip>
     <template #trigger>
@@ -28,3 +18,13 @@ const emit = defineEmits(['click'])
     {{ tooltip }}
   </NTooltip>
 </template>
+
+<script lang="ts" setup>
+import CodeOutline from '@vicons/ionicons5/CodeOutline.js'
+
+defineProps<{
+  tooltip?: string
+}>()
+
+const emit = defineEmits(['click'])
+</script>

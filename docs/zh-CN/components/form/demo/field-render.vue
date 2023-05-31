@@ -1,5 +1,8 @@
+<template>
+  <n-pro-form :instance="form" />
+</template>
+
 <script lang="ts" setup>
-import NProForm, { defineForm, field } from '@naive-ui-pro/form'
 import { NRadio, NRadioGroup, NSpace } from 'naive-ui'
 import { h } from 'vue'
 
@@ -36,7 +39,3 @@ const form = defineForm({
   email: emailField.withConfig({ span: 12 }),
 })
 </script>
-
-<template>
-  <n-pro-form :instance="form" />
-</template>

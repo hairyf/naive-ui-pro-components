@@ -2,7 +2,8 @@
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import './style.css'
-import naive from 'naive-ui'
+import NaiveUI from 'naive-ui'
+import NaiveUIProComponent from 'naive-ui-pro-components'
 import NaiveUIContainer from './components/NaiveUIContainer/index.vue'
 import Outline from './components/Outline/index.vue'
 
@@ -23,7 +24,8 @@ export default {
     })
   },
   enhanceApp({ app }) {
-    app.use(naive)
+    app.use(NaiveUI)
+    app.use(NaiveUIProComponent)
     app.component('DemoContainer', NaiveUIContainer)
   },
 }

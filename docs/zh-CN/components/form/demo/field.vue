@@ -1,6 +1,8 @@
-<script lang="ts" setup>
-import NProForm, { defineForm, field } from '@naive-ui-pro/form'
+<template>
+  <n-pro-form :instance="form" />
+</template>
 
+<script lang="ts" setup>
 // fields.ts
 const emailField = field({
   type: 'input',
@@ -27,7 +29,3 @@ const form = defineForm({
     }),
 })
 </script>
-
-<template>
-  <n-pro-form :instance="form" />
-</template>

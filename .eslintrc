@@ -4,6 +4,7 @@
     "@typescript-eslint/no-use-before-define": "off",
     "vue/component-name-in-template-casing": "off",
     "no-alert": "off",
-    "vue/one-component-per-file": "off"
+    "vue/one-component-per-file": "off",
+    "vue/component-tags-order": ["error", { "order": ["template", "script", "style"] }]
   }
 }

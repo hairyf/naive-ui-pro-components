@@ -1,21 +1,3 @@
-<script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { getCodeSandboxParams } from '../utils'
-
-export default defineComponent({
-  name: 'EditInCodeSandboxButton',
-  props: {
-    code: String,
-    tooltip: String,
-  },
-  setup(props) {
-    return {
-      parameters: computed(() => getCodeSandboxParams(props.code || '')),
-    }
-  },
-})
-</script>
-
 <template>
   <n-tooltip>
     <template #trigger>
@@ -38,3 +20,21 @@ export default defineComponent({
     {{ tooltip }}
   </n-tooltip>
 </template>
+
+<script lang="ts">
+import { computed, defineComponent } from 'vue'
+import { getCodeSandboxParams } from '../utils'
+
+export default defineComponent({
+  name: 'EditInCodeSandboxButton',
+  props: {
+    code: String,
+    tooltip: String,
+  },
+  setup(props) {
+    return {
+      parameters: computed(() => getCodeSandboxParams(props.code || '')),
+    }
+  },
+})
+</script>

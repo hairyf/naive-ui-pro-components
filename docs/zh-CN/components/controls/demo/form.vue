@@ -1,7 +1,8 @@
-<script lang="ts" setup>
-import { defineControls } from '@naive-ui-pro/controls'
-import NProForm, { defineForm } from '@naive-ui-pro/form'
+<template>
+  <n-pro-form :instance="form" :toolbars="toolbars" />
+</template>
 
+<script lang="ts" setup>
 function delay(time: number) {
   return new Promise<void>(resolve => setTimeout(() => resolve(), time))
 }
@@ -33,7 +34,3 @@ const toolbars = defineControls([
   },
 ])
 </script>
-
-<template>
-  <n-pro-form :instance="form" :toolbars="toolbars" />
-</template>

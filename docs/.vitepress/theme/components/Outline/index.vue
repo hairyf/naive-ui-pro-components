@@ -1,3 +1,15 @@
+<template>
+  <div v-if="headers.length > 0" class="VPDocOutlineDropdown">
+    <button :class="{ open }" @click="open = !open">
+      {{ resolveTitle(theme) }}
+      <VPIconChevronRight class="icon" />
+    </button>
+    <div v-if="open" class="items">
+      <VPDocOutlineItem :headers="headers" />
+    </div>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { ref, shallowRef } from 'vue'
 import { onContentUpdated, useData } from 'vitepress'
@@ -15,18 +27,6 @@ onContentUpdated(() => {
   headers.value = getHeaders(frontmatter.value.outline)
 })
 </script>
-
-<template>
-  <div v-if="headers.length > 0" class="VPDocOutlineDropdown">
-    <button :class="{ open }" @click="open = !open">
-      {{ resolveTitle(theme) }}
-      <VPIconChevronRight class="icon" />
-    </button>
-    <div v-if="open" class="items">
-      <VPDocOutlineItem :headers="headers" />
-    </div>
-  </div>
-</template>
 
 <style scoped>
 .VPDocOutlineDropdown {

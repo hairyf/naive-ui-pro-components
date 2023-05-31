@@ -1,8 +1,10 @@
 <!-- eslint-disable no-console -->
-<script lang="ts" setup>
-import { defineControls } from '@naive-ui-pro/controls'
-import NProTable, { defineTable, useColumns } from '@naive-ui-pro/table'
+<template>
+  <component :is="controls" style="margin-bottom: 24px;" />
+  <n-pro-table :instance="table" :columns="columns" />
+</template>
 
+<script lang="ts" setup>
 interface Row {
   id: number
   name: string
@@ -53,8 +55,3 @@ const controls = defineControls([
   },
 ])
 </script>
-
-<template>
-  <component :is="controls" style="margin-bottom: 24px;" />
-  <n-pro-table :instance="table" :columns="columns" />
-</template>

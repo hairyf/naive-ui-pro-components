@@ -1,8 +1,9 @@
+<template>
+  <n-pro-form :instance="form" />
+  <n-pro-table :instance="table" :columns="columns" />
+</template>
+
 <script lang="ts" setup>
-import NProForm, { defineForm } from '@naive-ui-pro/form'
-
-import NProTable, { defineTable, useColumns } from '@naive-ui-pro/table'
-
 interface Row {
   id: number
   name: string
@@ -43,8 +44,3 @@ const table = defineTable<Row[]>({
   watcher: [form.data],
 })
 </script>
-
-<template>
-  <n-pro-form :instance="form" />
-  <n-pro-table :instance="table" :columns="columns" />
-</template>

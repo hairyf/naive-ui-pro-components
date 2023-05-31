@@ -1,6 +1,8 @@
-<script lang="ts" setup>
-import NProForm, { defineForm } from '@naive-ui-pro/form'
+<template>
+  <n-pro-form :instance="form" />
+</template>
 
+<script lang="ts" setup>
 const form = defineForm({
   brandNum: {
     type: 'input',
@@ -13,7 +15,3 @@ const form = defineForm({
   time: { type: 'date-picker' },
 })
 </script>
-
-<template>
-  <n-pro-form :instance="form" />
-</template>

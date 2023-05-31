@@ -1,3 +1,25 @@
+<template>
+  <n-tooltip>
+    <template #trigger>
+      <n-button
+        class="edit-button"
+        size="tiny"
+        text
+        target="_blank"
+        :style="{ padding: 0 }"
+        @click="open"
+      >
+        <template #icon>
+          <n-icon>
+            <EditIcon />
+          </n-icon>
+        </template>
+      </n-button>
+    </template>
+    {{ tooltip }}
+  </n-tooltip>
+</template>
+
 <script lang="ts">
 import { defineComponent } from 'vue'
 import EditIcon from '@vicons/fluent/Compose16Regular.js'
@@ -25,25 +47,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<template>
-  <n-tooltip>
-    <template #trigger>
-      <n-button
-        class="edit-button"
-        size="tiny"
-        text
-        target="_blank"
-        :style="{ padding: 0 }"
-        @click="open"
-      >
-        <template #icon>
-          <n-icon>
-            <EditIcon />
-          </n-icon>
-        </template>
-      </n-button>
-    </template>
-    {{ tooltip }}
-  </n-tooltip>
-</template>

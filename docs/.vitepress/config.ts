@@ -2,6 +2,7 @@ import type { DefaultTheme } from 'vitepress'
 import { defineConfig } from 'vitepress'
 import mitVitepressDemo from 'markdown-it-vitepress-demo'
 import VueJsx from 'unplugin-vue-jsx/vite'
+import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -23,6 +24,21 @@ export default defineConfig({
   vite: {
     plugins: [
       VueJsx({}),
+      AutoImport({
+        imports: [
+          {
+            'naive-ui-pro-components': [
+              'defineForm',
+              'defineTable',
+              'field',
+              'useColumnIndexes',
+              'useColumnLink',
+              'useColumns',
+              'defineControls',
+            ],
+          },
+        ],
+      }),
     ],
     // fix: https://github.com/vuejs/vitepress/issues/1905
     ssr: {

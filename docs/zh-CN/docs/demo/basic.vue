@@ -1,5 +1,9 @@
+<template>
+  <n-pro-form :instance="form" />
+  <pre>{{ JSON.stringify(form.dataTrans, null, 2) }}</pre>
+</template>
+
 <script lang="ts" setup>
-import NProForm, { defineForm } from '@naive-ui-pro/form'
 import { ref } from 'vue'
 
 const email = ref('')
@@ -18,8 +22,3 @@ const form = defineForm({
   time: { type: 'date-picker' },
 })
 </script>
-
-<template>
-  <n-pro-form :instance="form" />
-  <pre>{{ JSON.stringify(form.dataTrans, null, 2) }}</pre>
-</template>

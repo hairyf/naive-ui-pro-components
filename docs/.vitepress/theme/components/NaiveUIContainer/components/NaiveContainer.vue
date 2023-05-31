@@ -1,24 +1,7 @@
-<script lang="ts" setup>
-import { NCard, NConfigProvider, darkTheme, lightTheme } from 'naive-ui'
-import NGlobalProvider from '@naive-ui-pro/globals'
-import { useData } from 'vitepress'
-
-const props = defineProps<{
-  title: string
-  id: string
-}>()
-
-const { isDark } = useData()
-
-function handleTitleClick() {
-  window.location.hash = `#${props.id}`
-}
-</script>
-
 <template>
-  <NConfigProvider :theme="isDark ? darkTheme : lightTheme">
-    <NGlobalProvider>
-      <NCard
+  <n-config-provider :theme="isDark ? darkTheme : lightTheme">
+    <n-global-provider>
+      <n-card
         :id="id"
         class="demo-card"
         :segmented="{
@@ -42,10 +25,26 @@ function handleTitleClick() {
         <template #footer>
           <slot name="footer" />
         </template>
-      </NCard>
-    </NGlobalProvider>
-  </NConfigProvider>
+      </n-card>
+    </n-global-provider>
+  </n-config-provider>
 </template>
+
+<script lang="ts" setup>
+import { darkTheme, lightTheme } from 'naive-ui'
+import { useData } from 'vitepress'
+
+const props = defineProps<{
+  title: string
+  id: string
+}>()
+
+const { isDark } = useData()
+
+function handleTitleClick() {
+  window.location.hash = `#${props.id}`
+}
+</script>
 
 <style>
   .demo-card {

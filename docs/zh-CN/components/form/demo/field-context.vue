@@ -1,6 +1,8 @@
-<script lang="ts" setup>
-import NProForm, { defineForm, field } from '@naive-ui-pro/form'
+<template>
+  <n-pro-form :instance="form" />
+</template>
 
+<script lang="ts" setup>
 // 创建 field 时访问 form 上下文
 function createConfirmEmail(key: string) {
   return field(({ data }) => {
@@ -46,7 +48,3 @@ const form = defineForm({
   confirmPassword: confirmPasswordField,
 })
 </script>
-
-<template>
-  <n-pro-form :instance="form" />
-</template>

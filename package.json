@@ -9,12 +9,9 @@
   },
   "dependencies": {
     "@hairy/vue-components": "^0.1.1",
-    "@naive-ui-pro/controls": "workspace:^",
-    "@naive-ui-pro/form": "workspace:^",
-    "@naive-ui-pro/globals": "workspace:^",
-    "@naive-ui-pro/table": "workspace:^",
     "@vicons/ionicons5": "^0.12.0",
     "naive-ui": "^2.34.4",
+    "naive-ui-pro-components": "workspace:^",
     "unplugin-vue-jsx": "^0.2.0",
     "vue": "^3.3.4"
   },
@@ -27,6 +24,7 @@
     "eslint": "^8.41.0",
     "markdown-it-vitepress-demo": "^0.1.2",
     "tsup": "^6.7.0",
+    "unplugin-auto-import": "^0.16.4",
     "vitepress": "1.0.0-beta.1"
   }
 }

@@ -1,6 +1,8 @@
-<script lang="ts" setup>
-import NProForm, { defineForm } from '@naive-ui-pro/form'
+<template>
+  <n-pro-form :instance="form" />
+</template>
 
+<script lang="ts" setup>
 const options = [
   { label: 'Drive My Car', value: 'song1' },
   { label: 'Norwegian Wood', value: 'song2' },
@@ -23,7 +25,3 @@ const form = defineForm({
   },
 })
 </script>
-
-<template>
-  <n-pro-form :instance="form" />
-</template>

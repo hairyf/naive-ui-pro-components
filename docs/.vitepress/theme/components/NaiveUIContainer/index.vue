@@ -1,3 +1,49 @@
+<template>
+  <NaiveContainer :id="metadata.fileName" :title="title">
+    <template #header-extra>
+      <EditOnSandboxButton
+        :code="sfcCode"
+        :tooltip="t('editInCodeSandbox')"
+      />
+      <EditOnGithubButton
+        :relative-path="metadata.relativePath"
+        :tooltip="t('editOnGithub')"
+      />
+      <CopyCodeButton
+        :code="sfcCode"
+        :success-text="t('copySuccess')"
+        :tooltip="t('copyCode')"
+      />
+      <ExpandToggleButton
+        :tooltip="!visible ? t('show') : t('hide')"
+        @click="visible = !visible"
+      />
+    </template>
+    <n-p v-if="$slots.desc" class="desc">
+      <slot name="desc" />
+    </n-p>
+    <slot />
+    <template v-if="visible" #footer>
+      <n-tabs
+        v-if="isUsingTs"
+        size="small"
+        type="segment"
+        style="padding: 12px 24px 0 24px"
+        animated
+        @update:value="($e) => (showTs = $e === 'ts')"
+      >
+        <n-tab name="ts">
+          TypeScript
+        </n-tab>
+        <n-tab name="js">
+          JavaScript
+        </n-tab>
+      </n-tabs>
+      <div class="language-vue" v-html="highlightedHtml" />
+    </template>
+  </NaiveContainer>
+</template>
+
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import NaiveContainer from './components/NaiveContainer.vue'
@@ -51,52 +97,6 @@ const showTs = ref(isUsingTs.value)
 
 const highlightedHtml = computed(() => decodeURIComponent(showTs.value ? props.sfcTsHtml : props.sfcJsHtml))
 </script>
-
-<template>
-  <NaiveContainer :id="metadata.fileName" :title="title">
-    <template #header-extra>
-      <EditOnSandboxButton
-        :code="sfcCode"
-        :tooltip="t('editInCodeSandbox')"
-      />
-      <EditOnGithubButton
-        :relative-path="metadata.relativePath"
-        :tooltip="t('editOnGithub')"
-      />
-      <CopyCodeButton
-        :code="sfcCode"
-        :success-text="t('copySuccess')"
-        :tooltip="t('copyCode')"
-      />
-      <ExpandToggleButton
-        :tooltip="!visible ? t('show') : t('hide')"
-        @click="visible = !visible"
-      />
-    </template>
-    <n-p v-if="$slots.desc" class="desc">
-      <slot name="desc" />
-    </n-p>
-    <slot />
-    <template v-if="visible" #footer>
-      <n-tabs
-        v-if="isUsingTs"
-        size="small"
-        type="segment"
-        style="padding: 12px 24px 0 24px"
-        animated
-        @update:value="($e) => (showTs = $e === 'ts')"
-      >
-        <n-tab name="ts">
-          TypeScript
-        </n-tab>
-        <n-tab name="js">
-          JavaScript
-        </n-tab>
-      </n-tabs>
-      <div class="language-vue" v-html="highlightedHtml" />
-    </template>
-  </NaiveContainer>
-</template>
 
 <style>
   .desc:not(:empty) {

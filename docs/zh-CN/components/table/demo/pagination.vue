@@ -1,6 +1,9 @@
-<script lang="ts" setup>
-import NProTable, { defineTable, useColumns } from '@naive-ui-pro/table'
+<template>
+  <n-pro-table style="margin-bottom: 24px;" :instance="table" :columns="columns" :pagination="false" />
+  <n-pro-table :instance="table" :columns="columns" :pagination="{ showSizePicker: false }" />
+</template>
 
+<script lang="ts" setup>
 interface Row {
   id: number
   name: string
@@ -24,8 +27,3 @@ const table = defineTable<Row[]>({
   },
 })
 </script>
-
-<template>
-  <n-pro-table style="margin-bottom: 24px;" :instance="table" :columns="columns" :pagination="false" />
-  <n-pro-table :instance="table" :columns="columns" :pagination="{ showSizePicker: false }" />
-</template>
