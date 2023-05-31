@@ -1,6 +1,6 @@
 {
   "name": "@naive-ui-pro/config",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "main": "index.js",
   "devDependencies": {
