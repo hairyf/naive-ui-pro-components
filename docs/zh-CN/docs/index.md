@@ -1,6 +1,6 @@
-# Pro Components
+# Naive UI Pro Components
 
-Pro Components 是基于 Naive UI 开发的一套高级组件超集。它提供了更高层次的抽象和封装，具备开箱即用的可用性，并显著提高了创建 CRUD 页面的效率，专注于页面开发。
+Pro Components 是基于 Naive UI 开发的一套高级组件。它提供了更高层次的抽象和封装，具备开箱即用的可用性，并显著提高了创建 CRUD 页面的效率，专注于页面开发。
 
 ## Features
 
@@ -10,7 +10,7 @@ Pro Components 是基于 Naive UI 开发的一套高级组件超集。它提供�
 - [ProGlobals](/zh-CN/components/globals/) 全局反馈组件挂载、优化
 - 开发中...
 
-## Installation
+## 安装
 
 pro-components 中的每个组件都是一个独立的包。您也可以安装 `naive-ui-pro-components` 来使用所有组件。
 
@@ -23,37 +23,68 @@ pnpm add @naive-ui-pro/table
 pnpm add naive-ui-pro-components
 ```
 
-## Using in a project
+## 完整引入
 
-```vue
-<script lang="ts" setup>
-import ProForm, { defineForm, field } from '@naive-ui-pro/form'
+```ts
+import { createApp } from 'vue'
+import NaiveUIProComponents from 'naive-ui-pro-components'
+import App from './App.vue'
 
-const email = ref('')
+const app = createApp(App)
 
-const form = defineForm({
-  userName: {
-    type: 'input',
-    placeholder: '请输入',
-  },
-  email: {
-    type: 'input',
-    value: email,
-    span: 12,
-  },
-  // 使用 field 函数获得额外的功能
-  password: field({
-    type: 'input',
-    rules: [/* ... */],
-    props: { type: 'password' },
-    value: '',
-    span: 12,
-  })
-    .preventAutofill(),
-})
-</script>
-
-<template>
-  <pro-form :instance="form" />
-</template>
+app.use(NaiveUIProComponents)
 ```
+
+## 按需导入（推荐）
+
+安装 unplugin-vue-components 和 unplugin-auto-import 这两款插件，它们将自动导入 naive-ui-pro-components 的所有组件与 API。
+
+```sh
+npm install -D unplugin-vue-components unplugin-auto-import
+```
+
+### Vite
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import NaiveUIProResolves from 'naive-ui-pro-components/resolvers'
+
+export default defineConfig({
+  // ...
+  plugins: [
+    // ...
+    AutoImport({
+      resolvers: [NaiveUIProResolves()],
+    }),
+    Components({
+      resolvers: [NaiveUIProResolves()],
+    }),
+  ],
+})
+```
+
+### Webpack
+
+```js
+// webpack.config.js
+const AutoImport = require('unplugin-auto-import/webpack')
+const Components = require('unplugin-vue-components/webpack')
+const NaiveUIProResolves = require('naive-ui-pro-components/resolvers')
+
+module.exports = {
+  // ...
+  plugins: [
+    AutoImport({
+      resolvers: [NaiveUIProResolves()],
+    }),
+    Components({
+      resolvers: [NaiveUIProResolves()],
+    }),
+  ],
+}
+```
+
+<!-- <demo title="Using in a project" src="./demo/basic.vue" /> -->
