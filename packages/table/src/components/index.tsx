@@ -27,6 +27,8 @@ export const NProTable = defineComponent({
   name: 'ProTable',
   props: proTableProps,
   setup(_props) {
+    style.mount()
+
     const customs = ['instance', 'pagination'] as const
     const props = reactivePick(_props, ...customs)
     const tableProps = reactiveOmit(_props, ...customs)
@@ -83,5 +85,3 @@ const style = c([
     userSelect: 'none',
   }),
 ])
-
-style.mount()

@@ -1,7 +1,7 @@
 import type { App } from 'vue'
 import { NProForm } from '@naive-ui-pro/form'
-import { NGlobalDialog, NGlobalMessage, NGlobalNotification, NGlobalProvider, NInstallProvider } from '@naive-ui-pro/globals'
 import { NProTable } from '@naive-ui-pro/table'
+import { NGlobalDialog, NGlobalMessage, NGlobalNotification, NGlobalProvider, NInstallProvider } from '@naive-ui-pro/globals'
 
 export * from '@naive-ui-pro/form'
 export * from '@naive-ui-pro/controls'
