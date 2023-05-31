@@ -24,8 +24,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "prepublishOnly": "pnpm build"
+    "build": "tsup"
   },
   "dependencies": {
     "@naive-ui-pro/controls": "workspace:^",

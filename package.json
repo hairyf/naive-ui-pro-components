@@ -4,7 +4,9 @@
   "private": true,
   "packageManager": "pnpm@8.6.0",
   "scripts": {
-    "release": "bumpp -r & pnpm -r publish --no-git-checks --access public",
+    "build": "turbo run build --parallel",
+    "publish:public": "pnpm -r publish --no-git-checks --access public",
+    "release": "bumpp -r & nr build & nr publish:public",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
@@ -22,6 +24,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.3",
+    "@antfu/ni": "^0.21.3",
     "@naive-ui-pro/config": "workspace:*",
     "@types/node": "^20.2.3",
     "@vicons/fluent": "^0.12.0",
@@ -30,6 +33,7 @@
     "eslint": "^8.41.0",
     "markdown-it-vitepress-demo": "^0.1.2",
     "tsup": "^6.7.0",
+    "turbo": "^1.10.0",
     "vitepress": "1.0.0-beta.1",
     "vitest": "^0.31.0"
   }

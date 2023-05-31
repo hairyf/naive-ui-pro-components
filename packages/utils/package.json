@@ -20,8 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "prepublishOnly": "pnpm build"
+    "build": "tsup"
   },
   "dependencies": {
     "defu": "^6.1.2",
