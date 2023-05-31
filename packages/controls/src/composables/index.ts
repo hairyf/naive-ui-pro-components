@@ -1,4 +1,4 @@
-import { useAsyncCallback } from '@naive-ui/utils'
+import { useAsyncCallback } from '@naive-ui-pro/utils'
 import { computed, reactive } from 'vue-demi'
 import type { ControlProps } from '../types'
 

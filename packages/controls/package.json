@@ -23,7 +23,7 @@
     "build": "tsup"
   },
   "dependencies": {
-    "@naive-ui/utils": "workspace:^",
+    "@naive-ui-pro/utils": "workspace:^",
     "vue-demi": "^0.14.5"
   }
 }

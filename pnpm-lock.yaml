@@ -26,7 +26,7 @@ importers:
       '@antfu/eslint-config':
         specifier: ^0.39.3
         version: 0.39.3(eslint@8.41.0)(typescript@5.0.4)
-      '@naive-ui/config':
+      '@naive-ui-pro/config':
         specifier: workspace:*
         version: link:packages/config
       '@types/node':
@@ -90,7 +90,7 @@ importers:
 
   packages/controls:
     dependencies:
-      '@naive-ui/utils':
+      '@naive-ui-pro/utils':
         specifier: workspace:^
         version: link:../utils
       vue-demi:
@@ -99,7 +99,7 @@ importers:
 
   packages/form:
     dependencies:
-      '@naive-ui/utils':
+      '@naive-ui-pro/utils':
         specifier: workspace:^
         version: link:../utils
       '@vueuse/core':
@@ -120,7 +120,7 @@ importers:
 
   packages/table:
     dependencies:
-      '@naive-ui/utils':
+      '@naive-ui-pro/utils':
         specifier: workspace:^
         version: link:../utils
       '@vueuse/core':

@@ -1,4 +1,4 @@
-import { defineBuildConfig } from '@naive-ui/config'
+import { defineBuildConfig } from '@naive-ui-pro/config'
 
 export default defineBuildConfig({
   format: ['cjs', 'esm', 'iife', 'iife-min'],

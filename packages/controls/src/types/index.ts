@@ -1,4 +1,4 @@
-import type { NestedRefs } from '@naive-ui/utils'
+import type { NestedRefs } from '@naive-ui-pro/utils'
 import type { ButtonProps } from 'naive-ui'
 import type { VNodeChild } from 'vue-demi'
 

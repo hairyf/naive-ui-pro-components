@@ -1,4 +1,4 @@
-import { isFunction, isUndefined, noop } from '@naive-ui/utils'
+import { isFunction, isUndefined, noop } from '@naive-ui-pro/utils'
 import { syncRef } from '@vueuse/core'
 import type { MaybeRef } from 'vue-demi'
 import { computed, reactive, unref } from 'vue-demi'

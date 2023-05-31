@@ -1,7 +1,7 @@
 import type { Ref } from 'vue'
 import { reactive, ref, watch } from 'vue'
 
-import { useAsyncCallback } from '@naive-ui/utils'
+import { useAsyncCallback } from '@naive-ui-pro/utils'
 import { useDebounceFn } from '@vueuse/core'
 import type { OffsetPaginationOptions, ServerPaginationResolve } from '../composables'
 import { useMetadata } from '../composables'

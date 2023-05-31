@@ -5,7 +5,7 @@ import type { PropType } from 'vue'
 import { computed, defineComponent } from 'vue'
 
 import { reactiveOmit, reactivePick } from '@vueuse/core'
-import { Condition, isObject } from '@naive-ui/utils'
+import { Condition, isObject } from '@naive-ui-pro/utils'
 import type { ProTableInstance } from '../types'
 import { useTableMinWidth } from '../composables'
 

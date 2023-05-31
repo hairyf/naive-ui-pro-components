@@ -2,7 +2,7 @@ import type { FormInst, FormItemInst, ShouldRuleBeApplied } from 'naive-ui/es/fo
 import type { Ref } from 'vue-demi'
 import { reactiveComputed } from '@vueuse/core'
 import { ref } from 'vue-demi'
-import { noop } from '@naive-ui/utils'
+import { noop } from '@naive-ui-pro/utils'
 import type { FormItemConfig } from '../types'
 
 export interface Metadata {

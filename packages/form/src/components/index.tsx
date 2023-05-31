@@ -3,7 +3,7 @@ import { computed, defineComponent, toRefs } from 'vue-demi'
 
 import { NForm, NFormItem, NFormItemGi, NGrid, formProps } from 'naive-ui'
 import { reactiveOmit, reactivePick } from '@vueuse/core'
-import { final, render } from '@naive-ui/utils'
+import { final, render } from '@naive-ui-pro/utils'
 import type { FormItemConfig, ProFormInstance } from '../types'
 import { renderItemField } from '../utils'
 
