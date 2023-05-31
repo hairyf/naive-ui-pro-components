@@ -2,19 +2,9 @@
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import './style.css'
-import NaiveUI from 'naive-ui'
-import NaiveUIProComponent from 'naive-ui-pro-components'
 import NaiveUIContainer from './components/NaiveUIContainer/index.vue'
 import Outline from './components/Outline/index.vue'
 
-// fix: global is not defined
-// fix: document is not defined
-if (typeof global !== 'undefined' && !global.document) {
-  global.document = {
-    querySelector: () => ({}),
-    createElement: () => ({}),
-  } as any
-}
 export default {
   ...Theme,
   Layout: () => {
@@ -23,9 +13,13 @@ export default {
       'aside-outline-before': () => h(Outline),
     })
   },
-  enhanceApp({ app }) {
-    app.use(NaiveUI)
-    app.use(NaiveUIProComponent)
+  async enhanceApp({ app }) {
+    if (!import.meta.env.SSR) {
+      const { default: NaiveUI } = await import('naive-ui')
+      const { default: NaiveUIProComponents } = await import('naive-ui-pro-components')
+      app.use(NaiveUI)
+      app.use(NaiveUIProComponents)
+    }
     app.component('DemoContainer', NaiveUIContainer)
   },
 }

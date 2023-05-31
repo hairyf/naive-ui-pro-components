@@ -42,7 +42,7 @@ export default defineConfig({
     ],
     // fix: https://github.com/vuejs/vitepress/issues/1905
     ssr: {
-      noExternal: ['naive-ui'],
+      noExternal: ['naive-ui', 'naive-ui-pro-components'],
     },
   },
   locales: {
@@ -75,9 +75,6 @@ function defineThemeConfig(lang = 'en-US') {
         ],
       },
     ],
-    search: {
-      provider: 'local',
-    },
     sidebar: [
       {
         text: 'Docs',
