@@ -7,7 +7,9 @@
     "release": "bumpp -r & pnpm -r publish --no-git-checks --access public",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
     "@hairy/vue-components": "^0.1.1",

@@ -67,10 +67,10 @@ async function requestAllData<T>(request: DefineTableOptions<T>['request']) {
   const data: any[] = []
   while (length > 1000) {
     const result = await request(pagination as any)
-    const array = result.data as any[] || []
+    const array = result.data as unknown as any[] || []
     data.push(...array)
     length = array.length
     pagination.page++
   }
-  return data as T
+  return data as unknown as T
 }
