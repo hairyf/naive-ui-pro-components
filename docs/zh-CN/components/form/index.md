@@ -4,18 +4,6 @@
 
 高级表单基于对象的函数式编程（functional programming）思想。并将表单数据抽象为一个 JavaScript 对象，通过对这个对象进行操作和封装，让表单数据具有更好的可复用性和可维护性。
 
-<!-- demo -->
-
-组件参数继承：
-
-- [表单 Form - Naive UI](https://www.naiveui.com/zh-CN/light/components/form)
-- [栅格 Grid - Naive UI](https://www.naiveui.com/zh-CN/light/components/grid)
-- [文本输入 Input - Naive UI](https://www.naiveui.com/zh-CN/light/components/input)
-- [选择器 Select - Naive UI](https://www.naiveui.com/zh-CN/light/components/select)
-- [日期选择器 Date Picker - Naive UI](https://www.naiveui.com/zh-CN/light/components/date-picker)
-- [按钮 Button - Naive UI](https://www.naiveui.com/zh-CN/os-theme/components/button)
-- [开关 Switch - Naive UI](https://www.naiveui.com/zh-CN/light/components/switch)
-
 ::: demo src="./demo/basic.vue" title="基础"
 
 高级表单使用 `defineForm` 定义，返回一个表单对象的实例，它会将表单数据进行重组，它具有良好的 Typescript 支持。

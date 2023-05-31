@@ -25,6 +25,7 @@
   "dependencies": {
     "@naive-ui/utils": "workspace:^",
     "@vueuse/core": "^10.1.2",
+    "nanoid": "^4.0.2",
     "vue-demi": "^0.14.5"
   }
 }

@@ -3,7 +3,7 @@ import type { InternalRowData, TableExpandColumn, TableSelectionColumn, TableBas
 import type { MaybeRef, Ref } from 'vue'
 import { computed, unref } from 'vue'
 
-export interface TableBaseColumn<T> extends _TableBaseColumn<T> {
+export interface TableBaseColumn<T = InternalRowData> extends _TableBaseColumn<T> {
   disabled?: boolean | Ref<boolean> | ((row: T, index: number) => boolean)
   text?: string | ((row: T, index: number) => string)
 }

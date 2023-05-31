@@ -66,6 +66,9 @@ export const NProTable = defineComponent({
         data={data.value}
         columns={columns.value}
         loading={instance.value.loading}
+        pagination={{
+          pageSize: pageSize.value,
+        }}
       />
       <Condition if={showPagination.value} class="n-pro-table__pagination" tag="div">
         <NPagination

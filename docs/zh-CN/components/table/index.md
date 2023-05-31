@@ -4,12 +4,6 @@
 
 当你的表格需要与服务端进行交互或者需要多种单元格样式时，ProTable 是不二选择，如果你只是想渲染一个表格，更建议你使用 [data-table](https://www.naiveui.com/zh-CN/os-theme/components/data-table) 或者 [table](https://www.naiveui.com/zh-CN/os-theme/components/table)。
 
-组件参数继承：
-
-- [数据表格 Data Table - Naive UI](https://www.naiveui.com/zh-CN/light/components/data-table)
-- [分页 Pagination - Naive UI](https://www.naiveui.com/zh-CN/light/components/pagination)
-
-
 <demo title="基础" src="./demo/basic.vue" />
 
 ::: demo src="./demo/request.vue" title="外部控制"
@@ -35,6 +29,13 @@
 当表格数据变化时，你可能需要做一些额外的操作，这时你可以通过 `watcher` 参数来监听数据变化，它将会自动重置分页并请求。
 
 :::
+
+::: demo src="./demo/hooks.vue" title="钩子函数"
+
+表格存在一些工具函数，用于快速创建列。
+
+:::
+
 
 ## Props
 

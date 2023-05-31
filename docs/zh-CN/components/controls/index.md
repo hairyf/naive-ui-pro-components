@@ -4,10 +4,6 @@ Pro Controls 通常用于在 Table Columns 与 Form Toolbars 中，它也可以�
 
 它返回一个 Function Component，该 Function Component 会根据传入的参数渲染组件。
 
-组件参数：
-
-- [按钮 Button - Naive UI](https://www.naiveui.com/zh-CN/light/components/button)
-
 <demo src="./demo/basic.vue" title="基础" />
 
 ::: demo src="./demo/form.vue" title="表单工具栏"
