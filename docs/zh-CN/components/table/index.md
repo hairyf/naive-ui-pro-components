@@ -45,3 +45,15 @@
 | pagination | `boolean \| PaginationProps` | `true` | 分页配置 |
 
 > 更多参数参考 [data-table](https://www.naiveui.com/zh-CN/os-theme/components/data-table)。
+
+## Methods（table）
+
+| 名称 | 类型 | 说明 |
+| --- | --- | --- |
+| pagination | `OffsetPagination` | 表单分页配置 |
+| next | `() => void` | 跳转下一页，并请求相关页面 |
+| prev | `() => void` | 跳转上一页，并请求相关页面 |
+| search | `(pagination?: ServerPaginationResolve) => Promise<void>` | 根据分页信息重新请求内容 |
+| reset | `() => Promise<void>` | 重置页码并重新请求 |
+| request | `(pagination: ServerPaginationResolve) => DataResolved<T> \| Promise<DataResolved<T>>` | 源请求函数 |
+| requestAll | `() => Promise<T>` | 根据页码相关信息请求所有数据，一般可用于组合 `.csv` 文件 |
