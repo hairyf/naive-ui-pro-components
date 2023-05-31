@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, shallowRef } from 'vue'
+import { nextTick, ref, shallowRef } from 'vue'
 import { onContentUpdated, useData } from 'vitepress'
 
 import VPIconChevronRight from 'vitepress/dist/client/theme-default/components//icons/VPIconChevronRight.vue'
@@ -23,7 +23,8 @@ const { frontmatter, theme } = useData()
 const open = ref(true)
 const headers = shallowRef<any[]>([])
 
-onContentUpdated(() => {
+onContentUpdated(async () => {
+  await nextTick()
   headers.value = getHeaders(frontmatter.value.outline)
 })
 </script>

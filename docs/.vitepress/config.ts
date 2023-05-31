@@ -81,6 +81,7 @@ function defineThemeConfig(lang = 'en-US') {
         items: [
           { text: 'Introduction', link: `/${lang}/docs/intro` },
           { text: 'Quick Start', link: `/${lang}/docs/` },
+          { text: 'FAQ', link: `/${lang}/docs/faq` },
         ],
       },
       {
