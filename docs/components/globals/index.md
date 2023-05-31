@@ -4,9 +4,9 @@ All global components provided by `naive-ui` cannot be used in the global scope 
 
 ```html
 <!-- App.vue -->
-<n-globals>
+<n-global-provider>
   <content />
-</n-globals>
+</n-global-provider>
 ```
 
 Now you can use `$message`, `$dialog`, `$loadingBar`, `$notification` in the global scope.
