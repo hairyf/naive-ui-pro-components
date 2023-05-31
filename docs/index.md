@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Naive UI Pro Components"
-  text: "Superset of Naive UI"
+  text: "Naive UI"
   tagline: Make the development of middle and back office easier
   image: /logo.svg
   actions:

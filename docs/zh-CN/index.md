@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Naive UI Pro Components"
-  text: "Naive UI 超集"
+  text: "Naive UI"
   tagline: 让中后台开发简单快捷
   image: /logo.svg
   actions:
