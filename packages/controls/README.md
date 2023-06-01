@@ -45,7 +45,8 @@ npm install -D unplugin-vue-components unplugin-auto-import
 import { defineConfig } from 'vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { NaiveUIProImports, NaiveUIProResolver } from 'naive-ui-pro-components/resolvers'
+import NaiveUIProResolver from 'naive-ui-pro-components/resolver'
+import NaiveUIProImports from 'naive-ui-pro-components/imports'
 
 export default defineConfig({
   // ...
@@ -67,7 +68,8 @@ export default defineConfig({
 // webpack.config.js
 const AutoImport = require('unplugin-auto-import/webpack')
 const Components = require('unplugin-vue-components/webpack')
-const { NaiveUIProImports, NaiveUIProResolver } = require('naive-ui-pro-components/resolvers')
+const NaiveUIProResolver = require('naive-ui-pro-components/resolver')
+const NaiveUIProImports = require('naive-ui-pro-components/imports')
 
 module.exports = {
   // ...

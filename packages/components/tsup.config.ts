@@ -15,7 +15,7 @@ export default [
   }),
   {
     format: ['cjs', 'esm'],
-    entry: ['src/resolvers.ts'],
+    entry: ['src/resolver.ts', 'src/imports.ts'],
     dts: true,
   },
 ]

@@ -1,7 +1,6 @@
 import type { ComponentResolver } from 'unplugin-vue-components/types'
-import type { ImportsMap } from 'unplugin-auto-import/types'
 
-export function NaiveUIProResolver(): ComponentResolver {
+function NaiveUIProResolver(): ComponentResolver {
   return {
     type: 'component',
     resolve: (name: string) => {
@@ -15,16 +14,4 @@ export function NaiveUIProResolver(): ComponentResolver {
   }
 }
 
-export function NaiveUIProImports(): ImportsMap {
-  return {
-    'naive-ui-pro-components': [
-      'defineForm',
-      'defineTable',
-      'field',
-      'useColumnIndexes',
-      'useColumnLink',
-      'useColumns',
-      'defineControls',
-    ],
-  }
-}
+export default NaiveUIProResolver

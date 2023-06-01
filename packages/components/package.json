@@ -10,11 +10,17 @@
         "require": "./dist/index.cjs.js",
         "import": "./dist/index.esm.js"
       },
-      "./resolvers": {
-        "types": "./dist/resolvers/index.d.ts",
-        "require": "./dist/resolvers/index.cjs.js",
-        "import": "./dist/resolvers/index.js"
-      }
+      "./resolver": {
+        "types": "./dist/resolver/index.d.ts",
+        "require": "./dist/resolver/index.cjs.js",
+        "import": "./dist/resolver/index.js"
+      },
+      "./imports": {
+        "types": "./dist/imports/index.d.ts",
+        "require": "./dist/imports/index.cjs.js",
+        "import": "./dist/imports/index.js"
+      },
+      "./*": "./*"
     },
     "main": "./dist/index.cjs.js",
     "module": "./dist/index.esm.js",
@@ -22,9 +28,15 @@
     "jsdelivr": "./dist/index.iife.min.js",
     "types": "./dist/index.d.ts"
   },
+  "typesVersions": {
+    "*": { "*": ["./dist/*"] }
+  },
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "build": "tsup"
   },
