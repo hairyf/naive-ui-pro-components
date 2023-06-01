@@ -5,7 +5,7 @@ export function packer<T, K extends keyof T>(target: T, keys: K[], pack: (source
   }
 }
 
-export type Deferred<T = void> = Promise<T> & { resolve: (value: T) => void; reject: Function }
+export type Deferred<T = void> = Promise<T> & { resolve: (value: T) => void; reject: () => void }
 
 export function createDeferred<T = void>(): Deferred<T> {
   let resolve: any, reject: any
