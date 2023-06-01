@@ -6,10 +6,12 @@
   "publishConfig": {
     "exports": {
       ".": {
+        "types": "./dist/index.d.ts",
         "require": "./dist/index.cjs.js",
         "import": "./dist/index.esm.js"
       },
       "./resolvers": {
+        "types": "./dist/resolvers/index.d.ts",
         "require": "./dist/resolvers/index.cjs.js",
         "import": "./dist/resolvers/index.js"
       }
