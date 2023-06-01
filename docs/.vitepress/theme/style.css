@@ -36,14 +36,6 @@
  * Component: Global
  * -------------------------------------------------------------------------- */
 
-:root {
-  --vp-layout-max-width: 1600px;
-}
-
-.VPDoc.has-aside .content-container {
-    max-width: 1000px !important;
-}
-
 /**
  * Component: Home
  * -------------------------------------------------------------------------- */
@@ -126,11 +118,7 @@
     border-radius:0 0 4px 4px;
   }
 }
-@media (min-width: 1280px) {
-  .content {
-    min-width: 945px !important;
-  }
-}
+
 .vp-doc div[class*='language-'] {
   background-color: var(--n-color, var(--vp-code-block-bg));
   transition: color .3s var(--n-bezier), background-color .3s var(--n-bezier), box-shadow .3s var(--n-bezier), border-color .3s var(--n-bezier);
