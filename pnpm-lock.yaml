@@ -17,7 +17,7 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0(vue@3.2.47)
       vue:
-        specifier: ^3.2.47
+        specifier: 3.2.47
         version: 3.2.47
     devDependencies:
       '@antfu/eslint-config':
