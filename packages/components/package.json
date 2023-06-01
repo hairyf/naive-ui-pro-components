@@ -11,14 +11,14 @@
         "import": "./dist/index.esm.js"
       },
       "./resolver": {
-        "types": "./dist/resolver/index.d.ts",
-        "require": "./dist/resolver/index.cjs.js",
-        "import": "./dist/resolver/index.js"
+        "types": "./dist/resolver.d.ts",
+        "require": "./dist/resolver.cjs.js",
+        "import": "./dist/resolver.js"
       },
       "./imports": {
-        "types": "./dist/imports/index.d.ts",
-        "require": "./dist/imports/index.cjs.js",
-        "import": "./dist/imports/index.js"
+        "types": "./dist/imports.d.ts",
+        "require": "./dist/imports.cjs.js",
+        "import": "./dist/imports.js"
       },
       "./*": "./*"
     },
