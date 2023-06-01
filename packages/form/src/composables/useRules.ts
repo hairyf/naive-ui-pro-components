@@ -1,15 +1,16 @@
 import type { FormItemRule } from 'naive-ui'
-import type { MaybeRef } from 'vue'
+import type { MaybeRef } from '@vueuse/core'
 import { computed, unref } from 'vue'
 
-import type { FormItemConfig } from '../types'
+import type { FormItemConfig, FormItemConfigWithKey } from '../types'
 
 export function useRules(values: MaybeRef<Record<string, FormItemConfig>>) {
   return computed(() => {
     const entries = Object.keys(unref(values))
       .map((key) => {
-        const { rules, validate } = unref(values)[key]
-        return [key, parseRules(key, unref(rules), validate)]
+        const value = unref(values)[key] as FormItemConfigWithKey
+        key = value.key || key
+        return [value.key || key, parseRules(key, unref(value.rules), value.validate)]
       })
     return Object.fromEntries(entries)
   })

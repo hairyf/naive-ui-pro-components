@@ -1,4 +1,4 @@
-import type { MaybeRef } from 'vue'
+import type { MaybeRef } from '@vueuse/core'
 import { reactive } from 'vue'
 
 import { useData, useMetadata, useRules, useValues } from '../composables'
