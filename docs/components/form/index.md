@@ -40,6 +40,9 @@ The `renderItem` field allows for custom rendering of form items. If the content
 The `field` method returns a field, and the `clone` method can be used to clone a new field, avoiding reference sharing of field data.
 :::
 
+::: demo src="./demo/toolbars.vue" title="Toolbar"
+Enable the `toolbars` mode, the grid will be fixed as `0:24 742:6 1394:4`, and you can customize the toolbar content through the `toolbars` slot.
+:::
 
 ## Props
 

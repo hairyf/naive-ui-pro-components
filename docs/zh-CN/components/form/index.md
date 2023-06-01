@@ -44,6 +44,10 @@
 通过 `field` 方法返回的字段，使用 `clone` 方法可以克隆一个新的字段，避免字段数据引用是同一个 value。
 :::
 
+::: demo src="./demo/toolbars.vue" title="工具栏"
+开启 `toolbars` 模式，栅格将固定为 `0:24 742:6 1394:4`，你可以通过 `toolbars` 插槽自定义右侧工具栏内容。
+:::
+
 
 ## Props
 
