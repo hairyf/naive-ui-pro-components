@@ -15,12 +15,11 @@
     "typecheck": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
-    "@hairy/vue-components": "^0.1.1",
     "@vicons/ionicons5": "^0.12.0",
     "naive-ui": "^2.34.4",
     "naive-ui-pro-components": "workspace:^",
     "unplugin-vue-jsx": "^0.2.0",
-    "vue": "^3.3.4"
+    "vue": "3.2.47"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.3",
