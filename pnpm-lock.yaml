@@ -53,6 +53,9 @@ importers:
       turbo:
         specifier: ^1.10.0
         version: 1.10.0
+      typescript:
+        specifier: ^5.0.4
+        version: 5.0.4
       vitepress:
         specifier: 1.0.0-alpha.76
         version: 1.0.0-alpha.76(@algolia/client-search@4.17.1)(@types/node@20.2.3)

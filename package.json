@@ -33,6 +33,7 @@
     "markdown-it-vitepress-demo": "^0.1.2",
     "tsup": "^6.7.0",
     "turbo": "^1.10.0",
+    "typescript": "^5.0.4",
     "vitepress": "1.0.0-alpha.76",
     "vitest": "^0.31.0"
   }
