@@ -47,7 +47,7 @@ export function defineTable<T extends any[]>(options: DefineTableOptions<T>): Pr
   if (immediate)
     reset()
 
-  return {
+  return reactive({
     _tableInstRef: tableInstRef,
     data,
     loading,
@@ -58,7 +58,7 @@ export function defineTable<T extends any[]>(options: DefineTableOptions<T>): Pr
     pagination: reactive(pagination),
     prev: pagination.prev,
     next: pagination.next,
-  }
+  })
 }
 
 async function requestAllData<T>(request: DefineTableOptions<T>['request']) {
