@@ -24,7 +24,6 @@ const Component = defineComponent({
 
     style.mount()
 
-    
     function renderCustom(options: ControlParsedProps) {
       return <div class="n-controls__item">{options.custom?.(...props.args)}</div>
     }
@@ -41,9 +40,9 @@ const Component = defineComponent({
 
     return () => <div class="n-controls">
       {buttons.value.map((options) => {
-        return options.custom 
-        ? renderCustom(options) 
-        : renderButton(options)
+        return options.custom
+          ? renderCustom(options)
+          : renderButton(options)
       })}
     </div>
   },

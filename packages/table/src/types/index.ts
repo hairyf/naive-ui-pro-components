@@ -1,4 +1,4 @@
-import type { Ref, UnwrapNestedRefs } from 'vue'
+import type { UnwrapNestedRefs } from 'vue'
 import type { PromisifyFn } from '@vueuse/core'
 import type { DataTableInst } from 'naive-ui'
 import type { OffsetPagination, ServerPaginationResolve } from '../composables'

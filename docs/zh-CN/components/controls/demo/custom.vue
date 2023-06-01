@@ -4,12 +4,8 @@
 
 <script lang="ts" setup>
 import { defineControls } from 'naive-ui-pro-components'
-import { NRadioGroup, NSpace, NRadio } from 'naive-ui'
-import { h } from 'vue';
-
-function delay(time: number) {
-  return new Promise<void>(resolve => setTimeout(() => resolve(), time))
-}
+import { NRadio, NRadioGroup, NSpace } from 'naive-ui'
+import { h } from 'vue'
 
 const controls = defineControls([
   {
@@ -22,7 +18,7 @@ const controls = defineControls([
           h(NRadio, { label: '关闭', value: '1' }),
         ]),
       ],
-    )
+    ),
   },
   {
     render: () => 'Search',
@@ -30,6 +26,6 @@ const controls = defineControls([
   {
     type: 'default',
     render: () => 'Reset',
-  }
+  },
 ])
 </script>

@@ -16,5 +16,5 @@ export interface ControlInstance<T extends any[]> {
 
 export interface ControlParsedProps extends ButtonProps {
   slots?: Record<string, () => any>
-  custom?: (...args:any[]) => VNodeChild | VNodeChild[]
+  custom?: (...args: any[]) => VNodeChild | VNodeChild[]
 }

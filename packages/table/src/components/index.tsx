@@ -1,8 +1,8 @@
 import type { PaginationProps } from 'naive-ui'
 import { NDataTable, NPagination, c, dataTableProps } from 'naive-ui'
 
-import { PropType, reactive, toRefs } from 'vue'
-import { computed, defineComponent } from 'vue'
+import type { PropType } from 'vue'
+import { computed, defineComponent, reactive, toRefs } from 'vue'
 
 import { reactiveOmit, reactivePick } from '@vueuse/core'
 import { Condition, isObject } from '@naive-ui-pro/utils'

@@ -1,9 +1,6 @@
 import { useAsyncCallback } from '@naive-ui-pro/utils'
-import { VNode, VNodeChild, computed, reactive } from 'vue'
+import { computed, reactive } from 'vue'
 import type { ControlParsedProps, ControlProps } from '../types'
-import { ButtonProps } from 'naive-ui'
-
-
 
 export function useControlButtons<T extends any[]>(args: T, controls: ControlProps<T>[]) {
   const buttons = computed(() => {
