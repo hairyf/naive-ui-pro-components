@@ -1,6 +1,7 @@
 import { final } from '@naive-ui-pro/utils'
 import type { InternalRowData, TableExpandColumn, TableSelectionColumn, TableBaseColumn as _TableBaseColumn, TableColumnGroup as _TableColumnGroup } from 'naive-ui/es/data-table/src/interface'
-import type { MaybeRef, Ref } from 'vue'
+import type { MaybeRef } from '@vueuse/core'
+import type { Ref } from 'vue'
 import { computed, unref } from 'vue'
 
 export interface TableBaseColumn<T = InternalRowData> extends _TableBaseColumn<T> {

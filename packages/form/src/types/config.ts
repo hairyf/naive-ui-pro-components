@@ -1,6 +1,7 @@
 import type { NestedRefs } from '@naive-ui-pro/utils'
 import type * as NaiveUI from 'naive-ui'
-import type { MaybeRef, Ref, VNodeChild } from 'vue'
+import type { Ref, VNodeChild } from 'vue'
+import type { MaybeRef } from '@vueuse/core'
 import type { ProFormInstance } from './instance'
 
 export interface FormItemDate {

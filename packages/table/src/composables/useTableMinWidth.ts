@@ -1,4 +1,4 @@
-import type { MaybeRef } from 'vue'
+import type { MaybeRef } from '@vueuse/core'
 import { useArrayMap, useArrayReduce } from '@vueuse/core'
 import type { TableColumns } from './useColumns'
 
