@@ -14,8 +14,8 @@ const controls = defineControls([
       null,
       [
         h(NSpace, [
-          h(NRadio, { label: '开启', value: '0' }),
-          h(NRadio, { label: '关闭', value: '1' }),
+          h(NRadio, { label: 'Enable', value: '0' }),
+          h(NRadio, { label: 'Disable', value: '1' }),
         ]),
       ],
     ),
