@@ -29,11 +29,7 @@
     "types": "./dist/index.d.ts"
   },
   "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*"
-      ]
-    }
+    "*": { "*": ["./dist/*", "./*"] }
   },
   "files": [
     "dist"
