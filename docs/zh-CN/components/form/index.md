@@ -8,6 +8,10 @@
 高级表单使用 `defineForm` 定义，返回一个表单对象的实例，它会将表单数据进行重组，它具有良好的 Typescript 支持。
 :::
 
+::: demo src="./demo/array.vue" title="模式"
+`defineForm` 同时支持数组/对象模式，定义数组时，`key` 是必填项，它会将数组中的字段进行合并。
+:::
+
 
 ::: demo src="./demo/grid.vue" title="栅格"
 对不同的字段的 `span` 进行设置，可以实现不同栅格布局。

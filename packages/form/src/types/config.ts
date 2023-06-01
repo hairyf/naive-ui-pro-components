@@ -107,6 +107,8 @@ export type FormItemConfig<V = any, K = string> = FormItemComponents & {
   validate?: MaybeRef<boolean>
 }
 
+export type FormItemConfigWithKey = (FormItemConfig & { key: string })
+
 export type FormItemFieldConfig<T extends WithFieldConfigExtends> = T & {
   /**
    * set with new config
@@ -137,12 +139,14 @@ export type FormItemFieldConfig<T extends WithFieldConfigExtends> = T & {
    */
   render: () => VNodeChild
 }
-
-export type WithFieldConfigExtends = FormItemConfig | (() => FormItemConfig)
-
-export type WithFieldConfig<T> = T | ((inst: ProFormInstance) => T)
 export type FormItemConfigExport<V = any, K = string> = FormItemConfig<V, K> | ((inst: ProFormInstance) => FormItemConfig<V, K>)
+
+export type WithFieldConfigExtends = FormItemConfig | FormItemConfigWithKey | (() => FormItemConfig | FormItemConfigWithKey)
+export type WithFieldConfig<T> = T | ((inst: ProFormInstance) => T)
+
 export type RecordFormItemConfigExport = Record<string, FormItemConfigExport>
+export type ArrayFormItemConfigExport = FormItemConfigWithKey[]
+export type FormExtendsConfig = RecordFormItemConfigExport | ArrayFormItemConfigExport
 
 export type WithConfig<T extends WithFieldConfigExtends> = (config: WithFieldConfig<FormItemConfig>) => FormItemFieldConfig<T>
 

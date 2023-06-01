@@ -6,15 +6,18 @@ import { computed, reactive, unref } from 'vue-demi'
 import type { FormItemConfig, WithFieldConfigExtends } from '../types'
 import type { Metadata } from './useMetadata'
 
-export function useValues(metadata: Metadata, initialValues: MaybeRef<WithFieldConfigExtends>) {
+export function useValues(metadata: Metadata, initialValues: MaybeRef<WithFieldConfigExtends | FormItemConfig[]>) {
   function parse(): Record<string, FormItemConfig> {
-    const entries = Object.keys(unref(initialValues)).map((key) => {
-      const target = Reflect.get(unref(initialValues), key)
-      const option = isFunction(target) ? target(metadata) : target
+    const values = unref(initialValues)
+    const entries = Object.keys(values).map((key) => {
+      const target = Reflect.get(values, key)
+      const option = isFunction(target)
+        ? target(metadata)
+        : target
       // 修复 naive-ui 无法处理 undefined 的情况
       if (isUndefined(option.value))
         option.value = null
-      return [key, option]
+      return [option.key ?? key, option]
     })
     return reactive(Object.fromEntries(entries))
   }
