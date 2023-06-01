@@ -1,7 +1,7 @@
 import { NButton, c } from 'naive-ui'
 import type { PropType } from 'vue'
 import { defineComponent, h } from 'vue'
-import type { ControlInstance, ControlProps } from '../types'
+import type { ControlInstance, ControlParsedProps, ControlProps } from '../types'
 import { useControlButtons } from '../composables'
 
 export function defineControls<T extends any[]>(controls: ControlProps<T>[]): ControlInstance<T> {
@@ -24,19 +24,36 @@ const Component = defineComponent({
 
     style.mount()
 
+    
+    function renderCustom(options: ControlParsedProps) {
+      return <div class="n-controls__item">{options.custom?.(...props.args)}</div>
+    }
+    function renderButton(options: ControlParsedProps) {
+      const { slots, ...props } = options
+      return <NButton
+        class="n-controls__item"
+        type="primary"
+        {...props}
+      >
+        {{ ...slots }}
+      </NButton>
+    }
+
     return () => <div class="n-controls">
-    {buttons.value.map((rest) => {
-      const { slots, ...props } = rest
-      return <NButton class="n-controls__button" type="primary" {...props}>{{ ...slots }}</NButton>
-    })}
-  </div>
+      {buttons.value.map((options) => {
+        return options.custom 
+        ? renderCustom(options) 
+        : renderButton(options)
+      })}
+    </div>
   },
 })
 
 const style = c('.n-controls', {
   display: 'flex',
+  alignItems: 'center',
 }, [
-  c('.n-controls__button:not(:first-child)', {
+  c('.n-controls__item:not(:first-child)', {
     marginLeft: '12px',
   }),
 ])

@@ -15,6 +15,14 @@ Pro Controls 通常用于在 Table Columns 与 Form Toolbars 中，它也可以�
 
 <demo src="./demo/table.vue" title="表格控件" />
 
+
+
+::: demo src="./demo/custom.vue" title="自定义渲染"
+
+默认情况下，Controls 仅渲染 button 控件，如果需要使用其他组件，可以使用 `custom` 属性。
+
+:::
+
 ## Item Props
 
 | 名称 | 类型 | 默认值 | 说明 |
