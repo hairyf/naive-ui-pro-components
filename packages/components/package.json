@@ -1,7 +1,7 @@
 {
   "name": "naive-ui-pro-components",
   "type": "module",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "./src/index.ts",
   "publishConfig": {
     "exports": {
@@ -29,9 +29,15 @@
     "types": "./dist/index.d.ts"
   },
   "typesVersions": {
-    "*": { "*": ["./dist/*"] }
+    "*": {
+      "*": [
+        "./dist/*"
+      ]
+    }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=14"
   },
