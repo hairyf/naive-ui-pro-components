@@ -1,4 +1,4 @@
-import type { Component, FunctionalComponent, PropType, SlotsType, VNode } from 'vue'
+import type { Component, FunctionalComponent, PropType, VNode } from 'vue'
 import { computed, defineComponent, toRefs } from 'vue'
 
 import { NForm, NFormItem, NFormItemGi, NGrid, formProps } from 'naive-ui'
@@ -50,9 +50,6 @@ export const proFormProps = {
 export const NProForm = defineComponent({
   name: 'ProForm',
   props: proFormProps,
-  slots: {} as SlotsType<{
-    toolbars?: () => void
-  }>,
   setup(_props, { slots }) {
     const customs = ['grid', 'xGap', 'yGap', 'cols', 'instance', 'toolbars'] as const
     const props = reactivePick(_props, ...customs)
