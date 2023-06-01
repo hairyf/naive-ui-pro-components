@@ -25,8 +25,9 @@ By default, Controls only render button controls. If you need to use other compo
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| render | `string \| (...args) => string \| VNode` | `-` | Render the control item |
+| render | `string \| (...args) => string \| VNodeChild` | `-` | Render the button item content |
 | helper | `(...args) => void \| Promise<void>` | `-` | Handle click events, if a `promise` is returned, it will automatically enable `loading` |
 | enable | `(...args) => void \| Promise<void>` | `-` | Whether to enable the control, returning `false` will not render the control |
+| custom | `(...args) => VNodeChild` | `-` | custom render |
 
 > For more parameters, please refer to [n-button](https://www.naiveui.com/zh-CN/light/components/button).
