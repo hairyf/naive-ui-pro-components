@@ -1,6 +1,6 @@
 import type { NestedRefs } from '@naive-ui-pro/utils'
 import type { ButtonProps } from 'naive-ui'
-import type { VNodeChild } from 'vue-demi'
+import type { VNodeChild } from 'vue'
 
 export interface ControlProps<T extends any[]> extends NestedRefs<Omit<ButtonProps, 'onClick' | 'loading' | 'disabled'>> {
   helper?: (...args: T) => Promise<void> | void

@@ -1,6 +1,6 @@
 import { createDefu } from 'defu'
-import type { Component, FunctionalComponent, VNode } from 'vue-demi'
-import { h } from 'vue-demi'
+import type { Component, FunctionalComponent, VNode } from 'vue'
+import { h } from 'vue'
 
 export function noop() { }
 

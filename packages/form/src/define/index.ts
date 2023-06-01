@@ -1,5 +1,5 @@
-import type { MaybeRef } from 'vue-demi'
-import { reactive } from 'vue-demi'
+import type { MaybeRef } from 'vue'
+import { reactive } from 'vue'
 
 import { useData, useMetadata, useRules, useValues } from '../composables'
 import type { FormExtendsConfig, ProFormInstance, RecordFormItemConfigExport } from '../types'

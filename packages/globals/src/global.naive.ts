@@ -1,5 +1,5 @@
 import type { DialogOptions, MessageOptions, MessageType } from 'naive-ui'
-import type { VNodeChild } from 'vue-demi'
+import type { VNodeChild } from 'vue'
 
 declare module 'naive-ui' {
   type XDialogReactive = {

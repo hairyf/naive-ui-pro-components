@@ -1,4 +1,4 @@
-import { ref } from 'vue-demi'
+import { ref } from 'vue'
 
 export function useAsyncCallback<T extends (...args: any[]) => any>(fun: T) {
   const error = ref()

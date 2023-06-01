@@ -1,5 +1,5 @@
-import type { Component, FunctionalComponent, PropType, SlotsType, VNode } from 'vue-demi'
-import { computed, defineComponent, toRefs } from 'vue-demi'
+import type { Component, FunctionalComponent, PropType, SlotsType, VNode } from 'vue'
+import { computed, defineComponent, toRefs } from 'vue'
 
 import { NForm, NFormItem, NFormItemGi, NGrid, formProps } from 'naive-ui'
 import { reactiveOmit, reactivePick } from '@vueuse/core'

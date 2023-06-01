@@ -1,5 +1,5 @@
 import { NLoadingBarProvider, useLoadingBar } from 'naive-ui'
-import { defineComponent } from 'vue-demi'
+import { defineComponent } from 'vue'
 
 export const NGlobalLoadingBar = defineComponent({
   name: 'NGlobalLoadingBar',

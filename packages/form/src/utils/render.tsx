@@ -1,5 +1,5 @@
-import type { Ref } from 'vue-demi'
-import { reactive } from 'vue-demi'
+import type { Ref } from 'vue'
+import { reactive } from 'vue'
 import { final } from '@naive-ui-pro/utils'
 import type { FormItemConfig } from '../types'
 import { FieldComponents } from '../config'

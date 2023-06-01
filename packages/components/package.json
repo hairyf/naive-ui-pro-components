@@ -7,8 +7,8 @@
     "exports": {
       ".": {
         "types": "./dist/index.d.ts",
-        "require": "./dist/index.cjs.js",
-        "import": "./dist/index.esm.js"
+        "require": "./dist/index.cjs",
+        "import": "./dist/index.js"
       },
       "./resolver": {
         "types": "./dist/resolver.d.ts",
@@ -22,22 +22,16 @@
       },
       "./*": "./*"
     },
-    "main": "./dist/index.cjs.js",
-    "module": "./dist/index.esm.js",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
     "unpkg": "./dist/index.iife.min.js",
     "jsdelivr": "./dist/index.iife.min.js",
     "types": "./dist/index.d.ts"
   },
   "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*"
-      ]
-    }
+    "*": { "*": ["./dist/*"] }
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "engines": {
     "node": ">=14"
   },
@@ -49,7 +43,8 @@
     "@naive-ui-pro/form": "workspace:*",
     "@naive-ui-pro/globals": "workspace:*",
     "@naive-ui-pro/table": "workspace:*",
-    "vue-demi": "^0.14.5"
+    "naive-ui": "^2.34.4",
+    "vue": "^3.2.47"
   },
   "devDependencies": {
     "unplugin-auto-import": "^0.16.4",

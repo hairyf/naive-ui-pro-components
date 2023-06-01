@@ -77,9 +77,12 @@ importers:
       '@naive-ui-pro/table':
         specifier: workspace:*
         version: link:../table
-      vue-demi:
-        specifier: ^0.14.5
-        version: 0.14.5(vue@3.3.4)
+      naive-ui:
+        specifier: ^2.34.4
+        version: 2.34.4(vue@3.3.4)
+      vue:
+        specifier: ^3.2.47
+        version: 3.3.4
     devDependencies:
       unplugin-auto-import:
         specifier: ^0.16.4
@@ -99,9 +102,12 @@ importers:
       '@naive-ui-pro/utils':
         specifier: workspace:^
         version: link:../utils
-      vue-demi:
-        specifier: ^0.14.5
-        version: 0.14.5(vue@3.3.4)
+      naive-ui:
+        specifier: ^2.34.4
+        version: 2.34.4(vue@3.3.4)
+      vue:
+        specifier: ^3.2.47
+        version: 3.3.4
 
   packages/form:
     dependencies:
@@ -111,18 +117,24 @@ importers:
       '@vueuse/core':
         specifier: ^10.1.2
         version: 10.1.2(vue@3.3.4)
-      vue-demi:
-        specifier: ^0.14.5
-        version: 0.14.5(vue@3.3.4)
+      naive-ui:
+        specifier: ^2.34.4
+        version: 2.34.4(vue@3.3.4)
+      vue:
+        specifier: ^3.2.47
+        version: 3.3.4
 
   packages/globals:
     dependencies:
       defu:
         specifier: ^6.1.2
         version: 6.1.2
-      vue-demi:
-        specifier: ^0.14.5
-        version: 0.14.5(vue@3.3.4)
+      naive-ui:
+        specifier: ^2.34.4
+        version: 2.34.4(vue@3.3.4)
+      vue:
+        specifier: ^3.2.47
+        version: 3.3.4
 
   packages/table:
     dependencies:
@@ -132,21 +144,24 @@ importers:
       '@vueuse/core':
         specifier: ^10.1.2
         version: 10.1.2(vue@3.3.4)
+      naive-ui:
+        specifier: ^2.34.4
+        version: 2.34.4(vue@3.3.4)
       nanoid:
         specifier: ^4.0.2
         version: 4.0.2
-      vue-demi:
-        specifier: ^0.14.5
-        version: 0.14.5(vue@3.3.4)
+      vue:
+        specifier: ^3.2.47
+        version: 3.3.4
 
   packages/utils:
     dependencies:
       defu:
         specifier: ^6.1.2
         version: 6.1.2
-      vue-demi:
-        specifier: ^0.14.5
-        version: 0.14.5(vue@3.3.4)
+      vue:
+        specifier: ^3.2.47
+        version: 3.3.4
 
 packages:
 

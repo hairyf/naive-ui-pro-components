@@ -1,5 +1,5 @@
-import type { Ref } from 'vue-demi'
-import { reactive, ref, watch } from 'vue-demi'
+import type { Ref } from 'vue'
+import { reactive, ref, watch } from 'vue'
 
 import { useAsyncCallback } from '@naive-ui-pro/utils'
 import { useDebounceFn } from '@vueuse/core'

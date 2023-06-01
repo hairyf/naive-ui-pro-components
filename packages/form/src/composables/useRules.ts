@@ -1,6 +1,6 @@
 import type { FormItemRule } from 'naive-ui'
-import type { MaybeRef } from 'vue-demi'
-import { computed, unref } from 'vue-demi'
+import type { MaybeRef } from 'vue'
+import { computed, unref } from 'vue'
 
 import type { FormItemConfig } from '../types'
 

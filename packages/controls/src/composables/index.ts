@@ -1,5 +1,5 @@
 import { useAsyncCallback } from '@naive-ui-pro/utils'
-import { computed, reactive } from 'vue-demi'
+import { computed, reactive } from 'vue'
 import type { ControlProps } from '../types'
 
 export function useControlButtons<T extends any[]>(args: T, controls: ControlProps<T>[]) {

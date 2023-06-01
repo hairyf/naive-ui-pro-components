@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid'
-import type { UnwrapNestedRefs } from 'vue-demi'
+import type { UnwrapNestedRefs } from 'vue'
 import type { OffsetPagination } from './useOffsetPagination'
 
 export function useColumnIndexes(pagination: UnwrapNestedRefs<OffsetPagination>) {

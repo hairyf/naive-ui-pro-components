@@ -1,4 +1,4 @@
-import { defineComponent, h } from 'vue-demi'
+import { defineComponent, h } from 'vue'
 
 export const Condition = defineComponent({
   name: 'Condition',

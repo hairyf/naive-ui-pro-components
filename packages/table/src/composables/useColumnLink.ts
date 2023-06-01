@@ -1,5 +1,5 @@
 import { NButton } from 'naive-ui'
-import { h } from 'vue-demi'
+import { h } from 'vue'
 import type { TableBaseColumn, TableColumn } from './useColumns'
 
 export function useColumnLink<T = any>(linkKey: string, column: Partial<TableBaseColumn<T>>): TableColumn<T> {

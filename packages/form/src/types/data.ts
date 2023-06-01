@@ -1,4 +1,4 @@
-import type { UnwrapRef } from 'vue-demi'
+import type { UnwrapRef } from 'vue'
 
 export type Data<T = Record<string, any>> = {
   [K in keyof T as FilterReceives<T, K>]: UnwrapRef<FieldValue<T[K]>>;
