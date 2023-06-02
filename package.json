@@ -1,6 +1,6 @@
 {
   "name": "naive-ui-pro-components-monorepo",
-  "version": "0.3.0-beta.0",
+  "version": "0.3.0-beta.1",
   "private": true,
   "packageManager": "pnpm@8.6.0",
   "scripts": {
