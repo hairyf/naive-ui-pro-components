@@ -30,7 +30,10 @@ export const NProCheckboxGroup = defineComponent({
         ref={ref}
         {...rest}
       >
-        {slots}
+        {{
+          default: () => rest.label,
+          ...slots,
+        }}
       </NCheckbox>
     }
     return () => (
