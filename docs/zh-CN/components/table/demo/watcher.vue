@@ -43,6 +43,6 @@ const table = defineTable<Row[]>({
       total: 6,
     }
   },
-  watcher: [form.data],
+  watch: [form.data],
 })
 </script>

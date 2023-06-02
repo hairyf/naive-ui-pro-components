@@ -9,7 +9,7 @@ import type { ProTableInstance, ProTableRequest } from '../types'
 
 export interface DefineTableOptions<T = any> {
   request: ProTableRequest<T>
-  watcher?: any[]
+  watch?: any[]
   immediate?: boolean
   pagination?: OffsetPaginationOptions
 }
@@ -42,8 +42,8 @@ export function defineTable<T extends any[]>(options: DefineTableOptions<T>): Pr
     search(reactive(pagination))
   })
 
-  if (options.watcher)
-    watch(options.watcher, () => reset())
+  if (options.watch)
+    watch(options.watch, () => reset())
 
   if (immediate)
     reset()

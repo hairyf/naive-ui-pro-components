@@ -26,7 +26,7 @@ Pagination is enabled by default. If you don't need pagination, you can set the 
 
 ::: demo src="./demo/watcher.vue" title="Data Watcher"
 
-When the table data changes, you may need to perform additional operations. You can use the `watcher` parameter to listen for data changes, and it will automatically reset the pagination and make a new request.
+When the table data changes, you may need to perform additional operations. You can use the `watch` parameter to listen for data changes, and it will automatically reset the pagination and make a new request.
 
 :::
 
