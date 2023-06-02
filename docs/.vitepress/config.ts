@@ -47,11 +47,12 @@ function defineThemeConfig(lang = 'en-US') {
   const componentsNavOrSidebar = {
     text: 'Components',
     items: [
+      { text: 'ProControls', link: `${prefix}components/controls/` },
       { text: 'ProForm', link: `${prefix}components/form/` },
       { text: 'ProTable', link: `${prefix}components/table/` },
-      { text: 'ProControls', link: `${prefix}components/controls/` },
-      { text: 'ProGlobals', link: `${prefix}components/globals/` },
       { text: 'ProCheckbox', link: `${prefix}components/checkbox/` },
+      { text: 'ProRadio', link: `${prefix}components/radio/` },
+      { text: 'ProGlobals', link: `${prefix}components/globals/` },
     ],
   }
   const themeConfig: DefaultTheme.Config = {
