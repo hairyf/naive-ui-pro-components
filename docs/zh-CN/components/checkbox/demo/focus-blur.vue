@@ -8,7 +8,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NProCheckboxGroup } from 'naive-ui-pro-components'
 import { reactive, ref } from 'vue'
 import type { CheckboxInst } from 'naive-ui'
 

@@ -13,7 +13,6 @@
 </template>
 
 <script lang="ts" setup>
-import { NProRadioGroup } from 'naive-ui-pro-components'
 import { reactive, ref } from 'vue'
 
 const cities = ref(null)

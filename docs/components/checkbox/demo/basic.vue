@@ -3,7 +3,6 @@
 </template>
 
 <script setup>
-import { NProCheckboxGroup } from 'naive-ui-pro-components'
 import { reactive, ref } from 'vue'
 
 const cities = ref(null)
