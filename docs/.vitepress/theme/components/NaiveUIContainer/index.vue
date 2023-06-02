@@ -17,9 +17,8 @@ const props = defineProps<{
   sfcJsCode: string
   sfcTsHtml: string
   sfcJsHtml: string
-  // descriptionHtml is generally not used since the slot with name="desc" will handle everything
-  descriptionHtml?: string
   title: string
   metadata: Record<string, any>
+  expand?: boolean
 }>()
 </script>

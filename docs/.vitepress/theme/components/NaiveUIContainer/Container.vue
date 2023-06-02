@@ -63,9 +63,10 @@ const props = defineProps<{
   descriptionHtml?: string
   title: string
   metadata: Record<string, any>
+  expand?: boolean
 }>()
 
-const visible = ref(false)
+const visible = ref(props.expand ?? false)
 
 const { t } = i18n({
   'zh-CN': {

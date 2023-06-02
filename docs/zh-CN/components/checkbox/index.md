@@ -2,7 +2,7 @@
 
 以配置项创建复选框组。
 
-<demo title="基础用法" src="./demo/basic.vue" />
+<demo title="基础用法" :expand="true" src="./demo/basic.vue" />
 
 <demo title="事件" src="./demo/events.vue" />
 
