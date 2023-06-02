@@ -63,8 +63,29 @@ importers:
         specifier: ^0.31.0
         version: 0.31.0
 
+  packages/checkbox:
+    dependencies:
+      '@naive-ui-pro/utils':
+        specifier: workspace:^
+        version: link:../utils
+      '@vueuse/core':
+        specifier: 10.0.0-beta.0
+        version: 10.0.0-beta.0(vue@3.2.47)
+      naive-ui:
+        specifier: ^2.34.4
+        version: 2.34.4(vue@3.2.47)
+      nanoid:
+        specifier: ^4.0.2
+        version: 4.0.2
+      vue:
+        specifier: ^3.2.47
+        version: 3.2.47
+
   packages/components:
     dependencies:
+      '@naive-ui-pro/checkbox':
+        specifier: workspace:*
+        version: link:../checkbox
       '@naive-ui-pro/controls':
         specifier: workspace:*
         version: link:../controls
@@ -74,6 +95,9 @@ importers:
       '@naive-ui-pro/globals':
         specifier: workspace:*
         version: link:../globals
+      '@naive-ui-pro/radio':
+        specifier: workspace:*
+        version: link:../radio
       '@naive-ui-pro/table':
         specifier: workspace:*
         version: link:../table
@@ -111,6 +135,12 @@ importers:
 
   packages/form:
     dependencies:
+      '@naive-ui-pro/checkbox':
+        specifier: workspace:*
+        version: link:../checkbox
+      '@naive-ui-pro/radio':
+        specifier: workspace:*
+        version: link:../radio
       '@naive-ui-pro/utils':
         specifier: workspace:^
         version: link:../utils
@@ -132,6 +162,24 @@ importers:
       naive-ui:
         specifier: ^2.34.4
         version: 2.34.4(vue@3.2.47)
+      vue:
+        specifier: ^3.2.47
+        version: 3.2.47
+
+  packages/radio:
+    dependencies:
+      '@naive-ui-pro/utils':
+        specifier: workspace:^
+        version: link:../utils
+      '@vueuse/core':
+        specifier: 10.0.0-beta.0
+        version: 10.0.0-beta.0(vue@3.2.47)
+      naive-ui:
+        specifier: ^2.34.4
+        version: 2.34.4(vue@3.2.47)
+      nanoid:
+        specifier: ^4.0.2
+        version: 4.0.2
       vue:
         specifier: ^3.2.47
         version: 3.2.47

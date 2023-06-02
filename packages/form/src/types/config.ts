@@ -37,6 +37,21 @@ export interface FormItemSwitch {
   props?: NestedRefs<NaiveUI.SwitchProps>
 }
 
+export interface FormItemRate {
+  type?: 'rate'
+  props?: NestedRefs<NaiveUI.RateProps>
+}
+
+export interface FormItemSlider {
+  type?: 'slider'
+  props?: NestedRefs<NaiveUI.SliderProps>
+}
+
+export interface FormItemTimePicker {
+  type?: 'time-picker'
+  props?: NestedRefs<NaiveUI.TimePickerProps>
+}
+
 export interface FormItemSelect {
   type?: 'select'
   options?: MaybeRef<NaiveUI.SelectProps['options']>
@@ -44,15 +59,20 @@ export interface FormItemSelect {
 }
 
 export interface FormItemCheckboxGroup {
-  type?: 'checkbox'
+  type?: 'checkbox-group'
   options?: MaybeRef<ProCheckboxGroupProps['options']>
   props?: NestedRefs<ProCheckboxGroupProps>
 }
 
 export interface FormItemRadioGroup {
-  type?: 'radio'
+  type?: 'radio-group'
   options?: MaybeRef<ProRadioGroupProps['options']>
   props?: NestedRefs<ProRadioGroupProps>
+}
+export interface FormItemMention {
+  type?: 'mention'
+  options?: MaybeRef<NaiveUI.MentionProps['options']>
+  props?: NestedRefs<NaiveUI.MentionProps>
 }
 
 export type FormItemComponents =
@@ -63,7 +83,13 @@ export type FormItemComponents =
  FormItemInput |
  FormItemInputNumber |
  FormItemButton |
- FormItemSwitch
+ FormItemSwitch |
+ FormItemCheckboxGroup |
+ FormItemRadioGroup |
+ FormItemRate |
+ FormItemSlider |
+ FormItemTimePicker |
+ FormItemMention
 
 export type FormItemDefaultRender = (model: Ref<any>, config: FormItemConfig) => any
 
