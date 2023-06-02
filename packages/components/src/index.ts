@@ -1,7 +1,7 @@
 import type { App } from 'vue'
 import { NProForm } from '@naive-ui-pro/form'
 import { NProTable } from '@naive-ui-pro/table'
-import { NProRadio, NProRadioGroup } from '@naive-ui-pro/radio'
+import { NProRadioGroup } from '@naive-ui-pro/radio'
 import { NProCheckboxGroup } from '@naive-ui-pro/checkbox'
 import { NGlobalDialog, NGlobalMessage, NGlobalNotification, NGlobalProvider, NInstallProvider } from '@naive-ui-pro/globals'
 
@@ -15,7 +15,6 @@ export * from '@naive-ui-pro/checkbox'
 function install(app: App): void {
   app.component('NProForm', NProForm)
   app.component('NProTable', NProTable)
-  app.component('NProRadio', NProRadio)
   app.component('NProRadioGroup', NProRadioGroup)
   app.component('NProCheckboxGroup', NProCheckboxGroup)
   app.component('NGlobalProvider', NGlobalProvider)
