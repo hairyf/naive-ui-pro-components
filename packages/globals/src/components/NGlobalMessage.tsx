@@ -1,10 +1,10 @@
-import { XMessageApiInjection, messageProviderProps } from 'naive-ui'
-import { NMessageProvider, useMessage } from 'naive-ui'
+import type { XMessageApiInjection } from 'naive-ui'
+import { NMessageProvider, messageProviderProps, useMessage } from 'naive-ui'
 
 import { defineComponent } from 'vue'
 import { createDeferred, packer } from '../utils'
 
-export const NInstallMessage = defineComponent((_, {slots}) => {
+export const NInstallMessage = defineComponent((_, { slots }) => {
   window.$message = useMessage() as XMessageApiInjection
   packer(
     window.$message, ['create', 'success', 'warning', 'error', 'info'],

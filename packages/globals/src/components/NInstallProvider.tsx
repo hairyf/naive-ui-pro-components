@@ -1,7 +1,7 @@
 import type { Component, PropType, VNode } from 'vue'
-import { computed, defineComponent, h } from 'vue'
+import { defineComponent, h } from 'vue'
 
-export type InstallComponentOptions = { component: Component, props: any }
+export interface InstallComponentOptions { component: Component; props: any }
 export type InstallComponentItem = Component | InstallComponentOptions
 
 export const NInstallProvider = defineComponent({

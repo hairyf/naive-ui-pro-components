@@ -1,8 +1,7 @@
 import { NNotificationProvider, notificationProviderProps, useNotification } from 'naive-ui'
 import { defineComponent } from 'vue'
 
-
-export const NInstallNotification = defineComponent((_, {slots}) => {
+export const NInstallNotification = defineComponent((_, { slots }) => {
   window.$notification = useNotification()
   return slots.default
 })

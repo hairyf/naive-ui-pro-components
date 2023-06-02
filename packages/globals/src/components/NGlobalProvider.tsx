@@ -1,10 +1,11 @@
-import { PropType, defineComponent } from 'vue'
+import type { PropType } from 'vue'
+import { defineComponent } from 'vue'
+import type { DialogProviderProps, LoadingBarProviderProps, MessageProviderProps, NotificationProviderProps } from 'naive-ui'
 import { NInstallProvider } from './NInstallProvider'
 import { NGlobalLoadingBar } from './NGlobalLoadingBar'
 import { NGlobalDialog } from './NGlobalDialog'
 import { NGlobalNotification } from './NGlobalNotification'
 import { NGlobalMessage } from './NGlobalMessage'
-import { MessageProviderProps, LoadingBarProviderProps, DialogProviderProps, NotificationProviderProps } from 'naive-ui'
 
 export const NGlobalProvider = defineComponent({
   name: 'NGlobalProvider',
