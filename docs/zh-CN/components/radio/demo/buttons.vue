@@ -2,7 +2,7 @@
   <n-space vertical>
     <n-pro-radio-group v-model:value="cities" type="button" :options="options" />
     <n-space>
-      <n-checkbox v-model:checked="disabled2" style="margin-right: 12px">
+      <n-checkbox v-model:checked="disabled2">
         禁用 Shakemaker
       </n-checkbox>
       <n-checkbox v-model:checked="disabled1">

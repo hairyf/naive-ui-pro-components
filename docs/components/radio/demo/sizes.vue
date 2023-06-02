@@ -3,11 +3,11 @@
     <n-pro-radio-group v-model:value="cities" type="button" :options="options" size="medium" />
     <n-pro-radio-group v-model:value="cities" type="button" :options="options" size="large" />
     <n-space>
-      <n-checkbox v-model:checked="disabled2" style="margin-right: 12px">
-        禁用 Shakemaker
+      <n-checkbox v-model:checked="disabled2">
+        Disable Shakemaker
       </n-checkbox>
       <n-checkbox v-model:checked="disabled1">
-        禁用 Live Forever
+        Disable Live Forever
       </n-checkbox>
     </n-space>
   </n-space>
