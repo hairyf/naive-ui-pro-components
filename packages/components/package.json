@@ -49,6 +49,7 @@
     "@naive-ui-pro/controls": "workspace:*",
     "@naive-ui-pro/form": "workspace:*",
     "@naive-ui-pro/globals": "workspace:*",
+    "@naive-ui-pro/radio": "workspace:*",
     "@naive-ui-pro/table": "workspace:*",
     "naive-ui": "^2.34.4",
     "vue": "^3.2.47"
