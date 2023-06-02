@@ -2,7 +2,7 @@ import type { ExtractPropTypes, PropType } from 'vue'
 import { computed, defineComponent } from 'vue'
 import type { RadioProps, SpaceProps } from 'naive-ui'
 import { NRadioGroup, NSpace, radioGroupProps } from 'naive-ui'
-import { reactiveOmit, useVModel } from '@vueuse/core'
+import { reactiveOmit } from '@vueuse/core'
 import NProRadio from './ProRadio'
 
 export const proRadioGroupProps = {
@@ -24,7 +24,6 @@ export const NProRadioGroup = defineComponent({
   setup(props) {
     const options = computed(() => props.options || [])
     const radioGroupProps = reactiveOmit(props, ['space', 'options', 'type'])
-    const model = useVModel(props, 'value')
     function renderRadio({ slots, ...rest }: RadioMixedOption, i: number) {
       return <NProRadio
         key={i}
@@ -35,7 +34,7 @@ export const NProRadioGroup = defineComponent({
       </NProRadio>
     }
     return () => (
-      <NRadioGroup {...radioGroupProps} v-model={[model.value, 'value']}>
+      <NRadioGroup {...radioGroupProps}>
         <NSpace {...props.space}>
           {options.value.map(renderRadio)}
         </NSpace>
