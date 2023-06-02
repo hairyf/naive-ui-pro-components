@@ -14,6 +14,17 @@ const form = defineForm({
     type: 'input',
     span: 12,
   },
-  time: { type: 'date-picker' },
+  time: {
+    type: 'date-picker',
+    span: 20,
+  },
+  enable: {
+    type: 'checkbox-group',
+    options: [
+      { label: 'Enable', value: 'a' },
+      { label: 'Disable', value: 'b' },
+    ],
+    span: 4,
+  },
 })
 </script>

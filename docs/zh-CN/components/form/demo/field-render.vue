@@ -1,43 +1,28 @@
 <template>
   <n-pro-form :instance="form" />
+  <n-button type="primary" style="width: 100%">
+    付款
+  </n-button>
 </template>
 
 <script lang="ts" setup>
 import { defineForm, field } from 'naive-ui-pro-components'
-
-import { NRadio, NRadioGroup, NSpace } from 'naive-ui'
 import { h } from 'vue'
 
 // 使用默认渲染函数渲染默认的表单项
 const amountField = field({
-  type: 'input',
+  type: 'input-number',
   renderItem(model, config, defaultRender) {
+    const style = 'margin-top: 12px; margin-bottom: -12px;'
     return h('div', { style: 'width: 100%' }, [
       defaultRender(model, config),
-      h('div', { style: 'margin-top: 12px' }, '你有 1000... 元'),
+      h('div', { style }, '你有 1000 元'),
     ])
   },
 })
 
-// 使用自定义渲染函数渲染表单项
-const emailField = field({
-  type: 'input',
-  placeholder: '请输入邮箱',
-  renderItem(model) {
-    return h(NRadioGroup,
-      { value: model.value, onUpdateValue: value => model.value = value },
-      [
-        h(NSpace, [
-          h(NRadio, { label: '开启', value: '0' }),
-          h(NRadio, { label: '关闭', value: '1' }),
-        ]),
-      ],
-    )
-  },
-})
-
 const form = defineForm({
-  amount: amountField.withConfig({ span: 12 }),
-  email: emailField.withConfig({ span: 12 }),
+  amount: amountField
+    .withConfig({ placeholder: '请输入金额' }),
 })
 </script>
