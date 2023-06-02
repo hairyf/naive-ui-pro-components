@@ -2,13 +2,13 @@
 import type { DataTableInst } from 'naive-ui'
 import { ref } from 'vue'
 import type { ColumnKey, FilterState } from 'naive-ui/es/data-table/src/interface'
-import type { OffsetPaginationOptions } from './useOffsetPagination'
+import type { DefineTableOptions } from '../define'
 import { useOffsetPagination } from './useOffsetPagination'
 
-export function useMetadata(options: OffsetPaginationOptions) {
+export function useMetadata(options: DefineTableOptions) {
   const tableInstRef = ref<DataTableInst | undefined>()
-  const firstPage = ref(options.page || 1)
-  const pagination = useOffsetPagination({ ...options })
+  const firstPage = ref(options.pagination?.page || 1)
+  const pagination = useOffsetPagination({ ...options.pagination })
 
   function clearFilters() {
     tableInstRef.value?.clearFilters()
@@ -16,7 +16,6 @@ export function useMetadata(options: OffsetPaginationOptions) {
   function clearSorter() {
     tableInstRef.value?.clearSorter()
   }
-
   function filters(filters: FilterState | null) {
     tableInstRef.value?.filters(filters)
   }
@@ -27,6 +26,7 @@ export function useMetadata(options: OffsetPaginationOptions) {
   function sort(columnKey: ColumnKey, order: 'ascend' | 'descend' | false) {
     tableInstRef.value?.sort(columnKey, order)
   }
+
   return {
     tableInstRef,
     pagination,

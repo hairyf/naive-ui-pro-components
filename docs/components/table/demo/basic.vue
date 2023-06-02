@@ -24,9 +24,8 @@ const table = defineTable<Row[]>({
       total: 1000,
     }
   },
+  pagination: { pageSize: 5 },
   // 默认开始请求第一页
   immediate: true,
-  // 分页设置
-  pageSize: 5,
 })
 </script>

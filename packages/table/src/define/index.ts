@@ -7,10 +7,11 @@ import type { OffsetPaginationOptions, ServerPaginationResolve } from '../compos
 import { useMetadata } from '../composables'
 import type { ProTableInstance, ProTableRequest } from '../types'
 
-export interface DefineTableOptions<T> extends OffsetPaginationOptions {
+export interface DefineTableOptions<T = any> {
   request: ProTableRequest<T>
   watcher?: any[]
   immediate?: boolean
+  pagination?: OffsetPaginationOptions
 }
 
 export function defineTable<T extends any[]>(options: DefineTableOptions<T>): ProTableInstance<T> {

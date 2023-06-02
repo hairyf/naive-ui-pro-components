@@ -15,7 +15,6 @@ function delay(time: number) {
 }
 
 const table = defineTable<Row[]>({
-  pageSize: 5,
   request: async ({ pageSize }) => {
     await delay(500)
     return {
@@ -25,6 +24,7 @@ const table = defineTable<Row[]>({
       total: 1000,
     }
   },
+  pagination: { pageSize: 5 },
 })
 
 const columns = useColumns<Row>([
