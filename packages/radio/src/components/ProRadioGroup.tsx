@@ -1,13 +1,15 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { ExtractPropTypes, PropType, VNodeChild } from 'vue'
 import { computed, defineComponent } from 'vue'
 import type { RadioProps, SpaceProps } from 'naive-ui'
-import { NRadioGroup, NSpace, radioGroupProps } from 'naive-ui'
+import { NRadio, NRadioButton, NRadioGroup, NSpace, radioGroupProps } from 'naive-ui'
 import { reactiveOmit } from '@vueuse/core'
-import NProRadio from './ProRadio'
 
 export const proRadioGroupProps = {
   ...radioGroupProps,
-  type: String as PropType<'button' | 'default'>,
+  type: {
+    type: String as PropType<'button' | 'default'>,
+    default: 'default',
+  },
   options: Array as PropType<RadioMixedOption[]>,
   space: Object as PropType<SpaceProps>,
 }
@@ -25,19 +27,18 @@ export const NProRadioGroup = defineComponent({
     const options = computed(() => props.options || [])
     const radioGroupProps = reactiveOmit(props, ['space', 'options', 'type'])
     function renderRadio({ slots, ...rest }: RadioMixedOption, i: number) {
-      return <NProRadio
-        key={i}
-        type={props.type}
-        {...rest}
-      >
-        {slots}
-      </NProRadio>
+      return props.type === 'default'
+        ? <NRadio key={i} {...rest}>{slots}</NRadio>
+        : <NRadioButton key={i} {...rest}>{slots}</NRadioButton>
+    }
+    function renderSpace(content: VNodeChild) {
+      return props.type === 'default'
+        ? <NSpace {...props.space}>{content}</NSpace>
+        : content
     }
     return () => (
       <NRadioGroup {...radioGroupProps}>
-        <NSpace {...props.space}>
-          {options.value.map(renderRadio)}
-        </NSpace>
+        {renderSpace(options.value.map(renderRadio))}
       </NRadioGroup>
     )
   },
