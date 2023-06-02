@@ -23,6 +23,8 @@
     "build": "tsup"
   },
   "dependencies": {
+    "@naive-ui-pro/checkbox": "workspace:*",
+    "@naive-ui-pro/radio": "workspace:*",
     "@naive-ui-pro/utils": "workspace:^",
     "@vueuse/core": "10.0.0-beta.0",
     "naive-ui": "^2.34.4",

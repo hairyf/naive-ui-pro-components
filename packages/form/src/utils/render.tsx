@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import type { Ref } from 'vue'
-import { reactive } from 'vue'
+import { reactive, unref } from 'vue'
+
 import { final } from '@naive-ui-pro/utils'
 import type { FormItemConfig } from '../types'
 import { FieldComponents } from '../config'
@@ -19,6 +21,8 @@ export function renderDefField(model: Ref<any>, config: FormItemConfig, _key?: s
 
   return <Component
     placeholder={placeholder}
+    // @ts-expect-error
+    options={unref(config.options)}
     {...reactive(config.props || {})}
     style="width: 100%"
     v-model={[model.value, 'value']}

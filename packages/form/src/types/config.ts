@@ -2,15 +2,13 @@ import type { NestedRefs } from '@naive-ui-pro/utils'
 import type * as NaiveUI from 'naive-ui'
 import type { Ref, VNodeChild } from 'vue'
 import type { MaybeRef } from '@vueuse/core'
+import type { ProCheckboxGroupProps } from '@naive-ui-pro/checkbox'
+import type { ProRadioGroupProps } from '@naive-ui-pro/radio'
 import type { ProFormInstance } from './instance'
 
 export interface FormItemDate {
   type?: 'date-picker'
   props?: NestedRefs<NaiveUI.DatePickerProps>
-}
-export interface FormItemSelect {
-  type?: 'select'
-  props?: NestedRefs<NaiveUI.SelectProps>
 }
 export interface FormItemAutoComplete {
   type?: 'auto-complete'
@@ -37,6 +35,24 @@ export interface FormItemButton {
 export interface FormItemSwitch {
   type?: 'switch'
   props?: NestedRefs<NaiveUI.SwitchProps>
+}
+
+export interface FormItemSelect {
+  type?: 'select'
+  options?: MaybeRef<NaiveUI.SelectProps['options']>
+  props?: NestedRefs<NaiveUI.SelectProps>
+}
+
+export interface FormItemCheckboxGroup {
+  type?: 'checkbox'
+  options?: MaybeRef<ProCheckboxGroupProps['options']>
+  props?: NestedRefs<ProCheckboxGroupProps>
+}
+
+export interface FormItemRadioGroup {
+  type?: 'radio'
+  options?: MaybeRef<ProRadioGroupProps['options']>
+  props?: NestedRefs<ProRadioGroupProps>
 }
 
 export type FormItemComponents =

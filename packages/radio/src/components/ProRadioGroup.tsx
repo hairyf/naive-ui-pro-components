@@ -8,13 +8,13 @@ import NProRadio from './ProRadio'
 export const proRadioGroupProps = {
   ...radioGroupProps,
   type: String as PropType<'button' | 'default'>,
-  options: Array as PropType<RadioOption[]>,
+  options: Array as PropType<RadioMixedOption[]>,
   space: Object as PropType<SpaceProps>,
 }
 
 export type ProRadioGroupProps = ExtractPropTypes<typeof proRadioGroupProps>
 
-export interface RadioOption extends RadioProps {
+export interface RadioMixedOption extends RadioProps {
   slots?: Record<string, () => JSX.Element | undefined>
 }
 
@@ -25,7 +25,7 @@ export const NProRadioGroup = defineComponent({
     const options = computed(() => props.options || [])
     const radioGroupProps = reactiveOmit(props, ['space', 'options', 'type'])
     const model = useVModel(props, 'value')
-    function renderRadio({ slots, ...rest }: RadioOption, i: number) {
+    function renderRadio({ slots, ...rest }: RadioMixedOption, i: number) {
       return <NProRadio
         key={i}
         type={props.type}
