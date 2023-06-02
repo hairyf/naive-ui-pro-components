@@ -30,7 +30,6 @@
 `field` 是一个描述对象，他可以是普通的对象，field 可以与 form 分离，并且通过 `field` 函数创建具有额外的能力。
 :::
 
-
 ::: demo src="./demo/field-context.vue" title="字段上下文"
 `field|withConfig` 传入函数可接收当前使用的 form 实例，用于组合校验。
 :::
@@ -61,7 +60,7 @@
 
 > 更多参数请参考 [n-form](https://www.naiveui.com/zh-CN/os-theme/components/form) 和 [n-grid](https://www.naiveui.com/zh-CN/os-theme/components/grid) 的属性。
 
-## Methods（form）
+## Form Methods
 
 | 名称 | 类型 | 说明 |
 | --- | --- | --- |
@@ -69,7 +68,7 @@
 | resetValidate | `(paths?: string[]) => void` | 重置校验，传递 `paths` 过滤需要重置的参数 |
 | resetFields | `(paths?: string[]) => void` | 重置表单数据为初始值，传递 `paths` 过滤需要重置的参数 |
 
-## Methods（field）
+## Field Methods
 
 | 名称 | 类型 | 说明 |
 | --- | --- | --- |
@@ -79,6 +78,26 @@
 | preventAutofill | `() => WithConfigField` | 阻止浏览器自动填充 |
 | clone | `() => WithConfigField` | 浅拷贝 `field` |
 | cloneDeep | `() => WithConfigField` | 深拷贝 `field` |
+
+
+## Field Types
+
+| 名称 | 说明 |
+| --- | --- |
+| date-picker | 日期选择器 |
+| auto-complete | 自动完成 |
+| cascader | 级联选择器 |
+| input | 输入框 |
+| input-number | 数字输入框 |
+| rate | 评分 |
+| time-picker | 时间选择器 |
+| mention | 提及 |
+| select | 选择器 |
+| switch | 开关 |
+| slider | 滑块 |
+| radio | 单选框 |
+| checkbox | 多选框 |
+| textarea | 多行输入框 |
 
 
 ## Slots

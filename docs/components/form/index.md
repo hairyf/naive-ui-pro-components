@@ -1,87 +1,109 @@
 # NProForm
 
-> NProForm is used to quickly build form views and requires the use of defineForm Functions.
+> Advanced form is used to quickly build form views. Using pro-form requires the use of defineForm functions.
 
-Advanced Form is based on the concept of functional programming with objects. It abstracts form data as a JavaScript object, allowing for better reusability and maintainability of form data through operations and encapsulation.
+Advanced forms are based on the principles of functional programming and abstract the form data into a JavaScript object. By manipulating and encapsulating this object, the form data becomes more reusable and maintainable.
 
 ::: demo src="./demo/basic.vue" title="Basic"
-Advanced Form is defined using `defineForm`, which returns an instance of a form object. It restructures the form data and has excellent TypeScript support.
+Advanced forms are defined using `defineForm`, which returns an instance of a form object. It restructures the form data and provides excellent TypeScript support.
 :::
 
-::: demo src="./demo/array.vue" title="Mode"
-`defineForm` supports both array and object modes. When defining an array, `key` is a required field that will merge the fields within the array.
+::: demo src="./demo/array.vue" title="Schema"
+`defineForm` also supports array/object schemas. When defining an array, the `key` is required and it merges the fields within the array.
 :::
 
 
 ::: demo src="./demo/grid.vue" title="Grid"
-By setting the `span` for different fields, you can achieve different grid layouts.
+Different fields can be set with different `span` values to achieve different grid layouts.
 :::
 
 ::: demo src="./demo/props.vue" title="Form Component Settings"
-The `props` attribute in the field allows for customization of form components.
+The `props` attribute within the fields can be used to customize the form components.
 :::
 
 
-::: demo src="./demo/formItemProps.vue" title="FormItem Settings"
-The `formItemProps` attribute in the field allows for customization of form items. It inherits all the properties of [n-form-item](https://www.naiveui.com/zh-CN/os-theme/components/form#FormItem-Props) and [n-grid-item](https://www.naiveui.com/zh-CN/os-theme/components/grid#GridItem-Props).
+::: demo src="./demo/formItemProps.vue" title="Form Item Settings"
+The `formItemProps` attribute within the fields allows for customization of the form items. It inherits all the properties of [n-form-item](https://www.naiveui.com/en-US/os-theme/components/form#FormItem-Props) and [n-grid-item](https://www.naiveui.com/en-US/os-theme/components/grid#GridItem-Props).
 :::
 
 ::: demo src="./demo/field.vue" title="Form Fields"
-`field` is a descriptor object that can be a plain object. Fields can be separated from the form and have additional capabilities created using the `field` function.
+`field` is an object description that can be a regular object. Fields can be separated from the form and provide additional capabilities through the `field` function.
 :::
 
-
 ::: demo src="./demo/field-context.vue" title="Field Context"
-`field|withConfig` accepts a function that can receive the current form instance being used to combine validation.
+The `field|withConfig` method can accept the current form instance for validation combinations.
 :::
 
 ::: demo src="./demo/field-render.vue" title="Field Rendering"
-The `renderItem` field allows for custom rendering of form items. If the content is more complex, we recommend using TSX to write it.
+The `renderItem` attribute allows for custom rendering of form items. For complex content, it is recommended to use tsx for writing.
 :::
 
 
 ::: demo src="./demo/clone.vue" title="Field Cloning"
-The `field` method returns a field, and the `clone` method can be used to clone a new field, avoiding reference sharing of field data.
+The `clone` method can be used on fields returned by the `field` function to create a new cloned field, avoiding reference sharing of field data.
 :::
 
-::: demo src="./demo/toolbars.vue" title="Toolbar"
-Enable the `toolbars` mode, the grid will be fixed as `0:24 742:6 1394:4`, and you can customize the toolbar content through the `toolbars` slot.
+::: demo src="./demo/toolbars.vue" title="Toolbars"
+By enabling the `toolbars` mode, the grid will be fixed as `0:24 742:6 1394:4`. You can customize the content of the right-side toolbar using the `toolbars` slot.
 :::
+
 
 ## Props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | instance | `ProFormInstance` | `-` | The instance of the component |
-| grid | `boolean` | `true` | Whether to enable grid layout |
-| cols | `number \| ResponsiveDescription` | `24` | Number of grid columns to display |
-| x-gap | `number \| ResponsiveDescription` | `0` | Horizontal gap between grid items |
-| y-gap | `number \| ResponsiveDescription` | `0` | Vertical gap between grid items |
+| grid | `boolean` | `true` | Enables grid layout |
+| cols | `number \| ResponsiveDescription` | `24` | The number of grid columns to display |
+| x-gap | `number \| ResponsiveDescription` | `0` | The horizontal gap between slots |
+| y-gap | `number \| ResponsiveDescription` | `0` | The vertical gap between slots |
 
-> For more parameters, please refer to the properties of [n-form](https://www.naiveui.com/zh-CN/os-theme/components/form) and [n-grid](https://www.naiveui.com/zh-CN/os-theme/components/grid).
+> For more parameters, please refer to the attributes of [n-form](https://www.naiveui.com/en-US/os-theme/components/form) and [n-grid](https://www.naiveui.com/en-US/os-theme/components/grid).
 
-## Methods (form)
-
-| Name | Type | Description |
-| --- | --- | --- |
-| validate | `(paths?: string[]) => Promise<void>` | Validate form fields, passing `paths` filters the parameters to be validated |
-| resetValidate | `(paths?: string[]) => void` | Reset validation, passing `paths` filters the parameters to be reset |
-| resetFields | `(paths?: string[]) => void` | Reset form data to initial values, passing `paths` filters the parameters to be reset |
-
-## Methods (field)
+## Form Methods
 
 | Name | Type | Description |
 | --- | --- | --- |
-| withConfig | `(config) => WithConfigField` | Carry and return a new configuration |
-| preventDefault | `() => WithConfigField` | Set label and rules to empty |
-| preventRequired | `() => WithConfigField` | Remove `required` from rules |
-| preventAutofill | `() => WithConfigField` | Prevent browser autofill |
-| clone | `() => WithConfigField` | Shallow clone of `field` |
-| cloneDeep | `() => WithConfigField` | Deep clone of `field` |
+| validate | `(paths?: string[]) => Promise<void>` | Validates the form items, passing `paths`
+
+ filters the parameters to be validated |
+| resetValidate | `(paths?: string[]) => void` | Resets the validation, passing `paths` filters the parameters to be reset |
+| resetFields | `(paths?: string[]) => void` | Resets the form data to its initial values, passing `paths` filters the parameters to be reset |
+
+## Field Methods
+
+| Name | Type | Description |
+| --- | --- | --- |
+| withConfig | `(config) => WithConfigField` | Carries and returns a new configuration |
+| preventDefault | `() => WithConfigField` | Sets the label and rules to empty |
+| preventRequired | `() => WithConfigField` | Removes the required rule from the rules |
+| preventAutofill | `() => WithConfigField` | Prevents browser autofill |
+| clone | `() => WithConfigField` | Shallow clones the `field` |
+| cloneDeep | `() => WithConfigField` | Deep clones the `field` |
+
+
+## Field Types
+
+| Name | Description |
+| --- | --- |
+| date-picker | Date picker |
+| auto-complete | Auto-complete |
+| cascader | Cascading selector |
+| input | Input field |
+| input-number | Number input field |
+| rate | Rating |
+| time-picker | Time picker |
+| mention | Mention |
+| select | Selector |
+| switch | Switch |
+| slider | Slider |
+| radio | Radio button |
+| checkbox | Checkbox |
+| textarea | Textarea |
 
 
 ## Slots
 
 | Name | Type | Description |
 | --- | --- | --- |
-| toolbars | `()` | Content for the toolbar, enabling toolbar mode by default |
+| toolbars | `()` | Content of the toolbar. This slot is automatically enabled when using the toolbar mode. |

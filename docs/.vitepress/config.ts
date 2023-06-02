@@ -51,6 +51,7 @@ function defineThemeConfig(lang = 'en-US') {
       { text: 'ProTable', link: `${prefix}components/table/` },
       { text: 'ProControls', link: `${prefix}components/controls/` },
       { text: 'ProGlobals', link: `${prefix}components/globals/` },
+      { text: 'ProCheckbox', link: `${prefix}components/checkbox/` },
     ],
   }
   const themeConfig: DefaultTheme.Config = {
