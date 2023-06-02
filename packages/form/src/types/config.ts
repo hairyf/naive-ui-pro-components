@@ -92,6 +92,8 @@ export type FormItemConfig<V = any, K = string> = FormItemComponents & {
    * current form-item props
    */
   formItemProps?: NaiveUI.FormItemGiProps
+
+  formItemSlots?: Record<string, any>
   /**
    * render current component slots
    */

@@ -99,7 +99,10 @@ export const NProForm = defineComponent({
         key={path}
         {...spawnItemProps(path, config)}
        >
-        {renderItemField(modal, config, path)}
+        {{
+          default: () => renderItemField(modal, config, path),
+          ...config.formItemSlots,
+        }}
       </FormItem>
       )
     }
