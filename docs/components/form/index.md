@@ -8,6 +8,10 @@ Advanced Form is based on the concept of functional programming with objects. It
 Advanced Form is defined using `defineForm`, which returns an instance of a form object. It restructures the form data and has excellent TypeScript support.
 :::
 
+::: demo src="./demo/array.vue" title="Mode"
+`defineForm` supports both array and object modes. When defining an array, `key` is a required field that will merge the fields within the array.
+:::
+
 
 ::: demo src="./demo/grid.vue" title="Grid"
 By setting the `span` for different fields, you can achieve different grid layouts.

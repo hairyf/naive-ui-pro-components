@@ -1,4 +1,4 @@
-import type { Ref, UnwrapNestedRefs } from 'vue'
+import type { UnwrapNestedRefs } from 'vue'
 import type { PromisifyFn } from '@vueuse/core'
 import type { DataTableInst } from 'naive-ui'
 import type { OffsetPagination, ServerPaginationResolve } from '../composables'
@@ -22,8 +22,8 @@ export interface ProTableRequest<T> {
 }
 
 export interface ProTableInstance<T = any[]> {
-  data: Ref<T>
-  loading: Ref<boolean>
+  data: T
+  loading: boolean
   pagination: UnwrapNestedRefs<OffsetPagination>
   next: () => void
   prev: () => void
@@ -31,5 +31,5 @@ export interface ProTableInstance<T = any[]> {
   requestAll: () => Promise<T>
   search: PromisifyFn<(pagination?: ServerPaginationResolve) => void>
   reset: PromisifyFn<() => void>
-  _tableInstRef: Ref<DataTableInst | undefined>
+  _tableInstRef: DataTableInst | undefined
 }

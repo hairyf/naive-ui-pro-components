@@ -1,18 +1,29 @@
 import type { Component, PropType, VNode } from 'vue'
 import { computed, defineComponent, h } from 'vue'
 
+export type InstallComponentOptions = { component: Component, props: any }
+export type InstallComponentItem = Component | InstallComponentOptions
+
 export const NInstallProvider = defineComponent({
   props: {
     install: {
-      type: Array as PropType<Component[]>,
+      type: Array as PropType<InstallComponentItem[]>,
       default: () => [],
     },
   },
   setup({ install }, { slots }) {
-    const content = computed(() => h(() => slots.default?.()))
-    function render(content: VNode, Component: any) {
-      return <Component>{content}</Component>
+    function render(content: VNode, { component, props }: any) {
+      return h(component, props, () => content)
     }
-    return () => install.reduceRight(render, content.value)
+    return () => resolve(install).reduceRight(render, slots.default?.() as any)
   },
 })
+
+function resolve(components: InstallComponentItem[]): InstallComponentOptions[] {
+  return components.map((item: any) => {
+    if (!item.component)
+      return { component: item as Component, props: {} }
+    else
+      return item
+  })
+}

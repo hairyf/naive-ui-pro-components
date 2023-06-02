@@ -2,7 +2,7 @@ import type { PaginationProps } from 'naive-ui'
 import { NDataTable, NPagination, c, dataTableProps } from 'naive-ui'
 
 import type { PropType } from 'vue'
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, reactive, toRefs } from 'vue'
 
 import { reactiveOmit, reactivePick } from '@vueuse/core'
 import { Condition, isObject } from '@naive-ui-pro/utils'
@@ -33,9 +33,13 @@ export const NProTable = defineComponent({
     const props = reactivePick(_props, ...customs)
     const tableProps = reactiveOmit(_props, ...customs)
 
-    const instance = computed(() => props.instance)
+    const {
+      _tableInstRef,
+      data, loading,
+    } = toRefs(props.instance)
+
+    const instance = computed(() => reactive(props.instance))
     const columns = computed(() => tableProps.columns ?? [])
-    const data = computed(() => instance.value.data)
 
     const showPagination = computed(() => props.pagination !== false)
 
@@ -56,10 +60,11 @@ export const NProTable = defineComponent({
       style={{ '--n-table-min-width': `${minWidth.value}px` }}
     >
       <NDataTable
+        ref={_tableInstRef}
         {...tableProps}
         data={data.value}
         columns={columns.value}
-        loading={instance.value.loading}
+        loading={loading.value}
       >
         {slots}
       </NDataTable>

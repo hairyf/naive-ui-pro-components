@@ -1,6 +1,6 @@
 {
   "name": "naive-ui-pro-components-monorepo",
-  "version": "0.2.6",
+  "version": "0.2.8",
   "private": true,
   "packageManager": "pnpm@8.6.0",
   "scripts": {
@@ -19,7 +19,7 @@
     "naive-ui": "^2.34.4",
     "naive-ui-pro-components": "workspace:^",
     "unplugin-vue-jsx": "^0.2.0",
-    "vue": "3.2.47"
+    "vue": "^3.2.47"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.3",
@@ -33,7 +33,8 @@
     "markdown-it-vitepress-demo": "^0.1.2",
     "tsup": "^6.7.0",
     "turbo": "^1.10.0",
-    "vitepress": "1.0.0-beta.1",
+    "typescript": "^5.0.4",
+    "vitepress": "1.0.0-alpha.76",
     "vitest": "^0.31.0"
   }
 }
