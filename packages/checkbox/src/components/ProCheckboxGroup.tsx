@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType, Ref } from 'vue'
-import { computed, defineComponent, isRef, toRef } from 'vue'
+import { computed, defineComponent, isRef } from 'vue'
 
 import type { CheckboxInst, CheckboxProps, SpaceProps } from 'naive-ui'
 import { NCheckbox, NCheckboxGroup, NSpace, checkboxGroupProps } from 'naive-ui'
@@ -24,26 +24,25 @@ export const NProCheckboxGroup = defineComponent({
   setup(props) {
     const options = computed(() => props.options || [])
     const groupProps = reactiveOmit(props, ['space', 'options'])
-    function renderCheckbox(options: CheckboxMixedOption, i: number) {
-      const { slots, ref: _ref, ...rest } = options
-      const ref = isRef(_ref) ? _ref : toRef(options, 'ref')
+    function renderCheckbox(opts: CheckboxMixedOption, i: number) {
       return <NCheckbox
         key={i}
-        ref={ref}
-        {...rest}
+        {...opts}
+        ref={
+          (inst: any) => isRef(opts.ref)
+            ? opts.ref.value = inst
+            : opts.ref = inst
+        }
       >
-        {{
-          default: () => rest.label,
-          ...slots,
-        }}
+        {opts.label || opts.slots?.default?.()}
       </NCheckbox>
     }
     return () => (
       <NCheckboxGroup {...groupProps}>
-        <NSpace {...props.space}>
-          {options.value.map(renderCheckbox)}
-        </NSpace>
-      </NCheckboxGroup>
+          <NSpace {...props.space}>
+            {options.value.map(renderCheckbox)}
+          </NSpace>
+        </NCheckboxGroup>
     )
   },
 })
