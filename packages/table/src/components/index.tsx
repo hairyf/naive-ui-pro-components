@@ -26,7 +26,7 @@ export const proTableProps = {
 export const NProTable = defineComponent({
   name: 'ProTable',
   props: proTableProps,
-  setup(_props) {
+  setup(_props, { slots }) {
     style.mount()
 
     const customs = ['instance', 'pagination'] as const
@@ -60,7 +60,9 @@ export const NProTable = defineComponent({
         data={data.value}
         columns={columns.value}
         loading={instance.value.loading}
-      />
+      >
+        {slots}
+      </NDataTable>
       <Condition if={showPagination.value} class="n-pro-table__pagination" tag="div">
         <NPagination
           v-models={[
