@@ -79,8 +79,8 @@ importers:
         specifier: ^2.34.4
         version: 2.34.4(vue@3.2.47)
       nanoid:
-        specifier: ^4.0.2
-        version: 4.0.2
+        specifier: ^5.0.0
+        version: 5.0.0
       vue:
         specifier: ^3.2.47
         version: 3.2.47
@@ -182,8 +182,8 @@ importers:
         specifier: ^2.34.4
         version: 2.34.4(vue@3.2.47)
       nanoid:
-        specifier: ^4.0.2
-        version: 4.0.2
+        specifier: ^5.0.0
+        version: 5.0.0
       vue:
         specifier: ^3.2.47
         version: 3.2.47
@@ -200,8 +200,8 @@ importers:
         specifier: ^2.34.4
         version: 2.34.4(vue@3.2.47)
       nanoid:
-        specifier: ^4.0.2
-        version: 4.0.2
+        specifier: ^5.0.0
+        version: 5.0.0
       vue:
         specifier: ^3.2.47
         version: 3.2.47
@@ -4740,9 +4740,9 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  /nanoid@4.0.2:
-    resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
-    engines: {node: ^14 || ^16 || >=18}
+  /nanoid@5.0.0:
+    resolution: {integrity: sha512-wVZsnt5OB0dYCCfehtku3pGSS7vDjUjGQcB96wS+67JA0fILOVx0o7CnMSHZdlzGpaUtegC41ltxUVEqn5a+BA==}
+    engines: {node: ^18 || >=20}
     hasBin: true
     dev: false
 
