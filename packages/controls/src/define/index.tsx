@@ -1,6 +1,7 @@
 import { NButton, c } from 'naive-ui'
 import type { PropType } from 'vue'
-import { defineComponent, h } from 'vue'
+import { defineComponent, h, toRefs } from 'vue'
+
 import type { ControlInstance, ControlParsedProps, ControlProps } from '../types'
 import { useControlButtons } from '../composables'
 
@@ -20,7 +21,8 @@ const Component = defineComponent({
     },
   },
   setup(props) {
-    const buttons = useControlButtons(props.args, props.controls)
+    const { args, controls } = toRefs(props)
+    const buttons = useControlButtons(args, controls)
 
     style.mount()
 
