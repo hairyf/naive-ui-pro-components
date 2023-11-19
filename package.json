@@ -31,7 +31,7 @@
     "codesandbox": "^2.2.3",
     "eslint": "^8.41.0",
     "markdown-it-vitepress-demo": "^0.1.2",
-    "tsup": "^6.7.0",
+    "tsup": "^8.0.0",
     "turbo": "^1.10.0",
     "typescript": "^5.0.4",
     "vitepress": "1.0.0-beta.3",
