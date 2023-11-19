@@ -22,7 +22,7 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.3",
+    "@antfu/eslint-config": "^2.0.0",
     "@antfu/ni": "^0.21.3",
     "@naive-ui-pro/config": "workspace:*",
     "@types/node": "^20.2.3",
