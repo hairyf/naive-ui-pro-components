@@ -31,7 +31,7 @@ export const NpDialog = defineComponent({
       trailing: false,
     })
 
-    return <NModal v-model={[visible, 'show']} >
+    return <NModal v-model={[visible.value, 'show']} >
       <NDialog
         {...props}
         loading={loading.value}

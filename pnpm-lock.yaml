@@ -89,7 +89,7 @@ importers:
     dependencies:
       '@naive-ui-pro/checkbox':
         specifier: workspace:*
-        version: link:../dialog
+        version: link:../checkbox
       '@naive-ui-pro/controls':
         specifier: workspace:*
         version: link:../controls
@@ -163,7 +163,7 @@ importers:
     dependencies:
       '@naive-ui-pro/checkbox':
         specifier: workspace:*
-        version: link:../dialog
+        version: link:../checkbox
       '@naive-ui-pro/radio':
         specifier: workspace:*
         version: link:../radio
