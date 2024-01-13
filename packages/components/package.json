@@ -1,7 +1,7 @@
 {
   "name": "naive-ui-pro-components",
   "type": "module",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "./src/index.ts",
   "publishConfig": {
     "exports": {
