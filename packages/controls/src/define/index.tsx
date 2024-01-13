@@ -4,7 +4,7 @@ import { defineComponent, h } from 'vue'
 import type { ControlInstance, ControlParsedProps, ControlProps } from '../types'
 import { useControlButtons } from '../composables'
 
-export function defineControls<T extends any[]>(controls: ControlProps<T>[]): ControlInstance<T> {
+export function useControls<T extends any[]>(controls: ControlProps<T>[]): ControlInstance<T> {
   return (...args: T) => h(Component, { args, controls })
 }
 

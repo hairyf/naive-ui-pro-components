@@ -23,7 +23,7 @@ export const proTableProps = {
   },
 }
 
-export const NProTable = defineComponent({
+export const NpTable = defineComponent({
   name: 'ProTable',
   props: proTableProps,
   setup(_props, { slots }) {
@@ -56,7 +56,7 @@ export const NProTable = defineComponent({
     const minWidth = useTableMinWidth(columns)
 
     return () => <div
-      class="n-pro-table"
+      class="np-table"
       style={{ '--n-table-min-width': `${minWidth.value}px` }}
     >
       <NDataTable
@@ -68,7 +68,7 @@ export const NProTable = defineComponent({
       >
         {slots}
       </NDataTable>
-      <Condition if={showPagination.value} class="n-pro-table__pagination" tag="div">
+      <Condition if={showPagination.value} class="np-table__pagination" tag="div">
         <NPagination
           v-models={[
             [instance.value.pagination.page, 'page'],
@@ -85,7 +85,7 @@ const style = c([
   c('.n-data-table-table', {
     minWidth: 'var(--n-table-min-width) !important',
   }),
-  c('.n-pro-table__pagination', {
+  c('.np-table__pagination', {
     display: 'flex',
     justifyContent: 'flex-end',
     marginTop: '18px',

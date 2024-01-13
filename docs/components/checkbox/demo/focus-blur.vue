@@ -3,7 +3,7 @@
     <n-button @click="handleClick">
       Focus then blur in 1 second
     </n-button>
-    <n-pro-checkbox-group v-model:value="cities" :options="options" />
+    <np-checkbox-group v-model:value="cities" :options="options" />
   </n-space>
 </template>
 

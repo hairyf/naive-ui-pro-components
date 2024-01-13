@@ -1,5 +1,5 @@
 <template>
-  <n-pro-table :instance="table" :columns="columns" />
+  <np-table :instance="table" :columns="columns" />
 </template>
 
 <script lang="ts" setup>

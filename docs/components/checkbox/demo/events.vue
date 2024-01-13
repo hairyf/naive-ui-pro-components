@@ -1,5 +1,5 @@
 <template>
-  <n-pro-checkbox-group :value="cities" :options="options" @update:value="handleUpdateValue" />
+  <np-checkbox-group :value="cities" :options="options" @update:value="handleUpdateValue" />
 </template>
 
 <script lang="ts" setup>

@@ -3,7 +3,7 @@
     <n-button @click="handleClick">
       聚焦，一秒后失效
     </n-button>
-    <n-pro-checkbox-group v-model:value="cities" :options="options" />
+    <np-checkbox-group v-model:value="cities" :options="options" />
   </n-space>
 </template>
 

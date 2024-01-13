@@ -20,7 +20,7 @@ export interface RadioMixedOption extends RadioProps {
   slots?: Record<string, () => JSX.Element | undefined>
 }
 
-export const NProRadioGroup = defineComponent({
+export const NpRadioGroup = defineComponent({
   name: 'ProRadioGroup',
   props: proRadioGroupProps,
   setup(props) {
@@ -44,4 +44,4 @@ export const NProRadioGroup = defineComponent({
   },
 })
 
-export default NProRadioGroup
+export default NpRadioGroup

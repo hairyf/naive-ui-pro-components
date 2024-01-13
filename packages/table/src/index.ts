@@ -1,8 +1,8 @@
-import { NProTable } from './components'
+import { NpTable } from './components'
 
 export * from './define'
 export * from './types'
 export * from './components'
 export * from './composables'
 
-export default NProTable
+export default NpTable

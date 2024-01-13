@@ -1,6 +1,6 @@
 import { NAutoComplete, NButton, NCascader, NDatePicker, NInput, NInputNumber, NMention, NRate, NSelect, NSlider, NSwitch, NTimePicker } from 'naive-ui'
-import { NProCheckboxGroup } from '@naive-ui-pro/checkbox'
-import { NProRadioGroup } from '@naive-ui-pro/radio'
+import { NpCheckboxGroup } from '@naive-ui-pro/checkbox'
+import { NpRadioGroup } from '@naive-ui-pro/radio'
 
 export const FieldComponents: Record<string, any> = {
   'date-picker': NDatePicker,
@@ -11,8 +11,8 @@ export const FieldComponents: Record<string, any> = {
   'input-number': NInputNumber,
   'button': NButton,
   'switch': NSwitch,
-  'checkbox-group': NProCheckboxGroup,
-  'radio-group': NProRadioGroup,
+  'checkbox-group': NpCheckboxGroup,
+  'radio-group': NpRadioGroup,
   'rate': NRate,
   'slider': NSlider,
   'time-picker': NTimePicker,

@@ -1,5 +1,5 @@
 <template>
-  <n-pro-form :instance="form" />
+  <np-form :instance="form" />
   <pre>{{ JSON.stringify(form.dataTrans, null, 2) }}</pre>
 </template>
 

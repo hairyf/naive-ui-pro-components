@@ -1,6 +1,6 @@
 <template>
-  <n-pro-form :instance="form" />
-  <n-pro-table :instance="table" :columns="columns" />
+  <np-form :instance="form" />
+  <np-table :instance="table" :columns="columns" />
 </template>
 
 <script lang="ts" setup>

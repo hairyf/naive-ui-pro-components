@@ -1,5 +1,5 @@
 <template>
-  <n-pro-checkbox-group v-model:value="cities" :options="options" />
+  <np-checkbox-group v-model:value="cities" :options="options" />
 </template>
 
 <script setup>

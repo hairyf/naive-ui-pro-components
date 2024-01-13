@@ -3,13 +3,13 @@
 </template>
 
 <script lang="ts" setup>
-import { defineControls } from 'naive-ui-pro-components'
+import { useControls } from 'naive-ui-pro-components'
 
 function delay(time: number) {
   return new Promise<void>(resolve => setTimeout(() => resolve(), time))
 }
 
-const controls = defineControls([
+const controls = useControls([
   {
     render: () => 'Search',
     helper: () => {

@@ -1,5 +1,5 @@
 <template>
-  <n-pro-form :instance="form" />
+  <np-form :instance="form" />
   <n-button type="primary" style="width: 100%">
     Pay
   </n-button>

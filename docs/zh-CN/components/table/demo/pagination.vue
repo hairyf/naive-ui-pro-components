@@ -1,6 +1,6 @@
 <template>
-  <n-pro-table style="margin-bottom: 24px;" :instance="table" :columns="columns" :pagination="false" />
-  <n-pro-table :instance="table" :columns="columns" :pagination="{ showSizePicker: false }" />
+  <np-table style="margin-bottom: 24px;" :instance="table" :columns="columns" :pagination="false" />
+  <np-table :instance="table" :columns="columns" :pagination="{ showSizePicker: false }" />
 </template>
 
 <script lang="ts" setup>

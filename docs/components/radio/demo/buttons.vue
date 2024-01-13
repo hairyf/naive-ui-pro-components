@@ -1,6 +1,6 @@
 <template>
   <n-space vertical>
-    <n-pro-radio-group v-model:value="cities" type="button" :options="options" />
+    <np-radio-group v-model:value="cities" type="button" :options="options" />
     <n-space>
       <n-checkbox v-model:checked="disabled2">
         Disable Shakemaker

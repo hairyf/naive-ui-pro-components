@@ -1,6 +1,6 @@
 <template>
   <n-space>
-    <n-pro-radio-group v-model:value="cities" :options="options" />
+    <np-radio-group v-model:value="cities" :options="options" />
     <n-switch v-model:value="disabled" />
   </n-space>
 </template>

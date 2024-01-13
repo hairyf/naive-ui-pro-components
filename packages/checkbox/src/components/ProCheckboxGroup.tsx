@@ -18,7 +18,7 @@ export interface CheckboxMixedOption extends CheckboxProps {
   ref?: CheckboxInst | undefined | Ref<CheckboxInst | undefined>
 }
 
-export const NProCheckboxGroup = defineComponent({
+export const NpCheckboxGroup = defineComponent({
   name: 'ProCheckboxGroup',
   props: proCheckboxGroupProps,
   setup(props) {
@@ -47,4 +47,4 @@ export const NProCheckboxGroup = defineComponent({
   },
 })
 
-export default NProCheckboxGroup
+export default NpCheckboxGroup

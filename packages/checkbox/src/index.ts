@@ -1,5 +1,5 @@
-import { NProCheckboxGroup } from './components'
+import { NpCheckboxGroup } from './components'
 
 export * from './components'
 
-export default NProCheckboxGroup
+export default NpCheckboxGroup

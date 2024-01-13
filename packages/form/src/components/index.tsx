@@ -47,7 +47,7 @@ export const proFormProps = {
   >,
 }
 
-export const NProForm = defineComponent({
+export const NpForm = defineComponent({
   name: 'ProForm',
   props: proFormProps,
   setup(_props, { slots }) {

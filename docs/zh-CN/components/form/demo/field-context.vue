@@ -1,5 +1,5 @@
 <template>
-  <n-pro-form :instance="form" />
+  <np-form :instance="form" />
 </template>
 
 <script lang="ts" setup>

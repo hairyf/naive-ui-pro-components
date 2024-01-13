@@ -1,4 +1,4 @@
-import { NProRadioGroup } from './components'
+import { NpRadioGroup } from './components'
 
 export * from './components'
-export default NProRadioGroup
+export default NpRadioGroup

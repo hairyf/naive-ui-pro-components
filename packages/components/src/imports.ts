@@ -9,7 +9,7 @@ function NaiveUIProImports(): ImportsMap {
       'useColumnIndexes',
       'useColumnLink',
       'useColumns',
-      'defineControls',
+      'useControls',
     ],
   }
 }

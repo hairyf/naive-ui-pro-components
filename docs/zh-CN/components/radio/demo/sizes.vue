@@ -1,7 +1,7 @@
 <template>
   <n-space vertical>
-    <n-pro-radio-group v-model:value="cities" type="button" :options="options" size="medium" />
-    <n-pro-radio-group v-model:value="cities" type="button" :options="options" size="large" />
+    <np-radio-group v-model:value="cities" type="button" :options="options" size="medium" />
+    <np-radio-group v-model:value="cities" type="button" :options="options" size="large" />
     <n-space>
       <n-checkbox v-model:checked="disabled2">
         禁用 Shakemaker

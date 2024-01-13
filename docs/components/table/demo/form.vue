@@ -1,10 +1,10 @@
 <template>
-  <n-pro-form :instance="form">
+  <np-form :instance="form">
     <template #toolbars>
       <n-button>Search</n-button>
     </template>
-  </n-pro-form>
-  <n-pro-table :instance="table" :columns="columns" />
+  </np-form>
+  <np-table :instance="table" :columns="columns" />
 </template>
 
 <script lang="ts" setup>
