@@ -27,8 +27,8 @@
     "@naive-ui-pro/utils": "workspace:^",
     "@vueuse/core": "10.0.0-beta.0",
     "lodash-es": "^4.17.21",
-    "naive-ui": "^2.34.4",
-    "vue": "^3.2.47"
+    "naive-ui": "^2.39.0",
+    "vue": "^3.4.35"
   },
   "devDependencies": {
     "@types/lodash-es": "^4.17.12"

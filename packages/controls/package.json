@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@naive-ui-pro/utils": "workspace:^",
-    "naive-ui": "^2.34.4",
-    "vue": "^3.2.47"
+    "naive-ui": "^2.39.0",
+    "vue": "^3.4.35"
   }
 }

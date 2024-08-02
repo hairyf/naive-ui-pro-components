@@ -23,7 +23,7 @@
     "build": "tsup"
   },
   "dependencies": {
-    "defu": "^6.1.2",
-    "vue": "^3.2.47"
+    "defu": "^6.1.4",
+    "vue": "^3.4.35"
   }
 }

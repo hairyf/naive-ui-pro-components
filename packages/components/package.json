@@ -52,11 +52,11 @@
     "@naive-ui-pro/globals": "workspace:*",
     "@naive-ui-pro/radio": "workspace:*",
     "@naive-ui-pro/table": "workspace:*",
-    "naive-ui": "^2.34.4",
-    "vue": "^3.2.47"
+    "naive-ui": "^2.39.0",
+    "vue": "^3.4.35"
   },
   "devDependencies": {
-    "unplugin-auto-import": "^0.16.4",
-    "unplugin-vue-components": "^0.25.0"
+    "unplugin-auto-import": "^0.16.7",
+    "unplugin-vue-components": "^0.25.2"
   }
 }

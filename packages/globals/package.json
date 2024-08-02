@@ -23,8 +23,8 @@
     "build": "tsup"
   },
   "dependencies": {
-    "defu": "^6.1.2",
-    "naive-ui": "^2.34.4",
-    "vue": "^3.2.47"
+    "defu": "^6.1.4",
+    "naive-ui": "^2.39.0",
+    "vue": "^3.4.35"
   }
 }
