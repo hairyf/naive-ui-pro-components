@@ -4,9 +4,9 @@ All global components provided by `naive-ui` cannot be used in the global scope 
 
 ```html
 <!-- App.vue -->
-<n-global-provider>
+<np-global-provider>
   <content />
-</n-global-provider>
+</np-global-provider>
 ```
 
 Now you can use `$message`, `$dialog`, `$loadingBar`, `$notification` in the global scope.
@@ -54,31 +54,31 @@ If you only need to use `$message`, you can achieve it by mounting the component
 ```html
 <!-- App.vue -->
 <script lang="ts" setup>
-  import { NGlobalMessage } from 'naive-ui-pro-components'
+  import { NpGlobalMessage } from 'naive-ui-pro-components'
 </script>
 
 <template>
-  <n-global-message>
+  <np-global-message>
     <content />
-  </n-global-message>
+  </np-global-message>
 </template>
 ```
 
-You can use `n-install-provider` to simplify the mounting process:
+You can use `np-install-provider` to simplify the mounting process:
 
 ```html
 <!-- App.vue -->
 <script lang="ts" setup>
-  import { NInstallProvider, NGlobalMessage, NGlobalDialog } from 'naive-ui-pro-components'
+  import { NpInstallProvider, NpGlobalMessage, NpGlobalDialog } from 'naive-ui-pro-components'
 </script>
 <template>
-  <n-install-provider
+  <np-install-provider
     :install="[
-      NGlobalMessage,
-      NGlobalDialog,
+      NpGlobalMessage,
+      NpGlobalDialog,
     ]"
   >
     <content />
-  </n-install-provider>
+  </np-install-provider>
 </template>
 ```

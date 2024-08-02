@@ -17,9 +17,9 @@ const indexHtml = `<!DOCTYPE html>
 `
 
 const appVue = `<template>
-  <n-global-provider>
+  <np-global-provider>
     <demo />
-  </n-global-provider>
+  </np-global-provider>
 </template>
 
 <script>

@@ -4,7 +4,7 @@ import { defineComponent, h } from 'vue'
 export interface InstallComponentOptions { component: Component; props: any }
 export type InstallComponentItem = Component | InstallComponentOptions
 
-export const NInstallProvider = defineComponent({
+export const NpInstallProvider = defineComponent({
   props: {
     install: {
       type: Array as PropType<InstallComponentItem[]>,

@@ -4,9 +4,9 @@
 
 ```html
 <!-- App.vue -->
-<n-global-provider>
+<np-global-provider>
   <content />
-</n-global-provider>
+</np-global-provider>
 ```
 
 现在你可以在全局中通过使用 `$message`、`$dialog`、`$loadingBar`、`$notification` 来使用这些方法。
@@ -54,32 +54,32 @@ await $message.error('错误')
 ```html
 <!-- App.vue -->
 <script lang="ts" setup>
-  import { NGlobalMessage } from 'naive-ui-pro-components'
+  import { NpGlobalMessage } from 'naive-ui-pro-components'
 </script>
 
 <template>
-  <n-global-message>
+  <np-global-message>
     <content />
-  </n-global-message>
+  </np-global-message>
 </template>
 ```
 
-你可以使用 `n-install-provider` 简化挂载操作：
+你可以使用 `np-install-provider` 简化挂载操作：
 
 
 ```html
 <!-- App.vue -->
 <script lang="ts" setup>
-  import { NInstallProvider, NGlobalMessage, NGlobalDialog } from 'naive-ui-pro-components'
+  import { NpInstallProvider, NpGlobalMessage, NpGlobalDialog } from 'naive-ui-pro-components'
 </script>
 <template>
-  <n-install-provider
+  <np-install-provider
     :install="[
-      NGlobalMessage,
-      NGlobalDialog,
+      NpGlobalMessage,
+      NpGlobalDialog,
     ]"
   >
     <content />
-  </n-install-provider>
+  </np-install-provider>
 </template>
 ```

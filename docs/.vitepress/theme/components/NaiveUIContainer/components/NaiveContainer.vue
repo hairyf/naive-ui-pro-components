@@ -1,6 +1,6 @@
 <template>
   <n-config-provider :theme="isDark ? darkTheme : lightTheme">
-    <n-global-provider>
+    <np-global-provider>
       <n-card
         :id="id"
         class="demo-card"
@@ -26,7 +26,7 @@
           <slot name="footer" />
         </template>
       </n-card>
-    </n-global-provider>
+    </np-global-provider>
   </n-config-provider>
 </template>
 

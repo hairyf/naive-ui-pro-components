@@ -1,19 +1,19 @@
 import { NLoadingBarProvider, loadingBarProviderProps, useLoadingBar } from 'naive-ui'
 import { defineComponent } from 'vue'
 
-export const NInstallLoadingBar = defineComponent((_, { slots }) => {
+export const NpInstallLoadingBar = defineComponent((_, { slots }) => {
   window.$loadingBar = useLoadingBar()
   return slots.default
 })
 
-export const NGlobalLoadingBar = defineComponent({
-  name: 'NGlobalLoadingBar',
+export const NpGlobalLoadingBar = defineComponent({
+  name: 'NpGlobalLoadingBar',
   props: loadingBarProviderProps,
   setup(props, { slots }) {
     return () => <NLoadingBarProvider {...props}>
-      <NInstallLoadingBar>
+      <NpInstallLoadingBar>
         {slots}
-      </NInstallLoadingBar>
+      </NpInstallLoadingBar>
     </NLoadingBarProvider>
   },
 })

@@ -6,9 +6,9 @@ function NaiveUIProResolver(): ComponentResolver {
     resolve: (name: string) => {
       if (name.match(/^Np.+/))
         return { name, from: 'naive-ui-pro-components' }
-      if (name.match(/^NGlobal.+/))
+      if (name.match(/^NpGlobal.+/))
         return { name, from: 'naive-ui-pro-components' }
-      if (name.match(/^NInstall.+/))
+      if (name.match(/^NpInstall.+/))
         return { name, from: 'naive-ui-pro-components' }
     },
   }

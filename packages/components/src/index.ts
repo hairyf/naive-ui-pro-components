@@ -3,7 +3,7 @@ import { NpForm } from '@naive-ui-pro/form'
 import { NpTable } from '@naive-ui-pro/table'
 import { NpRadioGroup } from '@naive-ui-pro/radio'
 import { NpCheckboxGroup } from '@naive-ui-pro/checkbox'
-import { NGlobalDialog, NGlobalMessage, NGlobalNotification, NGlobalProvider, NInstallProvider } from '@naive-ui-pro/globals'
+import { NpGlobalDialog, NpGlobalMessage, NpGlobalNotification, NpGlobalProvider, NpInstallProvider } from '@naive-ui-pro/globals'
 
 export * from '@naive-ui-pro/form'
 export * from '@naive-ui-pro/controls'
@@ -17,11 +17,11 @@ function install(app: App): void {
   app.component('NpTable', NpTable)
   app.component('NpRadioGroup', NpRadioGroup)
   app.component('NpCheckboxGroup', NpCheckboxGroup)
-  app.component('NGlobalProvider', NGlobalProvider)
-  app.component('NGlobalDialog', NGlobalDialog)
-  app.component('NGlobalMessage', NGlobalMessage)
-  app.component('NGlobalNotification', NGlobalNotification)
-  app.component('NInstallProvider', NInstallProvider)
+  app.component('NpGlobalProvider', NpGlobalProvider)
+  app.component('NpGlobalDialog', NpGlobalDialog)
+  app.component('NpGlobalMessage', NpGlobalMessage)
+  app.component('NpGlobalNotification', NpGlobalNotification)
+  app.component('NpInstallProvider', NpInstallProvider)
 }
 
 export { install }
