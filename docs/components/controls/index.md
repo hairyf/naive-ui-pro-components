@@ -15,6 +15,8 @@ Used in conjunction with Form Toolbars, Pro Controls allow you to quickly create
 
 <demo src="./demo/table.vue" title="Table Controls" />
 
+<demo src="./demo/table2.vue" title="Table Controls2" />
+
 ::: demo src="./demo/custom.vue" title="Custom Rendering"
 
 By default, Controls only render button controls. If you need to use other components, you can use the custom attribute.
