@@ -26,7 +26,7 @@
     "@naive-ui-pro/checkbox": "workspace:*",
     "@naive-ui-pro/radio": "workspace:*",
     "@naive-ui-pro/utils": "workspace:^",
-    "@vueuse/core": "10.0.0-beta.0",
+    "@vueuse/core": "10.11.1",
     "naive-ui": "^2.34.4",
     "vue": "^3.2.47"
   }
