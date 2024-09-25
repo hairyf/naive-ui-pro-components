@@ -28,8 +28,8 @@ importers:
         specifier: ^0.39.3
         version: 0.39.3(eslint@8.41.0)(typescript@5.0.4)
       '@antfu/ni':
-        specifier: ^0.21.3
-        version: 0.21.3
+        specifier: ^0.23.0
+        version: 0.23.0
       '@naive-ui-pro/config':
         specifier: workspace:*
         version: link:packages/config
@@ -477,8 +477,8 @@ packages:
       - typescript
     dev: true
 
-  /@antfu/ni@0.21.3:
-    resolution: {integrity: sha512-iDtQMeMW1kKV4nzQ+tjYOIPUm6nmh7pJe4sM0kx1jdAChKSCBLStqlgIoo5Tce++p+o8cBiWIzC3jg6oHyjzMA==}
+  /@antfu/ni@0.23.0:
+    resolution: {integrity: sha512-R5/GkA3PfGewAXLzz6lN5XagunF6PKeDtWt8dbZQXvHfebLS0qEczV+Azg/d+tKgSh6kRBpxvu8oSjARdPtw0A==}
     hasBin: true
     dev: true
 

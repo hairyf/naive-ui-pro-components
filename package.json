@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.3",
-    "@antfu/ni": "^0.21.3",
+    "@antfu/ni": "^0.23.0",
     "@naive-ui-pro/config": "workspace:*",
     "@types/node": "^20.2.3",
     "@vicons/fluent": "^0.12.0",
