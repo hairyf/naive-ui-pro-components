@@ -1,25 +1,25 @@
 import { useAsyncCallback } from '@naive-ui-pro/utils'
-import { computed, reactive } from 'vue'
+import { type Ref, computed, reactive, unref } from 'vue'
 import type { ControlParsedProps, ControlProps } from '../types'
 
-export function useControlButtons<T extends any[]>(args: T, controls: ControlProps<T>[]) {
+export function useControlButtons<T extends any[]>(args: Ref<T>, controls: Ref<ControlProps<T>[]>) {
   const buttons = computed(() => {
-    return controls
+    return unref(controls)
       .filter((control) => {
         const enable = typeof control.enable === 'function'
-          ? control.enable(...args)
+          ? control.enable(...unref(args))
           : (control.enable || true)
         return enable
       })
       .map((control) => {
         const { disabled: _, helper, render, ...props } = control
-        const [onClick, loading] = useAsyncCallback(() => helper?.(...args))
+        const [onClick, loading] = useAsyncCallback(() => helper?.(...unref(args)))
         const defaultRender = () => typeof render === 'function'
-          ? render
+          ? () => render(...unref(args))
           : () => render
         const slots: any = { default: defaultRender, ...props.slots }
         for (const key in slots)
-          slots[key] = slots[key]?.(...args)
+          slots[key] = slots[key]?.(...unref(args))
         return reactive({
           ...props,
           loading,
