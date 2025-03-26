@@ -1,4 +1,4 @@
-import { defineBuildConfig } from '@naive-ui-pro/config'
+import { defineBuildConfig } from 'tsup-define'
 
 export default defineBuildConfig({
   format: ['cjs', 'esm', 'iife', 'iife-min'],

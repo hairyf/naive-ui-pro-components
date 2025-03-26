@@ -1,9 +1,10 @@
-import { createDefu } from 'defu'
 import type { Component, FunctionalComponent, VNode } from 'vue'
+import { createDefu } from 'defu'
 import { h } from 'vue'
 
 export function noop() { }
 
+// eslint-disable-next-line ts/no-unsafe-function-type
 export function isFunction(val: any): val is Function {
   return typeof val === 'function'
 }

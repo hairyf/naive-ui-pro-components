@@ -1,9 +1,5 @@
-<template>
-  <np-form :instance="form" :toolbars="toolbars" />
-</template>
-
 <script lang="ts" setup>
-import { useControls, defineForm } from 'naive-ui-pro-components'
+import { defineControls, defineForm } from 'naive-ui-pro-components'
 
 function delay(time: number) {
   return new Promise<void>(resolve => setTimeout(() => resolve(), time))
@@ -20,7 +16,7 @@ const form = defineForm({
   },
 })
 
-const toolbars = useControls([
+const toolbars = defineControls([
   {
     render: () => 'Search',
     helper: () => {
@@ -36,3 +32,7 @@ const toolbars = useControls([
   },
 ])
 </script>
+
+<template>
+  <np-form :is="form" :toolbars="toolbars" />
+</template>

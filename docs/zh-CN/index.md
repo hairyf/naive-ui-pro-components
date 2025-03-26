@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /zh-CN/docs/
+      link: /zh-CN/guide/
     - theme: alt
       text: View on GitHub
       link: https://github.com/hairyf/naive-ui-pro-components
@@ -23,4 +23,3 @@ features:
   - title: TypeScript
     details: 当然使用 TypeScript 编写，带有完整的 TS 文档。
 ---
-

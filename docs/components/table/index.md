@@ -36,12 +36,11 @@ The table provides several utility functions to quickly create columns.
 
 :::
 
-
 ## Props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| instance | `ProTableInstance` | `-` | The instance of the component |
+| is | `ProTableInstance` | `-` | The instance of the component |
 | pagination | `boolean \| PaginationProps` | `true` | Pagination configuration |
 
 > For more parameters, refer to [data-table](https://www.naiveui.com/en-US/os-theme/components/data-table).

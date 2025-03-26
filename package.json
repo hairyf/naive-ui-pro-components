@@ -1,40 +1,48 @@
 {
-  "name": "naive-ui-pro-components-monorepo",
+  "type": "module",
   "version": "0.3.1",
   "private": true,
-  "packageManager": "pnpm@8.9.0",
+  "packageManager": "pnpm@10.4.0",
   "scripts": {
-    "build": "turbo run build --parallel",
-    "publish:public": "pnpm -r publish --no-git-checks --access public",
-    "release": "bumpp -r & nr build & nr publish:public",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
-    "lint": "eslint .",
+    "lint": "eslint --cache .",
+    "docs": "pnpm -C docs run docs:dev",
+    "docs:build": "pnpm -C docs run docs:build",
+    "release": "bumpp -r && pnpm -r publish",
     "test": "vitest",
-    "typecheck": "tsc --noEmit --skipLibCheck"
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@vicons/ionicons5": "^0.12.0",
-    "naive-ui": "^2.34.4",
-    "naive-ui-pro-components": "workspace:^",
-    "unplugin-vue-jsx": "^0.2.0",
-    "vue": "^3.2.47"
+    "@vicons/fluent": "^0.12.0",
+    "@vicons/ionicons5": "^0.13.0",
+    "naive-ui": "catalog:share",
+    "naive-ui-pro-components": "workspace:^"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.3",
-    "@antfu/ni": "^0.21.3",
-    "@naive-ui-pro/config": "workspace:*",
-    "@types/node": "^20.2.3",
-    "@vicons/fluent": "^0.12.0",
-    "bumpp": "^9.1.0",
-    "codesandbox": "^2.2.3",
-    "eslint": "^8.41.0",
-    "markdown-it-vitepress-demo": "^0.1.2",
-    "tsup": "^6.7.0",
-    "turbo": "^1.10.0",
-    "typescript": "^5.0.4",
-    "vitepress": "1.0.0-beta.3",
-    "vitest": "^0.31.0"
+    "@antfu/eslint-config": "catalog:",
+    "@antfu/ni": "catalog:",
+    "@antfu/utils": "catalog:",
+    "@shikijs/twoslash": "^3.2.1",
+    "@types/node": "catalog:",
+    "@vitejs/plugin-vue-jsx": "^4.1.2",
+    "bumpp": "catalog:",
+    "eslint": "catalog:",
+    "lint-staged": "catalog:",
+    "pnpm": "catalog:",
+    "simple-git-hooks": "catalog:",
+    "tsup": "^8.4.0",
+    "tsup-define": "workspace:*",
+    "tsx": "catalog:",
+    "typescript": "catalog:",
+    "unbuild": "catalog:",
+    "unplugin-vue-jsx": "^0.6.1",
+    "vite": "catalog:",
+    "vitest": "catalog:"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }

@@ -1,7 +1,3 @@
-<template>
-  <np-table :instance="table" :columns="columns" />
-</template>
-
 <script lang="ts" setup>
 import { defineTable, useColumnIndexes, useColumnLink, useColumns } from 'naive-ui-pro-components'
 
@@ -37,3 +33,7 @@ const columns = useColumns<Row>([
   useColumnLink('link', { key: 'linkName' }),
 ])
 </script>
+
+<template>
+  <np-table :is="table" :columns="columns" />
+</template>

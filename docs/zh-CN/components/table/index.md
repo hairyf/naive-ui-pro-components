@@ -36,12 +36,11 @@ NProTable 用于解决项目中需要写很多 table 的样板代码的问题，
 
 :::
 
-
 ## Props
 
 | 名称 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
-| instance | `ProTableInstance` | `-` | 组件的实例 |
+| is | `ProTableInstance` | `-` | 组件的实例 |
 | pagination | `boolean \| PaginationProps` | `true` | 分页配置 |
 
 > 更多参数参考 [data-table](https://www.naiveui.com/zh-CN/os-theme/components/data-table)。

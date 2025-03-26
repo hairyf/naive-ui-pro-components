@@ -1,8 +1,3 @@
-<template>
-  <np-table style="margin-bottom: 24px;" :instance="table" :columns="columns" :pagination="false" />
-  <np-table :instance="table" :columns="columns" :pagination="{ showSizePicker: false }" />
-</template>
-
 <script lang="ts" setup>
 import { defineTable, useColumns } from 'naive-ui-pro-components'
 
@@ -29,3 +24,8 @@ const table = defineTable<Row[]>({
   },
 })
 </script>
+
+<template>
+  <np-table :is="table" style="margin-bottom: 24px;" :columns="columns" :pagination="false" />
+  <np-table :is="table" :columns="columns" :pagination="{ showSizePicker: false }" />
+</template>

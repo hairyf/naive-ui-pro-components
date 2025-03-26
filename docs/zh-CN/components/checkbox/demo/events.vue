@@ -1,7 +1,3 @@
-<template>
-  <np-checkbox-group :value="cities" :options="options" @update:value="handleUpdateValue" />
-</template>
-
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 
@@ -19,3 +15,7 @@ function handleUpdateValue(value: (string | number)[]) {
   cities.value = value
 }
 </script>
+
+<template>
+  <np-checkbox-group :value="cities" :options="options" @update:value="handleUpdateValue" />
+</template>

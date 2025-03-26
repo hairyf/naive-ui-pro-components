@@ -1,15 +1,11 @@
-<template>
-  <component :is="controls" />
-</template>
-
 <script lang="ts" setup>
-import { useControls } from 'naive-ui-pro-components'
+import { defineControls } from 'naive-ui-pro-components'
 
 function delay(time: number) {
   return new Promise<void>(resolve => setTimeout(() => resolve(), time))
 }
 
-const controls = useControls([
+const controls = defineControls([
   {
     render: 'Message',
     type: 'default',
@@ -51,3 +47,7 @@ I cant get no, I cant get no`,
   },
 ])
 </script>
+
+<template>
+  <np-controls :is="controls" />
+</template>

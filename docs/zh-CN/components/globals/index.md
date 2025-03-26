@@ -66,7 +66,6 @@ await $message.error('错误')
 
 你可以使用 `np-install-provider` 简化挂载操作：
 
-
 ```html
 <!-- App.vue -->
 <script lang="ts" setup>

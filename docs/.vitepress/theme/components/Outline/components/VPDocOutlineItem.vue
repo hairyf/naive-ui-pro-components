@@ -1,14 +1,3 @@
-<template>
-  <ul :class="root ? 'root' : 'nested'">
-    <li v-for="{ children, link, title } in headers" :key="link">
-      <a class="outline-link" :href="link" :title="title" @click="onClick">{{ title }}</a>
-      <template v-if="children?.length">
-        <VPDocOutlineItem :headers="children" />
-      </template>
-    </li>
-  </ul>
-</template>
-
 <script setup lang="ts">
 defineProps<{
   headers: any[]
@@ -22,6 +11,17 @@ function onClick({ target: el }: Event) {
   heading?.focus({ preventScroll: true })
 }
 </script>
+
+<template>
+  <ul :class="root ? 'root' : 'nested'">
+    <li v-for="{ children, link, title } in headers" :key="link">
+      <a class="outline-link" :href="link" :title="title" @click="onClick">{{ title }}</a>
+      <template v-if="children?.length">
+        <VPDocOutlineItem :headers="children" />
+      </template>
+    </li>
+  </ul>
+</template>
 
 <style scoped>
 .root {

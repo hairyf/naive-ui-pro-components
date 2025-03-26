@@ -4,14 +4,13 @@
 
 Advanced forms are based on the principles of functional programming and abstract the form data into a JavaScript object. By manipulating and encapsulating this object, the form data becomes more reusable and maintainable.
 
-::: demo src="./demo/basic.vue" title="Basic"
+::: demo src="./demo/basic.vue" title="Basic" twoslash
 Advanced forms are defined using `defineForm`, which returns an instance of a form object. It restructures the form data and provides excellent TypeScript support.
 :::
 
-::: demo src="./demo/array.vue" title="Schema"
+::: demo src="./demo/array.vue" title="Schema" twoslash
 `defineForm` also supports array/object schemas. When defining an array, the `key` is required and it merges the fields within the array.
 :::
-
 
 ::: demo src="./demo/grid.vue" title="Grid"
 Different fields can be set with different `span` values to achieve different grid layouts.
@@ -20,7 +19,6 @@ Different fields can be set with different `span` values to achieve different gr
 ::: demo src="./demo/props.vue" title="Form Component Settings"
 The `props` attribute within the fields can be used to customize the form components.
 :::
-
 
 ::: demo src="./demo/formItemProps.vue" title="Form Item Settings"
 The `formItemProps` attribute within the fields allows for customization of the form items. It inherits all the properties of [n-form-item](https://www.naiveui.com/en-US/os-theme/components/form#FormItem-Props) and [n-grid-item](https://www.naiveui.com/en-US/os-theme/components/grid#GridItem-Props).
@@ -38,7 +36,6 @@ The `field|withConfig` method can accept the current form instance for validatio
 The `renderItem` attribute allows for custom rendering of form items. For complex content, it is recommended to use tsx for writing.
 :::
 
-
 ::: demo src="./demo/clone.vue" title="Field Cloning"
 The `clone` method can be used on fields returned by the `field` function to create a new cloned field, avoiding reference sharing of field data.
 :::
@@ -47,12 +44,11 @@ The `clone` method can be used on fields returned by the `field` function to cre
 By enabling the `toolbars` mode, the grid will be fixed as `0:24 742:6 1394:4`. You can customize the content of the right-side toolbar using the `toolbars` slot.
 :::
 
-
 ## Props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| instance | `ProFormInstance` | `-` | The instance of the component |
+| is | `ProFormInstance` | `-` | The instance of the component |
 | grid | `boolean` | `true` | Enables grid layout |
 | cols | `number \| ResponsiveDescription` | `24` | The number of grid columns to display |
 | x-gap | `number \| ResponsiveDescription` | `0` | The horizontal gap between slots |
@@ -81,7 +77,6 @@ By enabling the `toolbars` mode, the grid will be fixed as `0:24 742:6 1394:4`. 
 | clone | `() => WithConfigField` | Shallow clones the `field` |
 | cloneDeep | `() => WithConfigField` | Deep clones the `field` |
 
-
 ## Field Types
 
 | Name | Description |
@@ -100,7 +95,6 @@ By enabling the `toolbars` mode, the grid will be fixed as `0:24 742:6 1394:4`. 
 | radio | Radio button |
 | checkbox | Checkbox |
 | textarea | Textarea |
-
 
 ## Slots
 

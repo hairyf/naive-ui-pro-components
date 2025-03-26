@@ -19,11 +19,9 @@
 
 ### CheckboxOption Properties
 
-
 | 名称 | 类型 | 说明 |
 | --- | --- | --- |
 | ref | `CheckboxInst \| Ref<CheckboxInst>` | 用于绑定某个 checkbox 实例 |
 | slots | `Record<string, () => JSX.Element \| undefined>` | Checkbox Slots |
 
 > 更多参数参考 [checkbox](https://www.naiveui.com/zh-CN/os-theme/components/checkbox#Checkbox-Props)。
-

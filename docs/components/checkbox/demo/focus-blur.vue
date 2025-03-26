@@ -1,15 +1,6 @@
-<template>
-  <n-space item-style="display: flex; align-items: center;">
-    <n-button @click="handleClick">
-      Focus then blur in 1 second
-    </n-button>
-    <np-checkbox-group v-model:value="cities" :options="options" />
-  </n-space>
-</template>
-
 <script lang="ts" setup>
-import { reactive, ref } from 'vue'
 import type { CheckboxInst } from 'naive-ui'
+import { reactive, ref } from 'vue'
 
 const cities = ref(null)
 
@@ -28,3 +19,12 @@ function handleClick() {
   }, 1000)
 }
 </script>
+
+<template>
+  <n-space item-style="display: flex; align-items: center;">
+    <n-button @click="handleClick">
+      Focus then blur in 1 second
+    </n-button>
+    <np-checkbox-group v-model:value="cities" :options="options" />
+  </n-space>
+</template>

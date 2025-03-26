@@ -1,16 +1,12 @@
-<template>
-  <np-table :instance="table" :columns="columns" />
-</template>
-
 <script lang="ts" setup>
-import { useControls, defineTable, useColumns } from 'naive-ui-pro-components'
+import { defineControls, defineTable, useColumns } from 'naive-ui-pro-components'
 
 interface Row {
   id: number
   name: string
 }
 
-const controls = useControls<[Row, number]>([
+const controls = defineControls<[Row, number]>([
   {
     text: true,
     render: () => 'Deposit',
@@ -42,3 +38,7 @@ const table = defineTable<Row[]>({
   },
 })
 </script>
+
+<template>
+  <np-table :is="table" :columns="columns" />
+</template>

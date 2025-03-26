@@ -1,10 +1,3 @@
-<template>
-  <np-form :instance="form" />
-  <n-button type="primary" style="width: 100%">
-    付款
-  </n-button>
-</template>
-
 <script lang="ts" setup>
 import { defineForm, field } from 'naive-ui-pro-components'
 import { h } from 'vue'
@@ -26,3 +19,10 @@ const form = defineForm({
     .withConfig({ placeholder: '请输入金额' }),
 })
 </script>
+
+<template>
+  <np-form :is="form" />
+  <n-button type="primary" style="width: 100%">
+    付款
+  </n-button>
+</template>

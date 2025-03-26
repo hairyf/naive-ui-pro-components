@@ -1,13 +1,9 @@
-<template>
-  <component :is="controls" />
-</template>
-
 <script lang="ts" setup>
-import { useControls } from 'naive-ui-pro-components'
 import { NRadio, NRadioGroup, NSpace } from 'naive-ui'
+import { defineControls } from 'naive-ui-pro-components'
 import { h } from 'vue'
 
-const controls = useControls([
+const controls = defineControls([
   {
     custom: () => h(
       NRadioGroup,
@@ -29,3 +25,7 @@ const controls = useControls([
   },
 ])
 </script>
+
+<template>
+  <np-controls :is="controls" />
+</template>

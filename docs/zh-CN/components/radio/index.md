@@ -8,7 +8,6 @@
 
 <demo title="尺寸" :expand="true" src="./demo/sizes.vue" desc="任君挑选。" />
 
-
 ## Props
 
 | 名称 | 类型 | 默认值 | 说明 |
@@ -20,7 +19,6 @@
 > 更多参数参考 [radio-group](https://www.naiveui.com/zh-CN/os-theme/components/radio#RadioGroup-Props)。
 
 ### RadioOption Properties
-
 
 | 名称 | 类型 | 说明 |
 | --- | --- | --- |

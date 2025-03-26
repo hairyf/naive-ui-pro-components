@@ -1,0 +1,62 @@
+{
+  "name": "naive-ui-pro-components",
+  "type": "module",
+  "version": "0.3.1",
+  "main": "./src/index.ts",
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "require": "./dist/index.cjs",
+        "import": "./dist/index.js"
+      },
+      "./resolver": {
+        "types": "./dist/resolver.d.ts",
+        "require": "./dist/resolver.cjs",
+        "import": "./dist/resolver.js"
+      },
+      "./imports": {
+        "types": "./dist/imports.d.ts",
+        "require": "./dist/imports.cjs",
+        "import": "./dist/imports.js"
+      },
+      "./*": "./*"
+    },
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "unpkg": "./dist/index.iife.min.js",
+    "jsdelivr": "./dist/index.iife.min.js",
+    "types": "./dist/index.d.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@naiveui-pro/checkbox": "workspace:*",
+    "@naiveui-pro/controls": "workspace:*",
+    "@naiveui-pro/form": "workspace:*",
+    "@naiveui-pro/globals": "workspace:*",
+    "@naiveui-pro/radio": "workspace:*",
+    "@naiveui-pro/table": "workspace:*",
+    "naive-ui": "catalog:share",
+    "vue": "catalog:share"
+  },
+  "devDependencies": {
+    "unplugin-auto-import": "^0.16.4",
+    "unplugin-vue-components": "^0.25.0"
+  }
+}

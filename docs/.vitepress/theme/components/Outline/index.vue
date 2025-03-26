@@ -1,21 +1,9 @@
-<template>
-  <div v-if="headers.length > 0" class="VPDocOutlineDropdown">
-    <button :class="{ open }" @click="open = !open">
-      {{ resolveTitle(theme) }}
-      <VPIconChevronRight class="icon" />
-    </button>
-    <div v-if="open" class="items">
-      <VPDocOutlineItem :headers="headers" />
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
-import { nextTick, ref, shallowRef } from 'vue'
 import { onContentUpdated, useData } from 'vitepress'
-
 import VPIconChevronRight from 'vitepress/dist/client/theme-default/components//icons/VPIconChevronRight.vue'
-import { resolveTitle } from 'vitepress/dist/client/theme-default/composables/outline'
+
+import { resolveTitle } from 'vitepress/dist/client/theme-default/composables/outline.js'
+import { nextTick, ref, shallowRef } from 'vue'
 import VPDocOutlineItem from './components/VPDocOutlineItem.vue'
 import { getHeaders } from './utils'
 
@@ -28,6 +16,18 @@ onContentUpdated(async () => {
   headers.value = getHeaders(frontmatter.value.outline)
 })
 </script>
+
+<template>
+  <div v-if="headers.length > 0" class="VPDocOutlineDropdown">
+    <button :class="{ open }" @click="open = !open">
+      {{ resolveTitle(theme) }}
+      <VPIconChevronRight class="icon" />
+    </button>
+    <div v-if="open" class="items">
+      <VPDocOutlineItem :headers="headers" />
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .VPDocOutlineDropdown {

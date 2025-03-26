@@ -1,10 +1,3 @@
-<template>
-  <n-space>
-    <np-radio-group v-model:value="cities" :options="options" />
-    <n-switch v-model:value="disabled" />
-  </n-space>
-</template>
-
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 
@@ -18,3 +11,10 @@ const options = reactive([
   { value: 'Be Here Now', label: 'Be Here Now', disabled },
 ])
 </script>
+
+<template>
+  <n-space>
+    <np-radio-group v-model:value="cities" :options="options" />
+    <n-switch v-model:value="disabled" />
+  </n-space>
+</template>

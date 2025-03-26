@@ -1,19 +1,114 @@
 /**
  * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
  */
 
 /**
  * Colors
+ *
+ * Each colors have exact same color scale system with 3 levels of solid
+ * colors with different brightness, and 1 soft color.
+ *
+ * - `XXX-1`: The most solid color used mainly for colored text. It must
+ *   satisfy the contrast ratio against when used on top of `XXX-soft`.
+ *
+ * - `XXX-2`: The color used mainly for hover state of the button.
+ *
+ * - `XXX-3`: The color for solid background, such as bg color of the button.
+ *   It must satisfy the contrast ratio with pure white (#ffffff) text on
+ *   top of it.
+ *
+ * - `XXX-soft`: The color used for subtle background such as custom container
+ *   or badges. It must satisfy the contrast ratio when putting `XXX-1` colors
+ *   on top of it.
+ *
+ *   The soft color must be semi transparent alpha channel. This is crucial
+ *   because it allows adding multiple "soft" colors on top of each other
+ *   to create a accent, such as when having inline code block inside
+ *   custom containers.
+ *
+ * - `default`: The color used purely for subtle indication without any
+ *   special meanings attched to it such as bg color for menu hover state.
+ *
+ * - `brand`: Used for primary brand colors, such as link text, button with
+ *   brand theme, etc.
+ *
+ * - `tip`: Used to indicate useful information. The default theme uses the
+ *   brand color for this by default.
+ *
+ * - `warning`: Used to indicate warning to the users. Used in custom
+ *   container, badges, etc.
+ *
+ * - `danger`: Used to show error, or dangerous message to the users. Used
+ *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
- :root {
+:root {
   --vp-c-brand: #18A058;
-  --vp-c-brand-light: #36AD6A;
-  --vp-c-brand-lighter: #56FFA0;
-  --vp-c-brand-lightest: rgba(24, 160, 88, 0.16);
-  --vp-c-brand-dark: #63E2B7;
-  --vp-c-brand-darker: #2A947D;
-  --vp-c-brand-dimm: rgba(24, 160, 88, 0.08);
+  --vp-c-brand-2: #36AD6A;
+  --vp-c-brand-3: #56FFA0;
+  --vp-c-brand-soft: #18a05829;
+  --vp-c-bg-alt: #f9f9f9;
+
+  --vp-c-yellow-1: #edb253;
+  --vp-c-yellow-2: #daac61;
+  --vp-c-yellow-3: #e6cc78;
+
+  --vp-c-red-1: #b34e52;
+  --vp-c-red-2: #bc6063;
+  --vp-c-red-3: #cb7676;
+}
+
+
+.dark {
+  --vp-c-brand-1: #63E2B7;
+  --vp-c-brand-2: #2A947D;
+  --vp-c-brand-3: #18a05814;
+  --vp-c-brand-soft: #18a05814;
+  --vp-c-bg-alt: #18181b;
+
+  --vp-c-yellow-1: #e6cc78;
+  --vp-c-yellow-2: #daac61;
+  --vp-c-yellow-3: #edb253;
+
+  --vp-c-red-1: #cb7676;
+  --vp-c-red-2: #bc6063;
+  --vp-c-red-3: #b34e52;
+}
+
+:root {
+  --vp-c-default-1: var(--vp-c-gray-1);
+  --vp-c-default-2: var(--vp-c-gray-2);
+  --vp-c-default-3: var(--vp-c-gray-3);
+  --vp-c-default-soft: var(--vp-c-gray-soft);
+
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  --vp-c-warning-1: var(--vp-c-yellow-1);
+  --vp-c-warning-2: var(--vp-c-yellow-2);
+  --vp-c-warning-3: var(--vp-c-yellow-3);
+  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+
+  --vp-c-danger-1: var(--vp-c-red-1);
+  --vp-c-danger-2: var(--vp-c-red-2);
+  --vp-c-danger-3: var(--vp-c-red-3);
+  --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+:root {
+  -vp-c-text-1: rgba(42, 40, 47);
+  -vp-c-text-2: rgba(42, 40, 47, 0.78);
+  -vp-c-text-3: rgba(42, 40, 47, 0.56);
+  --black-text-1: rgba(42, 40, 47);
+}
+
+.dark {
+  --vp-c-text-1: rgba(255, 255, 245, 0.86);
+  --vp-c-text-2: rgba(235, 235, 245, 0.6);
+  --vp-c-text-3: rgba(235, 235, 245, 0.38);
 }
 
 /**
@@ -21,27 +116,24 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-button-brand-border: var(--vp-c-brand-light);
+  --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: var(--vp-c-brand);
-  --vp-button-brand-hover-border: var(--vp-c-brand-light);
+  --vp-button-brand-bg: var(--vp-c-brand-1);
+  --vp-button-brand-hover-border: transparent;
   --vp-button-brand-hover-text: var(--vp-c-white);
-  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
-  --vp-button-brand-active-border: var(--vp-c-brand-light);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
   --vp-button-brand-active-text: var(--vp-c-white);
-  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
 }
 
-/**
- * Component: Global
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-layout-max-width: 1600px;
-}
-
-.VPDoc.has-aside .content-container {
-    max-width: 1000px !important;
+.dark {
+  --vp-button-brand-text: var(--black-text-1);
+  --vp-button-brand-bg: var(--vp-c-brand-2);
+  --vp-button-brand-hover-text: var(--black-text-1);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-1);
+  --vp-button-brand-active-text: var(--black-text-1);
+  --vp-button-brand-active-bg: var(--vp-c-brand-3);
 }
 
 /**
@@ -49,19 +141,7 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #18a058 30%,
-    #409eff
-  );
-
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #18a058 50%,
-    #47caff 50%
-  );
-  --vp-home-hero-image-filter: blur(40px);
+  --vp-home-hero-name-color: var(--vp-c-brand-1);
 }
 
 @media (min-width: 640px) {
@@ -81,15 +161,10 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-custom-block-tip-border: var(--vp-c-brand);
-  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
-}
-
-.dark {
-  --vp-custom-block-tip-border: var(--vp-c-brand);
-  --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
 /**
@@ -97,53 +172,13 @@
  * -------------------------------------------------------------------------- */
 
 .DocSearch {
-  --docsearch-primary-color: var(--vp-c-brand) !important;
-}
-.VPNavBarTitle {
-  display: none;
-}
-.VPNavBarTitle.has-sidebar {
-  display: block;
-}
-.VPNavBarTitle .title {
-  font-size: 1.03rem;
+  --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
-.VPLink.link.VPNavBarMenuLink {
-  font-size: 0.9rem
-}
-.VPSidebarItem .item .text {
-  font-size: 0.9rem;
-}
-.VPSidebarItem.level-0 > .item .text {
-  font-size: 1rem;
-}
-
-@media (min-width: 640px) {
-  .vp-doc div[class*='language-'] {
-    border-radius: 8px;
-    margin: 0;
-    border-radius:0 0 4px 4px;
-  }
-}
-@media (min-width: 1280px) {
-  .content {
-    min-width: 945px !important;
-  }
-}
-.vp-doc div[class*='language-'] {
-  background-color: var(--n-color, var(--vp-code-block-bg));
-  transition: color .3s var(--n-bezier), background-color .3s var(--n-bezier), box-shadow .3s var(--n-bezier), border-color .3s var(--n-bezier);
-}
-.vp-doc [class*='language-'] code {
-  font-size: 14px;
-}
-
-.vp-doc table {
+.n-data-table .n-data-table-table {
   display: table;
-  margin: 0;
-  width: 100%;
 }
-.vp-doc th, .vp-doc td {
-  border: none
+.VPDocAsideOutline.has-outline,
+.VPLocalNavOutlineDropdown {
+  display: none !important;
 }

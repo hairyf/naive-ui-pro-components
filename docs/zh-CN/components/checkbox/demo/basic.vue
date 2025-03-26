@@ -1,8 +1,4 @@
-<template>
-  <np-checkbox-group v-model:value="cities" :options="options" />
-</template>
-
-<script setup>
+<script lang="ts" setup>
 import { reactive, ref } from 'vue'
 
 const cities = ref(null)
@@ -14,3 +10,7 @@ const options = reactive([
   { value: 'Shenzen', label: '深圳' },
 ])
 </script>
+
+<template>
+  <np-checkbox-group v-model:value="cities" :options="options" />
+</template>

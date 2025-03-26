@@ -1,8 +1,4 @@
-<template>
-  <np-form :instance="form" />
-</template>
-
-<script setup>
+<script lang="ts" setup>
 import { defineForm, field } from 'naive-ui-pro-components'
 
 // fields.ts
@@ -35,3 +31,7 @@ const form = defineForm({
   email3: emailField3,
 })
 </script>
+
+<template>
+  <np-form :is="form" />
+</template>

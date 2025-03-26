@@ -1,5 +1,5 @@
 {
-  "name": "@naive-ui-pro/utils",
+  "name": "@naiveui-pro/utils",
   "type": "module",
   "version": "0.3.1",
   "main": "./src/index.ts",
@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "defu": "^6.1.2",
-    "vue": "^3.2.47"
+    "vue": "catalog:share"
   }
 }

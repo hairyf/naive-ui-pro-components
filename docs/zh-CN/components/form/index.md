@@ -12,7 +12,6 @@
 `defineForm` 同时支持数组/对象模式，定义数组时，`key` 是必填项，它会将数组中的字段进行合并。
 :::
 
-
 ::: demo src="./demo/grid.vue" title="栅格"
 对不同的字段的 `span` 进行设置，可以实现不同栅格布局。
 :::
@@ -20,7 +19,6 @@
 ::: demo src="./demo/props.vue" title="表单组件设置"
 字段中的 `props` 属性，可以对表单组件进行设置。
 :::
-
 
 ::: demo src="./demo/formItemProps.vue" title="表单项设置"
 字段的 `formItemProps` 可以对表单项进行设置，它会继承 [n-form-item](https://www.naiveui.com/zh-CN/os-theme/components/form#FormItem-Props) 和 [n-grid-item](https://www.naiveui.com/zh-CN/os-theme/components/grid#GridItem-Props) 的所有属性。
@@ -38,7 +36,6 @@
 通过 `renderItem` 字段可以自定义渲染表单项，如果内容比较复杂，我们建议使用 tsx 编写。
 :::
 
-
 ::: demo src="./demo/clone.vue" title="字段克隆"
 通过 `field` 方法返回的字段，使用 `clone` 方法可以克隆一个新的字段，避免字段数据引用是同一个 value。
 :::
@@ -47,12 +44,11 @@
 开启 `toolbars` 模式，栅格将固定为 `0:24 742:6 1394:4`，你可以通过 `toolbars` 插槽自定义右侧工具栏内容。
 :::
 
-
 ## Props
 
 | 名称 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
-| instance | `ProFormInstance` | `-` | 组件的实例 |
+| is | `ProFormInstance` | `-` | 组件的实例 |
 | grid | `boolean` | `true` | 是否开启栅格布局 |
 | cols | `number \| ResponsiveDescription` | `24` | 显示的栅格数量 |
 | x-gap | `number \| ResponsiveDescription` | `0` | 横向间隔槽 |
@@ -79,7 +75,6 @@
 | clone | `() => WithConfigField` | 浅拷贝 `field` |
 | cloneDeep | `() => WithConfigField` | 深拷贝 `field` |
 
-
 ## Field Types
 
 | 名称 | 说明 |
@@ -99,11 +94,8 @@
 | checkbox | 多选框 |
 | textarea | 多行输入框 |
 
-
 ## Slots
 
 | 名称 | 类型 | 说明 |
 | --- | --- | --- |
 | toolbars | `()` | 工具栏内容，使用该插槽默认开启工具栏模式 |
-
-

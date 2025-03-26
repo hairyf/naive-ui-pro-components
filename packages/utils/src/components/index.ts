@@ -1,9 +1,9 @@
 import { defineComponent, h } from 'vue'
 
-export const Condition = defineComponent({
-  name: 'Condition',
+export const If = defineComponent({
+  name: 'If',
   props: {
-    if: {
+    cond: {
       type: Boolean,
       default: true,
     },
@@ -12,7 +12,7 @@ export const Condition = defineComponent({
     },
   },
   setup(props, { slots }) {
-    return () => props.if
+    return () => props.cond
       ? (props.tag ? h(props.tag, {}, slots) : slots.default?.())
       : null
   },

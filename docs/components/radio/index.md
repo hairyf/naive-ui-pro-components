@@ -8,7 +8,6 @@ Creates a group of radio buttons based on configuration options.
 
 <demo title="Sizes" :expand="true" src="./demo/sizes.vue" desc="Choose whichever size you prefer." />
 
-
 ## Props
 
 | Name | Type | Default | Description |

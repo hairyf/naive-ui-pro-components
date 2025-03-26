@@ -12,10 +12,7 @@ Pro Controls 通常用于在 Table Columns 与 Form Toolbars 中，它也可以�
 
 :::
 
-
 <demo src="./demo/table.vue" title="表格控件" />
-
-
 
 ::: demo src="./demo/custom.vue" title="自定义渲染"
 

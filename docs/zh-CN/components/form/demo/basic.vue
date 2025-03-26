@@ -1,8 +1,3 @@
-<template>
-  <np-form :instance="form" />
-  <pre>{{ JSON.stringify(form.dataTrans, null, 2) }}</pre>
-</template>
-
 <script lang="ts" setup>
 import { defineForm } from 'naive-ui-pro-components'
 
@@ -24,3 +19,8 @@ const form = defineForm({
   time: { type: 'date-picker' },
 })
 </script>
+
+<template>
+  <np-form :is="form" />
+  <pre>{{ JSON.stringify(form.dataTrans, null, 2) }}</pre>
+</template>

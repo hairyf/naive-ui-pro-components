@@ -1,8 +1,3 @@
-<template>
-  <np-form :instance="form" />
-  <np-table :instance="table" :columns="columns" />
-</template>
-
 <script lang="ts" setup>
 import { defineForm, defineTable, useColumns } from 'naive-ui-pro-components'
 
@@ -46,3 +41,8 @@ const table = defineTable<Row[]>({
   watch: [form.data],
 })
 </script>
+
+<template>
+  <np-form :is="form" />
+  <np-table :is="table" :columns="columns" />
+</template>
