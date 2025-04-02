@@ -10,16 +10,11 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "types": [
-      "vite/client"
-    ],
     "strict": true,
     "declaration": true,
     "downlevelIteration": true,
     "sourceMap": true,
-    "esModuleInterop": true,
-    "skipDefaultLibCheck": true,
-    "skipLibCheck": true
+    "esModuleInterop": true
   },
   "include": [
     "./**/*.ts",

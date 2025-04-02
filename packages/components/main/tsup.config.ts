@@ -11,11 +11,12 @@ export default [
       'vue': 'Vue',
     },
     clean: true,
-    dts: true,
+
   }),
   {
     format: ['cjs', 'esm'],
     entry: ['src/resolver.ts', 'src/imports.ts'],
+    name: 'naive-ui-pro-components',
     dts: true,
   },
 ]

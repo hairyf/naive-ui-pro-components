@@ -1,9 +1,9 @@
 import type { ProCheckboxGroupProps } from '@naiveui-pro/checkbox'
+import type { ProRadioGroupProps } from '@naiveui-pro/radio'
 import type { NestedRefs } from '@naiveui-pro/utils'
 import type { MaybeRef } from '@vueuse/core'
 import type * as NaiveUI from 'naive-ui'
 import type { Ref, VNodeChild } from 'vue'
-import type { ProRadioGroupProps } from '../../../radio/src'
 import type { ProFormInstance } from './instance'
 
 export interface FormItemDate {

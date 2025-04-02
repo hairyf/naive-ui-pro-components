@@ -11,7 +11,8 @@ exports.defineBuildConfig = (options) => {
 
   options = {
     ...options,
-    external: ['vue', 'naive-ui', '@vueuse/core', 'vue'],
+    dts: { resolve: [/@naiveui-pro/, /naive-ui/, /@vueuse/] },
+    external: ['vue', 'naive-ui', '@vueuse/core', 'vue', /@naiveui-pro/],
     esbuildPlugins: [require('unplugin-vue-jsx/esbuild')()],
   }
 

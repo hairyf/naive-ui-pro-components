@@ -30,7 +30,7 @@
     "lint-staged": "catalog:",
     "pnpm": "catalog:",
     "simple-git-hooks": "catalog:",
-    "tsup": "^8.4.0",
+    "tsup": "6.6.0",
     "tsup-define": "workspace:*",
     "tsx": "catalog:",
     "typescript": "catalog:",

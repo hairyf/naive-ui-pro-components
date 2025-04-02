@@ -9,5 +9,4 @@ export default defineBuildConfig({
     vue: 'Vue',
   },
   clean: true,
-  dts: true,
 })

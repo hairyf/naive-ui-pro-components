@@ -1,6 +1,6 @@
 import { NpCheckboxGroup } from '@naiveui-pro/checkbox'
+import { NpRadioGroup } from '@naiveui-pro/radio'
 import { NAutoComplete, NButton, NCascader, NDatePicker, NInput, NInputNumber, NMention, NRate, NSelect, NSlider, NSwitch, NTimePicker } from 'naive-ui'
-import { NpRadioGroup } from '../../../radio/src'
 
 export const FieldComponents: Record<string, any> = {
   'date-picker': NDatePicker,
