@@ -12,9 +12,6 @@ export default defineConfig({
     VueJsx(),
   ],
   ssr: {
-    noExternal: [
-      'naive-ui',
-      'naive-ui-pro-components',
-    ],
+    noExternal: ['naive-ui', 'vueuc', 'date-fns'],
   },
 })

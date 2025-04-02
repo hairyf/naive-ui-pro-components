@@ -29,14 +29,15 @@ export default {
       const { default: NaiveUIProComponents } = await import('naive-ui-pro-components')
       app.use(NaiveUI)
       app.use(NaiveUIProComponents)
+      app.use(NaiveUIContainer, {
+        github: 'https://github.com/hairyf/naive-ui-pro-components/tree/main',
+        codeeditor,
+        install: [
+          NpGlobalProvider,
+        ],
+      })
     }
-    app.use(NaiveUIContainer, {
-      github: 'https://github.com/hairyf/naive-ui-pro-components/tree/main',
-      codeeditor,
-      install: [
-        NpGlobalProvider,
-      ],
-    })
+
     app.use(TwoslashFloating)
   },
 }
