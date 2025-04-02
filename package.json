@@ -5,6 +5,7 @@
   "packageManager": "pnpm@10.4.0",
   "scripts": {
     "lint": "eslint --cache .",
+    "build": "pnpm -r build",
     "docs": "pnpm -C docs run docs:dev",
     "docs:build": "pnpm -C docs run docs:build",
     "release": "bumpp -r && pnpm -r publish",

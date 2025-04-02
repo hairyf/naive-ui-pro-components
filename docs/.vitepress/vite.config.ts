@@ -11,4 +11,9 @@ export default defineConfig({
     GroupIconVitePlugin(),
     VueJsx(),
   ],
+  ssr: {
+    external: [
+      'naive-ui',
+    ],
+  },
 })
