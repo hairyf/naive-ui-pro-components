@@ -169,6 +169,17 @@
 }
 
 /**
+ * Component: Global
+ * -------------------------------------------------------------------------- */
+
+ :root {
+  --vp-layout-max-width: 1600px;
+}
+.content-container {
+  max-width: var(--vp-layout-max-width) !important;
+}
+
+/**
  * Component: Custom Block
  * -------------------------------------------------------------------------- */
 
