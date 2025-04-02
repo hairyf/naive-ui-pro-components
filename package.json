@@ -13,12 +13,6 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
-  "dependencies": {
-    "@vicons/fluent": "^0.12.0",
-    "@vicons/ionicons5": "^0.13.0",
-    "naive-ui": "catalog:share",
-    "naive-ui-pro-components": "workspace:^"
-  },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
     "@antfu/ni": "catalog:",

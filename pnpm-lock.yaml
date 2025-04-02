@@ -95,19 +95,6 @@ catalogs:
 importers:
 
   .:
-    dependencies:
-      '@vicons/fluent':
-        specifier: ^0.12.0
-        version: 0.12.0
-      '@vicons/ionicons5':
-        specifier: ^0.13.0
-        version: 0.13.0
-      naive-ui:
-        specifier: catalog:share
-        version: 2.41.0(vue@3.5.13(typescript@5.7.3))
-      naive-ui-pro-components:
-        specifier: workspace:^
-        version: link:packages/components/main
     devDependencies:
       '@antfu/eslint-config':
         specifier: 'catalog:'
@@ -168,6 +155,13 @@ importers:
         version: 3.0.5(@types/debug@4.1.12)(@types/node@22.13.4)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.0)
 
   docs:
+    dependencies:
+      naive-ui:
+        specifier: catalog:share
+        version: 2.41.0(vue@3.5.13(typescript@5.7.3))
+      naive-ui-pro-components:
+        specifier: workspace:^
+        version: link:../packages/components/main
     devDependencies:
       '@iconify-json/svg-spinners':
         specifier: 'catalog:'
@@ -1943,12 +1937,6 @@ packages:
     resolution: {integrity: sha512-v2rFIrBaWGQmSJeKv7us+2OMos2RqdZYpf/seOpf4MFHrmjjiFQ1ZWkTqFyNfUxAwj6VID5frVJhxJfZuEhhug==}
     peerDependencies:
       vite: ^2.9.0 || ^3.0.0-0 || ^4.0.0 || ^5.0.0-0 || ^6.0.0-0
-
-  '@vicons/fluent@0.12.0':
-    resolution: {integrity: sha512-ATCiqPuiJ6RI5GBlD3BIpZ9Xw4MsCA4RpI5oR6MCti4quS4mX1Gp6N74FCzw7lgOj+80rV4HMKhZTVInwimpVQ==}
-
-  '@vicons/ionicons5@0.13.0':
-    resolution: {integrity: sha512-zvZKBPjEXKN7AXNo2Na2uy+nvuv6SP4KAMQxpKL2vfHMj0fSvuw7JZcOPCjQC3e7ayssKnaoFVAhbYcW6v41qQ==}
 
   '@vitejs/plugin-vue-jsx@4.1.2':
     resolution: {integrity: sha512-4Rk0GdE0QCdsIkuMmWeg11gmM4x8UmTnZR/LWPm7QJ7+BsK4tq08udrN0isrrWqz5heFy9HLV/7bOLgFS8hUjA==}
@@ -6300,10 +6288,6 @@ snapshots:
       vite: 6.1.0(@types/node@22.13.4)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.0)
     transitivePeerDependencies:
       - vue
-
-  '@vicons/fluent@0.12.0': {}
-
-  '@vicons/ionicons5@0.13.0': {}
 
   '@vitejs/plugin-vue-jsx@4.1.2(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))':
     dependencies:
