@@ -10,6 +10,7 @@
     "naive-ui": "catalog:share",
     "naive-ui-pro-components": "workspace:^"
   },
+
   "devDependencies": {
     "@iconify-json/svg-spinners": "catalog:",
     "@shikijs/vitepress-twoslash": "catalog:",
