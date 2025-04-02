@@ -21,7 +21,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "@naiveui-pro/utils": "workspace:^",

@@ -43,7 +43,8 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "@naiveui-pro/checkbox": "workspace:*",
