@@ -12,8 +12,9 @@ export default defineConfig({
     VueJsx(),
   ],
   ssr: {
-    external: [
+    noExternal: [
       'naive-ui',
+      'naive-ui-pro-components',
     ],
   },
 })
