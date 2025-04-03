@@ -7,7 +7,6 @@
     "lint": "eslint --cache .",
     "build": "pnpm -r build",
     "docs": "pnpm -C docs run docs:dev",
-    "docs:build": "pnpm -C docs run docs:build",
     "release": "bumpp -r && pnpm -r publish --access public",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
@@ -34,6 +33,7 @@
     "vite": "catalog:",
     "vitest": "catalog:"
   },
+
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },

@@ -11,9 +11,8 @@ const VERSIONS: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] 
   { text: `Release Notes`, link: 'https://github.com/hairyf/naive-ui-pro-components/releases' },
   { text: `Contributing`, link: 'https://github.com/hairyf/naive-ui-pro-components/blob/main/CONTRIBUTING.md' },
 ]
-
 export default defineConfig({
-  title: 'Naive Pro Components',
+  title: 'Naive Ultra',
   description: 'Make backend development easier',
   markdown: {
     theme: {
@@ -42,6 +41,9 @@ export default defineConfig({
       lang: 'zh-CN',
       themeConfig: useThemeConfig('zh-CN'),
     },
+  },
+  themeConfig: {
+    search: { provider: 'local' },
   },
 
   head: [
@@ -75,6 +77,7 @@ function useThemeConfig(lang = 'en-US') {
   ]
   const themeConfig: DefaultTheme.Config = {
     // https://vitepress.dev/reference/default-theme-config
+
     logo: '/logo.svg',
     nav: [
       { text: 'Guide', items: [{ items: GUIDES }] },

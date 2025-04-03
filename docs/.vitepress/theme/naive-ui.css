@@ -1,0 +1,14 @@
+.VPImage.logo {
+  width: 32px;
+  height: 32px;
+}
+.VPNavBarTitle .title span{
+  font-size: 18px;
+  font-weight: normal;
+}
+
+button span {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: inherit;
+}

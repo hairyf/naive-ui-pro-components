@@ -11,7 +11,7 @@ import { codeeditor } from './index.codeeditor'
 import '@shikijs/vitepress-twoslash/style.css'
 import 'virtual:group-icons.css'
 import './style.css'
-
+import './naive-ui.css'
 // import 'uno.css'
 
 // @unocss-include
