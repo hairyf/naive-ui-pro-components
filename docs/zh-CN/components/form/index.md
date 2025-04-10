@@ -4,43 +4,43 @@
 
 高级表单基于对象的函数式编程（functional programming）思想。并将表单数据抽象为一个 JavaScript 对象，通过对这个对象进行操作和封装，让表单数据具有更好的可复用性和可维护性。
 
-::: demo src="./demo/basic.vue" title="基础"
+::: demo twoslash src="./demo/basic.vue" title="基础"
 高级表单使用 `defineForm` 定义，返回一个表单对象的实例，它会将表单数据进行重组，它具有良好的 Typescript 支持。
 :::
 
-::: demo src="./demo/array.vue" title="模式"
+::: demo twoslash src="./demo/array.vue" title="模式"
 `defineForm` 同时支持数组/对象模式，定义数组时，`key` 是必填项，它会将数组中的字段进行合并。
 :::
 
-::: demo src="./demo/grid.vue" title="栅格"
+::: demo twoslash src="./demo/grid.vue" title="栅格"
 对不同的字段的 `span` 进行设置，可以实现不同栅格布局。
 :::
 
-::: demo src="./demo/props.vue" title="表单组件设置"
+::: demo twoslash src="./demo/props.vue" title="表单组件设置"
 字段中的 `props` 属性，可以对表单组件进行设置。
 :::
 
-::: demo src="./demo/formItemProps.vue" title="表单项设置"
+::: demo twoslash src="./demo/formItemProps.vue" title="表单项设置"
 字段的 `formItemProps` 可以对表单项进行设置，它会继承 [n-form-item](https://www.naiveui.com/zh-CN/os-theme/components/form#FormItem-Props) 和 [n-grid-item](https://www.naiveui.com/zh-CN/os-theme/components/grid#GridItem-Props) 的所有属性。
 :::
 
-::: demo src="./demo/field.vue" title="表单字段"
+::: demo twoslash src="./demo/field.vue" title="表单字段"
 `field` 是一个描述对象，他可以是普通的对象，field 可以与 form 分离，并且通过 `field` 函数创建具有额外的能力。
 :::
 
-::: demo src="./demo/field-context.vue" title="字段上下文"
+::: demo twoslash src="./demo/field-context.vue" title="字段上下文"
 `field|withConfig` 传入函数可接收当前使用的 form 实例，用于组合校验。
 :::
 
-::: demo src="./demo/field-render.vue" title="字段渲染"
+::: demo twoslash src="./demo/field-render.vue" title="字段渲染"
 通过 `renderItem` 字段可以自定义渲染表单项，如果内容比较复杂，我们建议使用 tsx 编写。
 :::
 
-::: demo src="./demo/clone.vue" title="字段克隆"
+::: demo twoslash src="./demo/clone.vue" title="字段克隆"
 通过 `field` 方法返回的字段，使用 `clone` 方法可以克隆一个新的字段，避免字段数据引用是同一个 value。
 :::
 
-::: demo src="./demo/toolbars.vue" title="工具栏"
+::: demo twoslash src="./demo/toolbars.vue" title="工具栏"
 开启 `toolbars` 模式，栅格将固定为 `0:24 742:6 1394:4`，你可以通过 `toolbars` 插槽自定义右侧工具栏内容。
 :::
 

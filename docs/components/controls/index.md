@@ -4,17 +4,17 @@ Pro Controls are commonly used in Table Columns and Form Toolbars, and can also 
 
 It returns a Function Component that renders the component based on the provided parameters.
 
-<demo src="./demo/basic.vue" title="Basic" />
+<demo twoslash src="./demo/basic.vue" title="Basic" />
 
-::: demo src="./demo/form.vue" title="Form Toolbar"
+::: demo twoslash src="./demo/form.vue" title="Form Toolbar"
 
 Used in conjunction with Form Toolbars, Pro Controls allow you to quickly create form toolbars.
 
 :::
 
-<demo src="./demo/table.vue" title="Table Controls" />
+<demo twoslash src="./demo/table.vue" title="Table Controls" />
 
-::: demo src="./demo/custom.vue" title="Custom Rendering"
+::: demo twoslash src="./demo/custom.vue" title="Custom Rendering"
 
 By default, Controls only render button controls. If you need to use other components, you can use the custom attribute.
 

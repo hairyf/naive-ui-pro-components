@@ -2,11 +2,11 @@
 
 以配置项创建单选框组。
 
-<demo title="基础用法" :expand="true" src="./demo/basic.vue" />
+<demo twoslash title="基础用法" expand src="./demo/basic.vue" />
 
-<demo title="按钮组" :expand="true" src="./demo/buttons.vue" desc="有的时候用按钮显得更优雅一点。" />
+<demo twoslash title="按钮组" expand src="./demo/buttons.vue" description="有的时候用按钮显得更优雅一点。" />
 
-<demo title="尺寸" :expand="true" src="./demo/sizes.vue" desc="任君挑选。" />
+<demo twoslash title="尺寸" expand src="./demo/sizes.vue" description="任君挑选。" />
 
 ## Props
 

@@ -155,6 +155,7 @@ export type FormItemConfig<V = any, K = string> = FormItemComponents & {
 export type FormItemConfigWithKey = (FormItemConfig & { key: string })
 
 export type FormItemFieldConfig<T extends WithFieldConfigExtends> = T & {
+
   /**
    * set with new config
    */

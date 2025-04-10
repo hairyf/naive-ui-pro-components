@@ -11,7 +11,7 @@ All global components provided by `naive-ui` cannot be used in the global scope 
 
 Now you can use `$message`, `$dialog`, `$loadingBar`, `$notification` in the global scope.
 
-<demo title="Basic" src="./demo/basic.vue" />
+<demo twoslash title="Basic" src="./demo/basic.vue" />
 
 ```ts
 function onClick() {

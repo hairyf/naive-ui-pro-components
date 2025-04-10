@@ -2,11 +2,11 @@
 
 Creates a group of radio buttons based on configuration options.
 
-<demo title="Basic Usage" :expand="true" src="./demo/basic.vue" />
+<demo twoslash title="Basic Usage" expand src="./demo/basic.vue" />
 
-<demo title="Button Group" :expand="true" src="./demo/buttons.vue" desc="Sometimes using buttons can be more elegant." />
+<demo twoslash title="Button Group" expand src="./demo/buttons.vue" description="Sometimes using buttons can be more elegant." />
 
-<demo title="Sizes" :expand="true" src="./demo/sizes.vue" desc="Choose whichever size you prefer." />
+<demo twoslash title="Sizes" expand src="./demo/sizes.vue" description="Choose whichever size you prefer." />
 
 ## Props
 

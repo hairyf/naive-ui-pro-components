@@ -4,17 +4,17 @@ Pro Controls 通常用于在 Table Columns 与 Form Toolbars 中，它也可以�
 
 它返回一个 Function Component，该 Function Component 会根据传入的参数渲染组件。
 
-<demo src="./demo/basic.vue" title="基础" />
+<demo twoslash src="./demo/basic.vue" title="基础" />
 
-::: demo src="./demo/form.vue" title="表单工具栏"
+::: demo twoslash src="./demo/form.vue" title="表单工具栏"
 
 与 Form Toolbars 配合使用，可以快速制作表单工具栏。
 
 :::
 
-<demo src="./demo/table.vue" title="表格控件" />
+<demo twoslash src="./demo/table.vue" title="表格控件" />
 
-::: demo src="./demo/custom.vue" title="自定义渲染"
+::: demo twoslash src="./demo/custom.vue" title="自定义渲染"
 
 默认情况下，Controls 仅渲染 button 控件，如果需要使用其他组件，可以使用 `custom` 属性。
 

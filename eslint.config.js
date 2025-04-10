@@ -8,6 +8,7 @@ export default antfu(
   },
   {
     rules: {
+      'vue/component-name-in-template-casing': 'off',
       'ts/no-use-before-define': 'off',
       'no-alert': 'off',
     },

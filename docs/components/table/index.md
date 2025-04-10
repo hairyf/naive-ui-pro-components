@@ -4,33 +4,33 @@ The advanced table is designed to address the issue of writing repetitive boiler
 
 If your table needs to interact with the server or requires different cell styles, ProTable is the perfect choice. However, if you just need to render a basic table, we recommend using [data-table](https://www.naiveui.com/en-US/os-theme/components/data-table) or [table](https://www.naiveui.com/en-US/os-theme/components/table).
 
-<demo title="Basic" src="./demo/basic.vue" />
+<demo twoslash title="Basic" src="./demo/basic.vue" />
 
-::: demo src="./demo/request.vue" title="External Control"
+::: demo twoslash src="./demo/request.vue" title="External Control"
 
 Use `defineTable` to control the request externally.
 
 :::
 
-::: demo src="./demo/form.vue" title="Form Integration"
+::: demo twoslash src="./demo/form.vue" title="Form Integration"
 
 You can also use it with `defineForm` to create a complete search page:
 
 :::
 
-::: demo src="./demo/pagination.vue" title="Table Pagination"
+::: demo twoslash src="./demo/pagination.vue" title="Table Pagination"
 
 Pagination is enabled by default. If you don't need pagination, you can set the `pagination` parameter to `false` to disable it. You can also override the `pagination` parameter by providing your own `pagination` configuration.
 
 :::
 
-::: demo src="./demo/watcher.vue" title="Data Watcher"
+::: demo twoslash src="./demo/watcher.vue" title="Data Watcher"
 
 When the table data changes, you may need to perform additional operations. You can use the `watch` parameter to listen for data changes, and it will automatically reset the pagination and make a new request.
 
 :::
 
-::: demo src="./demo/hooks.vue" title="Hooks Functions"
+::: demo twoslash src="./demo/hooks.vue" title="Hooks Functions"
 
 The table provides several utility functions to quickly create columns.
 

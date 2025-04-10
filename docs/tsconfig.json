@@ -10,9 +10,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "types": [
-      "./components.d.ts"
-    ],
     "strict": true,
     "declaration": true,
     "downlevelIteration": true,

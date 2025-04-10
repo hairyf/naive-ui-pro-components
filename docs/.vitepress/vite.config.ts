@@ -31,6 +31,8 @@ export default defineConfig({
         resolve: (name: string) => {
           if (name.match(/^Np.+/))
             return { name, from: 'naive-ui-pro-components' }
+          if (name.match(/^N.+/))
+            return { name, from: 'naive-ui' }
         },
       }],
     }),

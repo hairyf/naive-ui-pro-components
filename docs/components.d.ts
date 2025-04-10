@@ -7,10 +7,14 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    NButton: typeof import('naive-ui')['NButton']
+    NCheckbox: typeof import('naive-ui')['NCheckbox']
     NpCheckboxGroup: typeof import('naive-ui-pro-components')['NpCheckboxGroup']
     NpControls: typeof import('naive-ui-pro-components')['NpControls']
     NpForm: typeof import('naive-ui-pro-components')['NpForm']
     NpRadioGroup: typeof import('naive-ui-pro-components')['NpRadioGroup']
     NpTable: typeof import('naive-ui-pro-components')['NpTable']
+    NSpace: typeof import('naive-ui')['NSpace']
+    NSwitch: typeof import('naive-ui')['NSwitch']
   }
 }
