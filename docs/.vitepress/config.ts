@@ -1,4 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
+import path from 'node:path'
+import process from 'node:process'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { defineConfig } from 'vitepress'
 import { demoMdPlugin } from 'vitepress-plugin-demo'
@@ -11,6 +13,12 @@ const VERSIONS: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] 
   { text: `Release Notes`, link: 'https://github.com/hairyf/naive-ui-pro-components/releases' },
   { text: `Contributing`, link: 'https://github.com/hairyf/naive-ui-pro-components/blob/main/CONTRIBUTING.md' },
 ]
+
+const types = [
+  'auto-imports.d.ts',
+  'components.d.ts',
+]
+
 export default defineConfig({
   title: 'Naive Ultra',
   description: 'Make backend development easier',
@@ -20,7 +28,13 @@ export default defineConfig({
       dark: 'vitesse-dark',
     },
     codeTransformers: [
-      transformerTwoslash(),
+      transformerTwoslash({
+        twoslashOptions: {
+          compilerOptions: {
+            types: types.map(type => path.resolve(process.cwd(), `./${type}`)),
+          },
+        },
+      }),
     ],
     languages: ['js', 'jsx', 'ts', 'tsx'],
     config: (md) => {

@@ -184,6 +184,9 @@ importers:
       unocss:
         specifier: 'catalog:'
         version: 65.5.0(postcss@8.5.1)(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
+      unplugin-auto-import:
+        specifier: ^0.16.4
+        version: 0.16.7(@vueuse/core@12.7.0(typescript@5.7.3))(rollup@4.36.0)
       unplugin-vue-components:
         specifier: 'catalog:'
         version: 28.1.0(@babel/parser@7.26.10)(vue@3.5.13(typescript@5.7.3))
@@ -9304,6 +9307,21 @@ snapshots:
       - postcss
       - supports-color
       - vue
+
+  unplugin-auto-import@0.16.7(@vueuse/core@12.7.0(typescript@5.7.3))(rollup@4.36.0):
+    dependencies:
+      '@antfu/utils': 0.7.10
+      '@rollup/pluginutils': 5.1.4(rollup@4.36.0)
+      fast-glob: 3.3.3
+      local-pkg: 0.5.1
+      magic-string: 0.30.17
+      minimatch: 9.0.5
+      unimport: 3.14.6(rollup@4.36.0)
+      unplugin: 1.16.1
+    optionalDependencies:
+      '@vueuse/core': 12.7.0(typescript@5.7.3)
+    transitivePeerDependencies:
+      - rollup
 
   unplugin-auto-import@0.16.7(@vueuse/core@13.0.0(vue@3.5.13(typescript@5.7.3)))(rollup@4.36.0):
     dependencies:

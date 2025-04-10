@@ -2,6 +2,11 @@
   "name": "naive-ui-pro-components",
   "type": "module",
   "version": "0.3.5",
+  "exports": {
+    ".": "./src/index.ts",
+    "./resolver": "./src/resolver.ts",
+    "./imports": "./src/imports.ts"
+  },
   "main": "./src/index.ts",
   "publishConfig": {
     "exports": {
