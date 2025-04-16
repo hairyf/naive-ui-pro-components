@@ -64,7 +64,7 @@ await $message.error('错误')
 </template>
 ```
 
-你可以使用 `np-install-provider` 简化挂载操作：
+你可以使用 `np-installs-provider` 简化挂载操作：
 
 ```html
 <!-- App.vue -->
@@ -72,13 +72,13 @@ await $message.error('错误')
   import { NpInstallProvider, NpGlobalMessage, NpGlobalDialog } from 'naive-ultra'
 </script>
 <template>
-  <np-install-provider
+  <np-installs-provider
     :install="[
       NpGlobalMessage,
       NpGlobalDialog,
     ]"
   >
     <content />
-  </np-install-provider>
+  </np-installs-provider>
 </template>
 ```

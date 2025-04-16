@@ -206,6 +206,18 @@ importers:
         specifier: catalog:share
         version: 3.5.13(typescript@5.7.3)
 
+  packages/components/actions:
+    dependencies:
+      '@naive-ultra/utils':
+        specifier: workspace:^
+        version: link:../../utils
+      naive-ui:
+        specifier: catalog:share
+        version: 2.41.0(vue@3.5.13(typescript@5.7.3))
+      vue:
+        specifier: catalog:share
+        version: 3.5.13(typescript@5.7.3)
+
   packages/components/checkbox:
     dependencies:
       '@naive-ultra/utils':
@@ -214,18 +226,6 @@ importers:
       '@vueuse/core':
         specifier: catalog:share
         version: 13.0.0(vue@3.5.13(typescript@5.7.3))
-      naive-ui:
-        specifier: catalog:share
-        version: 2.41.0(vue@3.5.13(typescript@5.7.3))
-      vue:
-        specifier: catalog:share
-        version: 3.5.13(typescript@5.7.3)
-
-  packages/components/actions:
-    dependencies:
-      '@naive-ultra/utils':
-        specifier: workspace:^
-        version: link:../../utils
       naive-ui:
         specifier: catalog:share
         version: 2.41.0(vue@3.5.13(typescript@5.7.3))
@@ -276,32 +276,20 @@ importers:
         specifier: catalog:share
         version: 3.5.13(typescript@5.7.3)
 
-  packages/components/globals:
-    dependencies:
-      defu:
-        specifier: ^6.1.2
-        version: 6.1.4
-      naive-ui:
-        specifier: catalog:share
-        version: 2.41.0(vue@3.5.13(typescript@5.7.3))
-      vue:
-        specifier: catalog:share
-        version: 3.5.13(typescript@5.7.3)
-
   packages/components/main:
     dependencies:
-      '@naive-ultra/checkbox':
-        specifier: workspace:*
-        version: link:../checkbox
       '@naive-ultra/actions':
         specifier: workspace:*
         version: link:../actions
+      '@naive-ultra/checkbox':
+        specifier: workspace:*
+        version: link:../checkbox
       '@naive-ultra/form':
         specifier: workspace:*
         version: link:../form
-      '@naive-ultra/globals':
+      '@naive-ultra/providers':
         specifier: workspace:*
-        version: link:../globals
+        version: link:../provider
       '@naive-ultra/radio':
         specifier: workspace:*
         version: link:../radio
@@ -321,6 +309,18 @@ importers:
       unplugin-vue-components:
         specifier: ^0.25.0
         version: 0.25.2(@babel/parser@7.26.10)(rollup@4.36.0)(vue@3.5.13(typescript@5.7.3))
+
+  packages/components/provider:
+    dependencies:
+      defu:
+        specifier: ^6.1.2
+        version: 6.1.4
+      naive-ui:
+        specifier: catalog:share
+        version: 2.41.0(vue@3.5.13(typescript@5.7.3))
+      vue:
+        specifier: catalog:share
+        version: 3.5.13(typescript@5.7.3)
 
   packages/components/radio:
     dependencies:

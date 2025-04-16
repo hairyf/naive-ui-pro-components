@@ -1,12 +1,12 @@
-# Pro Install
+# Pro Provider
 
 All global components provided by `naive-ui` cannot be used in the global scope because they need to be mounted to a component. We provide the `install` component to use these feedback components in the global scope, and it will automatically mount the TypeScript types.
 
 ```html
 <!-- App.vue -->
-<np-install-provider>
+<np-installs-provider>
   <content />
-</np-install-provider>
+</np-installs-provider>
 ```
 
 Now you can use `$message`, `$dialog`, `$loadingBar`, `$notification` in the global scope.
@@ -64,7 +64,7 @@ If you only need to use `$message`, you can achieve it by mounting the component
 </template>
 ```
 
-You can use `np-install-provider` to simplify the mounting process:
+You can use `np-installs-provider` to simplify the mounting process:
 
 ```html
 <!-- App.vue -->
@@ -72,13 +72,13 @@ You can use `np-install-provider` to simplify the mounting process:
   import { NpInstallProvider, NpGlobalMessage, NpGlobalDialog } from 'naive-ultra'
 </script>
 <template>
-  <np-install-provider
+  <np-installs-provider
     :install="[
       NpGlobalMessage,
       NpGlobalDialog,
     ]"
   >
     <content />
-  </np-install-provider>
+  </np-installs-provider>
 </template>
 ```
