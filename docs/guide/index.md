@@ -1,8 +1,8 @@
 # The concept of ProComponents
 
-Similar to Ant Design Pro Components, Naive UI Pro Components is an advanced component library based on Naive UI, providing higher-level abstractions and encapsulation for backend systems.
+Similar to Ant Design Pro Components, Naive Ultra is an advanced component library based on Naive UI, providing higher-level abstractions and encapsulation for backend systems.
 
-We have made some adjustments to the design of Naive UI Pro Components to better align with the design style of Naive UI and provide the ability to quickly and efficiently build high-quality backend applications.
+We have made some adjustments to the design of Naive Ultra to better align with the design style of Naive UI and provide the ability to quickly and efficiently build high-quality backend applications.
 
 ## Design Ideas
 
@@ -14,7 +14,7 @@ If we want to re-request the network, we need to encapsulate the above behaviors
 
 ## A component !≈ a page
 
-We don't want you to see components as pages, but rather as a superset of functionality. This allows your code to remain flexible, which is also the difference between Naive UI Pro Components and Ant Design Pro Components.
+We don't want you to see components as pages, but rather as a superset of functionality. This allows your code to remain flexible, which is also the difference between Naive Ultra and Ant Design Pro Components.
 
 A list page can use the combination of `pro-form` and `pro-table`, while an edit page can utilize `pro-form` plus a `button` or other various components. This allows us to focus on implementing core business logic and page effects.
 

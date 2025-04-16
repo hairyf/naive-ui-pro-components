@@ -1,5 +1,5 @@
 {
-  "name": "naive-ui-pro-components",
+  "name": "naive-ultra",
   "type": "module",
   "version": "0.3.5",
   "exports": {
@@ -50,12 +50,12 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "@naiveui-pro/checkbox": "workspace:*",
-    "@naiveui-pro/controls": "workspace:*",
-    "@naiveui-pro/form": "workspace:*",
-    "@naiveui-pro/globals": "workspace:*",
-    "@naiveui-pro/radio": "workspace:*",
-    "@naiveui-pro/table": "workspace:*",
+    "@naive-ultra/actions": "workspace:*",
+    "@naive-ultra/checkbox": "workspace:*",
+    "@naive-ultra/form": "workspace:*",
+    "@naive-ultra/globals": "workspace:*",
+    "@naive-ultra/radio": "workspace:*",
+    "@naive-ultra/table": "workspace:*",
     "naive-ui": "catalog:share",
     "vue": "catalog:share"
   },

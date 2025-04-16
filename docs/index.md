@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Naive UI Pro Components"
-  text: "Naive UI"
+  name: "Naive Ultra"
+  text: "Naive UI Components"
   tagline: Make the development of middle and back office easier
   image: /logo.svg
   actions:
@@ -13,7 +13,7 @@ hero:
       link: /guide/
     - theme: alt
       text: View on GitHub
-      link: https://github.com/hairyf/naive-ui-pro-components
+      link: https://github.com/hairyf/naive-ultra
 
 features:
   - title: Easy to use

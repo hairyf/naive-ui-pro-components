@@ -5,7 +5,7 @@ function NaiveUIProResolver(): ComponentResolver {
     type: 'component',
     resolve: (name: string) => {
       if (name.match(/^Np.+/))
-        return { name, from: 'naive-ui-pro-components' }
+        return { name, from: 'naive-ultra' }
     },
   }
 }

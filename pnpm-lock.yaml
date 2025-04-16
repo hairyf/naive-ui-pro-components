@@ -159,7 +159,7 @@ importers:
       naive-ui:
         specifier: catalog:share
         version: 2.41.0(vue@3.5.13(typescript@5.7.3))
-      naive-ui-pro-components:
+      naive-ultra:
         specifier: workspace:^
         version: link:../packages/components/main
     devDependencies:
@@ -208,7 +208,7 @@ importers:
 
   packages/components/checkbox:
     dependencies:
-      '@naiveui-pro/utils':
+      '@naive-ultra/utils':
         specifier: workspace:^
         version: link:../../utils
       '@vueuse/core':
@@ -221,9 +221,9 @@ importers:
         specifier: catalog:share
         version: 3.5.13(typescript@5.7.3)
 
-  packages/components/controls:
+  packages/components/actions:
     dependencies:
-      '@naiveui-pro/utils':
+      '@naive-ultra/utils':
         specifier: workspace:^
         version: link:../../utils
       naive-ui:
@@ -235,7 +235,7 @@ importers:
 
   packages/components/dialog:
     dependencies:
-      '@naiveui-pro/utils':
+      '@naive-ultra/utils':
         specifier: workspace:^
         version: link:../../utils
       '@vueuse/core':
@@ -257,13 +257,13 @@ importers:
 
   packages/components/form:
     dependencies:
-      '@naiveui-pro/checkbox':
+      '@naive-ultra/checkbox':
         specifier: workspace:*
         version: link:../checkbox
-      '@naiveui-pro/radio':
+      '@naive-ultra/radio':
         specifier: workspace:*
         version: link:../radio
-      '@naiveui-pro/utils':
+      '@naive-ultra/utils':
         specifier: workspace:^
         version: link:../../utils
       '@vueuse/core':
@@ -290,22 +290,22 @@ importers:
 
   packages/components/main:
     dependencies:
-      '@naiveui-pro/checkbox':
+      '@naive-ultra/checkbox':
         specifier: workspace:*
         version: link:../checkbox
-      '@naiveui-pro/controls':
+      '@naive-ultra/actions':
         specifier: workspace:*
-        version: link:../controls
-      '@naiveui-pro/form':
+        version: link:../actions
+      '@naive-ultra/form':
         specifier: workspace:*
         version: link:../form
-      '@naiveui-pro/globals':
+      '@naive-ultra/globals':
         specifier: workspace:*
         version: link:../globals
-      '@naiveui-pro/radio':
+      '@naive-ultra/radio':
         specifier: workspace:*
         version: link:../radio
-      '@naiveui-pro/table':
+      '@naive-ultra/table':
         specifier: workspace:*
         version: link:../table
       naive-ui:
@@ -324,7 +324,7 @@ importers:
 
   packages/components/radio:
     dependencies:
-      '@naiveui-pro/utils':
+      '@naive-ultra/utils':
         specifier: workspace:^
         version: link:../../utils
       '@vueuse/core':
@@ -339,7 +339,7 @@ importers:
 
   packages/components/table:
     dependencies:
-      '@naiveui-pro/utils':
+      '@naive-ultra/utils':
         specifier: workspace:^
         version: link:../../utils
       '@vueuse/core':

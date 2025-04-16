@@ -1,5 +1,5 @@
 /* eslint-disable ts/no-empty-object-type */
-import type { AnyFunction } from '@naiveui-pro/utils'
+import type { AnyFunction } from '@naive-ultra/utils'
 import type { UnwrapRef } from 'vue'
 
 export type Data<T = Record<string, any>> = {

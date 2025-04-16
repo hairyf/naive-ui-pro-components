@@ -1,36 +1,36 @@
-# NProTable
+# Pro Table
 
 The advanced table is designed to address the issue of writing repetitive boilerplate code for tables in projects. It encapsulates many common logic and behaviors. These encapsulations can be simply classified into preset actions and preset logic.
 
 If your table needs to interact with the server or requires different cell styles, ProTable is the perfect choice. However, if you just need to render a basic table, we recommend using [data-table](https://www.naiveui.com/en-US/os-theme/components/data-table) or [table](https://www.naiveui.com/en-US/os-theme/components/table).
 
-<demo twoslash title="Basic" src="./demo/basic.vue" />
+<demo title="Basic" src="./demo/basic.vue" />
 
-::: demo twoslash src="./demo/request.vue" title="External Control"
+::: demo src="./demo/request.vue" title="External Actions"
 
 Use `defineTable` to control the request externally.
 
 :::
 
-::: demo twoslash src="./demo/form.vue" title="Form Integration"
+::: demo src="./demo/form.vue" title="Form Integration"
 
 You can also use it with `defineForm` to create a complete search page:
 
 :::
 
-::: demo twoslash src="./demo/pagination.vue" title="Table Pagination"
+::: demo src="./demo/pagination.vue" title="Table Pagination"
 
 Pagination is enabled by default. If you don't need pagination, you can set the `pagination` parameter to `false` to disable it. You can also override the `pagination` parameter by providing your own `pagination` configuration.
 
 :::
 
-::: demo twoslash src="./demo/watcher.vue" title="Data Watcher"
+::: demo src="./demo/watcher.vue" title="Data Watcher"
 
 When the table data changes, you may need to perform additional operations. You can use the `watch` parameter to listen for data changes, and it will automatically reset the pagination and make a new request.
 
 :::
 
-::: demo twoslash src="./demo/hooks.vue" title="Hooks Functions"
+::: demo src="./demo/hooks.vue" title="Hooks Functions"
 
 The table provides several utility functions to quickly create columns.
 

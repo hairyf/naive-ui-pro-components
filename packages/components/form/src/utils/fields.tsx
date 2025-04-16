@@ -1,5 +1,5 @@
 import type { FormItemFieldConfig, WithConfig, WithFieldConfig, WithFieldConfigExtends } from '../types'
-import { clone as _clone, cloneDeep as _cloneDeep, defu, final, isFunction, toArray } from '@naiveui-pro/utils'
+import { clone as _clone, cloneDeep as _cloneDeep, defu, final, isFunction, toArray } from '@naive-ultra/utils'
 import { unref } from 'vue'
 
 export function field<T extends WithFieldConfigExtends>(item: WithFieldConfig<T>) {

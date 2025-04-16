@@ -2,7 +2,7 @@ import type { Ref } from 'vue'
 import type { OffsetPaginationOptions, ServerPaginationResolve } from '../composables'
 
 import type { ProTableInstance, ProTableRequest } from '../types'
-import { useAsyncCallback } from '@naiveui-pro/utils'
+import { useAsyncCallback } from '@naive-ultra/utils'
 import { useDebounceFn } from '@vueuse/core'
 import { reactive, ref, watch } from 'vue'
 import { useMetadata } from '../composables'

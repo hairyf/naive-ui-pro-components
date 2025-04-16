@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineTable, useColumns } from 'naive-ui-pro-components'
+import { defineTable, useColumns } from 'naive-ultra'
 
 interface Row {
   id: number

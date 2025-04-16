@@ -76,9 +76,9 @@ const form = defineForm(() => {
 })
 ```
 
-## Separation of Pagination Configuration and Control in defineTable
+## Separation of Pagination Configuration and Actions in defineTable
 
-In `NProTable`, the `pagination` property of the component is only used to configure the display parameters of pagination, while `page` and `pageSize` are managed entirely by `defineTable`. You can configure the initial values of these two parameters through the arguments of `defineTable`.
+In `np-table`, the `pagination` property of the component is only used to configure the display parameters of pagination, while `page` and `pageSize` are managed entirely by `defineTable`. You can configure the initial values of these two parameters through the arguments of `defineTable`.
 
 ```ts
 const table = defineTable({

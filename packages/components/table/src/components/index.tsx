@@ -2,7 +2,7 @@ import type { PaginationProps } from 'naive-ui'
 import type { PropType } from 'vue'
 
 import type { ProTableInstance } from '../types'
-import { If, isObject } from '@naiveui-pro/utils'
+import { If, isObject } from '@naive-ultra/utils'
 
 import { reactiveOmit, reactivePick } from '@vueuse/core'
 import { c, dataTableProps, NDataTable, NPagination } from 'naive-ui'

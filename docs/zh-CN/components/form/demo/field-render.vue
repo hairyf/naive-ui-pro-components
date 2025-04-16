@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineForm, field } from 'naive-ui-pro-components'
+import { defineForm, field } from 'naive-ultra'
 import { h } from 'vue'
 
 // 使用默认渲染函数渲染默认的表单项

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineForm, field } from 'naive-ui-pro-components'
+import { defineForm, field } from 'naive-ultra'
 
 // fields.ts
 const emailField = field({

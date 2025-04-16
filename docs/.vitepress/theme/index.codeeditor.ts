@@ -7,7 +7,7 @@ export const codeeditor: NaiveUIContainerOptions['codeeditor'] = {
     package: {
       scripts: { start: 'vite' },
       dependencies: {
-        'naive-ui-pro-components': 'latest',
+        'naive-ultra': 'latest',
         'vue': 'latest',
       },
       devDependencies: {

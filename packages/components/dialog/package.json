@@ -1,5 +1,5 @@
 {
-  "name": "@naiveui-pro/dialog",
+  "name": "@naive-ultra/dialog",
   "type": "module",
   "version": "0.3.5",
   "private": true,
@@ -23,7 +23,7 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "@naiveui-pro/utils": "workspace:^",
+    "@naive-ultra/utils": "workspace:^",
     "@vueuse/core": "catalog:share",
     "lodash-es": "^4.17.21",
     "naive-ui": "catalog:share",

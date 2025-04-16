@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineForm, field } from 'naive-ui-pro-components'
+import { defineForm, field } from 'naive-ultra'
 import { h } from 'vue'
 
 // Render the default form item using the default render function

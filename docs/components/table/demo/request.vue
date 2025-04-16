@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineControls, defineTable, useColumns } from 'naive-ui-pro-components'
+import { defineActions, defineTable, useColumns } from 'naive-ultra'
 
 interface Row {
   id: number
@@ -29,7 +29,7 @@ const table = defineTable<Row[]>({
   },
 })
 
-const controls = defineControls([
+const actions = defineActions([
   {
     render: 'Search',
     helper: () => table.search(),
@@ -54,6 +54,6 @@ const controls = defineControls([
 </script>
 
 <template>
-  <np-controls :is="controls" style="margin-bottom: 24px;" />
+  <np-actions :is="actions" style="margin-bottom: 24px;" />
   <np-table :is="table" :columns="columns" />
 </template>

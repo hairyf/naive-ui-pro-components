@@ -2,10 +2,10 @@ import type { ImportsMap } from 'unplugin-auto-import/types'
 
 function NaiveUIProImports(): ImportsMap {
   return {
-    'naive-ui-pro-components': [
+    'naive-ultra': [
       'defineForm',
       'defineTable',
-      'defineControls',
+      'defineActions',
       'field',
       'useColumnIndexes',
       'useColumnLink',

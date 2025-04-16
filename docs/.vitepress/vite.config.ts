@@ -14,10 +14,10 @@ export default defineConfig({
     VueJsx(),
     AutoImport({
       imports: [{
-        'naive-ui-pro-components': [
+        'naive-ultra': [
           'defineForm',
           'defineTable',
-          'defineControls',
+          'defineActions',
           'field',
           'useColumnIndexes',
           'useColumnLink',
@@ -30,7 +30,7 @@ export default defineConfig({
         type: 'component',
         resolve: (name: string) => {
           if (name.match(/^Np.+/))
-            return { name, from: 'naive-ui-pro-components' }
+            return { name, from: 'naive-ultra' }
           if (name.match(/^N.+/))
             return { name, from: 'naive-ui' }
         },

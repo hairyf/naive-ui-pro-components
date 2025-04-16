@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineTable, useColumnIndexes, useColumnLink, useColumns } from 'naive-ui-pro-components'
+import { defineTable, useColumnIndexes, useColumnLink, useColumns } from 'naive-ultra'
 
 interface Row {
   name: string

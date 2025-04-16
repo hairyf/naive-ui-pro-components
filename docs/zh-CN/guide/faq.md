@@ -78,7 +78,7 @@ const form = defineForm(() => {
 
 ## defineTable 分页的配置与控制分离
 
-在 `NProTable` 中，组件的 `pagination` 仅用于配置分页的显示参数，而 `page` 与 `pageSize` 由 `defineTable` 全程接管，你可以通过 `defineTable` 参数配置这两个参数的初始值。
+在 `np-table` 中，组件的 `pagination` 仅用于配置分页的显示参数，而 `page` 与 `pageSize` 由 `defineTable` 全程接管，你可以通过 `defineTable` 参数配置这两个参数的初始值。
 
 ```ts
 const table = defineTable({

@@ -10,8 +10,8 @@ import vite from './vite.config'
 
 const VERSIONS: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
   { text: `v${version} (current)`, link: '/' },
-  { text: `Release Notes`, link: 'https://github.com/hairyf/naive-ui-pro-components/releases' },
-  { text: `Contributing`, link: 'https://github.com/hairyf/naive-ui-pro-components/blob/main/CONTRIBUTING.md' },
+  { text: `Release Notes`, link: 'https://github.com/hairyf/naive-ultra/releases' },
+  { text: `Contributing`, link: 'https://github.com/hairyf/naive-ultra/blob/main/CONTRIBUTING.md' },
 ]
 
 const types = [
@@ -81,13 +81,38 @@ function useThemeConfig(lang = 'en-US') {
     { text: 'Installation & Usage', link: '/guide/install' },
     { text: 'FAQ', link: `${prefix}/guide/faq` },
   ]
-  const COMPONENTS: DefaultTheme.NavItemWithLink[] = [
-    { text: 'ProForm', link: `${prefix}/components/form/` },
-    { text: 'ProTable', link: `${prefix}/components/table/` },
-    { text: 'ProCheckbox', link: `${prefix}/components/checkbox/` },
-    { text: 'ProRadio', link: `${prefix}/components/radio/` },
-    { text: 'ProControls', link: `${prefix}/components/controls/` },
-    { text: 'ProGlobals', link: `${prefix}/components/globals/` },
+  const COMPONENTS: DefaultTheme.SidebarItem[] = [
+    {
+      text: 'Pro Form',
+      link: `${prefix}/components/form/`,
+      items: [
+        { text: 'Field', link: `${prefix}/components/form/field` },
+        { text: 'Context', link: `${prefix}/components/form/context` },
+        { text: 'Action', link: `${prefix}/components/form/action` },
+      ],
+      collapsed: false,
+    },
+    {
+      text: 'Pro Table',
+      link: `${prefix}/components/table/`,
+      items: [
+        {
+          text: 'Hooks',
+          items: [
+            { text: 'useColumnIndexes', link: `${prefix}/components/table/hooks/use-column-indexes` },
+            { text: 'useColumnLink', link: `${prefix}/components/table/hooks/use-column-link` },
+          ],
+          collapsed: true,
+        },
+        { text: 'Form', link: `${prefix}/components/table/form` },
+        { text: 'Actions', link: `${prefix}/components/table/actions` },
+      ],
+      collapsed: false,
+    },
+    { text: 'Pro Checkbox', link: `${prefix}/components/checkbox/` },
+    { text: 'Pro Radio', link: `${prefix}/components/radio/` },
+    { text: 'Pro Actions', link: `${prefix}/components/actions/` },
+    { text: 'Pro Provider', link: `${prefix}/components/provider/` },
   ]
   const themeConfig: DefaultTheme.Config = {
     // https://vitepress.dev/reference/default-theme-config
@@ -104,7 +129,7 @@ function useThemeConfig(lang = 'en-US') {
     ],
 
     editLink: {
-      pattern: 'https://github.com/hairyf/naive-ui-pro-components/edit/main/docs/:path',
+      pattern: 'https://github.com/hairyf/naive-ultra/edit/main/docs/:path',
       text: 'Suggest changes to this page',
     },
     search: {
@@ -112,7 +137,7 @@ function useThemeConfig(lang = 'en-US') {
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/hairyf/naive-ui-pro-components' },
+      { icon: 'github', link: 'https://github.com/hairyf/naive-ultra' },
     ],
 
     footer: {

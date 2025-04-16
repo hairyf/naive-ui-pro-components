@@ -1,7 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import type { EnhanceAppContext } from 'vitepress'
 import TwoslashFloating from '@shikijs/vitepress-twoslash/client'
-import { NpGlobalProvider } from 'naive-ui-pro-components'
+import { NpGlobalProvider } from 'naive-ultra'
 import NaiveUIContainer from 'vitepress-plugin-demo/client/naive-ui'
 import Theme from 'vitepress/theme'
 import { h } from 'vue'
@@ -26,11 +26,11 @@ export default {
   async enhanceApp({ app }: EnhanceAppContext) {
     if (!import.meta.env.SSR) {
       const { default: NaiveUI } = await import('naive-ui')
-      const { default: NaiveUIProComponents } = await import('naive-ui-pro-components')
+      const { default: NaiveUltra } = await import('naive-ultra')
       app.use(NaiveUI)
-      app.use(NaiveUIProComponents)
+      app.use(NaiveUltra)
       app.use(NaiveUIContainer, {
-        github: 'https://github.com/hairyf/naive-ui-pro-components/tree/main',
+        github: 'https://github.com/hairyf/naive-ultra/tree/main',
         codeeditor,
         install: [
           NpGlobalProvider,

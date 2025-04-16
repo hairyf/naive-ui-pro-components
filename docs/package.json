@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "naive-ui": "catalog:share",
-    "naive-ui-pro-components": "workspace:^"
+    "naive-ultra": "workspace:^"
   },
   "devDependencies": {
     "@iconify-json/svg-spinners": "catalog:",

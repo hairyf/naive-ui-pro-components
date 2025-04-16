@@ -2,7 +2,7 @@
 import type { Ref } from 'vue'
 import type { FormItemConfig } from '../types'
 
-import { final } from '@naiveui-pro/utils'
+import { final } from '@naive-ultra/utils'
 import { reactive, unref } from 'vue'
 import { FieldComponents } from '../config'
 

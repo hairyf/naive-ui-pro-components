@@ -1,12 +1,12 @@
-# ProCheckbox
+# Pro Checkbox
 
 以配置项创建复选框组。
 
-<demo twoslash title="基础用法" expand src="./demo/basic.vue" />
+<demo title="基础用法" expand src="./demo/basic.vue" />
 
-<demo twoslash title="事件" src="./demo/events.vue" />
+<demo title="事件" src="./demo/events.vue" />
 
-<demo twoslash title="手动 focus & blur 项" src="./demo/focus-blur.vue" />
+<demo title="手动 focus & blur 项" src="./demo/focus-blur.vue" />
 
 ## Props
 

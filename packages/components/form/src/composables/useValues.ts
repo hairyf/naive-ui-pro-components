@@ -1,7 +1,7 @@
 import type { MaybeRef } from '@vueuse/core'
 import type { FormItemConfig, WithFieldConfigExtends } from '../types'
 import type { Metadata } from './useMetadata'
-import { isFunction, isUndefined, noop } from '@naiveui-pro/utils'
+import { isFunction, isUndefined, noop } from '@naive-ultra/utils'
 
 import { syncRef } from '@vueuse/core'
 import { computed, reactive, unref } from 'vue'

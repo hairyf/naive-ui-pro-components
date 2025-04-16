@@ -1,5 +1,5 @@
-import { NpCheckboxGroup } from '@naiveui-pro/checkbox'
-import { NpRadioGroup } from '@naiveui-pro/radio'
+import { NpCheckboxGroup } from '@naive-ultra/checkbox'
+import { NpRadioGroup } from '@naive-ultra/radio'
 import { NAutoComplete, NButton, NCascader, NDatePicker, NInput, NInputNumber, NMention, NRate, NSelect, NSlider, NSwitch, NTimePicker } from 'naive-ui'
 
 export const FieldComponents: Record<string, any> = {

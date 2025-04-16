@@ -1,7 +1,7 @@
 import type { DeepReadonly } from 'vue'
 import type { Data, TransformData } from '../types'
 import type { Metadata } from './useMetadata'
-import { noop } from '@naiveui-pro/utils'
+import { noop } from '@naive-ultra/utils'
 import { syncRef } from '@vueuse/core'
 import { computed, reactive } from 'vue'
 

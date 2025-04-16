@@ -1,7 +1,7 @@
 import type { Component, FunctionalComponent, PropType, VNode } from 'vue'
 import type { FormItemConfig, ProFormInstance } from '../types'
 
-import { final, render } from '@naiveui-pro/utils'
+import { final, render } from '@naive-ultra/utils'
 import { reactiveOmit, reactivePick } from '@vueuse/core'
 import { formProps, NForm, NFormItem, NFormItemGi, NGrid } from 'naive-ui'
 import { computed, defineComponent, toRefs } from 'vue'

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineForm } from 'naive-ui-pro-components'
+import { defineForm } from 'naive-ultra'
 
 const form = defineForm({
   brandNum: {

@@ -1,12 +1,12 @@
-# ProCheckbox
+# Pro Checkbox
 
 Creates a group of checkboxes based on configuration options.
 
-<demo twoslash title="Basic Usage" expand src="./demo/basic.vue" />
+<demo title="Basic Usage" expand src="./demo/basic.vue" />
 
-<demo twoslash title="Events" src="./demo/events.vue" />
+<demo title="Events" src="./demo/events.vue" />
 
-<demo twoslash title="Manually Focus & Blur Items" src="./demo/focus-blur.vue" />
+<demo title="Manually Focus & Blur Items" src="./demo/focus-blur.vue" />
 
 ## Props
 

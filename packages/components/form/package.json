@@ -1,5 +1,5 @@
 {
-  "name": "@naiveui-pro/form",
+  "name": "@naive-ultra/form",
   "type": "module",
   "version": "0.3.5",
   "main": "./src/index.ts",
@@ -22,9 +22,9 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "@naiveui-pro/checkbox": "workspace:*",
-    "@naiveui-pro/radio": "workspace:*",
-    "@naiveui-pro/utils": "workspace:^",
+    "@naive-ultra/checkbox": "workspace:*",
+    "@naive-ultra/radio": "workspace:*",
+    "@naive-ultra/utils": "workspace:^",
     "@vueuse/core": "catalog:share",
     "naive-ui": "catalog:share",
     "vue": "catalog:share"

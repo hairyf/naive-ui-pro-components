@@ -1,22 +1,22 @@
 import type { App } from 'vue'
-import { NpCheckboxGroup } from '@naiveui-pro/checkbox'
-import { NpControls } from '@naiveui-pro/controls'
-import { NpForm } from '@naiveui-pro/form'
-import { NpGlobalDialog, NpGlobalMessage, NpGlobalNotification, NpGlobalProvider, NpInstallProvider } from '@naiveui-pro/globals'
-import { NpRadioGroup } from '@naiveui-pro/radio'
-import { NpTable } from '@naiveui-pro/table'
+import { NpActions } from '@naive-ultra/actions'
+import { NpCheckboxGroup } from '@naive-ultra/checkbox'
+import { NpForm } from '@naive-ultra/form'
+import { NpGlobalDialog, NpGlobalMessage, NpGlobalNotification, NpGlobalProvider, NpInstallProvider } from '@naive-ultra/globals'
+import { NpRadioGroup } from '@naive-ultra/radio'
+import { NpTable } from '@naive-ultra/table'
 
-export * from '@naiveui-pro/checkbox'
-export * from '@naiveui-pro/controls'
-export * from '@naiveui-pro/form'
-export * from '@naiveui-pro/globals'
-export * from '@naiveui-pro/radio'
-export * from '@naiveui-pro/table'
+export * from '@naive-ultra/actions'
+export * from '@naive-ultra/checkbox'
+export * from '@naive-ultra/form'
+export * from '@naive-ultra/globals'
+export * from '@naive-ultra/radio'
+export * from '@naive-ultra/table'
 
 function install(app: App): void {
   app.component('NpForm', NpForm)
   app.component('NpTable', NpTable)
-  app.component('NpControls', NpControls)
+  app.component('NpActions', NpActions)
   app.component('NpRadioGroup', NpRadioGroup)
   app.component('NpCheckboxGroup', NpCheckboxGroup)
   app.component('NpGlobalProvider', NpGlobalProvider)

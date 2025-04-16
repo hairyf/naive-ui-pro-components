@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { FormItemRule } from 'naive-ui'
-import { defineForm, field } from 'naive-ui-pro-components'
+import { defineForm, field } from 'naive-ultra'
 
 const rules: FormItemRule[] = [
   {

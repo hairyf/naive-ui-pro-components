@@ -1,12 +1,12 @@
-# ProRadio
+# Pro Radio
 
 Creates a group of radio buttons based on configuration options.
 
-<demo twoslash title="Basic Usage" expand src="./demo/basic.vue" />
+<demo title="Basic Usage" expand src="./demo/basic.vue" />
 
-<demo twoslash title="Button Group" expand src="./demo/buttons.vue" description="Sometimes using buttons can be more elegant." />
+<demo title="Button Group" expand src="./demo/buttons.vue" description="Sometimes using buttons can be more elegant." />
 
-<demo twoslash title="Sizes" expand src="./demo/sizes.vue" description="Choose whichever size you prefer." />
+<demo title="Sizes" expand src="./demo/sizes.vue" description="Choose whichever size you prefer." />
 
 ## Props
 
