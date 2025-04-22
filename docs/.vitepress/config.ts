@@ -87,7 +87,6 @@ function useThemeConfig(lang = 'en-US') {
       link: `${prefix}/components/form/`,
       items: [
         { text: 'Field', link: `${prefix}/components/form/field` },
-        { text: 'Context', link: `${prefix}/components/form/context` },
         { text: 'Action', link: `${prefix}/components/form/action` },
       ],
       collapsed: false,
@@ -120,7 +119,7 @@ function useThemeConfig(lang = 'en-US') {
     logo: '/logo.svg',
     nav: [
       { text: 'Guide', items: [{ items: GUIDES }] },
-      { text: 'Components', items: [{ items: COMPONENTS }] },
+      { text: 'Components', items: [{ items: COMPONENTS as any }] },
       { text: `v${version}`, items: VERSIONS },
     ],
     sidebar: [

@@ -6,18 +6,6 @@ If your table needs to interact with the server or requires different cell style
 
 <demo title="Basic" src="./demo/basic.vue" />
 
-::: demo src="./demo/request.vue" title="External Actions"
-
-Use `defineTable` to control the request externally.
-
-:::
-
-::: demo src="./demo/form.vue" title="Form Integration"
-
-You can also use it with `defineForm` to create a complete search page:
-
-:::
-
 ::: demo src="./demo/pagination.vue" title="Table Pagination"
 
 Pagination is enabled by default. If you don't need pagination, you can set the `pagination` parameter to `false` to disable it. You can also override the `pagination` parameter by providing your own `pagination` configuration.

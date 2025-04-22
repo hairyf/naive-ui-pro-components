@@ -24,26 +24,6 @@ The `props` attribute within the fields can be used to customize the form compon
 The `formItemProps` attribute within the fields allows for customization of the form items. It inherits all the properties of [n-form-item](https://www.naiveui.com/en-US/os-theme/components/form#FormItem-Props) and [n-grid-item](https://www.naiveui.com/en-US/os-theme/components/grid#GridItem-Props).
 :::
 
-::: demo src="./demo/field.vue" title="Form Fields"
-`field` is an object description that can be a regular object. Fields can be separated from the form and provide additional capabilities through the `field` function.
-:::
-
-::: demo src="./demo/field-context.vue" title="Field Context"
-The `field|withConfig` method can accept the current form instance for validation combinations.
-:::
-
-::: demo src="./demo/field-render.vue" title="Field Rendering"
-The `renderItem` attribute allows for custom rendering of form items. For complex content, it is recommended to use tsx for writing.
-:::
-
-::: demo src="./demo/clone.vue" title="Field Cloning"
-The `clone` method can be used on fields returned by the `field` function to create a new cloned field, avoiding reference sharing of field data.
-:::
-
-::: demo src="./demo/toolbars.vue" title="Toolbars"
-By enabling the `toolbars` mode, the grid will be fixed as `0:24 742:6 1394:4`. You can customize the content of the right-side toolbar using the `toolbars` slot.
-:::
-
 ## Props
 
 | Name | Type | Default | Description |

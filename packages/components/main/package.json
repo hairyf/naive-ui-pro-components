@@ -53,7 +53,7 @@
     "@naive-ultra/actions": "workspace:*",
     "@naive-ultra/checkbox": "workspace:*",
     "@naive-ultra/form": "workspace:*",
-    "@naive-ultra/providers": "workspace:*",
+    "@naive-ultra/provider": "workspace:*",
     "@naive-ultra/radio": "workspace:*",
     "@naive-ultra/table": "workspace:*",
     "naive-ui": "catalog:share",
