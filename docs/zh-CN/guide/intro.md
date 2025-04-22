@@ -1,6 +1,6 @@
 # The concept of ProComponents
 
-类似于 Ant Design Pro Components，Naive Ultra 是一个基于 Naive UI 的高级组件库，为后端系统提供更高级的抽象和封装。
+类似于 Ant Design Pro Components，Naive Ultra 是一个基于 Naive UI 的高级组件库，为后台系统提供更高级的抽象和封装。
 
 我们对 Naive Ultra 的设计进行了一些调整，以更好地与 Naive UI 的设计风格保持一致，并提供快速高效地构建高质量后端应用程序的能力。
 
@@ -18,4 +18,4 @@
 
 列表页面可以使用 `pro-form` + `pro-table` 组合，而编辑页面可以利用 `pro-form` + `button` 或其他各种组件。这使我们能够专注于实现核心业务逻辑和页面效果。
 
-基于此原因，我们对开发新的组件会尽可能的谨慎，我们会尽可能的将组件的功能拆分到更小的组件中，以便您可以更好的组合它们。
+我们对开发新的组件会尽可能的谨慎，我们会尽可能的将组件的功能拆分到更小的组件中，以便您可以更好的组合它们。

@@ -83,11 +83,13 @@ function useThemeConfig(lang = 'en-US') {
   ]
   const COMPONENTS: DefaultTheme.SidebarItem[] = [
     {
-      text: 'Pro Form',
+      text: 'Form',
       link: `${prefix}/components/form/`,
       items: [
-        { text: 'Field', link: `${prefix}/components/form/field` },
-        { text: 'Action', link: `${prefix}/components/form/action` },
+        { text: 'Data Transform', link: `${prefix}/components/form/data-trans` },
+        { text: 'Field Component', link: `${prefix}/components/form/field-component` },
+        { text: 'Field API', link: `${prefix}/components/form/field-api` },
+        { text: 'Field Context', link: `${prefix}/components/form/field-context` },
       ],
       collapsed: false,
     },
@@ -95,15 +97,7 @@ function useThemeConfig(lang = 'en-US') {
       text: 'Pro Table',
       link: `${prefix}/components/table/`,
       items: [
-        {
-          text: 'Hooks',
-          items: [
-            { text: 'useColumnIndexes', link: `${prefix}/components/table/hooks/use-column-indexes` },
-            { text: 'useColumnLink', link: `${prefix}/components/table/hooks/use-column-link` },
-          ],
-          collapsed: true,
-        },
-        { text: 'Form', link: `${prefix}/components/table/form` },
+        { text: 'Column Hooks', link: `${prefix}/components/table/form` },
         { text: 'Actions', link: `${prefix}/components/table/actions` },
       ],
       collapsed: false,

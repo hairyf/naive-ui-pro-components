@@ -4,6 +4,8 @@
 
 高级表单基于对象的函数式编程（functional programming）思想。并将表单数据抽象为一个 JavaScript 对象，通过对这个对象进行操作和封装，让表单数据具有更好的可复用性和可维护性。
 
+ProForm 是基于 Naive Form 的可降级封装，与 Naive 功能完全对齐，内置了所有数据录入组件，在其之上还增加一些预设行为和布局。并且拥有公共的 API。
+
 ::: demo src="./demo/basic.vue" title="基础"
 高级表单使用 `defineForm` 定义，返回一个表单对象的实例，它会将表单数据进行重组，它具有良好的 Typescript 支持。
 :::
@@ -21,7 +23,7 @@
 :::
 
 ::: demo src="./demo/formItemProps.vue" title="表单项设置"
-字段的 `formItemProps` 可以对表单项进行设置，它会继承 [n-form-item](https://www.naiveui.com/zh-CN/os-theme/components/form#FormItem-Props) 和 [n-grid-item](https://www.naiveui.com/zh-CN/os-theme/components/grid#GridItem-Props) 的所有属性。
+字段的 `formItemProps` 可以对表单项进行设置，它继承 [n-form-item](https://www.naiveui.com/zh-CN/os-theme/components/form#FormItem-Props) 和 [n-grid-item](https://www.naiveui.com/zh-CN/os-theme/components/grid#GridItem-Props) 的所有属性。
 :::
 
 ::: demo src="./demo/field.vue" title="表单字段"

@@ -7,6 +7,8 @@ Pro Components 是基于 Naive UI 开发的一套高级组件。它提供了更�
 - [ProForm](/zh-CN/components/form/) 基于对象的函数式编程的表单模板组件，预设常见布局和行为
 - [ProTable](/zh-CN/components/table/) 抽象网络请求和表格格式化
 - [ProActions](/zh-CN/components/actions/) 多场景的表单、表格控件
+- [ProCheckbox](/zh-CN/components/checkbox/) 组合式复选框
+- [ProRadio](/zh-CN/components/radio/) 组合式单选框
 - [ProProvider](/zh-CN/components/provider/) 全局反馈组件挂载与优化
 - 开发中...
 

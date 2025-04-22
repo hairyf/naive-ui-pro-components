@@ -28,7 +28,6 @@ const table = defineTable<Row[]>({
     }
   },
 })
-
 const actions = defineActions([
   {
     render: 'Search',

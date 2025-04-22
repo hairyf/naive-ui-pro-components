@@ -8,6 +8,7 @@ const email = ref('')
 const form = defineForm({
   brandNum: {
     type: 'input',
+    props: {},
     placeholder: 'Please input brand number',
     value: '',
   },
