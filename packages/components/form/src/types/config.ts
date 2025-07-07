@@ -1,4 +1,3 @@
-/* eslint-disable ts/no-empty-object-type */
 import type { ProCheckboxGroupProps } from '@naive-ultra/checkbox'
 import type { ProRadioGroupProps } from '@naive-ultra/radio'
 import type { NestedRefs } from '@naive-ultra/utils'
@@ -94,7 +93,7 @@ export type FormItemComponents =
 
 export type FormItemDefaultRender = (model: Ref<any>, config: FormItemConfig) => any
 
-export type FormItemConfig<V = any, K = string, T = {}> = FormItemComponents & {
+export type FormItemConfig<V = any, K = string, T = unknown> = FormItemComponents & {
   /**
    * Initial value of item
    */
@@ -189,7 +188,7 @@ export type FormItemFieldConfig<V, T> = FormItemConfig<V, string, T> & {
 export type FormItemConfigExport<V = any, K = string> = FormItemConfig<V, K> | ((inst: ProFormInstance) => FormItemConfig<V, K>)
 
 export type WithFieldConfigExtends<V = any> = FormItemConfig<V> | FormItemConfigWithKey | (() => FormItemConfig<V> | FormItemConfigWithKey)
-export type WithFieldConfig<V, T> = FormItemConfig<V, string, T> | ((config: FormItemConfig<V, string, T>) => FormItemConfig<V, string, T>)
+export type WithFieldConfig<V = any, T = unknown> = FormItemConfig<V, string, T> | ((config: ProFormInstance) => FormItemConfig<V, string, T>)
 
 export type RecordFormItemConfigExport = Record<string, FormItemConfigExport>
 export type ArrayFormItemConfigExport = FormItemConfigWithKey[]

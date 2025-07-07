@@ -2,7 +2,7 @@ import type { FormItemFieldConfig, WithConfig, WithFieldConfig } from '../types'
 import { clone as _clone, cloneDeep as _cloneDeep, defu, final, isFunction, toArray } from '@naive-ultra/utils'
 import { unref } from 'vue'
 
-export function field<V, T>(item: WithFieldConfig<V, T>) {
+export function field<V = any, T = unknown>(item: WithFieldConfig<V, T>) {
   const target = encase(item)
 
   function withConfig(config: WithFieldConfig<V, T>) {

@@ -12,7 +12,7 @@ export function defineForm<T extends FormExtendsConfig>(initialValues: MaybeRef<
   const formData = useData(metadata)
   const rules = useRules(values)
 
-  const instance = reactive({
+  const instance = reactive<any>({
     values,
     data: formData.data,
     dataTrans: formData.dataTrans,
@@ -24,5 +24,5 @@ export function defineForm<T extends FormExtendsConfig>(initialValues: MaybeRef<
     _rules: rules,
   })
 
-  return instance as any
+  return instance
 }

@@ -19,8 +19,8 @@ type PickTransform<T> = {
 }
 
 type FieldValue<T> = T extends Field<infer V> ? V : string
-type FilterOmitTransformKeys<T, K extends keyof T> = T[K] extends FieldTransform<any, any> ? never : K
-type FilterPickTransformKeys<T, K extends keyof T> = T[K] extends FieldTransform<any, any> ? K : never
+type FilterOmitTransformKeys<T, K extends keyof T> = T[K] extends FieldTransform<any, object> ? never : K
+type FilterPickTransformKeys<T, K extends keyof T> = T[K] extends FieldTransform<any, object> ? K : never
 type FilterOmitReceive<T, K extends keyof T> = T[K] extends { receive: false } ? never : K
 
 interface FieldTransform<V, R> {

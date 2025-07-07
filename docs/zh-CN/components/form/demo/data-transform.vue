@@ -16,8 +16,8 @@ const form = defineForm({
   }),
 })
 form.data.time
-form.dataTrans.endAt
 form.dataTrans.startAt
+form.dataTrans.endAt
 </script>
 
 <template>
