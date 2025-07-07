@@ -19,7 +19,7 @@ export function toArray<T>(val: T | T[]): T[] {
 
 export const defu = createDefu((obj, key, value) => {
   if (Array.isArray(obj[key]) && Array.isArray(value)) {
-    obj[key] = value
+    obj[key] = [...obj[key], ...value]
     return true
   }
 })
