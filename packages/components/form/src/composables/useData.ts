@@ -62,7 +62,7 @@ function parseTrans(values: Metadata['values']) {
       if (receive === false)
         continue
       if (transform)
-        target[key] = transform(value, key)
+        Object.assign(target, transform(value, key))
       else
         target[key] = value
     }

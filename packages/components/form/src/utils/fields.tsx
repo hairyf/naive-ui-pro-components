@@ -1,25 +1,25 @@
-import type { FormItemFieldConfig, WithConfig, WithFieldConfig, WithFieldConfigExtends } from '../types'
+import type { FormItemFieldConfig, WithConfig, WithFieldConfig } from '../types'
 import { clone as _clone, cloneDeep as _cloneDeep, defu, final, isFunction, toArray } from '@naive-ultra/utils'
 import { unref } from 'vue'
 
-export function field<T extends WithFieldConfigExtends>(item: WithFieldConfig<T>) {
+export function field<V, T>(item: WithFieldConfig<V, T>) {
   const target = encase(item)
 
-  function withConfig(config: WithFieldConfig<T>) {
+  function withConfig(config: WithFieldConfig<V, T>) {
     if (isFunction(config))
       return field((c: any) => defu((config as any)(c), { ...final(item as any, c) }))
     if (isFunction(item))
-      return field((c: any) => defu(config, { ...final(item, c) }))
-    return field(defu(config, { ...item }))
+      return field(((c: any) => defu(config, { ...final(item, c) })) as WithFieldConfig<V, T>)
+    return field(defu(config, { ...item }) as WithFieldConfig<V, T>)
   }
 
-  target.withConfig = withConfig as unknown as WithConfig<T>
+  target.withConfig = withConfig as unknown as WithConfig<V, T>
 
   return target
 }
 
-function encase<T extends WithFieldConfigExtends>(config: WithFieldConfig<T>) {
-  const target = config as FormItemFieldConfig<T>
+function encase<V, T>(config: WithFieldConfig<V, T>) {
+  const target = config as FormItemFieldConfig<V, T>
 
   function clone() {
     return _clone(target)
@@ -34,8 +34,8 @@ function encase<T extends WithFieldConfigExtends>(config: WithFieldConfig<T>) {
     return target.withConfig({ rules: [], label: '' })
   }
   function preventRequired() {
-    return target.withConfig((inst) => {
-      const source = final(target, inst)
+    return target.withConfig((config) => {
+      const source = final(target, config)
       const rules = toArray(unref(source.rules) || [])
         .filter(v => !v?.required)
       return { ...source, rules }

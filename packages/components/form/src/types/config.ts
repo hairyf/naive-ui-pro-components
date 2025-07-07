@@ -1,3 +1,4 @@
+/* eslint-disable ts/no-empty-object-type */
 import type { ProCheckboxGroupProps } from '@naive-ultra/checkbox'
 import type { ProRadioGroupProps } from '@naive-ultra/radio'
 import type { NestedRefs } from '@naive-ultra/utils'
@@ -93,7 +94,7 @@ export type FormItemComponents =
 
 export type FormItemDefaultRender = (model: Ref<any>, config: FormItemConfig) => any
 
-export type FormItemConfig<V = any, K = string> = FormItemComponents & {
+export type FormItemConfig<V = any, K = string, T = {}> = FormItemComponents & {
   /**
    * Initial value of item
    */
@@ -117,7 +118,7 @@ export type FormItemConfig<V = any, K = string> = FormItemComponents & {
   /**
    * transform the value of the current form item
    */
-  transform?: (value: V, key: string) => any
+  transform?: (value: V, key: string) => T
   /**
    * current grid-item span
    */
@@ -154,48 +155,48 @@ export type FormItemConfig<V = any, K = string> = FormItemComponents & {
 
 export type FormItemConfigWithKey = (FormItemConfig & { key: string })
 
-export type FormItemFieldConfig<T extends WithFieldConfigExtends> = T & {
-
+export type FormItemFieldConfig<V, T> = FormItemConfig<V, string, T> & {
   /**
    * set with new config
    */
-  withConfig: WithConfig<T>
+  withConfig: WithConfig<V, T>
   /**
    * clone current config
    */
-  clone: () => FormItemFieldConfig<T>
+  clone: () => FormItemFieldConfig<V, T>
   /**
    * clone current config deep
    */
-  cloneDeep: () => FormItemFieldConfig<T>
+  cloneDeep: () => FormItemFieldConfig<V, T>
   /**
    * prevent the current form item rules and label
    */
-  preventDefault: () => FormItemFieldConfig<T>
+  preventDefault: () => FormItemFieldConfig<V, T>
   /**
    * prevent the current form item rules required
    */
-  preventRequired: () => FormItemFieldConfig<T>
+  preventRequired: () => FormItemFieldConfig<V, T>
   /**
    * prevent browser from automatically filling
    */
-  preventAutofill: () => FormItemFieldConfig<T>
+  preventAutofill: () => FormItemFieldConfig<V, T>
   /**
    * render current form item
    */
   render: () => VNodeChild
 }
+
 export type FormItemConfigExport<V = any, K = string> = FormItemConfig<V, K> | ((inst: ProFormInstance) => FormItemConfig<V, K>)
 
-export type WithFieldConfigExtends = FormItemConfig | FormItemConfigWithKey | (() => FormItemConfig | FormItemConfigWithKey)
-export type WithFieldConfig<T> = T | ((inst: ProFormInstance) => T)
+export type WithFieldConfigExtends<V = any> = FormItemConfig<V> | FormItemConfigWithKey | (() => FormItemConfig<V> | FormItemConfigWithKey)
+export type WithFieldConfig<V, T> = FormItemConfig<V, string, T> | ((config: FormItemConfig<V, string, T>) => FormItemConfig<V, string, T>)
 
 export type RecordFormItemConfigExport = Record<string, FormItemConfigExport>
 export type ArrayFormItemConfigExport = FormItemConfigWithKey[]
 export type FormExtendsConfig = RecordFormItemConfigExport | ArrayFormItemConfigExport
 
-export type WithConfig<T extends WithFieldConfigExtends> = (config: WithFieldConfig<FormItemConfig>) => FormItemFieldConfig<T>
+export type WithConfig<V, T> = (config: WithFieldConfig<V, T>) => FormItemFieldConfig<V, T>
 
 export type DecodeValues<T extends RecordFormItemConfigExport> = {
-  [key in keyof T]: T[key] extends WithFieldConfig<infer V> ? V : never
+  [key in keyof T]: T[key] extends WithFieldConfig<infer V, any> ? V : never
 }
