@@ -209,3 +209,8 @@
 .VPLocalNavOutlineDropdown {
   display: none !important;
 }
+
+table {
+  width: 100%;
+  display: table !important;
+}

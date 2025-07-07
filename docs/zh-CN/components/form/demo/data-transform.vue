@@ -1,8 +1,9 @@
+<!-- eslint-disable ts/no-unused-expressions -->
 <script lang="ts" setup>
 import { defineForm } from 'naive-ultra'
 
 const form = defineForm({
-  time: {
+  time: field({
     type: 'date-picker',
     props: { type: 'datetimerange', clearable: true },
     value: null as null | string[],
@@ -12,8 +13,11 @@ const form = defineForm({
         endAt: value?.[1] ?? null,
       }
     },
-  },
+  }),
 })
+form.data.time
+form.dataTrans.endAt
+form.dataTrans.startAt
 </script>
 
 <template>

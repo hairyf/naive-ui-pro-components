@@ -77,7 +77,7 @@ function useThemeConfig(lang = 'en-US') {
   const prefix = lang = lang === 'en-US' ? '' : `/${lang}`
 
   const GUIDES: DefaultTheme.NavItemWithLink[] = [
-    { text: 'Getting Started', link: '/guide/' },
+    { text: 'Getting Started', link: '/guide/intro' },
     { text: 'Installation & Usage', link: '/guide/install' },
     { text: 'FAQ', link: `${prefix}/guide/faq` },
   ]
