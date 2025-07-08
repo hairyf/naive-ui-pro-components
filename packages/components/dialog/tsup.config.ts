@@ -1,10 +1,10 @@
-import { defineBuildConfig } from 'tsup-define'
+import { defineBuildConfig } from 'tsup-config'
 
 export default defineBuildConfig({
   format: ['cjs', 'esm', 'iife', 'iife-min'],
   entry: ['src/index.ts'],
-  name: 'pro-table',
-  globalName: 'NaiveProTable',
+  name: 'ultra-table',
+  globalName: 'NaiveUltraTable',
   globals: {
     'naive-ui': 'naive',
     'vue': 'Vue',

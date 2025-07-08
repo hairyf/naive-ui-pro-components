@@ -34,7 +34,7 @@ export default defineConfig({
             types: types.map(type => path.resolve(process.cwd(), `./${type}`)),
           },
         },
-      }),
+      }) as any,
     ],
     languages: ['js', 'jsx', 'ts', 'tsx'],
     config: (md) => {

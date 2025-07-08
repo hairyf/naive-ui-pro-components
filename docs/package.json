@@ -23,5 +23,13 @@
     "vitepress-plugin-demo": "catalog:docs",
     "vitepress-plugin-group-icons": "catalog:docs",
     "vue": "catalog:share"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "search-insights"
+      ]
+    }
   }
 }

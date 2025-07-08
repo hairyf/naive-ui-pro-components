@@ -1,10 +1,10 @@
-import { defineBuildConfig } from 'tsup-define'
+import { defineBuildConfig } from 'tsup-config'
 
 export default defineBuildConfig({
   format: ['cjs', 'esm', 'iife', 'iife-min'],
   entry: ['src/index.ts'],
-  name: 'pro-globals',
-  globalName: 'NaiveProGlobals',
+  name: 'ultra-globals',
+  globalName: 'NaiveUltraGlobals',
   globals: {
     vue: 'Vue',
   },

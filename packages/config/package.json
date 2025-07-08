@@ -1,11 +1,11 @@
 {
-  "name": "tsup-define",
+  "name": "tsup-config",
   "version": "0.3.5",
   "private": true,
   "main": "index.js",
   "types": "index.d.ts",
   "devDependencies": {
-    "esbuild-plugin-globals": "^0.2.0",
-    "unplugin-vue-jsx": "^0.6.1"
+    "esbuild-plugin-globals": "catalog:bundler",
+    "unplugin-vue-jsx": "catalog:bundler"
   }
 }

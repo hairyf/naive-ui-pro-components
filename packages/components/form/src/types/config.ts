@@ -75,21 +75,21 @@ export interface FormItemMention {
   props?: NestedRefs<NaiveUI.MentionProps>
 }
 
-export type FormItemComponents =
-  FormItemDate |
-  FormItemSelect |
-  FormItemAutoComplete |
-  FormItemCascader |
-  FormItemInput |
-  FormItemInputNumber |
-  FormItemButton |
-  FormItemSwitch |
-  FormItemCheckboxGroup |
-  FormItemRadioGroup |
-  FormItemRate |
-  FormItemSlider |
-  FormItemTimePicker |
-  FormItemMention
+export type FormItemComponents
+  = FormItemDate
+    | FormItemSelect
+    | FormItemAutoComplete
+    | FormItemCascader
+    | FormItemInput
+    | FormItemInputNumber
+    | FormItemButton
+    | FormItemSwitch
+    | FormItemCheckboxGroup
+    | FormItemRadioGroup
+    | FormItemRate
+    | FormItemSlider
+    | FormItemTimePicker
+    | FormItemMention
 
 export type FormItemDefaultRender = (model: Ref<any>, config: FormItemConfig) => any
 

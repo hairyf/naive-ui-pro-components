@@ -16,7 +16,6 @@
   "devDependencies": {
     "@antfu/eslint-config": "catalog:cli",
     "@antfu/ni": "catalog:cli",
-    "@antfu/utils": "catalog:inlined",
     "@types/node": "catalog:types",
     "bumpp": "catalog:cli",
     "eslint": "catalog:cli",
@@ -24,13 +23,14 @@
     "pnpm": "catalog:cli",
     "simple-git-hooks": "catalog:cli",
     "tsup": "catalog:bundler",
-    "tsup-define": "workspace:*",
+    "tsup-config": "workspace:*",
     "tsx": "catalog:cli",
     "typescript": "catalog:cli",
     "unbuild": "catalog:bundler",
     "vite": "catalog:cli",
     "vitest": "catalog:tesing"
   },
+
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
