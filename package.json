@@ -29,7 +29,6 @@
     "unbuild": "catalog:bundler",
     "vitest": "catalog:tesing"
   },
-
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
