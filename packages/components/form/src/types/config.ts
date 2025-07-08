@@ -197,5 +197,5 @@ export type FormExtendsConfig = RecordFormItemConfigExport | ArrayFormItemConfig
 export type WithConfig<V, T> = (config: WithFieldConfig<V, T>) => FormItemFieldConfig<V, T>
 
 export type DecodeValues<T extends RecordFormItemConfigExport> = {
-  [key in keyof T]: T[key] extends WithFieldConfig<infer V, any> ? V : never
+  [key in keyof T]: T[key] extends FormItemConfig ? FormItemConfig : never
 }

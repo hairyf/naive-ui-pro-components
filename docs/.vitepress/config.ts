@@ -87,7 +87,7 @@ function useThemeConfig(lang = 'en-US') {
       link: `${prefix}/components/form/`,
       items: [
         { text: 'Data Transform', link: `${prefix}/components/form/data-trans` },
-        { text: 'Field Component', link: `${prefix}/components/form/field-component` },
+        { text: 'Field Item', link: `${prefix}/components/form/field-item` },
         { text: 'Field API', link: `${prefix}/components/form/field-api` },
         { text: 'Field Context', link: `${prefix}/components/form/field-context` },
       ],
@@ -97,7 +97,7 @@ function useThemeConfig(lang = 'en-US') {
       text: 'Pro Table',
       link: `${prefix}/components/table/`,
       items: [
-        { text: 'Column Hooks', link: `${prefix}/components/table/form` },
+        { text: 'Column Hooks', link: `${prefix}/components/table/hooks` },
         { text: 'Actions', link: `${prefix}/components/table/actions` },
       ],
       collapsed: false,

@@ -133,7 +133,7 @@ export const NpForm = defineComponent({
       <>
         {Object
           .entries(values.value)
-          .map(([path, config]) => renderFormItem(path, config))}
+          .map(([path, config]: any) => renderFormItem(path, config))}
         {renderToolbars()}
       </>,
     )

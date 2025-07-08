@@ -22,7 +22,7 @@ ProForm 是基于 Naive Form 的可降级封装，与 Naive 功能完全对齐�
 字段中的 `props` 属性，可以对表单组件进行设置。
 :::
 
-::: demo src="./demo/formItemProps.vue" title="表单项设置"
+::: demo src="./demo/form-item-props.vue" title="表单项设置"
 字段的 `formItemProps` 可以对表单项进行设置，它继承 [n-form-item](https://www.naiveui.com/zh-CN/os-theme/components/form#FormItem-Props) 和 [n-grid-item](https://www.naiveui.com/zh-CN/os-theme/components/grid#GridItem-Props) 的所有属性。
 :::
 

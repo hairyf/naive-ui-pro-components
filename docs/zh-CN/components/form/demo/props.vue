@@ -1,29 +1,29 @@
 <script lang="ts" setup>
 import { defineForm } from 'naive-ultra'
 
-const options = [
-  { label: 'Drive My Car', value: 'song1' },
-  { label: 'Norwegian Wood', value: 'song2' },
-  { label: 'You Won\'t See', value: 'song3', disabled: true },
-]
-
 const form = defineForm({
-  song: {
-    type: 'select',
-    props: { options },
-  },
-  password: {
+  username: {
+    label: '用户名',
     type: 'input',
-    props: { type: 'password' },
+    placeholder: '请输入用户名',
+    props: {
+      clearable: true,
+    },
   },
-  time: {
-    type: 'date-picker',
-    value: undefined as undefined | [string, string],
-    props: { type: 'daterange' },
+  age: {
+    label: '年龄',
+    type: 'input-number',
+    placeholder: '请输入年龄',
+    props: {
+      min: 0,
+      max: 120,
+    },
   },
 })
 </script>
 
 <template>
-  <np-form :is="form" />
+  <n-space vertical>
+    <np-form :is="form" />
+  </n-space>
 </template>

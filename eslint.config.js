@@ -11,6 +11,8 @@ export default antfu(
       'vue/component-name-in-template-casing': 'off',
       'ts/no-use-before-define': 'off',
       'no-alert': 'off',
+      'prefer-promise-reject-errors': 'off',
     },
+    files: ['!**/*.md'],
   },
 )
