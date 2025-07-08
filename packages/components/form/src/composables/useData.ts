@@ -39,7 +39,7 @@ export function useData(metadata: Metadata) {
 
 function parse(values: Metadata['values']): Data<any> {
   const entries = Object.entries(values.value)
-    .filter(([key]) => typeof key === 'symbol')
+    .filter(([key]) => typeof key !== 'symbol')
     .map(([key]) => key)
     .map((key) => {
       return [
