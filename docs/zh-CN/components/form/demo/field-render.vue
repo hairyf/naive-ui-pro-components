@@ -16,7 +16,7 @@ const amountField = field({
 
 const form = defineForm({
   amount: amountField
-    .withConfig({ placeholder: '请输入金额' }),
+    .config({ placeholder: '请输入金额' }),
 })
 </script>
 

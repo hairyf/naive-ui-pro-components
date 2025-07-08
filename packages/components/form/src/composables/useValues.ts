@@ -1,12 +1,12 @@
 import type { MaybeRef } from '@vueuse/core'
-import type { FormItemConfig, WithFieldConfigExtends } from '../types'
+import type { FieldConfigExtends, FormItemConfig } from '../types'
 import type { Metadata } from './useMetadata'
 import { isFunction, isUndefined, noop } from '@naive-ultra/utils'
 
 import { syncRef } from '@vueuse/core'
 import { computed, reactive, unref } from 'vue'
 
-export function useValues(metadata: Metadata, initialValues: MaybeRef<WithFieldConfigExtends | FormItemConfig[]>) {
+export function useValues(metadata: Metadata, initialValues: MaybeRef<FieldConfigExtends | FormItemConfig[]>) {
   function parse(): Record<string, FormItemConfig> {
     const values = unref(initialValues)
     const entries = Object.keys(values).map((key) => {

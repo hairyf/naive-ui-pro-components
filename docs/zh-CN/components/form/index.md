@@ -31,7 +31,7 @@ ProForm 是基于 Naive Form 的可降级封装，与 Naive 功能完全对齐�
 :::
 
 ::: demo src="./demo/field-context.vue" title="字段上下文"
-`field|withConfig` 传入函数可接收当前使用的 form 实例，用于组合校验。
+`field|config` 传入函数可接收当前使用的 form 实例，用于组合校验。
 :::
 
 ::: demo src="./demo/field-render.vue" title="字段渲染"
@@ -70,12 +70,12 @@ ProForm 是基于 Naive Form 的可降级封装，与 Naive 功能完全对齐�
 
 | 名称 | 类型 | 说明 |
 | --- | --- | --- |
-| withConfig | `(config) => WithConfigField` | 携带并返回新的配置 |
-| preventDefault | `() => WithConfigField` | 将 label、rules 置空 |
-| preventRequired | `() => WithConfigField` | rules 中的 required 被删除 |
-| preventAutofill | `() => WithConfigField` | 阻止浏览器自动填充 |
-| clone | `() => WithConfigField` | 浅拷贝 `field` |
-| cloneDeep | `() => WithConfigField` | 深拷贝 `field` |
+| config | `(config) => Field` | 携带并返回新的配置 |
+| preventDefault | `() => Field` | 将 label、rules 置空 |
+| preventRequired | `() => Field` | rules 中的 required 被删除 |
+| preventAutofill | `() => Field` | 阻止浏览器自动填充 |
+| clone | `() => Field` | 浅拷贝 `field` |
+| cloneDeep | `() => Field` | 深拷贝 `field` |
 
 ## Field Types
 

@@ -13,6 +13,5 @@ export default antfu(
       'no-alert': 'off',
       'prefer-promise-reject-errors': 'off',
     },
-    files: ['!**/*.md'],
   },
 )

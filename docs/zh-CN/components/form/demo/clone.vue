@@ -20,15 +20,17 @@ const emailField2 = emailField.clone()
 // 深度克隆
 const emailField3 = emailField.cloneDeep()
 
-emailField3.rules.push({
-  type: 'email',
-  message: '请输入正确的邮箱',
-})
-
 const form = defineForm({
   email: emailField,
   email2: emailField2,
-  email3: emailField3,
+  email3: emailField3.config({
+    rules: [
+      {
+        type: 'email',
+        message: '请输入正确的邮箱',
+      },
+    ],
+  }),
 })
 </script>
 

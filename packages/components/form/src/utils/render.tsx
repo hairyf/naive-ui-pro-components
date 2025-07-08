@@ -32,3 +32,7 @@ export function renderDefField(model: Ref<any>, config: FormItemConfig, _key?: s
     </Component>
   )
 }
+
+export function ONLY_RENDER() {
+  return Symbol('ONLY_KEY')
+}

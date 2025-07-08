@@ -141,10 +141,6 @@ export type FormItemConfig<V = any, K = string, T = unknown> = FormItemComponent
    */
   slots?: Record<string, any>
   /**
-   * whether to receive the value of the current form item
-   */
-  receive?: false
-  /**
    * whether to validate the value of the current form item
    *
    * @default true
@@ -154,31 +150,31 @@ export type FormItemConfig<V = any, K = string, T = unknown> = FormItemComponent
 
 export type FormItemConfigWithKey = (FormItemConfig & { key: string })
 
-export type FormItemFieldConfig<V, T> = FormItemConfig<V, string, T> & {
+export type Field<V, T> = FormItemConfig<V, string, T> & {
   /**
    * set with new config
    */
-  withConfig: WithConfig<V, T>
+  config: FieldConfigFn<V, T>
   /**
    * clone current config
    */
-  clone: () => FormItemFieldConfig<V, T>
+  clone: () => Field<V, T>
   /**
    * clone current config deep
    */
-  cloneDeep: () => FormItemFieldConfig<V, T>
+  cloneDeep: () => Field<V, T>
   /**
    * prevent the current form item rules and label
    */
-  preventDefault: () => FormItemFieldConfig<V, T>
+  preventDefault: () => Field<V, T>
   /**
    * prevent the current form item rules required
    */
-  preventRequired: () => FormItemFieldConfig<V, T>
+  preventRequired: () => Field<V, T>
   /**
    * prevent browser from automatically filling
    */
-  preventAutofill: () => FormItemFieldConfig<V, T>
+  preventAutofill: () => Field<V, T>
   /**
    * render current form item
    */
@@ -187,14 +183,14 @@ export type FormItemFieldConfig<V, T> = FormItemConfig<V, string, T> & {
 
 export type FormItemConfigExport<V = any, K = string> = FormItemConfig<V, K> | ((inst: ProFormInstance) => FormItemConfig<V, K>)
 
-export type WithFieldConfigExtends<V = any> = FormItemConfig<V> | FormItemConfigWithKey | (() => FormItemConfig<V> | FormItemConfigWithKey)
-export type WithFieldConfig<V = any, T = unknown> = FormItemConfig<V, string, T> | ((config: ProFormInstance) => FormItemConfig<V, string, T>)
+export type FieldConfigExtends<V = any> = FormItemConfig<V> | FormItemConfigWithKey | (() => FormItemConfig<V> | FormItemConfigWithKey)
+export type FieldConfig<V = any, T = unknown> = FormItemConfig<V, string, T> | ((config: ProFormInstance) => FormItemConfig<V, string, T>)
 
 export type RecordFormItemConfigExport = Record<string, FormItemConfigExport>
 export type ArrayFormItemConfigExport = FormItemConfigWithKey[]
 export type FormExtendsConfig = RecordFormItemConfigExport | ArrayFormItemConfigExport
 
-export type WithConfig<V, T> = (config: WithFieldConfig<V, T>) => FormItemFieldConfig<V, T>
+export type FieldConfigFn<V, T> = (config: FieldConfig<V, T>) => Field<V, T>
 
 export type DecodeValues<T extends RecordFormItemConfigExport> = {
   [key in keyof T]: T[key] extends FormItemConfig ? FormItemConfig : never

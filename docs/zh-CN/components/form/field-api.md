@@ -23,7 +23,7 @@ export const phoneField = field({/* ... */})
 export const deviceField = field({/* ... */})
 ```
 
-## withConfig
+## config
 
 携带并返回新的配置，支持链式调用。
 
@@ -33,7 +33,7 @@ const field = field({
   label: '用户名'
 })
 
-const newField = field.withConfig({
+const newField = field.config({
   label: '新用户名',
   placeholder: '请输入用户名'
 })
@@ -68,7 +68,7 @@ const deepClonedField = field.cloneDeep()
 
 ## preventDefault
 
-将 label、rules 置空，适用于只渲染不收集数据的场景。
+将 label、rules 留空，保留其他属性。
 
 ```ts
 const field = field({

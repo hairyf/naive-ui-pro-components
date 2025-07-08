@@ -30,17 +30,21 @@ Form Field 支持 Naive UI 大部分表单组件，包括输入框、选择器�
 }
 ```
 
-## Receive
+## Only Render
 
-`receive: false` 时，该字段不会参与表单数据的收集，仅用于渲染内容（如分割线、说明文本、插槽等）。适用于只展示不需要提交的内容。
+定义 Form 时，通过引用 ONLY_RENDER 对该字段标识为仅渲染，不进行收集数据。
 
 ```ts
-field({
-  type: 'button',
-  receive: false,
-  props: {
-    // ...
-  },
+import { defineForm, field, ONLY_RENDER } from 'naive-ultra'
+const form = defineForm({
+  [ONLY_RENDER()]: field({
+    type: 'button',
+    props: {
+      onClick() {
+        form.validate()
+      }
+    },
+  })
 })
 ```
 

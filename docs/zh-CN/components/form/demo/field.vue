@@ -20,8 +20,8 @@ const emailField = field({
 // xxx.vue setup
 const form = defineForm({
   email: emailField
-    // 通过 withConfig 可以对 field 进行再次配置
-    .withConfig({
+    // 通过 config 可以对 field 进行再次配置
+    .config({
       label: '邮箱',
       placeholder: '请输入邮箱',
     }),

@@ -16,7 +16,7 @@ const form = defineForm({
   },
 })
 
-const toolbars = defineActions([
+const actions = defineActions([
   {
     render: () => 'Search',
     helper: () => {
@@ -34,5 +34,5 @@ const toolbars = defineActions([
 </script>
 
 <template>
-  <np-form :is="form" :toolbars="toolbars" />
+  <np-form :is="form" :toolbars="actions" />
 </template>

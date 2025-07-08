@@ -39,7 +39,7 @@ export function useData(metadata: Metadata) {
 
 function parse(values: Metadata['values']): Data<any> {
   const entries = Object.entries(values.value)
-    .filter(([_, i]) => i.receive !== false)
+    .filter(([key]) => typeof key === 'symbol')
     .map(([key]) => key)
     .map((key) => {
       return [
@@ -58,8 +58,8 @@ function parseTrans(values: Metadata['values']) {
   return computed(() => {
     const target: Record<string, any> = {}
     for (const key in values.value) {
-      const { value, transform, receive } = values.value[key]
-      if (receive === false)
+      const { value, transform } = values.value[key]
+      if (typeof key === 'symbol')
         continue
       if (transform)
         Object.assign(target, transform(value, key))

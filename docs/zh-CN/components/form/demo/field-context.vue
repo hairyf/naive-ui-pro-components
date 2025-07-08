@@ -22,9 +22,9 @@ const passwordField = field({
   placeholder: '请输入密码',
 })
 
-// 在 withConfig 中访问 form 上下文
+// 在 config 中访问 form 上下文
 const confirmPasswordField = passwordField
-  .withConfig(({ data }) => {
+  .config(({ data }) => {
     return {
       placeholder: '请再次输入密码',
       rules: {
