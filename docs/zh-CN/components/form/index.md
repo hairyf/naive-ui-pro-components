@@ -1,10 +1,10 @@
-# Pro Form
+# Ultra Form
 
 > 高级表单用于快速构建表单视图，使用 pro-form 需要使用 defineForm Functions。
 
 高级表单基于对象的函数式编程（functional programming）思想。并将表单数据抽象为一个 JavaScript 对象，通过对这个对象进行操作和封装，让表单数据具有更好的可复用性和可维护性。
 
-ProForm 是基于 Naive Form 的可降级封装，与 Naive 功能完全对齐，内置了所有数据录入组件，在其之上还增加一些预设行为和布局。并且拥有公共的 API。
+UltraForm 是基于 Naive Form 的可降级封装，与 Naive 功能完全对齐，内置了所有数据录入组件，在其之上还增加一些预设行为和布局。并且拥有公共的 API。
 
 ::: demo src="./demo/basic.vue" title="基础"
 高级表单使用 `defineForm` 定义，返回一个表单对象的实例，它会将表单数据进行重组，它具有良好的 Typescript 支持。
@@ -50,7 +50,7 @@ ProForm 是基于 Naive Form 的可降级封装，与 Naive 功能完全对齐�
 
 | 名称 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
-| is | `ProFormInstance` | `-` | 组件的实例 |
+| is | `UltraFormInstance` | `-` | 组件的实例 |
 | grid | `boolean` | `true` | 是否开启栅格布局 |
 | cols | `number \| ResponsiveDescription` | `24` | 显示的栅格数量 |
 | x-gap | `number \| ResponsiveDescription` | `0` | 横向间隔槽 |

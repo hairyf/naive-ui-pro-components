@@ -13,6 +13,6 @@ const form = defineForm({
 
 <template>
   <n-space vertical>
-    <np-form :is="form" />
+    <nu-form :is="form" />
   </n-space>
 </template>

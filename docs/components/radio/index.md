@@ -1,4 +1,4 @@
-# Pro Radio
+# Ultra Radio
 
 Create a radio group from configuration options.
 

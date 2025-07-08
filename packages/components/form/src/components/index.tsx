@@ -1,5 +1,5 @@
 import type { Component, FunctionalComponent, PropType, VNode } from 'vue'
-import type { FormItemConfig, ProFormInstance } from '../types'
+import type { FormItemConfig, UltraFormInstance } from '../types'
 
 import { final, render } from '@naive-ultra/utils'
 import { reactiveOmit, reactivePick } from '@vueuse/core'
@@ -9,10 +9,10 @@ import { renderItemField } from '../utils'
 
 const { rules: _r, model: _m, ...extendsProps } = formProps
 
-export const proFormProps = {
+export const ultraFormProps = {
   ...extendsProps,
   is: {
-    type: Object as PropType<ProFormInstance<any>>,
+    type: Object as PropType<UltraFormInstance<any>>,
     required: true as const,
   },
   cols: {
@@ -47,9 +47,9 @@ export const proFormProps = {
   >,
 }
 
-export const NpForm = defineComponent({
-  name: 'ProForm',
-  props: proFormProps,
+export const NuForm = defineComponent({
+  name: 'NuForm',
+  props: ultraFormProps,
   setup(_props, { slots }) {
     const customs = ['grid', 'xGap', 'yGap', 'cols', 'is', 'toolbars'] as const
     const props = reactivePick(_props, ...customs)

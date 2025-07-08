@@ -4,7 +4,7 @@ import { messageProviderProps, NMessageProvider, useMessage } from 'naive-ui'
 import { defineComponent } from 'vue'
 import { createDeferred, packer } from '../utils'
 
-export const NpInstallMessage = defineComponent((props, { slots }) => {
+export const NuInstallMessage = defineComponent((props, { slots }) => {
   window.$message = useMessage() as XMessageApiInjection
   packer(
     window.$message,
@@ -26,15 +26,15 @@ export const NpInstallMessage = defineComponent((props, { slots }) => {
   return slots.default as any as any
 })
 
-export const NpGlobalMessage = defineComponent({
-  name: 'NpGlobalMessage',
+export const NuGlobalMessage = defineComponent({
+  name: 'NuGlobalMessage',
   props: messageProviderProps,
   setup(props, { slots }) {
     return () => (
       <NMessageProvider {...props}>
-        <NpInstallMessage>
+        <NuInstallMessage>
           {slots}
-        </NpInstallMessage>
+        </NuInstallMessage>
       </NMessageProvider>
     )
   },

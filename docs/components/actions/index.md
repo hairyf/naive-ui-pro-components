@@ -1,6 +1,6 @@
-# Pro Actions
+# Ultra Actions
 
-Pro Actions are commonly used in Table Columns and Form Toolbars, and can also be rendered independently using `<component />`.
+Ultra Actions are commonly used in Table Columns and Form Toolbars, and can also be rendered independently using `<component />`.
 
 It returns a Function Component, which renders components based on the passed parameters.
 

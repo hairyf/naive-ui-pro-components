@@ -78,7 +78,7 @@ const form = defineForm(() => {
 
 ## Pagination config and control separation in defineTable
 
-In `np-table`, the `pagination` prop is only for configuring the display parameters of pagination, while `page` and `pageSize` are managed entirely by `defineTable`. You can configure the initial values of these two parameters via the defineTable options.
+In `nu-table`, the `pagination` prop is only for configuring the display parameters of pagination, while `page` and `pageSize` are managed entirely by `defineTable`. You can configure the initial values of these two parameters via the defineTable options.
 
 ```ts
 const table = defineTable({

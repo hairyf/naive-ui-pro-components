@@ -1,4 +1,4 @@
-# Pro Checkbox
+# Ultra Checkbox
 
 以配置项创建复选框组。
 

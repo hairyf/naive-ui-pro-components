@@ -14,7 +14,7 @@ const options = reactive([
 
 <template>
   <n-space>
-    <np-radio-group v-model:value="cities" :options="options" />
+    <nu-radio-group v-model:value="cities" :options="options" />
     <n-switch v-model:value="disabled" />
   </n-space>
 </template>

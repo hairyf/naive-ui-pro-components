@@ -1,10 +1,10 @@
 import type { MaybeRef } from '@vueuse/core'
-import type { FormExtendsConfig, ProFormInstance, RecordFormItemConfigExport } from '../types'
+import type { FormExtendsConfig, RecordFormItemConfigExport, UltraFormInstance } from '../types'
 
 import { reactive } from 'vue'
 import { useData, useMetadata, useRules, useValues } from '../composables'
 
-export type DefineFormReturn<T> = T extends RecordFormItemConfigExport ? ProFormInstance<T> : ProFormInstance
+export type DefineFormReturn<T> = T extends RecordFormItemConfigExport ? UltraFormInstance<T> : UltraFormInstance
 
 export function defineForm<T extends FormExtendsConfig>(initialValues: MaybeRef<T>): DefineFormReturn<T> {
   const metadata = useMetadata()

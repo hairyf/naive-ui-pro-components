@@ -1,7 +1,7 @@
 # Table Hooks
 
 ::: demo src="./demo/hooks.vue" title="Common hooks usage"
-Table Hooks provide a set of utility functions for simplifying table column configuration, index columns, link columns, and other common scenarios, making ProTable's column configuration more flexible and reusable.
+Table Hooks provide a set of utility functions for simplifying table column configuration, index columns, link columns, and other common scenarios, making UltraTable's column configuration more flexible and reusable.
 :::
 
 ## useColumns
@@ -45,6 +45,6 @@ const columns = [
 ## Other Common Hooks
 
 - `useTableMinWidth(columns)`: Automatically calculates the minimum table width, suitable for responsive layouts.
-- `useOffsetPagination(options)`: Pagination state management, used with ProTable.
+- `useOffsetPagination(options)`: Pagination state management, used with UltraTable.
 
 > You can flexibly combine these hooks to quickly implement complex table scenarios.

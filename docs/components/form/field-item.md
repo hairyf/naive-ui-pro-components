@@ -8,7 +8,7 @@ Form Field supports most Naive UI form components, including input, select, date
 ::: demo src="./demo/form-item-props.vue" title="Form Item Props"
 `formItemProps` is used to set the properties of the current form item, supporting all properties of [Naive UI n-form-item](https://www.naiveui.com/en-US/os-theme/components/form#FormItem-Props) and [n-grid-item](https://www.naiveui.com/en-US/os-theme/components/grid#GridItem-Props). You can customize label, validation, layout, style, etc.
 
-- ProForm enables grid layout by default, all form items are wrapped in `NFormItemGi` (Grid Item), and `formItemProps` supports both n-form-item and n-grid-item properties.
+- UltraForm enables grid layout by default, all form items are wrapped in `NFormItemGi` (Grid Item), and `formItemProps` supports both n-form-item and n-grid-item properties.
 - You can set the column width of the current form item via the `span` property, or further customize it via `formItemProps`.
 :::
 

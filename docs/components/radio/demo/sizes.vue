@@ -16,8 +16,8 @@ const options = reactive([
 
 <template>
   <n-space vertical>
-    <np-radio-group v-model:value="cities" type="button" :options="options" size="medium" />
-    <np-radio-group v-model:value="cities" type="button" :options="options" size="large" />
+    <nu-radio-group v-model:value="cities" type="button" :options="options" size="medium" />
+    <nu-radio-group v-model:value="cities" type="button" :options="options" size="large" />
     <n-space>
       <n-checkbox v-model:checked="disabled2">
         Disable Shakermaker

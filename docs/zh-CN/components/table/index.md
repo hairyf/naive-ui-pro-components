@@ -1,8 +1,8 @@
-# Pro Table
+# Ultra Table
 
-np-table 用于解决项目中需要写很多 table 的样板代码的问题，所以在其中做了封装了很多常用的逻辑。这些封装可以简单的分类为预设行为与预设逻辑。
+nu-table 用于解决项目中需要写很多 table 的样板代码的问题，所以在其中做了封装了很多常用的逻辑。这些封装可以简单的分类为预设行为与预设逻辑。
 
-当你的表格需要与服务端进行交互或者需要多种单元格样式时，ProTable 是不二选择，如果你只是想渲染一个表格，更建议你使用 [data-table](https://www.naiveui.com/zh-CN/os-theme/components/data-table) 或者 [table](https://www.naiveui.com/zh-CN/os-theme/components/table)。
+当你的表格需要与服务端进行交互或者需要多种单元格样式时，UltraTable 是不二选择，如果你只是想渲染一个表格，更建议你使用 [data-table](https://www.naiveui.com/zh-CN/os-theme/components/data-table) 或者 [table](https://www.naiveui.com/zh-CN/os-theme/components/table)。
 
 <demo title="基础" src="./demo/basic.vue" />
 
@@ -34,7 +34,7 @@ np-table 用于解决项目中需要写很多 table 的样板代码的问题，�
 
 | 名称 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
-| is | `ProTableInstance` | `-` | 组件的实例 |
+| is | `UltraTableInstance` | `-` | 组件的实例 |
 | pagination | `boolean \| PaginationProps` | `true` | 分页配置 |
 
 > 更多参数参考 [data-table](https://www.naiveui.com/zh-CN/os-theme/components/data-table)。

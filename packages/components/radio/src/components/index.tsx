@@ -5,7 +5,7 @@ import { reactiveOmit } from '@vueuse/core'
 import { NRadio, NRadioButton, NRadioGroup, NSpace, radioGroupProps } from 'naive-ui'
 import { computed, defineComponent } from 'vue'
 
-export const proRadioGroupProps = {
+export const ultraRadioGroupProps = {
   ...radioGroupProps,
   type: {
     type: String as PropType<'button' | 'default'>,
@@ -15,15 +15,15 @@ export const proRadioGroupProps = {
   space: Object as PropType<SpaceProps>,
 }
 
-export type ProRadioGroupProps = ExtractPropTypes<typeof proRadioGroupProps>
+export type UltraRadioGroupProps = ExtractPropTypes<typeof ultraRadioGroupProps>
 
 export interface RadioMixedOption extends RadioProps {
   slots?: Record<string, () => JSX.Element | undefined>
 }
 
-export const NpRadioGroup = defineComponent({
-  name: 'ProRadioGroup',
-  props: proRadioGroupProps,
+export const NuRadioGroup = defineComponent({
+  name: 'NuRadioGroup',
+  props: ultraRadioGroupProps,
   setup(props) {
     const options = computed(() => props.options || [])
     const radioGroupProps = reactiveOmit(props, ['space', 'options', 'type'])
@@ -45,4 +45,4 @@ export const NpRadioGroup = defineComponent({
   },
 })
 
-export default NpRadioGroup
+export default NuRadioGroup

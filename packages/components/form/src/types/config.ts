@@ -1,10 +1,10 @@
-import type { ProCheckboxGroupProps } from '@naive-ultra/checkbox'
-import type { ProRadioGroupProps } from '@naive-ultra/radio'
+import type { UltraCheckboxGroupProps } from '@naive-ultra/checkbox'
+import type { UltraRadioGroupProps } from '@naive-ultra/radio'
 import type { NestedRefs } from '@naive-ultra/utils'
 import type { MaybeRef } from '@vueuse/core'
 import type * as NaiveUI from 'naive-ui'
 import type { Ref, VNodeChild } from 'vue'
-import type { ProFormInstance } from './instance'
+import type { UltraFormInstance } from './instance'
 
 export interface FormItemDate {
   type?: 'date-picker'
@@ -60,14 +60,14 @@ export interface FormItemSelect {
 
 export interface FormItemCheckboxGroup {
   type?: 'checkbox-group'
-  options?: MaybeRef<ProCheckboxGroupProps['options']>
-  props?: NestedRefs<ProCheckboxGroupProps>
+  options?: MaybeRef<UltraCheckboxGroupProps['options']>
+  props?: NestedRefs<UltraCheckboxGroupProps>
 }
 
 export interface FormItemRadioGroup {
   type?: 'radio-group'
-  options?: MaybeRef<ProRadioGroupProps['options']>
-  props?: NestedRefs<ProRadioGroupProps>
+  options?: MaybeRef<UltraRadioGroupProps['options']>
+  props?: NestedRefs<UltraRadioGroupProps>
 }
 export interface FormItemMention {
   type?: 'mention'
@@ -181,10 +181,10 @@ export type Field<V, T> = FormItemConfig<V, string, T> & {
   render: () => VNodeChild
 }
 
-export type FormItemConfigExport<V = any, K = string> = FormItemConfig<V, K> | ((inst: ProFormInstance) => FormItemConfig<V, K>)
+export type FormItemConfigExport<V = any, K = string> = FormItemConfig<V, K> | ((inst: UltraFormInstance) => FormItemConfig<V, K>)
 
 export type FieldConfigExtends<V = any> = FormItemConfig<V> | FormItemConfigWithKey | (() => FormItemConfig<V> | FormItemConfigWithKey)
-export type FieldConfig<V = any, T = unknown> = FormItemConfig<V, string, T> | ((config: ProFormInstance) => FormItemConfig<V, string, T>)
+export type FieldConfig<V = any, T = unknown> = FormItemConfig<V, string, T> | ((config: UltraFormInstance) => FormItemConfig<V, string, T>)
 
 export type RecordFormItemConfigExport = Record<string, FormItemConfigExport>
 export type ArrayFormItemConfigExport = FormItemConfigWithKey[]

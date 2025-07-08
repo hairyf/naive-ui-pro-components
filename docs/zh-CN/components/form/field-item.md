@@ -8,7 +8,7 @@ Form Field 支持 Naive UI 大部分表单组件，包括输入框、选择器�
 ::: demo src="./demo/form-item-props.vue" title="Form Item Props"
 `formItemProps` 用于设置当前表单项的属性，支持 [Naive UI n-form-item](https://www.naiveui.com/zh-CN/os-theme/components/form#FormItem-Props) 和 [n-grid-item](https://www.naiveui.com/zh-CN/os-theme/components/grid#GridItem-Props) 的所有属性。你可以通过它自定义 label、校验、布局、样式等。
 
-- ProForm 默认启用 grid 布局，所有表单项均包裹在 `NFormItemGi`（Grid Item）中，`formItemProps` 同时支持 n-form-item 和 n-grid-item 的属性。
+- UltraForm 默认启用 grid 布局，所有表单项均包裹在 `NFormItemGi`（Grid Item）中，`formItemProps` 同时支持 n-form-item 和 n-grid-item 的属性。
 - 你可以通过 `span` 属性设置当前表单项的栅格宽度，或通过 `formItemProps` 进一步定制。
 :::
 

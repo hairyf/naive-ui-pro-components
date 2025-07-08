@@ -3,7 +3,7 @@ import { dialogProviderProps, NDialogProvider, useDialog } from 'naive-ui'
 import { defineComponent } from 'vue'
 import { createDeferred, packer } from '../utils'
 
-export const NpInstallDialog = defineComponent((_, { slots }) => {
+export const NuInstallDialog = defineComponent((_, { slots }) => {
   window.$dialog = useDialog() as XDialogProviderInst
   packer(
     window.$dialog,
@@ -47,15 +47,15 @@ export const NpInstallDialog = defineComponent((_, { slots }) => {
   return slots.default as any
 })
 
-export const NpGlobalDialog = defineComponent({
-  name: 'NpGlobalDialog',
+export const NuGlobalDialog = defineComponent({
+  name: 'NuGlobalDialog',
   props: dialogProviderProps,
   setup(props, { slots }) {
     return () => (
       <NDialogProvider {...props}>
-        <NpInstallDialog>
+        <NuInstallDialog>
           {slots}
-        </NpInstallDialog>
+        </NuInstallDialog>
       </NDialogProvider>
     )
   },

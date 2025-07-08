@@ -1,6 +1,6 @@
 import type { ImportsMap } from 'unplugin-auto-import/types'
 
-function NaiveUIProImports(): ImportsMap {
+function NaiveUltraImports(): ImportsMap {
   return {
     'naive-ultra': [
       'defineForm',
@@ -15,4 +15,4 @@ function NaiveUIProImports(): ImportsMap {
   }
 }
 
-export default NaiveUIProImports
+export default NaiveUltraImports

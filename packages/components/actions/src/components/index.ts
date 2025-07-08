@@ -2,8 +2,8 @@ import type { PropType } from 'vue'
 import type { ActionsInstance } from '../types'
 import { defineComponent } from 'vue'
 
-export const NpActions = defineComponent({
-  name: 'NpActions',
+export const NuActions = defineComponent({
+  name: 'NuActions',
   props: {
     is: {
       type: Object as PropType<ActionsInstance<any>>,

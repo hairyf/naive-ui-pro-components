@@ -37,10 +37,10 @@ const table = defineTable<Row[]>({
 </script>
 
 <template>
-  <np-form :is="form">
+  <nu-form :is="form">
     <template #toolbars>
       <n-button>Search</n-button>
     </template>
-  </np-form>
-  <np-table :is="table" :columns="columns" />
+  </nu-form>
+  <nu-table :is="table" :columns="columns" />
 </template>

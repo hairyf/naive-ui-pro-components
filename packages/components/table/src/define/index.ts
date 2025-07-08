@@ -1,20 +1,20 @@
 import type { Ref } from 'vue'
 import type { OffsetPaginationOptions, ServerPaginationResolve } from '../composables'
 
-import type { ProTableInstance, ProTableRequest } from '../types'
+import type { UltraTableInstance, UltraTableRequest } from '../types'
 import { useAsyncCallback } from '@naive-ultra/utils'
 import { useDebounceFn } from '@vueuse/core'
 import { reactive, ref, watch } from 'vue'
 import { useMetadata } from '../composables'
 
 export interface DefineTableOptions<T = any> {
-  request: ProTableRequest<T>
+  request: UltraTableRequest<T>
   watch?: any[]
   immediate?: boolean
   pagination?: OffsetPaginationOptions
 }
 
-export function defineTable<T extends any[]>(options: DefineTableOptions<T>): ProTableInstance<T> {
+export function defineTable<T extends any[]>(options: DefineTableOptions<T>): UltraTableInstance<T> {
   const { firstPage, pagination, tableInstRef } = useMetadata(options)
   const data = ref<any>([]) as Ref<T>
   const { immediate = true } = options

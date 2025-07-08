@@ -28,7 +28,7 @@ export default defineConfig({
       resolvers: [{
         type: 'component',
         resolve: (name: string) => {
-          if (name.match(/^Np.+/))
+          if (name.match(/^Nu.+/))
             return { name, from: 'naive-ultra' }
           if (name.match(/^N.+/))
             return { name, from: 'naive-ui' }

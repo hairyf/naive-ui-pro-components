@@ -10,12 +10,12 @@ declare module 'vue' {
   export interface GlobalComponents {
     NButton: typeof import('naive-ui')['NButton']
     NCheckbox: typeof import('naive-ui')['NCheckbox']
-    NpActions: typeof import('naive-ultra')['NpActions']
-    NpCheckboxGroup: typeof import('naive-ultra')['NpCheckboxGroup']
-    NpForm: typeof import('naive-ultra')['NpForm']
-    NpRadioGroup: typeof import('naive-ultra')['NpRadioGroup']
-    NpTable: typeof import('naive-ultra')['NpTable']
     NSpace: typeof import('naive-ui')['NSpace']
     NSwitch: typeof import('naive-ui')['NSwitch']
+    NuActions: typeof import('naive-ultra')['NuActions']
+    NuCheckboxGroup: typeof import('naive-ultra')['NuCheckboxGroup']
+    NuForm: typeof import('naive-ultra')['NuForm']
+    NuRadioGroup: typeof import('naive-ultra')['NuRadioGroup']
+    NuTable: typeof import('naive-ultra')['NuTable']
   }
 }

@@ -17,5 +17,5 @@ function handleUpdateValue(value: (string | number)[]) {
 </script>
 
 <template>
-  <np-checkbox-group :value="cities" :options="options" @update:value="handleUpdateValue" />
+  <nu-checkbox-group :value="cities" :options="options" @update:value="handleUpdateValue" />
 </template>

@@ -34,5 +34,5 @@ const actions = defineActions([
 </script>
 
 <template>
-  <np-form :is="form" :toolbars="actions" />
+  <nu-form :is="form" :toolbars="actions" />
 </template>

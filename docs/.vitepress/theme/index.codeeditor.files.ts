@@ -1,18 +1,18 @@
 export const viteConfigJs = `\
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-// import NaiveUIProResolver from 'naive-ultra/resolver'
-// import NaiveUIProImports from 'naive-ultra/imports'
+// import NaiveUltraResolver from 'naive-ultra/resolver'
+// import NaiveUltraImports from 'naive-ultra/imports'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
 plugins: [
   // AutoImport({
-  //   imports: [NaiveUIProImports()],
+  //   imports: [NaiveUltraImports()],
   // }),
   // Components({
-  //   resolvers: [NaiveUIProResolver()],
+  //   resolvers: [NaiveUltraResolver()],
   // }),
   Vue()
 ],

@@ -37,5 +37,5 @@ const form = defineForm({
 </script>
 
 <template>
-  <np-form :is="form" />
+  <nu-form :is="form" />
 </template>

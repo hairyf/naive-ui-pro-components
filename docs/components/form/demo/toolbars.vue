@@ -20,12 +20,12 @@ const form = defineForm({
 </script>
 
 <template>
-  <np-form :is="form">
+  <nu-form :is="form">
     <template #toolbars>
       <n-button type="primary">
         Search
       </n-button>
     </template>
-  </np-form>
-  <np-form :is="form" toolbars />
+  </nu-form>
+  <nu-form :is="form" toolbars />
 </template>

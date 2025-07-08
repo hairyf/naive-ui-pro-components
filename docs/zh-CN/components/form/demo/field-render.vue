@@ -21,7 +21,7 @@ const form = defineForm({
 </script>
 
 <template>
-  <np-form :is="form" />
+  <nu-form :is="form" />
   <n-button type="primary" style="width: 100%">
     付款
   </n-button>

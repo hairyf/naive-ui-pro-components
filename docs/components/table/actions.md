@@ -1,6 +1,6 @@
-# Pro Actions (Table Integration)
+# Ultra Actions (Table Integration)
 
-Pro Actions can be used with ProTable to render batch operation buttons in table columns, simplifying the implementation of table operation columns.
+Ultra Actions can be used with UltraTable to render batch operation buttons in table columns, simplifying the implementation of table operation columns.
 
 ::: demo src="../actions/demo/table.vue" title="Table Controls"
 In the table column configuration, you can directly use the component function returned by `defineActions` to implement batch operation buttons.
@@ -46,4 +46,4 @@ const columns = useColumns([
 
 defineActions supports generic parameters, automatically inferring the parameter types for each action. For example, `defineActions<[Row, number]>()` can get the current row and index.
 
-Pro Actions can be used in tables, toolbars, and other scenarios.
+Ultra Actions can be used in tables, toolbars, and other scenarios.

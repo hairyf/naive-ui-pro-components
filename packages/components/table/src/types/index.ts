@@ -17,17 +17,17 @@ export interface DataResolved<T> {
   total: number
 }
 
-export interface ProTableRequest<T> {
+export interface UltraTableRequest<T> {
   (pagination: ServerPaginationResolve): DataResolved<T> | Promise<DataResolved<T>>
 }
 
-export interface ProTableInstance<T = any[]> {
+export interface UltraTableInstance<T = any[]> {
   data: T
   loading: boolean
   pagination: UnwrapNestedRefs<OffsetPagination>
   next: () => void
   prev: () => void
-  request: ProTableRequest<T>
+  request: UltraTableRequest<T>
   requestAll: () => Promise<T>
   search: PromisifyFn<(pagination?: ServerPaginationResolve) => void>
   reset: PromisifyFn<() => void>

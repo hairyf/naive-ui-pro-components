@@ -1,4 +1,4 @@
-# Pro Radio
+# Ultra Radio
 
 以配置项创建单选框组。
 

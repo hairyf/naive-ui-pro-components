@@ -27,5 +27,5 @@ const actions = defineActions([
 </script>
 
 <template>
-  <np-actions :is="actions" />
+  <nu-actions :is="actions" />
 </template>

@@ -1,12 +1,12 @@
-# Pro Provider
+# Ultra Provider
 
 All global components provided by `naive-ui` cannot be used globally by default, because they need to be mounted on a certain component. We provide the `globals` component, which allows you to use these feedback components globally, and it will automatically mount TypeScript types.
 
 ```html
 <!-- App.vue -->
-<np-global-provider>
+<nu-global-provider>
   <content />
-</np-global-provider>
+</nu-global-provider>
 ```
 
 Now you can use `$message`, `$dialog`, `$loadingBar`, `$notification` globally.
@@ -54,31 +54,31 @@ If you only need to use `$message`, you can mount a single component:
 ```html
 <!-- App.vue -->
 <script lang="ts" setup>
-  import { NpGlobalMessage } from 'naive-ultra'
+  import { NuGlobalMessage } from 'naive-ultra'
 </script>
 
 <template>
-  <np-global-message>
+  <nu-global-message>
     <content />
-  </np-global-message>
+  </nu-global-message>
 </template>
 ```
 
-You can use `np-installs-provider` for simplified mounting:
+You can use `nu-installs-provider` for simplified mounting:
 
 ```html
 <!-- App.vue -->
 <script lang="ts" setup>
-  import { NpInstallProvider, NpGlobalMessage, NpGlobalDialog } from 'naive-ultra'
+  import { NuInstallProvider, NuGlobalMessage, NuGlobalDialog } from 'naive-ultra'
 </script>
 <template>
-  <np-installs-provider
+  <nu-installs-provider
     :install="[
-      NpGlobalMessage,
-      NpGlobalDialog,
+      NuGlobalMessage,
+      NuGlobalDialog,
     ]"
   >
     <content />
-  </np-installs-provider>
+  </nu-installs-provider>
 </template>
 ```

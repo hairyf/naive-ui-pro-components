@@ -43,6 +43,6 @@ const table = defineTable<Row[]>({
 </script>
 
 <template>
-  <np-form :is="form" />
-  <np-table :is="table" :columns="columns" />
+  <nu-form :is="form" />
+  <nu-table :is="table" :columns="columns" />
 </template>

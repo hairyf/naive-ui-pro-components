@@ -1,8 +1,8 @@
-# Pro Table
+# Ultra Table
 
-np-table is designed to solve the problem of writing a lot of table template code in projects, so it encapsulates a lot of common logic. These encapsulations can be simply classified as preset behaviors and preset logic.
+nu-table is designed to solve the problem of writing a lot of table template code in projects, so it encapsulates a lot of common logic. These encapsulations can be simply classified as preset behaviors and preset logic.
 
-When your table needs to interact with the server or requires multiple cell formats, ProTable is the best choice. If you just want to render a table, it is recommended to use [data-table](https://www.naiveui.com/en-US/os-theme/components/data-table) or [table](https://www.naiveui.com/en-US/os-theme/components/table).
+When your table needs to interact with the server or requires multiple cell formats, UltraTable is the best choice. If you just want to render a table, it is recommended to use [data-table](https://www.naiveui.com/en-US/os-theme/components/data-table) or [table](https://www.naiveui.com/en-US/os-theme/components/table).
 
 <demo title="Basic" src="./demo/basic.vue" />
 
@@ -34,7 +34,7 @@ When the table data changes, you may need to perform some extra operations. You 
 
 | Name       | Type                           | Default | Description         |
 | ---------- | ------------------------------ | ------- | ------------------- |
-| is         | `ProTableInstance`             | `-`     | Instance of the component |
+| is         | `UltraTableInstance`             | `-`     | Instance of the component |
 | pagination | `boolean \| PaginationProps`     | `true`  | Pagination config   |
 
 > For more parameters, see [data-table](https://www.naiveui.com/en-US/os-theme/components/data-table).

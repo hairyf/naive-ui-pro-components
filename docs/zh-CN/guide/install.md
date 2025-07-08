@@ -4,12 +4,12 @@ Pro Components 是基于 Naive UI 开发的一套高级组件。它提供了更�
 
 ## Features
 
-- [ProForm](/zh-CN/components/form/) 基于对象的函数式编程的表单模板组件，预设常见布局和行为
-- [ProTable](/zh-CN/components/table/) 抽象网络请求和表格格式化
-- [ProActions](/zh-CN/components/actions/) 多场景的表单、表格控件
-- [ProCheckbox](/zh-CN/components/checkbox/) 组合式复选框
-- [ProRadio](/zh-CN/components/radio/) 组合式单选框
-- [ProProvider](/zh-CN/components/provider/) 全局反馈组件挂载与优化
+- [Ultra Form](/zh-CN/components/form/) 基于对象的函数式编程的表单模板组件，预设常见布局和行为
+- [Ultra Table](/zh-CN/components/table/) 抽象网络请求和表格格式化
+- [Ultra Actions](/zh-CN/components/actions/) 多场景的表单、表格控件
+- [Ultra Checkbox](/zh-CN/components/checkbox/) 组合式复选框
+- [Ultra Radio](/zh-CN/components/radio/) 组合式单选框
+- [Ultra Provider](/zh-CN/components/provider/) 全局反馈组件挂载与优化
 - 开发中...
 
 ## 安装
@@ -48,8 +48,8 @@ npm install -D unplugin-vue-components unplugin-auto-import
 ### Vite
 
 ```ts
-import NaiveUIProImports from 'naive-ultra/imports'
-import NaiveUIProResolver from 'naive-ultra/resolver'
+import NaiveUltraImports from 'naive-ultra/imports'
+import NaiveUltraResolver from 'naive-ultra/resolver'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 // vite.config.ts
@@ -60,10 +60,10 @@ export default defineConfig({
   plugins: [
     // ...
     AutoImport({
-      imports: [NaiveUIProImports()],
+      imports: [NaiveUltraImports()],
     }),
     Components({
-      resolvers: [NaiveUIProResolver()],
+      resolvers: [NaiveUltraResolver()],
     }),
   ],
 })
@@ -72,8 +72,8 @@ export default defineConfig({
 ### Webpack
 
 ```js
-const NaiveUIProImports = require('naive-ultra/imports')
-const NaiveUIProResolver = require('naive-ultra/resolver')
+const NaiveUltraImports = require('naive-ultra/imports')
+const NaiveUltraResolver = require('naive-ultra/resolver')
 // webpack.config.js
 const AutoImport = require('unplugin-auto-import/webpack')
 const Components = require('unplugin-vue-components/webpack')
@@ -83,10 +83,10 @@ module.exports = {
   plugins: [
     // ...
     AutoImport({
-      imports: [NaiveUIProImports()],
+      imports: [NaiveUltraImports()],
     }),
     Components({
-      resolvers: [NaiveUIProResolver()],
+      resolvers: [NaiveUltraResolver()],
     }),
   ],
 }

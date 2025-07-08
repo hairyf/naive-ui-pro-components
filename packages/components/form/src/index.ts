@@ -1,8 +1,8 @@
-import { NpForm } from './components'
+import { NuForm } from './components'
 
 export * from './components'
 export * from './define'
 export * from './types'
 export * from './utils'
 
-export default NpForm
+export default NuForm

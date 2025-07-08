@@ -21,6 +21,6 @@ form.dataTrans.endAt
 </script>
 
 <template>
-  <np-form :is="form" />
+  <nu-form :is="form" />
   <pre>{{ JSON.stringify(form.dataTrans, null, 2) }}</pre>
 </template>

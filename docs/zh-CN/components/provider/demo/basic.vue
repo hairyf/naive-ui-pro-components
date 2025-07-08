@@ -49,5 +49,5 @@ I cant get no, I cant get no`,
 </script>
 
 <template>
-  <np-actions :is="actions" />
+  <nu-actions :is="actions" />
 </template>

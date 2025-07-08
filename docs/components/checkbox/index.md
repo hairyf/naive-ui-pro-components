@@ -1,4 +1,4 @@
-# Pro Checkbox
+# Ultra Checkbox
 
 Create a checkbox group from configuration options.
 

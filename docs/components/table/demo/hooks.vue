@@ -39,5 +39,5 @@ const columns = useColumns<Row>([
 </script>
 
 <template>
-  <np-table :is="table" :columns="columns" />
+  <nu-table :is="table" :columns="columns" />
 </template>

@@ -3,7 +3,7 @@ import type { ShouldRuleBeApplied } from 'naive-ui/es/form/src/interface'
 import type { DecodeValues, RecordFormItemConfigExport } from './config'
 import type { Data, TransformData } from './data'
 
-export interface ProFormInstance<T extends RecordFormItemConfigExport = RecordFormItemConfigExport> {
+export interface UltraFormInstance<T extends RecordFormItemConfigExport = RecordFormItemConfigExport> {
   values: DecodeValues<T>
   data: Data<T>
   dataTrans: TransformData<T>

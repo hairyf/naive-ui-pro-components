@@ -94,7 +94,7 @@ function useThemeConfig(lang = 'en-US') {
       collapsed: false,
     },
     {
-      text: 'Pro Table',
+      text: 'Table',
       link: `${prefix}/components/table/`,
       items: [
         { text: 'Column Hooks', link: `${prefix}/components/table/hooks` },
@@ -102,10 +102,10 @@ function useThemeConfig(lang = 'en-US') {
       ],
       collapsed: false,
     },
-    { text: 'Pro Checkbox', link: `${prefix}/components/checkbox/` },
-    { text: 'Pro Radio', link: `${prefix}/components/radio/` },
-    { text: 'Pro Actions', link: `${prefix}/components/actions/` },
-    { text: 'Pro Provider', link: `${prefix}/components/provider/` },
+    { text: 'Checkbox', link: `${prefix}/components/checkbox/` },
+    { text: 'Radio', link: `${prefix}/components/radio/` },
+    { text: 'Actions', link: `${prefix}/components/actions/` },
+    { text: 'Provider', link: `${prefix}/components/provider/` },
   ]
   const themeConfig: DefaultTheme.Config = {
     // https://vitepress.dev/reference/default-theme-config

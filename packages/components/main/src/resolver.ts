@@ -1,13 +1,13 @@
 import type { ComponentResolver } from 'unplugin-vue-components/types'
 
-function NaiveUIProResolver(): ComponentResolver {
+function NaiveUltraResolver(): ComponentResolver {
   return {
     type: 'component',
     resolve: (name: string) => {
-      if (name.match(/^Np.+/))
+      if (name.match(/^Nu.+/))
         return { name, from: 'naive-ultra' }
     },
   }
 }
 
-export default NaiveUIProResolver
+export default NaiveUltraResolver

@@ -1,7 +1,7 @@
 # Table Hooks
 
 ::: demo src="./demo/hooks.vue" title="常用 hooks 用法"
-Table Hooks 提供了一组用于简化表格列配置、索引列、链接列等常用场景的工具函数，让 ProTable 的列配置更灵活、可复用。
+Table Hooks 提供了一组用于简化表格列配置、索引列、链接列等常用场景的工具函数，让 UltraTable 的列配置更灵活、可复用。
 :::
 
 ## useColumns
@@ -45,6 +45,6 @@ const columns = [
 ## 其他常用 hooks
 
 - `useTableMinWidth(columns)`：自动计算表格最小宽度，适配响应式布局。
-- `useOffsetPagination(options)`：分页状态管理，配合 ProTable 使用。
+- `useOffsetPagination(options)`：分页状态管理，配合 UltraTable 使用。
 
 > 你可以将这些 hooks 灵活组合，快速实现复杂表格场景。

@@ -1,6 +1,6 @@
-# Pro Actions
+# Ultra Actions
 
-Pro Actions 通常用于在 Table Columns 与 Form Toolbars 中，它也可以使用 `<component />` 独立渲染。
+Ultra Actions 通常用于在 Table Columns 与 Form Toolbars 中，它也可以使用 `<component />` 独立渲染。
 
 它返回一个 Function Component，该 Function Component 会根据传入的参数渲染组件。
 

@@ -1,6 +1,6 @@
-# Pro Actions（表格集成）
+# Ultra Actions（表格集成）
 
-Pro Actions 可与 ProTable 搭配使用，便于在表格列中渲染批量操作按钮，简化表格操作列实现。
+Ultra Actions 可与 UltraTable 搭配使用，便于在表格列中渲染批量操作按钮，简化表格操作列实现。
 
 ::: demo src="../actions/demo/table.vue" title="表格控件"
 在表格列配置中直接使用 `defineActions` 返回的组件函数，即可实现批量操作按钮。
@@ -46,4 +46,4 @@ const columns = useColumns([
 
 defineActions 支持泛型参数，自动推导每个操作项的参数类型。例如 `defineActions<[Row, number]>()` 可获得当前行和索引。
 
-Pro Actions 可用于表格、工具栏等场景。
+Ultra Actions 可用于表格、工具栏等场景。

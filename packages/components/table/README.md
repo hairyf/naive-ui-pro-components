@@ -41,8 +41,8 @@ npm install -D unplugin-vue-components unplugin-auto-import
 ### Vite
 
 ```ts
-import NaiveUIProImports from 'naive-ultra/imports'
-import NaiveUIProResolver from 'naive-ultra/resolver'
+import NaiveUltraImports from 'naive-ultra/imports'
+import NaiveUltraResolver from 'naive-ultra/resolver'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 // vite.config.ts
@@ -53,10 +53,10 @@ export default defineConfig({
   plugins: [
     // ...
     AutoImport({
-      imports: [NaiveUIProImports()],
+      imports: [NaiveUltraImports()],
     }),
     Components({
-      resolvers: [NaiveUIProResolver()],
+      resolvers: [NaiveUltraResolver()],
     }),
   ],
 })
@@ -65,8 +65,8 @@ export default defineConfig({
 ### Webpack
 
 ```js
-const NaiveUIProImports = require('naive-ultra/imports')
-const NaiveUIProResolver = require('naive-ultra/resolver')
+const NaiveUltraImports = require('naive-ultra/imports')
+const NaiveUltraResolver = require('naive-ultra/resolver')
 // webpack.config.js
 const AutoImport = require('unplugin-auto-import/webpack')
 const Components = require('unplugin-vue-components/webpack')
@@ -76,10 +76,10 @@ module.exports = {
   plugins: [
     // ...
     AutoImport({
-      imports: [NaiveUIProImports()],
+      imports: [NaiveUltraImports()],
     }),
     Components({
-      resolvers: [NaiveUIProResolver()],
+      resolvers: [NaiveUltraResolver()],
     }),
   ],
 }

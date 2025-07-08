@@ -25,6 +25,6 @@ function handleClick() {
     <n-button @click="handleClick">
       聚焦，一秒后失效
     </n-button>
-    <np-checkbox-group v-model:value="cities" :options="options" />
+    <nu-checkbox-group v-model:value="cities" :options="options" />
   </n-space>
 </template>

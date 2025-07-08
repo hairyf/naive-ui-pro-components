@@ -12,5 +12,5 @@ const options = reactive([
 </script>
 
 <template>
-  <np-checkbox-group v-model:value="cities" :options="options" />
+  <nu-checkbox-group v-model:value="cities" :options="options" />
 </template>

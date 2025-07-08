@@ -5,7 +5,7 @@ import { useVModel } from '@vueuse/core'
 import { dialogProps, NDialog, NModal } from 'naive-ui'
 import { defineComponent } from 'vue'
 
-export const proDialogProps = {
+export const ultraDialogProps = {
   ...dialogProps,
   show: Boolean,
   width: String,
@@ -14,11 +14,11 @@ export const proDialogProps = {
   disabled: Boolean,
 }
 
-export type ProDialogProps = ExtractPropTypes<typeof proDialogProps>
+export type UltraDialogProps = ExtractPropTypes<typeof ultraDialogProps>
 
-export const NpDialog = defineComponent({
-  name: 'ProDialog',
-  props: proDialogProps,
+export const NuDialog = defineComponent({
+  name: 'NuDialog',
+  props: ultraDialogProps,
   setup(props, { slots }) {
     const visible = useVModel(props, 'show')
 

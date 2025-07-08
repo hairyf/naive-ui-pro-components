@@ -1,10 +1,10 @@
-# Pro Form
+# Ultra Form
 
 > Advanced forms for quickly building form UIs. Using pro-form requires the use of defineForm Functions.
 
 Advanced forms are based on object-oriented functional programming concepts. The form data is abstracted as a JavaScript object, which can be manipulated and encapsulated for better reusability and maintainability.
 
-ProForm is a downward-compatible wrapper based on Naive Form, fully compatible with Naive features, and includes all data entry components. It also adds some preset behaviors and layouts, and provides a common API.
+UltraForm is a downward-compatible wrapper based on Naive Form, fully compatible with Naive features, and includes all data entry components. It also adds some preset behaviors and layouts, and provides a common API.
 
 ::: demo src="./demo/basic.vue" title="Basic"
 Advanced forms use `defineForm` to define and return an instance of a form object, which will reorganize the form data and has excellent TypeScript support.
@@ -50,7 +50,7 @@ Enable the `toolbars` mode, the grid will be fixed as `0:24 742:6 1394:4`, and y
 
 | Name   | Type                              | Default | Description                |
 | ------ | --------------------------------- | ------- | -------------------------- |
-| is     | `ProFormInstance`                 | `-`     | Instance of the component  |
+| is     | `UltraFormInstance`                 | `-`     | Instance of the component  |
 | grid   | `boolean`                         | `true`  | Enable grid layout         |
 | cols   | `number | ResponsiveDescription`   | `24`    | Number of columns to show  |
 | x-gap  | `number | ResponsiveDescription`   | `0`     | Horizontal gap             |

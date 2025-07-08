@@ -1,8 +1,8 @@
-import { NpTable } from './components'
+import { NuTable } from './components'
 
 export * from './components'
 export * from './composables'
 export * from './define'
 export * from './types'
 
-export default NpTable
+export default NuTable

@@ -6,22 +6,22 @@ import { reactiveOmit } from '@vueuse/core'
 import { checkboxGroupProps, NCheckbox, NCheckboxGroup, NSpace } from 'naive-ui'
 import { computed, defineComponent, isRef } from 'vue'
 
-export const proCheckboxGroupProps = {
+export const ultraCheckboxGroupProps = {
   ...checkboxGroupProps,
   options: Array as PropType<CheckboxMixedOption[]>,
   space: Object as PropType<SpaceProps>,
 }
 
-export type ProCheckboxGroupProps = ExtractPropTypes<typeof proCheckboxGroupProps>
+export type UltraCheckboxGroupProps = ExtractPropTypes<typeof ultraCheckboxGroupProps>
 
 export interface CheckboxMixedOption extends CheckboxProps {
   slots?: Record<string, () => JSX.Element | undefined>
   ref?: CheckboxInst | undefined | Ref<CheckboxInst | undefined>
 }
 
-export const NpCheckboxGroup = defineComponent({
-  name: 'ProCheckboxGroup',
-  props: proCheckboxGroupProps,
+export const NuCheckboxGroup = defineComponent({
+  name: 'NuCheckboxGroup',
+  props: ultraCheckboxGroupProps,
   setup(props) {
     const options = computed(() => props.options || [])
     const groupProps = reactiveOmit(props, ['space', 'options'])
@@ -50,4 +50,4 @@ export const NpCheckboxGroup = defineComponent({
   },
 })
 
-export default NpCheckboxGroup
+export default NuCheckboxGroup

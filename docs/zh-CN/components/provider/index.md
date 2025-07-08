@@ -1,12 +1,12 @@
-# Pro Provider
+# Ultra Provider
 
 `naive-ui` 所提供的所有全局组件，并不能在全局中使用，因为他们需要挂载到某个组件上，我们提供了 `globals` 组件，用于在全局中使用这些反馈组件，它将自动挂载 Typescript 类型。
 
 ```html
 <!-- App.vue -->
-<np-global-provider>
+<nu-global-provider>
   <content />
-</np-global-provider>
+</nu-global-provider>
 ```
 
 现在你可以在全局中通过使用 `$message`、`$dialog`、`$loadingBar`、`$notification` 来使用这些方法。
@@ -54,31 +54,31 @@ await $message.error('错误')
 ```html
 <!-- App.vue -->
 <script lang="ts" setup>
-  import { NpGlobalMessage } from 'naive-ultra'
+  import { NuGlobalMessage } from 'naive-ultra'
 </script>
 
 <template>
-  <np-global-message>
+  <nu-global-message>
     <content />
-  </np-global-message>
+  </nu-global-message>
 </template>
 ```
 
-你可以使用 `np-installs-provider` 简化挂载操作：
+你可以使用 `nu-installs-provider` 简化挂载操作：
 
 ```html
 <!-- App.vue -->
 <script lang="ts" setup>
-  import { NpInstallProvider, NpGlobalMessage, NpGlobalDialog } from 'naive-ultra'
+  import { NuInstallProvider, NuGlobalMessage, NuGlobalDialog } from 'naive-ultra'
 </script>
 <template>
-  <np-installs-provider
+  <nu-installs-provider
     :install="[
-      NpGlobalMessage,
-      NpGlobalDialog,
+      NuGlobalMessage,
+      NuGlobalDialog,
     ]"
   >
     <content />
-  </np-installs-provider>
+  </nu-installs-provider>
 </template>
 ```

@@ -1,5 +1,5 @@
-import { NpCheckboxGroup } from './components'
+import { NuCheckboxGroup } from './components'
 
 export * from './components'
 
-export default NpCheckboxGroup
+export default NuCheckboxGroup

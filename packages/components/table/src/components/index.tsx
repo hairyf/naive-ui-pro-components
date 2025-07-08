@@ -1,7 +1,7 @@
 import type { PaginationProps } from 'naive-ui'
 import type { PropType } from 'vue'
 
-import type { ProTableInstance } from '../types'
+import type { UltraTableInstance } from '../types'
 import { If, isObject } from '@naive-ultra/utils'
 
 import { reactiveOmit, reactivePick } from '@vueuse/core'
@@ -11,10 +11,10 @@ import { useTableMinWidth } from '../composables'
 
 const { pagination: _p, ...extendsProps } = dataTableProps
 
-export const proTableProps = {
+export const ultraTableProps = {
   ...extendsProps,
   is: {
-    type: Object as PropType<ProTableInstance>,
+    type: Object as PropType<UltraTableInstance>,
     required: true as const,
   },
   pagination: {
@@ -23,9 +23,9 @@ export const proTableProps = {
   },
 }
 
-export const NpTable = defineComponent({
-  name: 'ProTable',
-  props: proTableProps,
+export const NuTable = defineComponent({
+  name: 'NuTable',
+  props: ultraTableProps,
   setup(_props, { slots }) {
     style.mount()
 
@@ -58,7 +58,7 @@ export const NpTable = defineComponent({
 
     return () => (
       <div
-        class="np-table"
+        class="nu-table"
         style={{ '--n-table-min-width': `${minWidth.value}px` }}
       >
         <NDataTable
@@ -70,7 +70,7 @@ export const NpTable = defineComponent({
         >
           {slots}
         </NDataTable>
-        <If cond={showPagination.value} class="np-table__pagination" tag="div">
+        <If cond={showPagination.value} class="nu-table__pagination" tag="div">
           <NPagination
             v-models={[
               [instance.value.pagination.page, 'page'],
@@ -84,12 +84,12 @@ export const NpTable = defineComponent({
   },
 })
 
-const style = c('.np-table', [
+const style = c('.nu-table', [
   c('.n-data-table-table', {
     minWidth: 'var(--n-table-min-width) !important',
   }),
 
-  c('.np-table__pagination', {
+  c('.nu-table__pagination', {
     display: 'flex',
     justifyContent: 'flex-end',
     marginTop: '18px',

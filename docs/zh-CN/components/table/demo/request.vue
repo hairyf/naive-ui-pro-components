@@ -53,6 +53,6 @@ const actions = defineActions([
 </script>
 
 <template>
-  <np-actions :is="actions" style="margin-bottom: 24px;" />
-  <np-table :is="table" :columns="columns" />
+  <nu-actions :is="actions" style="margin-bottom: 24px;" />
+  <nu-table :is="table" :columns="columns" />
 </template>
