@@ -48,5 +48,3 @@ const columns = [
 - `useOffsetPagination(options)`：分页状态管理，配合 ProTable 使用。
 
 > 你可以将这些 hooks 灵活组合，快速实现复杂表格场景。
-
-更多用法请参考 [hooks 示例](./demo/hooks.vue)。
