@@ -2,7 +2,7 @@
   "type": "module",
   "version": "0.3.5",
   "private": true,
-  "packageManager": "pnpm@10.4.0",
+  "packageManager": "pnpm@10.12.4",
   "scripts": {
     "lint": "eslint --cache .",
     "build": "pnpm -r build",
@@ -31,7 +31,6 @@
     "vite": "catalog:cli",
     "vitest": "catalog:tesing"
   },
-
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
