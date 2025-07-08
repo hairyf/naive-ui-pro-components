@@ -7,6 +7,7 @@ function NaiveUIProImports(): ImportsMap {
       'defineTable',
       'defineActions',
       'field',
+      'ONLY_RENDER',
       'useColumnIndexes',
       'useColumnLink',
       'useColumns',
