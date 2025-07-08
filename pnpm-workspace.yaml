@@ -29,8 +29,6 @@ catalogs:
     vitepress: ^2.0.0-alpha.2
     vitepress-plugin-demo: ^0.8.0
     vitepress-plugin-group-icons: ^1.3.5
-  inlined:
-    '@antfu/utils': ^9.0.0
   share:
     '@vueuse/core': ^13.0.0
     naive-ui: ^2.41.0

@@ -27,10 +27,17 @@
     "tsx": "catalog:cli",
     "typescript": "catalog:cli",
     "unbuild": "catalog:bundler",
-    "vite": "catalog:cli",
     "vitest": "catalog:tesing"
   },
 
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "search-insights"
+      ]
+    }
+  },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
