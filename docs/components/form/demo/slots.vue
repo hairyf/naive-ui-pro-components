@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { defineForm } from 'naive-ultra'
+import { defineForm, ONLY_RENDER } from 'naive-ultra'
 
 const form = defineForm({
-  button: {
+  [ONLY_RENDER()]: {
     type: 'button',
     slots: {
       default: () => 'Custom slot content',
