@@ -1,7 +1,7 @@
 import type { ExtractPropTypes, PropType } from 'vue'
+import { debounce } from '@hairy/utils'
 import { useAsyncCallback } from '@naive-ultra/utils'
 import { useVModel } from '@vueuse/core'
-import { debounce } from 'lodash-es'
 import { dialogProps, NDialog, NModal } from 'naive-ui'
 import { defineComponent } from 'vue'
 

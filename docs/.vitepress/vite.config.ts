@@ -9,7 +9,6 @@ import { groupIconVitePlugin as GroupIconVitePlugin } from 'vitepress-plugin-gro
 export default defineConfig({
   plugins: [
     Tsconfig({ projects: [fileURLToPath(new URL('../../tsconfig.json', import.meta.url))] }),
-    // UnoCSS(fileURLToPath(new URL('./uno.config.ts', import.meta.url))),
     GroupIconVitePlugin(),
     VueJsx(),
     AutoImport({

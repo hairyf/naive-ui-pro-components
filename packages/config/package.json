@@ -5,6 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "devDependencies": {
-    "esbuild-plugin-globals": "^0.2.0"
+    "esbuild-plugin-globals": "^0.2.0",
+    "unplugin-vue-jsx": "^0.6.1"
   }
 }

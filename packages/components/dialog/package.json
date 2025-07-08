@@ -17,19 +17,18 @@
       }
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "prepublish": "npm run build"
   },
   "dependencies": {
+    "@hairy/utils": "catalog:utils",
     "@naive-ultra/utils": "workspace:^",
     "@vueuse/core": "catalog:share",
-    "lodash-es": "^4.17.21",
     "naive-ui": "catalog:share",
     "vue": "catalog:share"
-  },
-  "devDependencies": {
-    "@types/lodash-es": "^4.17.12"
   }
 }

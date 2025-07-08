@@ -25,7 +25,7 @@
     "@naive-ultra/utils": "workspace:^",
     "@vueuse/core": "catalog:share",
     "naive-ui": "catalog:share",
-    "nanoid": "^5.1.5",
+    "nanoid": "catalog:utils",
     "vue": "catalog:share"
   }
 }

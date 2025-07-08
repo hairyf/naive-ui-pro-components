@@ -60,7 +60,7 @@
     "vue": "catalog:share"
   },
   "devDependencies": {
-    "unplugin-auto-import": "^0.16.4",
-    "unplugin-vue-components": "^0.25.0"
+    "unplugin-auto-import": "catalog:share",
+    "unplugin-vue-components": "catalog:share"
   }
 }

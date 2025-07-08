@@ -22,7 +22,7 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "defu": "^6.1.2",
+    "defu": "catalog:utils",
     "naive-ui": "catalog:share",
     "vue": "catalog:share"
   }

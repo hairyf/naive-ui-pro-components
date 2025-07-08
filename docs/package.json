@@ -12,19 +12,16 @@
     "naive-ultra": "workspace:^"
   },
   "devDependencies": {
-    "@iconify-json/svg-spinners": "catalog:",
-    "@shikijs/vitepress-twoslash": "catalog:",
-    "@unocss/reset": "catalog:",
-    "@vueuse/core": "catalog:",
-    "floating-vue": "catalog:",
-    "pinia": "catalog:",
-    "unocss": "catalog:",
-    "unplugin-auto-import": "^0.16.4",
-    "unplugin-vue-components": "catalog:",
-    "vite-tsconfig-paths": "catalog:",
-    "vitepress": "catalog:",
-    "vitepress-plugin-demo": "^0.8.0",
-    "vitepress-plugin-group-icons": "catalog:",
+    "@iconify-json/svg-spinners": "catalog:docs",
+    "@shikijs/vitepress-twoslash": "catalog:docs",
+    "@vitejs/plugin-vue-jsx": "catalog:docs",
+    "floating-vue": "catalog:docs",
+    "unplugin-auto-import": "catalog:share",
+    "unplugin-vue-components": "catalog:share",
+    "vite-tsconfig-paths": "catalog:docs",
+    "vitepress": "catalog:docs",
+    "vitepress-plugin-demo": "catalog:docs",
+    "vitepress-plugin-group-icons": "catalog:docs",
     "vue": "catalog:share"
   }
 }
