@@ -84,10 +84,11 @@ export const NpTable = defineComponent({
   },
 })
 
-const style = c([
+const style = c('.np-table', [
   c('.n-data-table-table', {
     minWidth: 'var(--n-table-min-width) !important',
   }),
+
   c('.np-table__pagination', {
     display: 'flex',
     justifyContent: 'flex-end',

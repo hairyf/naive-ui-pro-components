@@ -17,9 +17,9 @@ hero:
 
 features:
   - title: 简单易用
-    details: 在 Naive UI 下进行封装，快速搭建中后台系统。
+    details: 提供统一的 API 设计理念和示例文档，快速上手，极大提升中后台系统的开发效率。
   - title: Naive UI
-    details: 无缝对接 Naive UI 的组件，在此基础上进行扩展。
+    details: 使用 Naive UI 的组件作为基准，在此基础上进行扩展，满足复杂的业务场景。
   - title: TypeScript
-    details: 当然使用 TypeScript 编写，带有完整的 TS 文档。
+    details: 使用 TypeScript 编写，具备完善的类型推导和类型提示，配套详细的 TS 文档，保障开发体验和代码质量。
 ---

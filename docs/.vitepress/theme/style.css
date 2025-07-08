@@ -214,3 +214,23 @@ table {
   width: 100%;
   display: table !important;
 }
+
+.vp-doc .n-data-table table {
+  margin: 0 !important;
+}
+.vp-doc .n-data-table th {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+@media (min-width: 960px) {
+  .VPHome {
+    margin-top: 120px;
+  }
+}
+@media (min-width: 960px) {
+  .VPHero {
+    margin-bottom: 24px;
+  }
+}
